@@ -22,7 +22,7 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; }
 .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; white-space: nowrap; }
 .nav-cta:hover { background: var(--gold); color: var(--navy); }
 
 /* PAGE HEADER */
@@ -30,45 +30,64 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 .page-header::before { content: ''; position: absolute; right: -5%; top: -20%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(184,150,62,0.06) 0%, transparent 65%); }
 .page-label { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
 .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 300; color: var(--cream); margin-bottom: 0.9rem; }
-.page-desc { color: var(--muted); font-size: 0.93rem; line-height: 1.8; max-width: 460px; }
+.page-desc { color: var(--muted); font-size: 0.93rem; line-height: 1.8; max-width: 520px; }
 .divider { width: 44px; height: 1px; background: var(--gold); margin: 1.3rem 0; }
 
 /* CONTROLS */
-.blog-controls { padding: 2rem 4vw; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(184,150,62,0.1); flex-wrap: wrap; gap: 1rem; background: var(--navy-light); }
+.blog-controls { padding: 1.5rem 4vw; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(184,150,62,0.1); flex-wrap: wrap; gap: 1rem; background: var(--navy-light); }
 .filter-tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .filter-tab { padding: 0.38rem 1rem; font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid rgba(184,150,62,0.2); color: var(--muted); background: transparent; cursor: pointer; transition: all 0.3s; font-family: 'Jost', sans-serif; }
 .filter-tab:hover, .filter-tab.active { border-color: var(--gold); color: var(--gold); }
+.filter-tab.series-tab { border-color: rgba(184,150,62,0.35); color: var(--gold-light); }
+.filter-tab.series-tab:hover, .filter-tab.series-tab.active { background: rgba(184,150,62,0.1); border-color: var(--gold); color: var(--gold); }
 .search-box { display: flex; align-items: center; gap: 0.5rem; background: rgba(13,31,53,0.8); border: 1px solid rgba(184,150,62,0.2); padding: 0.46rem 0.9rem; }
 .search-box input { background: none; border: none; outline: none; color: var(--text); font-family: 'Jost', sans-serif; font-size: 0.86rem; width: 190px; }
 .search-box input::placeholder { color: var(--muted); }
 
-/* BLOG GRID */
+/* BLOG SECTION */
 .blog-section { padding: 3.5rem 4vw; }
-.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.8rem; }
-
-/* BLOG CARD */
-.blog-card { background: var(--navy-light); border: 1px solid rgba(184,150,62,0.12); transition: transform 0.3s, border-color 0.3s; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
-.blog-card:hover { transform: translateY(-3px); border-color: rgba(184,150,62,0.32); }
-.blog-card-img { height: 160px; overflow: hidden; background: linear-gradient(135deg, var(--navy) 0%, rgba(184,150,62,0.12) 100%); display: flex; align-items: center; justify-content: center; position: relative; }
-.blog-card-img-placeholder { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; color: rgba(184,150,62,0.18); }
-.blog-tag { position: absolute; top: 0.9rem; left: 0.9rem; background: var(--gold); color: var(--navy); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.22rem 0.65rem; }
-.blog-card-body { padding: 1.6rem; flex: 1; display: flex; flex-direction: column; }
-.blog-meta { display: flex; gap: 0.8rem; margin-bottom: 0.8rem; }
-.blog-date, .blog-read { font-size: 0.73rem; color: var(--muted); }
-.blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.28rem; color: var(--cream); line-height: 1.3; margin-bottom: 0.7rem; }
-.blog-card-excerpt { font-size: 0.83rem; color: var(--muted); line-height: 1.7; flex: 1; }
-.read-more-link { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--gold); font-size: 0.77rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 1.2rem; transition: gap 0.3s; text-decoration: none; }
-.blog-card:hover .read-more-link { gap: 0.8rem; }
 
 /* FEATURED */
 .featured-post { background: var(--navy-light); border: 1px solid rgba(184,150,62,0.2); display: grid; grid-template-columns: 1fr 1fr; margin-bottom: 2.5rem; overflow: hidden; text-decoration: none; color: inherit; transition: border-color 0.3s; }
-.featured-post:hover { border-color: rgba(184,150,62,0.4); }
-.featured-img { background: linear-gradient(135deg, var(--navy-light) 0%, rgba(184,150,62,0.1) 100%); display: flex; align-items: center; justify-content: center; min-height: 280px; }
+.featured-post:hover { border-color: rgba(184,150,62,0.45); }
+.featured-img { background: linear-gradient(135deg, var(--navy-light) 0%, rgba(184,150,62,0.1) 100%); display: flex; align-items: center; justify-content: center; min-height: 280px; position: relative; }
 .featured-img-icon { font-family: 'Cormorant Garamond', serif; font-size: 6rem; color: rgba(184,150,62,0.15); }
+.featured-series-badge { position: absolute; top: 1rem; left: 1rem; background: rgba(184,150,62,0.12); border: 1px solid rgba(184,150,62,0.35); color: var(--gold); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.7rem; }
 .featured-body { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
 .featured-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; }
 .featured-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--cream); line-height: 1.2; margin-bottom: 0.9rem; }
 .featured-excerpt { font-size: 0.88rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.3rem; flex: 1; }
+.read-more-link { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--gold); font-size: 0.77rem; letter-spacing: 0.1em; text-transform: uppercase; transition: gap 0.3s; }
+.featured-post:hover .read-more-link { gap: 0.8rem; }
+
+/* SERIES HEADER */
+.series-section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(184,150,62,0.15); }
+.series-section-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--cream); font-weight: 300; }
+.series-section-badge { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; background: rgba(184,150,62,0.1); border: 1px solid rgba(184,150,62,0.25); color: var(--gold); padding: 0.2rem 0.7rem; }
+.series-ep-count { font-size: 0.72rem; color: var(--muted); margin-left: auto; }
+
+/* BLOG GRID */
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.8rem; }
+
+/* BLOG CARD */
+.blog-card { background: var(--navy-light); border: 1px solid rgba(184,150,62,0.12); transition: transform 0.3s, border-color 0.3s; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+.blog-card:hover { transform: translateY(-3px); border-color: rgba(184,150,62,0.32); }
+.blog-card-img { height: 150px; overflow: hidden; background: linear-gradient(135deg, var(--navy) 0%, rgba(184,150,62,0.1) 100%); display: flex; align-items: center; justify-content: center; position: relative; }
+.blog-card-img-placeholder { font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; color: rgba(184,150,62,0.18); }
+.blog-tag { position: absolute; top: 0.9rem; left: 0.9rem; background: var(--gold); color: var(--navy); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.2rem 0.6rem; }
+.blog-tag.tag-series { background: rgba(184,150,62,0.12); border: 1px solid rgba(184,150,62,0.4); color: var(--gold-light); }
+.ep-badge { position: absolute; bottom: 0.7rem; right: 0.7rem; font-size: 0.6rem; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; }
+.blog-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+.blog-meta { display: flex; gap: 0.8rem; margin-bottom: 0.7rem; align-items: center; flex-wrap: wrap; }
+.blog-date, .blog-read { font-size: 0.72rem; color: var(--muted); }
+.blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--cream); line-height: 1.3; margin-bottom: 0.65rem; }
+.blog-card-excerpt { font-size: 0.82rem; color: var(--muted); line-height: 1.7; flex: 1; }
+.card-read-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--gold); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 1.1rem; transition: gap 0.3s; }
+.blog-card:hover .card-read-link { gap: 0.75rem; }
+
+/* EMPTY */
+.empty-state { display: none; text-align: center; padding: 4rem; color: var(--muted); }
+.empty-icon { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: rgba(184,150,62,0.25); margin-bottom: 1rem; }
 
 /* FOOTER */
 footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
@@ -77,11 +96,12 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
 .footer-links a { font-size: 0.76rem; color: var(--muted); text-decoration: none; transition: color 0.3s; }
 .footer-links a:hover { color: var(--gold); }
 
-/* EMPTY */
-.empty-state { display: none; text-align: center; padding: 4rem; color: var(--muted); }
-.empty-icon { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: rgba(184,150,62,0.25); margin-bottom: 1rem; }
-
-@media (max-width: 768px) { .nav-links { display: none; } .featured-post { grid-template-columns: 1fr; } .featured-img { min-height: 160px; } .blog-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .featured-post { grid-template-columns: 1fr; }
+  .featured-img { min-height: 160px; }
+  .blog-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -107,17 +127,18 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
   <div class="page-label">Insights &amp; Updates</div>
   <h1 class="page-title">NeeAr Ventures Blog</h1>
   <div class="divider"></div>
-  <p class="page-desc">Thoughts, insights, and updates on business, digital strategy, online income, and the entrepreneurial journey.</p>
+  <p class="page-desc">Strategies, insights, and updates on online income, digital business, AI, and the entrepreneurial journey — published twice a week.</p>
 </div>
 
 <div class="blog-controls">
   <div class="filter-tabs">
-    <button class="filter-tab active" onclick="filterPosts('all', this)">All</button>
-    <button class="filter-tab" onclick="filterPosts('business', this)">Business</button>
-    <button class="filter-tab" onclick="filterPosts('strategy', this)">Strategy</button>
-    <button class="filter-tab" onclick="filterPosts('digital', this)">Digital</button>
-    <button class="filter-tab" onclick="filterPosts('income', this)">Online Income</button>
-    <button class="filter-tab" onclick="filterPosts('updates', this)">Updates</button>
+    <button class="filter-tab active"      onclick="filterPosts('all', this)">All</button>
+    <button class="filter-tab"             onclick="filterPosts('income', this)">Online Income</button>
+    <button class="filter-tab"             onclick="filterPosts('business', this)">Business</button>
+    <button class="filter-tab"             onclick="filterPosts('strategy', this)">Strategy</button>
+    <button class="filter-tab"             onclick="filterPosts('digital', this)">Digital</button>
+    <button class="filter-tab"             onclick="filterPosts('updates', this)">Updates</button>
+    <button class="filter-tab series-tab"  onclick="filterPosts('ai-series', this)">📡 This Week in AI</button>
   </div>
   <div class="search-box">
     <span style="color:var(--gold)">⌕</span>
@@ -127,24 +148,38 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
 
 <section class="blog-section">
 
-  <!-- FEATURED POST — always the latest/pinned post -->
-  <a class="featured-post" href="blog-online-income.html">
-    <div class="featured-img"><div class="featured-img-icon">◈</div></div>
+  <!-- FEATURED — update this block whenever you publish a new post -->
+  <a class="featured-post" href="blog-twiai-ep1.html">
+    <div class="featured-img">
+      <div class="featured-img-icon">◈</div>
+      <div class="featured-series-badge">📡 This Week in AI · Ep. 1</div>
+    </div>
     <div class="featured-body">
-      <div class="featured-label">✦ Featured Post</div>
-      <div class="featured-title">7 Proven Strategies to Build Real Online Income — Starting Part-Time</div>
-      <p class="featured-excerpt">You don't need to quit your job to build a profitable digital presence. Here's a strategic breakdown of the 7 most reliable online income models — and how to start one today.</p>
+      <div class="featured-label">✦ Latest Post</div>
+      <div class="featured-title">AI Gets Dangerous, Ambitious, and Very Expensive</div>
+      <p class="featured-excerpt">Anthropic's model triggers emergency government meetings. Meta launches Muse Spark. OpenAI eyes $100B in ad revenue. AI pricing collapses. Five stories that matter — explained for entrepreneurs.</p>
       <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
-        <span style="font-size:0.75rem;color:var(--muted);">Apr 16, 2026</span>
-        <span style="font-size:0.75rem;color:var(--muted);">· 12 min read</span>
+        <span style="font-size:0.75rem;color:var(--muted);">Apr 20, 2026</span>
+        <span style="font-size:0.75rem;color:var(--muted);">· 8 min read</span>
+        <span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;">This Week in AI · Ep. 1</span>
       </div>
       <span class="read-more-link">Read Full Article →</span>
     </div>
   </a>
 
-  <!-- BLOG GRID -->
+  <!-- Series header shown only when filtering by ai-series -->
+  <div id="seriesHeader" style="display:none;">
+    <div class="series-section-header">
+      <div class="series-section-title">This Week in AI</div>
+      <div class="series-section-badge">📡 Series</div>
+      <div class="series-ep-count" id="epCount"></div>
+    </div>
+  </div>
+
   <div class="blog-grid" id="blogGrid"></div>
-  <div class="empty-state" id="emptyState"><div class="empty-icon">◈</div>No posts found.</div>
+  <div class="empty-state" id="emptyState">
+    <div class="empty-icon">◈</div>No posts found.
+  </div>
 
 </section>
 
@@ -160,56 +195,85 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
 
 <script>
 /* =====================================================
-   HOW TO ADD A NEW DAILY BLOG POST
+   HOW TO ADD A NEW POST
    =====================================================
-   1. Create a new HTML file for your post using the
-      template: blog-post-template.html
-      Name it clearly, e.g.: blog-domaining-basics.html
+   1. Create your HTML post file (use blog-post-template.html)
+      e.g. blog-domaining-tips.html
+           blog-twiai-ep2.html
 
-   2. Add a new entry at the TOP of the posts array below.
-      Fields:
-        id       — unique number (increment each time)
-        title    — your post headline
-        excerpt  — 1-2 sentence summary for the card
-        category — "business" | "strategy" | "digital" | "income" | "updates"
-        date     — e.g. "Apr 17, 2026"
-        read     — e.g. "8 min read"
-        icon     — "◈" | "◇" | "✦" | "◉" | "⬡" | "❖"
-        file     — filename of the full post HTML page
+   2. Add a NEW ENTRY at the TOP of the posts[] array below.
 
-   3. Save this file and commit to GitHub. Done!
+   FIELDS:
+     id       — increment by 1 (next is 8)
+     title    — post headline
+     excerpt  — 1-2 sentence summary shown on card
+     category — "income" | "business" | "strategy" |
+                 "digital" | "updates" | "ai-series"
+     date     — "Apr 22, 2026"
+     read     — "7 min read"
+     icon     — "◈" | "◇" | "✦" | "◉" | "⬡" | "❖"
+     file     — "your-filename.html"
+     series   — (for ai-series only) "This Week in AI"
+     episode  — (for ai-series only) "Ep. 2"
+
+   3. Also update the FEATURED block in the HTML above
+      to point to your newest post.
+
+   4. Commit to GitHub. Done!
    ===================================================== */
 
-let posts = [
+const posts = [
+
+  /* ── THIS WEEK IN AI SERIES ──
+     Add new episodes at the TOP of this block          */
   {
-    id       — 6
-        title    — "This Week in AI- Episode 1: AI Gets Dangerous, Ambitious, and Very Expensive",
-        excerpt  — "Meta launches a new model, Anthropic triggers emergency bank meetings, OpenAI eyes $100B in ad revenue — and AI pricing collapses. Here's what happened.",
-        category — "updates",
-        date     — "Apr 20, 2026",
-        read     — "10 min read"
-        icon     — "◇" ,
-        file     — "blog-twiai-ep1.html"
+    id: 7,
+    title: "AI Gets Dangerous, Ambitious, and Very Expensive",
+    excerpt: "Anthropic triggers emergency govt meetings, Meta launches Muse Spark, OpenAI eyes $100B in ads, and AI pricing collapses. 5 stories explained.",
+    category: "ai-series",
+    date: "Apr 20, 2026",
+    read: "8 min read",
+    icon: "◈",
+    file: "blog-twiai-ep1.html",
+    series: "This Week in AI",
+    episode: "Ep. 1"
   },
+
+  /* ── ONLINE INCOME ──                                */
   {
-    id: 5,
+    id: 6,
     title: "7 Proven Strategies to Build Real Online Income — Starting Part-Time",
-    excerpt: "A strategic breakdown of the 7 most reliable online income models — domaining, freelancing, consulting, and more.",
+    excerpt: "A strategic breakdown of 7 proven online income models — domaining, freelancing, consulting, blogging, digital products, and more.",
     category: "income",
     date: "Apr 16, 2026",
     read: "12 min read",
-    icon: "◈",
+    icon: "◇",
     file: "blog-online-income.html"
+  },
+
+  /* ── EXISTING POSTS ──
+     NOTE: These link to files you'll need to create
+     using blog-post-template.html, or remove them
+     from this array until you're ready.               */
+  {
+    id: 5,
+    title: "5 Signs Your Business Needs a Digital Strategy Now",
+    excerpt: "Most businesses wait too long before building a digital strategy. Here are 5 clear signals you shouldn't ignore.",
+    category: "digital",
+    date: "Apr 10, 2025",
+    read: "4 min read",
+    icon: "◈",
+    file: "blog-digital-strategy.html"
   },
   {
     id: 4,
-    title: "NeeAr Ventures — Q1 2025 Highlights",
-    excerpt: "A look back at what we accomplished in Q1 and what's coming next for our clients and community.",
-    category: "updates",
-    date: "Mar 15, 2025",
-    read: "3 min read",
-    icon: "◉",
-    file: "blog-q1-2025.html"
+    title: "How Online Consultation is Changing the Advisory World",
+    excerpt: "Remote consultation has moved from a convenience to a competitive advantage. We explore how businesses are adapting.",
+    category: "business",
+    date: "Apr 5, 2025",
+    read: "6 min read",
+    icon: "◇",
+    file: "blog-online-consultation.html"
   },
   {
     id: 3,
@@ -223,24 +287,15 @@ let posts = [
   },
   {
     id: 2,
-    title: "How Online Consultation is Changing the Advisory World",
-    excerpt: "Remote consultation has moved from a convenience to a competitive advantage. We explore how businesses are adapting.",
-    category: "business",
-    date: "Apr 5, 2025",
-    read: "6 min read",
-    icon: "◇",
-    file: "blog-online-consultation.html"
+    title: "NeeAr Ventures — Q1 2025 Highlights",
+    excerpt: "A look back at what we accomplished in Q1 and what's coming next for our clients and community.",
+    category: "updates",
+    date: "Mar 15, 2025",
+    read: "3 min read",
+    icon: "◉",
+    file: "blog-q1-2025.html"
   },
-  {
-    id: 1,
-    title: "5 Signs Your Business Needs a Digital Strategy Now",
-    excerpt: "Most businesses wait too long before building a digital strategy. Here are 5 clear signals you shouldn't ignore.",
-    category: "digital",
-    date: "Apr 10, 2025",
-    read: "4 min read",
-    icon: "◈",
-    file: "blog-digital-strategy.html"
-  },
+
 ];
 
 let activeFilter = 'all';
@@ -248,22 +303,42 @@ let activeFilter = 'all';
 function renderPosts(list) {
   const grid = document.getElementById('blogGrid');
   const empty = document.getElementById('emptyState');
-  if (!list.length) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
+  const seriesHeader = document.getElementById('seriesHeader');
+  const epCount = document.getElementById('epCount');
+
+  if (!list.length) {
+    grid.innerHTML = '';
+    empty.style.display = 'block';
+    seriesHeader.style.display = 'none';
+    return;
+  }
+
   empty.style.display = 'none';
+
+  const isSeriesFilter = activeFilter === 'ai-series';
+  seriesHeader.style.display = isSeriesFilter ? 'block' : 'none';
+  if (isSeriesFilter) {
+    epCount.textContent = list.length + ' episode' + (list.length !== 1 ? 's' : '');
+  }
+
   grid.innerHTML = list.map(p => `
     <a class="blog-card" href="${p.file}">
       <div class="blog-card-img">
         <div class="blog-card-img-placeholder">${p.icon}</div>
-        <div class="blog-tag">${p.category}</div>
+        <div class="blog-tag ${p.category === 'ai-series' ? 'tag-series' : ''}">
+          ${p.category === 'ai-series' ? '📡 AI Series' : p.category}
+        </div>
+        ${p.episode ? `<div class="ep-badge">${p.episode}</div>` : ''}
       </div>
       <div class="blog-card-body">
         <div class="blog-meta">
           <span class="blog-date">${p.date}</span>
           <span class="blog-read">· ${p.read}</span>
+          ${p.series ? `<span style="font-size:0.68rem;color:var(--gold);letter-spacing:0.08em;text-transform:uppercase;">${p.series}</span>` : ''}
         </div>
         <div class="blog-card-title">${p.title}</div>
         <p class="blog-card-excerpt">${p.excerpt}</p>
-        <span class="read-more-link">Read Article →</span>
+        <span class="card-read-link">Read Article →</span>
       </div>
     </a>
   `).join('');
@@ -279,7 +354,11 @@ function filterPosts(cat, btn) {
 function searchPosts(query) {
   const q = query.toLowerCase();
   const base = activeFilter === 'all' ? posts : posts.filter(p => p.category === activeFilter);
-  renderPosts(base.filter(p => p.title.toLowerCase().includes(q) || p.excerpt.toLowerCase().includes(q)));
+  renderPosts(base.filter(p =>
+    p.title.toLowerCase().includes(q) ||
+    p.excerpt.toLowerCase().includes(q) ||
+    (p.series && p.series.toLowerCase().includes(q))
+  ));
 }
 
 renderPosts(posts);
