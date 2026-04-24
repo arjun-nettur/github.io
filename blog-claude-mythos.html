@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Claude Mythos: The AI Too Dangerous to Release — NeeAr Ventures</title>
+<meta name="description" content="Anthropic's Claude Mythos Preview can find and exploit zero-day vulnerabilities in every major OS and browser. Here's what it is, what it can do, and what it means for you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --navy: #0d1f35; --navy-light: #162d47; --gold: #b8963e; --gold-light: #d4ad5c; --cream: #f5f0e8; --text: #e8e0d0; --muted: #8a9ab0; --red: #c94040; --red-dim: rgba(201,64,64,0.1); }
+html { scroll-behavior: smooth; }
+body { background: var(--navy); color: var(--text); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(13,31,53,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(184,150,62,0.2); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--cream); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.6rem; letter-spacing: 0.16em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; }
+.nav-cta:hover { background: var(--gold); color: var(--navy); }
+
+/* HERO */
+.article-hero { padding: 9rem 4vw 4.5rem; background: linear-gradient(135deg, #0a1520 50%, #12203a 100%); position: relative; overflow: hidden; text-align: center; }
+.article-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(201,64,64,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+
+.alert-pill { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--red-dim); border: 1px solid rgba(201,64,64,0.4); color: #e07070; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.3rem 1rem; margin-bottom: 1.2rem; }
+.article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 1.2rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.article-title em { font-style: italic; color: var(--gold); }
+.article-subtitle { font-size: 1rem; color: var(--muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; }
+.article-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; flex-wrap: wrap; }
+.meta-dot { color: rgba(184,150,62,0.4); }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+/* BODY */
+.article-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 4vw 6rem; }
+.article-lead { font-size: 1.05rem; line-height: 1.9; color: var(--text); margin-bottom: 2.5rem; padding-left: 1.2rem; border-left: 2px solid var(--gold); }
+p { font-size: 0.95rem; line-height: 1.85; color: var(--text); margin-bottom: 1.4rem; }
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; color: var(--cream); margin: 3.5rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 1px solid rgba(184,150,62,0.2); }
+
+/* Alert box */
+.alert-box { background: var(--red-dim); border: 1px solid rgba(201,64,64,0.3); border-left: 3px solid var(--red); padding: 1.3rem 1.5rem; margin: 1.6rem 0; }
+.alert-box .a-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: #e07070; margin-bottom: 0.5rem; font-weight: 500; }
+.alert-box p { font-size: 0.88rem; color: #cca0a0; margin: 0; }
+
+/* Stat callout */
+.stat-callout { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; background: var(--navy-light); border: 1px solid rgba(184,150,62,0.15); padding: 1.8rem; margin: 2rem 0; }
+.stat-item { text-align: center; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold); line-height: 1; }
+.stat-label { font-size: 0.66rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; max-width: 120px; line-height: 1.4; }
+
+/* Insight card */
+.insight-card { background: var(--navy-light); border: 1px solid rgba(184,150,62,0.18); border-left: 3px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.4rem 0 1.8rem; }
+.insight-card .card-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 500; }
+.insight-card p { font-size: 0.87rem; color: var(--muted); margin: 0; }
+
+/* Tip row */
+.tip-row { display: flex; gap: 1rem; background: rgba(22,45,71,0.6); border: 1px solid rgba(184,150,62,0.12); padding: 1.1rem 1.3rem; margin: 1.4rem 0; align-items: flex-start; }
+.tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.tip-row p { font-size: 0.87rem; margin: 0; color: var(--muted); }
+.tip-row strong { color: var(--gold-light); }
+
+/* Timeline */
+.timeline { margin: 2rem 0; }
+.timeline-item { display: flex; gap: 1.2rem; padding: 1rem 0; border-bottom: 1px solid rgba(184,150,62,0.08); }
+.timeline-item:last-child { border-bottom: none; }
+.tl-date { font-size: 0.72rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; min-width: 80px; padding-top: 2px; font-weight: 500; }
+.tl-content { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+.tl-content strong { color: var(--text); }
+
+/* Blockquote */
+blockquote { background: rgba(184,150,62,0.05); border: 1px solid rgba(184,150,62,0.2); padding: 1.8rem 2rem; margin: 2.5rem 0; position: relative; }
+blockquote::before { content: '\201C'; font-family: 'Cormorant Garamond', serif; font-size: 5rem; color: rgba(184,150,62,0.12); position: absolute; top: -10px; left: 16px; line-height: 1; }
+blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; color: var(--cream); margin: 0; padding-top: 0.5rem; line-height: 1.6; font-weight: 300; }
+blockquote cite { display: block; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.9rem; font-style: normal; }
+
+.section-ornament { text-align: center; color: rgba(184,150,62,0.3); letter-spacing: 12px; font-size: 0.9rem; margin: 3rem 0; }
+
+/* Tags */
+.tags-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(184,150,62,0.12); }
+.tags-label { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.2em; text-transform: uppercase; margin-right: 0.3rem; }
+.tag { background: rgba(22,45,71,0.8); border: 1px solid rgba(184,150,62,0.18); padding: 0.22rem 0.75rem; font-size: 0.72rem; color: var(--muted); }
+
+/* CTA */
+.cta-box { background: var(--navy-light); border: 1px solid rgba(184,150,62,0.25); padding: 2.5rem; text-align: center; margin-top: 3rem; }
+.cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--cream); font-weight: 300; margin-bottom: 0.6rem; }
+.cta-box p { font-size: 0.88rem; color: var(--muted); margin-bottom: 1.5rem; }
+.btn-primary { background: var(--gold); color: var(--navy); padding: 0.78rem 2rem; font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border: none; display: inline-block; transition: background 0.3s; }
+.btn-primary:hover { background: var(--gold-light); }
+
+/* Share */
+.share-row { display: flex; gap: 1rem; align-items: center; margin-top: 2rem; flex-wrap: wrap; }
+.share-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.2em; text-transform: uppercase; }
+.share-btn { background: transparent; border: 1px solid rgba(184,150,62,0.25); color: var(--muted); padding: 0.35rem 1rem; font-size: 0.75rem; font-family: 'Jost', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; }
+.share-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Footer */
+footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: var(--muted); }
+.footer-links { display: flex; gap: 1.8rem; }
+.footer-links a { font-size: 0.76rem; color: var(--muted); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold); }
+
+@media (max-width: 640px) { .nav-links { display: none; } .article-title { font-size: 2rem; } .stat-callout { gap: 1.2rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Online Services &amp; Consultation</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#why">About</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="article-hero">
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+  <div class="alert-pill">🔴 Restricted Access · Not Public</div>
+  <div class="article-category">AI · Cybersecurity · Deep Dive</div>
+  <h1 class="article-title">Claude Mythos: The AI <em>Too Dangerous</em> to Release to the Public</h1>
+  <p class="article-subtitle">Anthropic built its most powerful model yet — and then decided the world wasn't ready for it. Here's what Mythos can do, why it was restricted, and what it means for everyone online.</p>
+  <div class="article-meta">
+    <span>Arjun Nettur</span>
+    <span class="meta-dot">◆</span>
+    <span>April 24, 2026</span>
+    <span class="meta-dot">◆</span>
+    <span>10 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>AI · Deep Dive</span>
+  </div>
+  <div class="divider-line"></div>
+</div>
+
+<div class="article-wrap">
+
+  <p class="article-lead">
+    In the history of technology, it is rare for a company to build something, confirm it works extraordinarily well, and then deliberately choose not to release it. That is exactly what Anthropic has done with Claude Mythos Preview — and the reason they gave is one of the most consequential statements in AI history: the model poses "unprecedented cybersecurity risks."
+  </p>
+
+  <p>This is not a PR headline. It is a technical reality, verified independently by the UK's AI Security Institute and documented in painstaking detail by Anthropic's own research team. Understanding what Mythos is, what it can do, and why it was restricted is essential for anyone operating a business, managing data, or simply using the internet in 2026.</p>
+
+  <h2>What Exactly Is Claude Mythos?</h2>
+  <p>Claude Mythos Preview, announced on April 7, 2026, is Anthropic's newest and most powerful AI model. On the surface it is a general-purpose language model — the same category as ChatGPT or standard Claude — capable of writing, reasoning, coding, and analysis.</p>
+  <p>But during internal testing, something unexpected emerged. The model turned out to be <em>strikingly</em> capable at a specific and dangerous task: finding and exploiting security vulnerabilities in software — autonomously, at scale, and with a success rate that alarmed even the engineers who built it.</p>
+
+  <div class="alert-box">
+    <div class="a-label">🔴 What Anthropic Found</div>
+    <p>During testing, Mythos Preview was capable of identifying and exploiting zero-day vulnerabilities — previously undiscovered security holes — in every major operating system and every major web browser. The oldest vulnerability it found was a 27-year-old bug in OpenBSD, an OS known specifically for its security focus.</p>
+  </div>
+
+  <p>Critically, Anthropic did not train Mythos to have these capabilities. They emerged as a natural consequence of general improvements in the model's reasoning, coding, and autonomous task execution — the same improvements that make it better at legitimate software development also make it better at breaking software security.</p>
+
+  <h2>What Can It Actually Do? The Numbers Are Sobering</h2>
+  <p>To understand how significant this is, compare Mythos against Anthropic's previous best model, Claude Opus 4.6, on the same security benchmark.</p>
+
+  <div class="stat-callout">
+    <div class="stat-item">
+      <div class="stat-num">0%</div>
+      <div class="stat-label">Opus 4.6 autonomous exploit success rate</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">181×</div>
+      <div class="stat-label">Mythos working exploits vs Opus's 2 on the same test</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">27 yrs</div>
+      <div class="stat-label">Age of oldest vulnerability Mythos discovered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">99%</div>
+      <div class="stat-label">Of vulnerabilities found are still unpatched</div>
+    </div>
+  </div>
+
+  <p>In one specific test, both models were asked to find vulnerabilities in Mozilla's Firefox 147 JavaScript engine and turn them into working exploits. Opus 4.6 succeeded twice out of several hundred attempts. Mythos succeeded 181 times — and achieved partial control on 29 additional attempts.</p>
+  <p>The exploits were not simple. In one case, Mythos wrote a browser exploit that chained together four separate vulnerabilities, constructing a technique that escaped both the browser's renderer sandbox and the operating system's own protections. In another, it wrote a remote code execution exploit for a server that gave full administrative access to unauthenticated users — with no human guidance beyond the initial instruction.</p>
+
+  <div class="insight-card">
+    <div class="card-label">The "Overnight Exploit" Test</div>
+    <p>Anthropic engineers with <em>no formal security training</em> asked Mythos Preview to find remote code execution vulnerabilities overnight. They woke up the following morning to complete, working exploits — ready to use. This is not a capability that previously existed outside of elite specialist security teams.</p>
+  </div>
+
+  <h2>How Was It Discovered — A Data Leak</h2>
+  <p>The existence of Claude Mythos was not announced on Anthropic's schedule. The model was inadvertently leaked on March 26, 2026, when a draft blog post describing the model was found in a publicly accessible, unsecured data cache — and reviewed by journalists at Fortune magazine before Anthropic could remove it.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="tl-date">Mar 26</div>
+      <div class="tl-content"><strong>Leaked.</strong> Draft blog post describing Mythos found in unsecured public cache. Fortune magazine reviews it before removal. Anthropic confirms the model exists and is in early access testing.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">Apr 7</div>
+      <div class="tl-content"><strong>Official announcement.</strong> Anthropic formally announces Claude Mythos Preview alongside Project Glasswing — a coordinated initiative to use the model's capabilities defensively to secure critical software.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">Apr 7</div>
+      <div class="tl-content"><strong>Google Cloud.</strong> Mythos Preview made available in Private Preview to select Google Cloud customers via Vertex AI as part of Project Glasswing.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">Apr 13</div>
+      <div class="tl-content"><strong>Independent evaluation.</strong> The UK AI Security Institute confirms Mythos is the first AI model to complete their full network takeover simulation — a test no previous model had passed.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">Apr 17</div>
+      <div class="tl-content"><strong>Government response.</strong> US Treasury and Federal Reserve hold emergency meetings with heads of five major banks to assess financial sector exposure to AI-driven cyber threats.</div>
+    </div>
+  </div>
+
+  <h2>Project Glasswing: Using Mythos to Defend, Not Attack</h2>
+  <p>Anthropic's response to their own discovery was to launch <strong style="color:var(--cream);">Project Glasswing</strong> — a coordinated initiative to deploy Mythos Preview specifically to help find and fix vulnerabilities before malicious actors can exploit them. Rather than shelving the model or releasing it publicly, they chose a third path: controlled deployment for defence.</p>
+
+  <p>Access is restricted to a small group of critical infrastructure operators, cybersecurity firms, and vetted partners. Anthropic has offered up to $100 million in usage credits to partners and is coordinating closely with government stakeholders. CrowdStrike, a founding member of the security coalition, described the model as fundamentally reshaping what's possible in both offensive and defensive cybersecurity.</p>
+
+  <blockquote>
+    <p>The same frontier models that expand the attack surface give defenders a capability advantage that did not exist a year ago — discovering vulnerabilities, detecting threats, and responding to incidents faster than ever before.</p>
+    <cite>— Anthropic, Project Glasswing announcement</cite>
+  </blockquote>
+
+  <p>Anthropic's position is nuanced: they believe that in the long run, powerful AI will benefit defenders more than attackers, because defenders have more resources, infrastructure, and incentive to use these tools systematically. But they acknowledge the transition period is dangerous — and that releasing Mythos publicly before defences are in place would hand attackers a significant asymmetric advantage.</p>
+
+  <h2>What This Means for Businesses and Individuals</h2>
+  <p>It is tempting to view Claude Mythos as a story about elite AI researchers and government security agencies — a world away from everyday business owners and entrepreneurs. That would be a mistake.</p>
+
+  <p>The capabilities Mythos demonstrated will not remain exclusive to Anthropic for long. Anthropic itself has acknowledged that similar capabilities from other AI providers are likely within months. The question is not whether AI-powered vulnerability discovery will become widespread — it is how quickly, and whether defences will keep pace.</p>
+
+  <div class="tip-row">
+    <div class="tip-icon">🔒</div>
+    <p><strong>For business owners:</strong> If you run a website, store customer data, or use cloud services, your attack surface is real. Review your hosting provider's security practices, ensure software and plugins are updated, use strong authentication, and consider a basic security audit if you haven't had one recently.</p>
+  </div>
+
+  <div class="tip-row">
+    <div class="tip-icon">🛡️</div>
+    <p><strong>For developers:</strong> The same AI that finds vulnerabilities can help you fix them. Models like Mythos (and future public equivalents) will make automated security scanning standard practice. Building security review into your development workflow now is the right preparation.</p>
+  </div>
+
+  <div class="tip-row">
+    <div class="tip-icon">📡</div>
+    <p><strong>For everyone:</strong> Keep software updated. Use a password manager. Enable two-factor authentication everywhere. These fundamentals become more important, not less, as automated exploit tools become more capable.</p>
+  </div>
+
+  <div class="section-ornament">◆ ◆ ◆</div>
+
+  <h2 style="border:none; margin-top:0; display:block;">The Bigger Picture: A New Phase in AI Development</h2>
+  <p>Claude Mythos represents something more significant than a powerful new model. It marks a moment where AI capabilities crossed a threshold that required a genuinely different response — not a press release and a product launch, but a coordinated effort involving governments, financial institutions, and cybersecurity firms.</p>
+  <p>Anthropic's decision to restrict the model rather than release it is itself notable. It reflects a belief — controversial in some quarters — that the responsible path is not always the most commercially aggressive one. Whether that decision holds as competitive pressure mounts remains to be seen.</p>
+  <p>What is certain is this: the AI systems being built today are no longer just productivity tools. They are consequential infrastructure — with the power to secure or threaten the software that the modern world runs on. Understanding them, even at a high level, is no longer optional for anyone serious about operating in the digital economy.</p>
+
+  <div class="cta-box">
+    <h3>Want to Understand How AI Affects Your Business?</h3>
+    <p>NeeAr Ventures offers focused digital strategy sessions to help you navigate the AI landscape with clarity — and make decisions that protect and grow your business.</p>
+    <a href="index.html#contact" class="btn-primary">Book a Consultation</a>
+  </div>
+
+  <div class="share-row">
+    <span class="share-label">Share:</span>
+    <button class="share-btn" onclick="copyLink()">Copy Link</button>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://neerarventures.com/blog-claude-mythos.html" target="_blank" class="share-btn">Facebook</a>
+    <a href="https://twitter.com/intent/tweet?url=https://neerarventures.com/blog-claude-mythos.html&text=Claude+Mythos%3A+The+AI+Too+Dangerous+to+Release" target="_blank" class="share-btn">Twitter / X</a>
+  </div>
+
+  <div class="tags-row">
+    <span class="tags-label">Topics:</span>
+    <span class="tag">Claude Mythos</span>
+    <span class="tag">Anthropic</span>
+    <span class="tag">AI Security</span>
+    <span class="tag">Cybersecurity</span>
+    <span class="tag">Project Glasswing</span>
+    <span class="tag">AI News</span>
+    <span class="tag">Deep Dive</span>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:arjun@neearventures.com">Email Us</a>
+  </div>
+</footer>
+
+<script>
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => btn.textContent = 'Copy Link', 2000);
+  });
+}
+</script>
+</body>
+</html>
