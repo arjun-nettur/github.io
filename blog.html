@@ -149,23 +149,23 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
 <section class="blog-section">
 
   <!-- FEATURED — update this block whenever you publish a new post -->
-  <a class="featured-post" href="blog-twiai-ep1.html">
-    <div class="featured-img">
-      <div class="featured-img-icon">◈</div>
-      <div class="featured-series-badge">📡 This Week in AI · Ep. 1</div>
+  <a class="featured-post" href="blog-twiai-ep2.html">
+  <div class="featured-img">
+    <div class="featured-img-icon">◇</div>
+    <div class="featured-series-badge">📡 This Week in AI · Ep. 2</div>
+  </div>
+  <div class="featured-body">
+    <div class="featured-label">✦ Latest Post</div>
+    <div class="featured-title">OpenAI Cracks, Google Goes to War, and AI Agents Enter the Office</div>
+    <p class="featured-excerpt">OpenAI misses revenue targets and rattles markets. Google signs a classified Pentagon deal. AI agents land inside Slack and Salesforce. EU delays its AI rulebook. And Big Tech bets $600B on infrastructure.</p>
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
+      <span style="font-size:0.75rem;color:var(--muted);">Apr 29, 2026</span>
+      <span style="font-size:0.75rem;color:var(--muted);">· 9 min read</span>
+      <span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;">This Week in AI · Ep. 2</span>
     </div>
-    <div class="featured-body">
-      <div class="featured-label">✦ Latest Post</div>
-      <div class="featured-title">AI Gets Dangerous, Ambitious, and Very Expensive</div>
-      <p class="featured-excerpt">Anthropic's model triggers emergency government meetings. Meta launches Muse Spark. OpenAI eyes $100B in ad revenue. AI pricing collapses. Five stories that matter — explained for entrepreneurs.</p>
-      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
-        <span style="font-size:0.75rem;color:var(--muted);">Apr 20, 2026</span>
-        <span style="font-size:0.75rem;color:var(--muted);">· 8 min read</span>
-        <span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;">This Week in AI · Ep. 1</span>
-      </div>
-      <span class="read-more-link">Read Full Article →</span>
-    </div>
-  </a>
+    <span class="read-more-link">Read Full Article →</span>
+  </div>
+</a>
 
   <!-- Series header shown only when filtering by ai-series -->
   <div id="seriesHeader" style="display:none;">
@@ -223,6 +223,18 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
    ===================================================== */
 
 const posts = [
+  {
+  id: 9,
+  title: "OpenAI Cracks, Google Goes to War, and AI Agents Enter the Office",
+  excerpt: "OpenAI misses revenue targets. Google signs a Pentagon AI deal. AI agents enter Slack. EU delays its AI Act. $600B infrastructure bet.",
+  category: "ai-series",
+  date: "Apr 29, 2026",
+  read: "9 min read",
+  icon: "◇",
+  file: "blog-twiai-ep2.html",
+  series: "This Week in AI",
+  episode: "Ep. 2"
+},
   {
   id: 8,
   title: "Claude Mythos: The AI Too Dangerous to Release to the Public",
