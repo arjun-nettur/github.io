@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>This Week in AI — Episode 2 | NeeAr Ventures</title>
+<meta name="description" content="OpenAI misses revenue targets and shakes markets. Google signs a classified Pentagon AI deal. The EU AI Act deadline slips. AI agents enter the workplace. Big Tech bets $600B on infrastructure. This Week in AI — Episode 2.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --navy: #0d1f35; --navy-light: #162d47; --gold: #b8963e; --gold-light: #d4ad5c; --cream: #f5f0e8; --text: #e8e0d0; --muted: #8a9ab0; }
+html { scroll-behavior: smooth; }
+body { background: var(--navy); color: var(--text); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
+
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(13,31,53,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(184,150,62,0.2); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--cream); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.6rem; letter-spacing: 0.16em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; }
+.nav-cta:hover { background: var(--gold); color: var(--navy); }
+
+.article-hero { padding: 9rem 4vw 4rem; background: linear-gradient(135deg, var(--navy) 50%, var(--navy-light) 100%); position: relative; overflow: hidden; text-align: center; }
+.article-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(184,150,62,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.series-badge { display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(184,150,62,0.1); border: 1px solid rgba(184,150,62,0.3); padding: 0.35rem 1rem; margin-bottom: 1.2rem; }
+.series-badge .series-name { font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+.series-badge .series-ep { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); border-left: 1px solid rgba(184,150,62,0.3); padding-left: 0.6rem; }
+.article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 300; color: var(--cream); line-height: 1.12; margin-bottom: 1rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.article-title em { font-style: italic; color: var(--gold); }
+.article-subtitle { font-size: 0.95rem; color: var(--muted); line-height: 1.75; max-width: 580px; margin: 0 auto 1.8rem; }
+.article-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; flex-wrap: wrap; }
+.meta-dot { color: rgba(184,150,62,0.4); }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.6rem auto; }
+
+.article-wrap { max-width: 760px; margin: 0 auto; padding: 3.5rem 4vw 6rem; }
+
+.issue-summary { background: var(--navy-light); border: 1px solid rgba(184,150,62,0.2); padding: 1.5rem 1.8rem; margin-bottom: 3rem; }
+.issue-summary .summary-label { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 500; }
+.summary-items { display: flex; flex-direction: column; gap: 0.55rem; }
+.summary-item { display: flex; align-items: flex-start; gap: 0.8rem; font-size: 0.86rem; color: var(--muted); }
+.summary-dot { color: var(--gold); flex-shrink: 0; margin-top: 2px; font-size: 0.6rem; }
+
+p { font-size: 0.95rem; line-height: 1.85; color: var(--text); margin-bottom: 1.4rem; }
+
+.story-heading { display: flex; align-items: flex-start; gap: 1rem; margin: 3rem 0 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(184,150,62,0.15); }
+.story-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: rgba(184,150,62,0.25); line-height: 1; flex-shrink: 0; width: 2rem; text-align: center; }
+.story-heading-text { flex: 1; }
+.story-company { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; font-weight: 500; }
+.story-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--cream); line-height: 1.2; }
+
+.impact-row { display: flex; gap: 0.5rem; margin: 0.8rem 0 1rem; flex-wrap: wrap; }
+.impact-tag { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.2rem 0.65rem; font-weight: 500; }
+.tag-high { background: rgba(220,60,60,0.12); color: #e07070; border: 1px solid rgba(220,60,60,0.25); }
+.tag-medium { background: rgba(184,150,62,0.1); color: var(--gold); border: 1px solid rgba(184,150,62,0.25); }
+.tag-low { background: rgba(80,140,200,0.1); color: #7ab0d4; border: 1px solid rgba(80,140,200,0.2); }
+
+.takeaway { background: rgba(184,150,62,0.06); border-left: 3px solid var(--gold); padding: 1rem 1.3rem; margin: 1.2rem 0 0.5rem; }
+.takeaway .t-label { font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; font-weight: 500; }
+.takeaway p { font-size: 0.86rem; color: var(--muted); margin: 0; }
+
+.stat-callout { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; background: var(--navy-light); border: 1px solid rgba(184,150,62,0.15); padding: 1.5rem; margin: 1.8rem 0; }
+.stat-item { text-align: center; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--gold); line-height: 1; }
+.stat-label { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; max-width: 120px; line-height: 1.4; }
+
+.insight-card { background: var(--navy-light); border: 1px solid rgba(184,150,62,0.18); border-left: 3px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.4rem 0; }
+.insight-card .card-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 500; }
+.insight-card p { font-size: 0.87rem; color: var(--muted); margin: 0; }
+
+blockquote { background: rgba(184,150,62,0.05); border: 1px solid rgba(184,150,62,0.2); padding: 1.8rem 2rem; margin: 2rem 0; position: relative; }
+blockquote::before { content: '\201C'; font-family: 'Cormorant Garamond', serif; font-size: 5rem; color: rgba(184,150,62,0.12); position: absolute; top: -10px; left: 16px; line-height: 1; }
+blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--cream); margin: 0; padding-top: 0.5rem; line-height: 1.6; font-weight: 300; }
+blockquote cite { display: block; font-size: 0.7rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.9rem; font-style: normal; }
+
+.section-ornament { text-align: center; color: rgba(184,150,62,0.3); letter-spacing: 12px; font-size: 0.9rem; margin: 3rem 0; }
+
+.editors-take { background: var(--navy-light); border: 1px solid rgba(184,150,62,0.2); padding: 2rem; margin: 3rem 0; }
+.editors-take .et-label { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 500; }
+.editors-take p { font-size: 0.93rem; color: var(--text); font-style: italic; line-height: 1.85; margin: 0; }
+
+.series-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; border-top: 1px solid rgba(184,150,62,0.15); border-bottom: 1px solid rgba(184,150,62,0.15); margin: 3rem 0; flex-wrap: wrap; gap: 1rem; }
+.series-nav-link { font-size: 0.76rem; color: var(--muted); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.3s; display: flex; align-items: center; gap: 0.5rem; }
+.series-nav-link:hover { color: var(--gold); }
+.series-nav-center { font-size: 0.7rem; color: rgba(184,150,62,0.5); letter-spacing: 0.2em; text-transform: uppercase; }
+
+.tags-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(184,150,62,0.12); }
+.tags-label { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.2em; text-transform: uppercase; margin-right: 0.3rem; }
+.tag { background: rgba(22,45,71,0.8); border: 1px solid rgba(184,150,62,0.18); padding: 0.22rem 0.75rem; font-size: 0.72rem; color: var(--muted); }
+
+.cta-box { background: var(--navy-light); border: 1px solid rgba(184,150,62,0.25); padding: 2rem; text-align: center; margin-top: 3rem; }
+.cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--cream); font-weight: 300; margin-bottom: 0.5rem; }
+.cta-box p { font-size: 0.86rem; color: var(--muted); margin-bottom: 1.3rem; }
+.btn-primary { background: var(--gold); color: var(--navy); padding: 0.75rem 2rem; font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border: none; display: inline-block; transition: background 0.3s; }
+.btn-primary:hover { background: var(--gold-light); }
+
+.share-row { display: flex; gap: 1rem; align-items: center; margin-top: 1.8rem; flex-wrap: wrap; }
+.share-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.2em; text-transform: uppercase; }
+.share-btn { background: transparent; border: 1px solid rgba(184,150,62,0.25); color: var(--muted); padding: 0.35rem 1rem; font-size: 0.75rem; font-family: 'Jost', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; }
+.share-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: var(--muted); }
+.footer-links { display: flex; gap: 1.8rem; }
+.footer-links a { font-size: 0.76rem; color: var(--muted); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold); }
+
+@media (max-width: 640px) { .nav-links { display: none; } .article-title { font-size: 2rem; } .stat-callout { gap: 1.2rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Online Services &amp; Consultation</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#why">About</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="article-hero">
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+  <div class="series-badge">
+    <span class="series-name">This Week in AI</span>
+    <span class="series-ep">Episode 2</span>
+  </div>
+  <h1 class="article-title">OpenAI Cracks, Google Goes to War, and AI Agents <em>Enter the Office</em></h1>
+  <p class="article-subtitle">OpenAI misses revenue targets and rattles markets. Google signs a classified Pentagon deal. The EU delays its AI rulebook. AI agents land inside Slack and Salesforce. And Big Tech bets $600B on infrastructure.</p>
+  <div class="article-meta">
+    <span>Arjun Nettur</span>
+    <span class="meta-dot">◆</span>
+    <span>April 29, 2026</span>
+    <span class="meta-dot">◆</span>
+    <span>9 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>This Week in AI · Ep. 2</span>
+  </div>
+  <div class="divider-line"></div>
+</div>
+
+<div class="article-wrap">
+
+  <div class="issue-summary">
+    <div class="summary-label">📋 In This Issue — 5 Stories</div>
+    <div class="summary-items">
+      <div class="summary-item"><span class="summary-dot">◆</span><span><strong style="color:var(--text);">OpenAI misses revenue targets</strong> — CFO warns the company may struggle to pay for its own data centre deals</span></div>
+      <div class="summary-item"><span class="summary-dot">◆</span><span><strong style="color:var(--text);">Google signs a classified Pentagon AI deal</strong> — 560+ employees revolt in open letter</span></div>
+      <div class="summary-item"><span class="summary-dot">◆</span><span><strong style="color:var(--text);">OpenAI Workspace Agents go live</strong> — AI agents now running inside Slack, Salesforce, and Google Drive</span></div>
+      <div class="summary-item"><span class="summary-dot">◆</span><span><strong style="color:var(--text);">EU AI Act deadline pushed back 16 months</strong> — but compliance obligations remain unchanged</span></div>
+      <div class="summary-item"><span class="summary-dot">◆</span><span><strong style="color:var(--text);">Big Tech bets $600 billion on AI infrastructure</strong> — the race shifts from models to physical compute</span></div>
+    </div>
+  </div>
+
+  <p>Welcome back to <strong style="color:var(--cream);">This Week in AI</strong>. Episode 2 arrives with a story that nobody in the AI industry wanted to see — and that everyone should pay close attention to. The narrative that AI is an unstoppable growth machine just got its first serious crack. Here is what happened, and what it actually means.</p>
+
+  <!-- STORY 1 -->
+  <div class="story-heading">
+    <div class="story-num">1</div>
+    <div class="story-heading-text">
+      <div class="story-company">OpenAI</div>
+      <div class="story-title">The Revenue Miss That Shook the Entire AI Industry</div>
+    </div>
+  </div>
+  <div class="impact-row">
+    <span class="impact-tag tag-high">🔴 High Impact</span>
+    <span class="impact-tag tag-medium">Business</span>
+    <span class="impact-tag tag-medium">Markets</span>
+  </div>
+
+  <p>On April 28, the Wall Street Journal reported that OpenAI has missed its own internal revenue and user growth targets — not once, but multiple times in early 2026. The company also fell short of its goal of reaching one billion weekly active ChatGPT users by the end of 2025. The shortfall has sparked serious internal concern, with CFO Sarah Friar warning colleagues that if revenue doesn't accelerate, OpenAI may struggle to honour its massive data centre commitments.</p>
+
+  <div class="stat-callout">
+    <div class="stat-item"><div class="stat-num">~15%</div><div class="stat-label">Reported revenue shortfall vs internal targets</div></div>
+    <div class="stat-item"><div class="stat-num">$300B</div><div class="stat-label">Five-year compute deal with Oracle at risk</div></div>
+    <div class="stat-item"><div class="stat-num">-10%</div><div class="stat-label">SoftBank stock drop in Tokyo after the report</div></div>
+    <div class="stat-item"><div class="stat-num">$852B</div><div class="stat-item-label">OpenAI's current private valuation</div></div>
+  </div>
+
+  <p>The ripple effect across markets was immediate. Oracle dropped over 5%, CoreWeave fell 5.4%, and Nvidia — the most closely watched AI infrastructure stock — was the worst performer among the Magnificent 7 that day. SoftBank, one of OpenAI's biggest investors, dropped around 10% in Tokyo. OpenAI and Friar issued a joint statement calling the framing "ridiculous," insisting they are fully aligned on continued infrastructure investment. The market disagreed.</p>
+
+  <div class="insight-card">
+    <div class="card-label">The Underlying Tension</div>
+    <p>The problem is structural. OpenAI has locked in enormous compute contracts — including a reported $300 billion, five-year deal with Oracle — that require revenue to keep scaling. But competition from Anthropic (now ahead in annualised revenue at ~$30B) and Google's Gemini has slowed ChatGPT's growth. The company is heading toward an IPO while navigating this tension between aggressive spending and slower-than-expected returns.</p>
+  </div>
+
+  <div class="takeaway">
+    <div class="t-label">💡 What This Means For You</div>
+    <p>The AI tools you rely on are being built by companies under real financial pressure. Understanding which AI providers are on solid financial ground — and which are racing to justify massive valuations — matters when choosing tools to build your business on. Anthropic's stronger revenue position is worth noting.</p>
+  </div>
+
+  <!-- STORY 2 -->
+  <div class="story-heading">
+    <div class="story-num">2</div>
+    <div class="story-heading-text">
+      <div class="story-company">Google</div>
+      <div class="story-title">Classified Pentagon Deal — and a Revolt from Within</div>
+    </div>
+  </div>
+  <div class="impact-row">
+    <span class="impact-tag tag-high">🔴 High Impact</span>
+    <span class="impact-tag tag-medium">Policy</span>
+    <span class="impact-tag tag-medium">Ethics</span>
+  </div>
+
+  <p>Google has signed a classified agreement with the US Department of Defense to deploy AI technologies in sensitive military contexts. The deal's details remain undisclosed, but its existence was confirmed by reporting this week. The implications — both strategic and ethical — are significant.</p>
+
+  <p>Inside Google, the reaction was swift. Over 560 employees signed an open letter to CEO Sundar Pichai urging him to refuse military AI applications. The letter stated directly: <em>"We want to see AI benefit humanity, not being used in inhumane or extremely harmful ways."</em> This mirrors the Project Maven controversy of 2018, when thousands of Google employees protested a Pentagon drone AI contract — ultimately leading Google to not renew it. This time, the company has clearly chosen a different path.</p>
+
+  <div class="insight-card">
+    <div class="card-label">The Broader Context</div>
+    <p>Google is not alone. AI's integration into defence and intelligence operations is accelerating across every major lab. Anthropic's Dario Amodei reportedly walked out of a Pentagon meeting eight weeks ago over AI safety concerns. The question of where AI companies draw the line on military applications is becoming one of the defining issues of the industry.</p>
+  </div>
+
+  <div class="takeaway">
+    <div class="t-label">💡 What This Means For You</div>
+    <p>The AI tools used in consumer and enterprise products are increasingly built by companies with defence contracts. For businesses with ethical supply-chain policies, this is now a relevant due-diligence consideration when choosing AI vendors.</p>
+  </div>
+
+  <!-- STORY 3 -->
+  <div class="story-heading">
+    <div class="story-num">3</div>
+    <div class="story-heading-text">
+      <div class="story-company">OpenAI</div>
+      <div class="story-title">Workspace Agents Are Here — AI Now Lives Inside Your Work Tools</div>
+    </div>
+  </div>
+  <div class="impact-row">
+    <span class="impact-tag tag-medium">🟡 Medium Impact</span>
+    <span class="impact-tag tag-low">Productivity</span>
+    <span class="impact-tag tag-low">Agents</span>
+  </div>
+
+  <p>On April 22, OpenAI launched <strong style="color:var(--cream);">Workspace Agents</strong> in ChatGPT — the formal successor to custom GPTs for organisations. These agents are powered by Codex, run in the cloud, and plug directly into Slack, Google Drive, Microsoft 365, Salesforce, Notion, and Atlassian. Pricing is free until May 6, then moves to credit-based billing on Business and Enterprise plans.</p>
+
+  <p>This is a meaningful shift in how AI integrates with work. Rather than being a standalone tool you open in a separate tab, AI agents now live inside the software teams already use — receiving tasks, executing multi-step workflows, and reporting back, without human oversight at each step.</p>
+
+  <div class="insight-card">
+    <div class="card-label">The "Plumber's AI" Moment</div>
+    <p>This same week, Avoca — a startup that uses AI to answer missed calls for plumbing and home service businesses — raised $125 million across multiple rounds and hit unicorn status at a $1 billion valuation. The lesson: AI agents solving very specific, boring business problems are already generating serious commercial value. The opportunity isn't just for big enterprises.</p>
+  </div>
+
+  <div class="takeaway">
+    <div class="t-label">💡 What This Means For You</div>
+    <p>If your business uses Slack, Google Workspace, or Salesforce, AI agents are now available inside those tools. The window to experiment before competitors do is open right now — and it closes quickly. Start with one workflow: answering customer emails, triaging support tickets, or summarising meeting notes.</p>
+  </div>
+
+  <!-- STORY 4 -->
+  <div class="story-heading">
+    <div class="story-num">4</div>
+    <div class="story-heading-text">
+      <div class="story-company">EU Regulation</div>
+      <div class="story-title">The AI Act Deadline Slips — But the Compliance Work Doesn't</div>
+    </div>
+  </div>
+  <div class="impact-row">
+    <span class="impact-tag tag-medium">🟡 Medium Impact</span>
+    <span class="impact-tag tag-low">Regulation</span>
+    <span class="impact-tag tag-low">Compliance</span>
+  </div>
+
+  <p>EU negotiators voted on April 28 to delay the hardest deadlines of the EU AI Act. The original August 2, 2026 deadline for high-risk AI systems is now likely to shift to December 2027 for standalone systems and August 2028 for AI embedded in regulated products. Formal adoption is expected by July 2026.</p>
+
+  <p>Here is the critical point that many businesses are missing: <strong style="color:var(--cream);">the obligations did not change. Only the timeline did.</strong> Conformity assessments, technical documentation, CE marking, and incident reporting are all still required. You have bought time — not a pass.</p>
+
+  <blockquote>
+    <p>Only 43% of organisations deploying AI have a formal governance policy. The majority are running autonomous AI systems with no framework for accountability, risk thresholds, or outcome ownership.</p>
+    <cite>— PEX Report 2025/26</cite>
+  </blockquote>
+
+  <div class="takeaway">
+    <div class="t-label">💡 What This Means For You</div>
+    <p>If you use AI in any customer-facing, HR, or high-stakes decision-making context and you serve EU customers, use the extra runway to build a proper AI vendor inventory. List every AI tool you use, what it does, and what oversight you have over its outputs. The companies doing this now will be in a far better position than those who wait.</p>
+  </div>
+
+  <!-- STORY 5 -->
+  <div class="story-heading">
+    <div class="story-num">5</div>
+    <div class="story-heading-text">
+      <div class="story-company">Big Tech</div>
+      <div class="story-title">$600 Billion in AI Infrastructure — The Race Shifts to Physical Compute</div>
+    </div>
+  </div>
+  <div class="impact-row">
+    <span class="impact-tag tag-medium">🟡 Medium Impact</span>
+    <span class="impact-tag tag-low">Infrastructure</span>
+    <span class="impact-tag tag-low">Industry</span>
+  </div>
+
+  <p>As Big Tech enters earnings season, the single biggest theme is infrastructure spending. Total AI-related capital expenditure across major tech companies is forecast to hit $600–665 billion in 2026 — a figure that dwarfs any previous technology buildout. Google alone is projected to spend up to $185 billion, Amazon $200 billion, Microsoft $140 billion, and Meta up to $135 billion.</p>
+
+  <p>The strategic insight here is fundamental: the AI race is no longer primarily about who has the best model. It is increasingly about who controls the physical infrastructure — the chips, data centres, power supply, and cooling capacity — that models run on. Access to compute is becoming a strategic moat that smaller players cannot easily replicate.</p>
+
+  <div class="stat-callout">
+    <div class="stat-item"><div class="stat-num">$200B</div><div class="stat-label">Amazon AI capex 2026</div></div>
+    <div class="stat-item"><div class="stat-num">$185B</div><div class="stat-label">Google AI capex 2026</div></div>
+    <div class="stat-item"><div class="stat-num">$140B</div><div class="stat-label">Microsoft AI capex 2026</div></div>
+    <div class="stat-item"><div class="stat-num">$135B</div><div class="stat-label">Meta AI capex 2026</div></div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t-label">💡 What This Means For You</div>
+    <p>For businesses and entrepreneurs, this infrastructure arms race has a silver lining: it drives down the cost of AI inference. The more compute that gets built, the cheaper it becomes to use. The companies spending $200 billion today are, in effect, subsidising your ability to build AI-powered products tomorrow.</p>
+  </div>
+
+  <div class="section-ornament">◆ ◆ ◆</div>
+
+  <div class="editors-take">
+    <div class="et-label">✦ Editor's Take — Arjun Nettur</div>
+    <p>Episode 2 tells a more complicated story than Episode 1. Last week was about breathtaking capabilities. This week is about the messy economics underneath them. OpenAI missing targets doesn't mean AI is slowing down — it means the hype is colliding with the reality of running an enormously expensive business. The AI companies that will matter in five years are those that can turn genuine capability into sustainable revenue. That race is just beginning, and the leaderboard is shifting faster than most people expected.</p>
+  </div>
+
+  <div class="cta-box">
+    <h3>Want to Build an AI Strategy for Your Business?</h3>
+    <p>NeeAr Ventures offers focused consultation sessions to help you identify the right AI tools, avoid costly mistakes, and build with clarity in a fast-moving landscape.</p>
+    <a href="index.html#contact" class="btn-primary">Book a Consultation</a>
+  </div>
+
+  <div class="series-nav">
+    <a href="blog-twiai-ep1.html" class="series-nav-link">← Episode 1</a>
+    <span class="series-nav-center">This Week in AI</span>
+    <a href="blog.html" class="series-nav-link">All Episodes →</a>
+  </div>
+
+  <div class="share-row">
+    <span class="share-label">Share:</span>
+    <button class="share-btn" onclick="copyLink()">Copy Link</button>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://neerarventures.com/blog-twiai-ep2.html" target="_blank" class="share-btn">Facebook</a>
+    <a href="https://twitter.com/intent/tweet?url=https://neerarventures.com/blog-twiai-ep2.html&text=This+Week+in+AI+%E2%80%94+Episode+2" target="_blank" class="share-btn">Twitter / X</a>
+  </div>
+
+  <div class="tags-row">
+    <span class="tags-label">Topics:</span>
+    <span class="tag">This Week in AI</span>
+    <span class="tag">OpenAI</span>
+    <span class="tag">Google</span>
+    <span class="tag">AI Agents</span>
+    <span class="tag">EU AI Act</span>
+    <span class="tag">AI Infrastructure</span>
+    <span class="tag">AI Business</span>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:arjun@neearventures.com">Email Us</a>
+  </div>
+</footer>
+
+<script>
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => btn.textContent = 'Copy Link', 2000);
+  });
+}
+</script>
+</body>
+</html>
