@@ -3,13 +3,6 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
-<link rel="manifest" href="site.webmanifest">
 <title>Blog — NeeAr Ventures</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -122,8 +115,6 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html#services">Services</a></li>
-    <li><a href="index.html#why">About</a></li>
     <li><a href="blog.html" class="active">Blog</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
@@ -134,7 +125,7 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
   <div class="page-label">Insights &amp; Updates</div>
   <h1 class="page-title">NeeAr Ventures Blog</h1>
   <div class="divider"></div>
-  <p class="page-desc">Strategies, insights, and updates on online income, digital business, AI, and the entrepreneurial journey. </p>
+  <p class="page-desc">Strategies, insights, and updates on online income, digital business, AI, and the entrepreneurial journey — published twice a week.</p>
 </div>
 
 <div class="blog-controls">
@@ -156,23 +147,23 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
 <section class="blog-section">
 
   <!-- FEATURED — update this block whenever you publish a new post -->
-  <a class="featured-post" href="blog-twiai-ep2.html">
-  <div class="featured-img">
-    <div class="featured-img-icon">◇</div>
-    <div class="featured-series-badge">📡 This Week in AI · Ep. 2</div>
-  </div>
-  <div class="featured-body">
-    <div class="featured-label">✦ Latest Post</div>
-    <div class="featured-title">OpenAI Cracks, Google Goes to War, and AI Agents Enter the Office</div>
-    <p class="featured-excerpt">OpenAI misses revenue targets and rattles markets. Google signs a classified Pentagon deal. AI agents land inside Slack and Salesforce. EU delays its AI rulebook. And Big Tech bets $600B on infrastructure.</p>
-    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
-      <span style="font-size:0.75rem;color:var(--muted);">Apr 29, 2026</span>
-      <span style="font-size:0.75rem;color:var(--muted);">· 9 min read</span>
-      <span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;">This Week in AI · Ep. 2</span>
+  <a class="featured-post" href="blog-twiai-ep1.html">
+    <div class="featured-img">
+      <div class="featured-img-icon">◈</div>
+      <div class="featured-series-badge">📡 This Week in AI · Ep. 1</div>
     </div>
-    <span class="read-more-link">Read Full Article →</span>
-  </div>
-</a>
+    <div class="featured-body">
+      <div class="featured-label">✦ Latest Post</div>
+      <div class="featured-title">AI Gets Dangerous, Ambitious, and Very Expensive</div>
+      <p class="featured-excerpt">Anthropic's model triggers emergency government meetings. Meta launches Muse Spark. OpenAI eyes $100B in ad revenue. AI pricing collapses. Five stories that matter — explained for entrepreneurs.</p>
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
+        <span style="font-size:0.75rem;color:var(--muted);">Apr 20, 2026</span>
+        <span style="font-size:0.75rem;color:var(--muted);">· 8 min read</span>
+        <span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;">This Week in AI · Ep. 1</span>
+      </div>
+      <span class="read-more-link">Read Full Article →</span>
+    </div>
+  </a>
 
   <!-- Series header shown only when filtering by ai-series -->
   <div id="seriesHeader" style="display:none;">
@@ -211,7 +202,7 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
    2. Add a NEW ENTRY at the TOP of the posts[] array below.
 
    FIELDS:
-     id       — increment by 1 (next is 8)
+     id       — increment by 1 (next is 5)
      title    — post headline
      excerpt  — 1-2 sentence summary shown on card
      category — "income" | "business" | "strategy" |
@@ -230,33 +221,36 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
    ===================================================== */
 
 const posts = [
-  {
-  id: 9,
-  title: "OpenAI Cracks, Google Goes to War, and AI Agents Enter the Office",
-  excerpt: "OpenAI misses revenue targets. Google signs a Pentagon AI deal. AI agents enter Slack. EU delays its AI Act. $600B infrastructure bet.",
-  category: "ai-series",
-  date: "Apr 29, 2026",
-  read: "9 min read",
-  icon: "◇",
-  file: "blog-twiai-ep2.html",
-  series: "This Week in AI",
-  episode: "Ep. 2"
-},
-  {
-  id: 8,
-  title: "Claude Mythos: The AI Too Dangerous to Release to the Public",
-  excerpt: "Anthropic's most powerful model can hack every major OS overnight — and they've chosen not to release it. Here's what it means for you.",
-  category: "digital",
-  date: "Apr 24, 2026",
-  read: "10 min read",
-  icon: "◈",
-  file: "blog-claude-mythos.html"
-},
 
-  /* ── THIS WEEK IN AI SERIES ──
-     Add new episodes at the TOP of this block          */
+  /* ══════════════════════════════════════════════════
+     ADD NEW POSTS AT THE TOP OF THIS ARRAY
+     Next id to use: 5
+  ══════════════════════════════════════════════════ */
+
   {
-    id: 7,
+    id: 4,
+    title: "OpenAI Cracks, Google Goes to War, and AI Agents Enter the Office",
+    excerpt: "OpenAI misses revenue targets. Google signs a Pentagon AI deal. AI agents enter Slack. EU delays its AI Act. $600B infrastructure bet.",
+    category: "ai-series",
+    date: "Apr 29, 2026",
+    read: "9 min read",
+    icon: "◇",
+    file: "blog-twiai-ep2.html",
+    series: "This Week in AI",
+    episode: "Ep. 2"
+  },
+  {
+    id: 3,
+    title: "Claude Mythos: The AI Too Dangerous to Release to the Public",
+    excerpt: "Anthropic's most powerful model can hack every major OS overnight — and they've chosen not to release it. Here's what it means for you.",
+    category: "digital",
+    date: "Apr 24, 2026",
+    read: "10 min read",
+    icon: "◈",
+    file: "blog-claude-mythos.html"
+  },
+  {
+    id: 2,
     title: "AI Gets Dangerous, Ambitious, and Very Expensive",
     excerpt: "Anthropic triggers emergency govt meetings, Meta launches Muse Spark, OpenAI eyes $100B in ads, and AI pricing collapses. 5 stories explained.",
     category: "ai-series",
@@ -267,10 +261,8 @@ const posts = [
     series: "This Week in AI",
     episode: "Ep. 1"
   },
-
-  /* ── ONLINE INCOME ──                                */
   {
-    id: 6,
+    id: 1,
     title: "7 Proven Strategies to Build Real Online Income — Starting Part-Time",
     excerpt: "A strategic breakdown of 7 proven online income models — domaining, freelancing, consulting, blogging, digital products, and more.",
     category: "income",
@@ -278,51 +270,6 @@ const posts = [
     read: "12 min read",
     icon: "◇",
     file: "blog-online-income.html"
-  },
-
-  /* ── EXISTING POSTS ──
-     NOTE: These link to files you'll need to create
-     using blog-post-template.html, or remove them
-     from this array until you're ready.               */
-  {
-    id: 5,
-    title: "5 Signs Your Business Needs a Digital Strategy Now",
-    excerpt: "Most businesses wait too long before building a digital strategy. Here are 5 clear signals you shouldn't ignore.",
-    category: "digital",
-    date: "Apr 10, 2025",
-    read: "4 min read",
-    icon: "◈",
-    file: "blog-digital-strategy.html"
-  },
-  {
-    id: 4,
-    title: "How Online Consultation is Changing the Advisory World",
-    excerpt: "Remote consultation has moved from a convenience to a competitive advantage. We explore how businesses are adapting.",
-    category: "business",
-    date: "Apr 5, 2025",
-    read: "6 min read",
-    icon: "◇",
-    file: "blog-online-consultation.html"
-  },
-  {
-    id: 3,
-    title: "Building a Brand That Speaks Before You Do",
-    excerpt: "A strong brand identity communicates your value instantly. Learn the fundamentals of brand development.",
-    category: "strategy",
-    date: "Mar 28, 2025",
-    read: "5 min read",
-    icon: "✦",
-    file: "blog-brand-development.html"
-  },
-  {
-    id: 2,
-    title: "NeeAr Ventures — Q1 2025 Highlights",
-    excerpt: "A look back at what we accomplished in Q1 and what's coming next for our clients and community.",
-    category: "updates",
-    date: "Mar 15, 2025",
-    read: "3 min read",
-    icon: "◉",
-    file: "blog-q1-2025.html"
   },
 
 ];
