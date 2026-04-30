@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+<title>Money Mindset & Financial Basics — NeeAr Ventures</title>
+<meta name="description" content="Your salary is not your financial destiny. A practical guide to building the right money mindset and mastering the basics of personal finance — written for everyday Indians in 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --navy: #0d1f35; --navy-light: #162d47; --gold: #b8963e; --gold-light: #d4ad5c; --cream: #f5f0e8; --text: #e8e0d0; --muted: #8a9ab0; }
+html { scroll-behavior: smooth; }
+body { background: var(--navy); color: var(--text); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
+
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(13,31,53,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(184,150,62,0.2); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--cream); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.6rem; letter-spacing: 0.16em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; }
+.nav-cta:hover { background: var(--gold); color: var(--navy); }
+
+.article-hero { padding: 9rem 4vw 4.5rem; background: linear-gradient(135deg, var(--navy) 50%, var(--navy-light) 100%); position: relative; overflow: hidden; text-align: center; }
+.article-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(184,150,62,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 1.2rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.article-title em { font-style: italic; color: var(--gold); }
+.article-subtitle { font-size: 1rem; color: var(--muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; }
+.article-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; flex-wrap: wrap; }
+.meta-dot { color: rgba(184,150,62,0.4); }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+.article-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 4vw 6rem; }
+.article-lead { font-size: 1.05rem; line-height: 1.9; color: var(--text); margin-bottom: 2.5rem; padding-left: 1.2rem; border-left: 2px solid var(--gold); }
+p { font-size: 0.95rem; line-height: 1.85; color: var(--text); margin-bottom: 1.4rem; }
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; color: var(--cream); margin: 3.5rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 1px solid rgba(184,150,62,0.2); display: flex; align-items: center; gap: 0.8rem; }
+.num-badge { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--gold); color: var(--navy); border-radius: 50%; font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; flex-shrink: 0; }
+
+.insight-card { background: var(--navy-light); border: 1px solid rgba(184,150,62,0.18); border-left: 3px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.4rem 0 1.8rem; }
+.insight-card .card-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 500; }
+.insight-card p { font-size: 0.87rem; color: var(--muted); margin: 0; }
+
+.tip-row { display: flex; gap: 1rem; background: rgba(22,45,71,0.6); border: 1px solid rgba(184,150,62,0.12); padding: 1.1rem 1.3rem; margin: 1.4rem 0; align-items: flex-start; }
+.tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.tip-row p { font-size: 0.87rem; margin: 0; color: var(--muted); }
+.tip-row strong { color: var(--gold-light); }
+
+.stat-callout { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; background: var(--navy-light); border: 1px solid rgba(184,150,62,0.15); padding: 1.8rem; margin: 2rem 0; }
+.stat-item { text-align: center; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold); line-height: 1; }
+.stat-label { font-size: 0.66rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; max-width: 130px; line-height: 1.4; }
+
+blockquote { background: rgba(184,150,62,0.05); border: 1px solid rgba(184,150,62,0.2); padding: 1.8rem 2rem; margin: 2.5rem 0; position: relative; }
+blockquote::before { content: '\201C'; font-family: 'Cormorant Garamond', serif; font-size: 5rem; color: rgba(184,150,62,0.12); position: absolute; top: -10px; left: 16px; line-height: 1; }
+blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; color: var(--cream); margin: 0; padding-top: 0.5rem; line-height: 1.6; font-weight: 300; }
+blockquote cite { display: block; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.9rem; font-style: normal; }
+
+.rule-box { background: var(--navy-light); border: 1px solid rgba(184,150,62,0.2); padding: 1.5rem 1.8rem; margin: 1.8rem 0; }
+.rule-box .rule-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--cream); margin-bottom: 1rem; }
+.rule-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem; }
+.rule-pct { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--gold); min-width: 60px; line-height: 1; }
+.rule-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.5; }
+.rule-desc strong { color: var(--text); }
+
+.section-ornament { text-align: center; color: rgba(184,150,62,0.3); letter-spacing: 12px; font-size: 0.9rem; margin: 3rem 0; }
+
+.tags-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(184,150,62,0.12); }
+.tags-label { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.2em; text-transform: uppercase; margin-right: 0.3rem; }
+.tag { background: rgba(22,45,71,0.8); border: 1px solid rgba(184,150,62,0.18); padding: 0.22rem 0.75rem; font-size: 0.72rem; color: var(--muted); }
+
+.share-row { display: flex; gap: 1rem; align-items: center; margin-top: 2rem; flex-wrap: wrap; }
+.share-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.2em; text-transform: uppercase; }
+.share-btn { background: transparent; border: 1px solid rgba(184,150,62,0.25); color: var(--muted); padding: 0.35rem 1rem; font-size: 0.75rem; font-family: 'Jost', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; }
+.share-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: var(--muted); }
+.footer-links { display: flex; gap: 1.8rem; }
+.footer-links a { font-size: 0.76rem; color: var(--muted); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold); }
+
+@media (max-width: 640px) { .nav-links { display: none; } .article-title { font-size: 2rem; } .stat-callout { gap: 1.2rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Online Services &amp; Consultation</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="article-hero">
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+  <div class="article-category">Money Mindset · Financial Basics</div>
+  <h1 class="article-title">Your Salary Is Not Your <em>Financial Destiny</em></h1>
+  <p class="article-subtitle">Most people earn for decades and never build wealth. The difference isn't how much you earn — it's how you think about money and what you do with it.</p>
+  <div class="article-meta">
+    <span>Arjun Nettur</span>
+    <span class="meta-dot">◆</span>
+    <span>April 30, 2026</span>
+    <span class="meta-dot">◆</span>
+    <span>9 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>Money Mindset</span>
+  </div>
+  <div class="divider-line"></div>
+</div>
+
+<div class="article-wrap">
+
+  <p class="article-lead">
+    Here is a fact that most people find uncomfortable: your monthly income has very little to do with whether you will be financially secure. India has millions of people earning ₹1 lakh a month who are one medical emergency away from financial crisis — and thousands of people earning ₹25,000 who are quietly building real wealth. The difference is not luck. It is mindset, habits, and a basic understanding of how money actually works.
+  </p>
+
+  <p>This article is not about get-rich-quick schemes or complex investment strategies. It is about the foundational thinking and simple habits that separate people who struggle financially from those who don't — regardless of their income level. If you get these basics right, everything else becomes easier.</p>
+
+  <div class="stat-callout">
+    <div class="stat-item"><div class="stat-num">51%</div><div class="stat-label">of Indians are unprepared for retirement</div></div>
+    <div class="stat-item"><div class="stat-num">₹12L</div><div class="stat-label">Annual income now effectively tax-free under new regime</div></div>
+    <div class="stat-item"><div class="stat-num">85.5</div><div class="stat-label">India's Aspiration Index — flat for first time in 8 years</div></div>
+  </div>
+
+  <p>These numbers tell a clear story. Indians are aspirational — but financial readiness is not keeping pace with ambition. The BankBazaar Aspiration Index 2025–26 shows that for the first time in eight years, financial aspirations have stopped rising. In an environment of job uncertainty, rising costs, and AI-driven career disruption, people are shifting focus from aggressive growth to financial stability. Which means now — more than ever — getting the basics right matters.</p>
+
+  <!-- 1 -->
+  <h2><span class="num-badge">1</span> The Most Important Shift: From Spender to Builder</h2>
+  <p>Most people follow this sequence with money: earn → spend → save whatever is left. This is the single most common financial mistake. Whatever is left after spending is almost always nothing — because spending expands to fill available income. This is called lifestyle inflation, and it silently destroys wealth-building across every income level.</p>
+  <p>The shift that changes everything is simple: <strong style="color:var(--cream);">earn → save first → spend what remains.</strong> Pay yourself before you pay anyone else. Automate a transfer to savings or investment the moment your salary arrives. Even ₹2,000 a month, invested consistently from age 25, becomes a significant corpus by 50 — because of compounding.</p>
+
+  <blockquote>
+    <p>Do not save what is left after spending. Instead, spend what is left after saving.</p>
+    <cite>— Warren Buffett</cite>
+  </blockquote>
+
+  <div class="tip-row">
+    <div class="tip-icon">⚡</div>
+    <p><strong>Action step:</strong> Set up an automatic transfer of at least 10% of your income to a separate savings account on the day your salary arrives. Don't think about it — automate it. Future you will thank present you.</p>
+  </div>
+
+  <!-- 2 -->
+  <h2><span class="num-badge">2</span> The 50/30/20 Rule — A Budget That Actually Works</h2>
+  <p>Most people avoid budgeting because it feels restrictive. But a budget is not a cage — it is a map. Without one, you have no idea where your money is going, which means you have no control over where it ends up.</p>
+  <p>The simplest framework that works for most Indians is the <strong style="color:var(--cream);">50/30/20 Rule</strong>:</p>
+
+  <div class="rule-box">
+    <div class="rule-title">The 50/30/20 Framework</div>
+    <div class="rule-row">
+      <div class="rule-pct">50%</div>
+      <div class="rule-desc"><strong>Needs</strong> — rent, groceries, EMIs, utilities, transport, insurance. Non-negotiables.</div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-pct">30%</div>
+      <div class="rule-desc"><strong>Wants</strong> — dining out, entertainment, shopping, subscriptions. Enjoy life, but consciously.</div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-pct">20%</div>
+      <div class="rule-desc"><strong>Savings & Investments</strong> — emergency fund, SIPs, PPF, NPS. This is your future self's salary.</div>
+    </div>
+  </div>
+
+  <p>If your needs exceed 50%, that is your most urgent financial signal. It means either your income needs to grow or your fixed costs need to be reduced — and both are worth working on actively.</p>
+
+  <div class="tip-row">
+    <div class="tip-icon">📱</div>
+    <p><strong>Track it simply:</strong> You don't need a complex app. A weekly 10-minute review of your bank statement is enough to understand your spending patterns. Most people who do this for the first time are genuinely shocked by what they discover.</p>
+  </div>
+
+  <!-- 3 -->
+  <h2><span class="num-badge">3</span> Build Your Emergency Fund First — Before Everything Else</h2>
+  <p>Before you invest a single rupee in stocks, mutual funds, or any asset — you need an emergency fund. This is 3 to 6 months of your living expenses, sitting in a liquid account you can access within 24 hours.</p>
+  <p>This is not an investment. It is not meant to grow. It is insurance against life — a job loss, a medical emergency, a sudden repair, a family crisis. Without it, any financial disruption forces you to either take on debt or liquidate investments at the worst possible time.</p>
+
+  <div class="insight-card">
+    <div class="card-label">Why This Matters in India Specifically</div>
+    <p>India's social security net is thin. There is no unemployment benefit. Medical costs can be catastrophic without adequate insurance. A single hospitalisation can wipe out years of savings. An emergency fund is not optional — it is the foundation everything else is built on.</p>
+  </div>
+
+  <div class="tip-row">
+    <div class="tip-icon">🏦</div>
+    <p><strong>Where to keep it:</strong> A high-interest savings account or a liquid mutual fund. Not a fixed deposit (premature withdrawal penalties), not in cash at home, and absolutely not in stocks. It needs to be accessible immediately, with no loss of principal.</p>
+  </div>
+
+  <!-- 4 -->
+  <h2><span class="num-badge">4</span> Understand the Difference Between Assets and Liabilities</h2>
+  <p>One of the most clarifying ideas in personal finance comes from Robert Kiyosaki's <em>Rich Dad Poor Dad</em> — and it is deceptively simple. An <strong style="color:var(--cream);">asset</strong> puts money into your pocket. A <strong style="color:var(--cream);">liability</strong> takes money out of your pocket.</p>
+  <p>By this definition, your car is almost always a liability — it loses value, consumes fuel, requires insurance and maintenance. A rental property that generates income is an asset. A mutual fund that grows is an asset. Your own home sits in a grey area — it does not generate income, but it can appreciate.</p>
+  <p>Most people spend their entire working lives accumulating liabilities — bigger cars, newer phones, lifestyle upgrades — while calling them assets. Financial freedom comes from deliberately and consistently building actual assets: investments, skills that generate income, businesses, or property that pays for itself.</p>
+
+  <div class="insight-card">
+    <div class="card-label">The Indian Context</div>
+    <p>Gold is culturally important in India — but as an investment, it is largely a store of value, not a wealth builder. Equity mutual funds via SIP, PPF, NPS, and real estate (for rental income) are far more effective long-term wealth-building tools for most Indians.</p>
+  </div>
+
+  <!-- 5 -->
+  <h2><span class="num-badge">5</span> Compounding: The Only "Get Rich" Strategy That Actually Works</h2>
+  <p>Albert Einstein reportedly called compound interest the eighth wonder of the world. Whether or not he said it, the idea is correct. Compounding is simply earning returns on your returns — and over time, it produces results that feel almost impossible.</p>
+
+  <div class="stat-callout">
+    <div class="stat-item"><div class="stat-num">₹14K</div><div class="stat-label">Monthly SIP needed to reach ₹10L in 5 years at 12% returns</div></div>
+    <div class="stat-item"><div class="stat-num">3–5</div><div class="stat-label">Years when compounding visibly accelerates</div></div>
+    <div class="stat-item"><div class="stat-num">12%</div><div class="stat-label">Approximate long-term average return of Indian equity markets</div></div>
+  </div>
+
+  <p>The critical variable in compounding is not how much you invest — it is <em>how early you start</em>. ₹5,000 per month invested from age 25 at 12% annual returns becomes approximately ₹1.76 crore by age 55. The same ₹5,000 per month starting at 35 becomes only ₹50 lakhs. Ten years of delay costs you over ₹1.25 crore — not because you invested less, but because compounding had less time to work.</p>
+
+  <div class="tip-row">
+    <div class="tip-icon">📈</div>
+    <p><strong>Start with a SIP:</strong> A Systematic Investment Plan in an index fund or diversified equity mutual fund is the simplest, most accessible way for most Indians to start compounding. You can begin with as little as ₹500 per month. The exact fund matters less than starting now.</p>
+  </div>
+
+  <!-- 6 -->
+  <h2><span class="num-badge">6</span> Debt: The Good, The Bad, and The Dangerous</h2>
+  <p>Not all debt is equal. A home loan taken at a reasonable rate for a property that appreciates is very different from a personal loan taken to fund a holiday or a credit card balance rolled over at 36% annual interest.</p>
+  <p>The rule of thumb is straightforward: <strong style="color:var(--cream);">if the debt funds an asset, it may be acceptable. If it funds consumption, it is a trap.</strong> High-interest consumer debt — credit cards, personal loans, buy-now-pay-later schemes — should be treated as a financial emergency and eliminated before any other financial goal is pursued.</p>
+
+  <div class="insight-card">
+    <div class="card-label">The EMI Trap</div>
+    <p>India's BNPL (Buy Now Pay Later) and easy EMI culture has made it very easy to live beyond your means. When your monthly EMI obligations exceed 30–35% of your take-home pay, you are in a dangerous position. A single income disruption — job loss, illness, pay cut — can cause a cascade of missed payments, penalties, and credit damage that takes years to recover from.</p>
+  </div>
+
+  <!-- 7 -->
+  <h2><span class="num-badge">7</span> The Mindset Shift That Changes Everything</h2>
+  <p>All of the above — budgeting, saving, investing, avoiding debt — requires one foundational mindset shift. You must stop thinking of money as something that happens to you and start treating it as something you actively direct.</p>
+  <p>Most people have a <strong style="color:var(--cream);">scarcity mindset</strong> around money — they believe there is never enough, that wealth is for other people, that their circumstances are fixed. This mindset leads to reactive financial behaviour: spending impulsively, avoiding financial planning, feeling powerless.</p>
+  <p>An <strong style="color:var(--cream);">abundance mindset</strong> doesn't mean pretending you have more than you do. It means believing that your financial situation is improvable through knowledge, consistent action, and time. It means making decisions based on long-term outcomes, not short-term emotion. It means treating every rupee as a decision, not just a transaction.</p>
+
+  <div class="tip-row">
+    <div class="tip-icon">📚</div>
+    <p><strong>Two books to start with:</strong> <em>The Psychology of Money</em> by Morgan Housel — the clearest explanation of how behaviour drives financial outcomes. And <em>Let's Talk Money</em> by Monika Halan — written specifically for Indians, practical and direct. Read these before any investment guide.</p>
+  </div>
+
+  <div class="section-ornament">◆ ◆ ◆</div>
+
+  <h2 style="border:none; margin-top:0; display:block;">Where to Begin — Right Now</h2>
+  <p>Financial basics are not complicated. They are just consistently ignored. The gap between knowing and doing is where most people's financial futures are lost.</p>
+  <p>Here is a simple starting checklist — not aspirational, but immediately actionable:</p>
+
+  <div class="insight-card">
+    <div class="card-label">✅ Your Financial Starter Checklist</div>
+    <p>
+      1. Track your expenses for one month — every rupee.<br><br>
+      2. Calculate your 50/30/20 split on your current income.<br><br>
+      3. Open a separate savings account for your emergency fund.<br><br>
+      4. Set up an auto-transfer of at least 10% of income on salary day.<br><br>
+      5. Start a SIP — even ₹500/month — in a diversified index fund.<br><br>
+      6. List all your debts with their interest rates. Prioritise eliminating the highest-rate ones first.<br><br>
+      7. Read one personal finance book this month.
+    </p>
+  </div>
+
+  <p>You don't need a financial advisor to do any of these. You need clarity, consistency, and the decision to start. The best time to build financial foundations was ten years ago. The second best time is today.</p>
+
+  <div class="share-row">
+    <span class="share-label">Share:</span>
+    <button class="share-btn" onclick="copyLink()">Copy Link</button>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://neerarventures.com/blog-money-mindset.html" target="_blank" class="share-btn">Facebook</a>
+    <a href="https://twitter.com/intent/tweet?url=https://neerarventures.com/blog-money-mindset.html&text=Your+Salary+Is+Not+Your+Financial+Destiny" target="_blank" class="share-btn">Twitter / X</a>
+  </div>
+
+  <div class="tags-row">
+    <span class="tags-label">Topics:</span>
+    <span class="tag">Money Mindset</span>
+    <span class="tag">Personal Finance</span>
+    <span class="tag">Financial Basics</span>
+    <span class="tag">Investing</span>
+    <span class="tag">Budgeting</span>
+    <span class="tag">India Finance</span>
+    <span class="tag">Wealth Building</span>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:arjun@neearventures.com">Email Us</a>
+  </div>
+</footer>
+
+<script>
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => btn.textContent = 'Copy Link', 2000);
+  });
+}
+</script>
+</body>
+</html>
