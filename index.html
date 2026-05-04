@@ -103,7 +103,11 @@
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
-    @media (max-width: 768px) { .contact-wrap { grid-template-columns: 1fr; gap: 2.5rem; } }
+    @media (max-width: 768px) {
+      .contact-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+      footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+      .footer-links { flex-wrap: wrap; gap: 1rem; }
+    }
     @media (max-width: 640px) { .nav-links { display: none; } .hero-title { font-size: 2.4rem; } }
   </style>
 </head>
