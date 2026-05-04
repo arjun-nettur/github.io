@@ -97,18 +97,24 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 .empty-state { display: none; text-align: center; padding: 4rem; color: var(--muted); }
 .empty-icon { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: rgba(184,150,62,0.25); margin-bottom: 1rem; }
 
+/* SOCIAL ICONS */
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); display: flex; align-items: center; justify-content: center; color: var(--muted); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold); color: var(--gold); background: rgba(184,150,62,0.08); }
+
 /* FOOTER */
 footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .footer-copy { font-size: 0.76rem; color: var(--muted); }
 .footer-links { display: flex; gap: 1.8rem; }
 .footer-links a { font-size: 0.76rem; color: var(--muted); text-decoration: none; transition: color 0.3s; }
 .footer-links a:hover { color: var(--gold); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
 
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .featured-post { grid-template-columns: 1fr; }
   .featured-img { min-height: 160px; }
   .blog-grid { grid-template-columns: 1fr; }
+  .footer-social { display: none; }
 }
 </style>
 </head>
@@ -155,24 +161,24 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
 <section class="blog-section">
 
   <!-- FEATURED — update this block whenever you publish a new post -->
- <a class="featured-post" href="blog-personal-brand.html">
-  <div class="featured-img">
-    <div class="featured-img-icon">◉</div>
-    <div class="featured-series-badge">Personal Brand · Online Presence</div>
-  </div>
-  <div class="featured-body">
-    <div class="featured-label">✦ Latest Post</div>
-    <div class="featured-title">Your Personal Brand Is Already Speaking — The Question Is What It's Saying</div>
-    <p class="featured-excerpt">Over 90% of recruiters and clients Google you before reaching out. 7 steps, checklists, and a 90-day plan to build a personal brand that opens doors.</p>
-    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
-      <span style="font-size:0.75rem;color:var(--muted);">May 3, 2026</span>
-      <span style="font-size:0.75rem;color:var(--muted);">· 10 min read</span>
-      <span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;">Personal Brand</span>
+  <a class="featured-post" href="blog-personal-brand.html">
+    <div class="featured-img">
+      <div class="featured-img-icon">◉</div>
+      <div class="featured-series-badge">Personal Brand · Online Presence</div>
     </div>
-    <span class="read-more-link">Read Full Article →</span>
-  </div>
-</a>
-  
+    <div class="featured-body">
+      <div class="featured-label">✦ Latest Post</div>
+      <div class="featured-title">Your Personal Brand Is Already Speaking — The Question Is What It's Saying</div>
+      <p class="featured-excerpt">Over 90% of recruiters and clients Google you before reaching out. 7 steps, checklists, and a 90-day plan to build a personal brand that opens doors.</p>
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
+        <span style="font-size:0.75rem;color:var(--muted);">May 3, 2026</span>
+        <span style="font-size:0.75rem;color:var(--muted);">· 10 min read</span>
+        <span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;">Personal Brand</span>
+      </div>
+      <span class="read-more-link">Read Full Article →</span>
+    </div>
+  </a>
+
   <!-- Series header shown only when filtering by ai-series -->
   <div id="seriesHeader" style="display:none;">
     <div class="series-section-header">
@@ -189,13 +195,31 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
 
 </section>
 
+<!-- FOOTER — matching index.html exactly -->
 <footer>
   <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="blog.html">Blog</a>
     <a href="index.html#contact">Contact</a>
-    <a href="mailto:arjun@neearventures.com">Email Us</a>
+    <a href="mailto:info@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://twitter.com/neearventures" target="_blank" class="social-icon" title="Twitter / X">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg>
+    </a>
   </div>
 </footer>
 
@@ -210,17 +234,17 @@ footer { padding: 2.2rem 4vw; border-top: 1px solid rgba(184,150,62,0.15); displ
    2. Add a NEW ENTRY at the TOP of the posts[] array below.
 
    FIELDS:
-     id       — increment by 1 (next is 5)
+     id       — increment by 1 (next is 9)
      title    — post headline
      excerpt  — 1-2 sentence summary shown on card
      category — "income" | "business" | "strategy" |
                  "digital" | "updates" | "ai-series"
-     date     — "Apr 22, 2026"
+     date     — "May 5, 2026"
      read     — "7 min read"
      icon     — "◈" | "◇" | "✦" | "◉" | "⬡" | "❖"
      file     — "your-filename.html"
      series   — (for ai-series only) "This Week in AI"
-     episode  — (for ai-series only) "Ep. 2"
+     episode  — (for ai-series only) "Ep. 3"
 
    3. Also update the FEATURED block in the HTML above
       to point to your newest post.
@@ -232,36 +256,38 @@ const posts = [
 
   /* ══════════════════════════════════════════════════
      ADD NEW POSTS AT THE TOP OF THIS ARRAY
-     Next id to use: 5
+     Next id to use: 9
   ══════════════════════════════════════════════════ */
-  { id: 8, 
-   title: "Your Personal Brand Is Already Speaking — The Question Is What It's Saying", 
-   excerpt: "Over 90% of clients Google you before reaching out. 7 steps, checklists, and a 90-day plan.", 
-   category: "strategy", 
-   date: "May 3, 2026", 
-   read: "10 min read", 
-   icon: "◉", 
-   file: "blog-personal-brand.html" 
+
+  {
+    id: 8,
+    title: "Your Personal Brand Is Already Speaking — The Question Is What It's Saying",
+    excerpt: "Over 90% of clients Google you before reaching out. 7 steps, checklists, and a 90-day plan.",
+    category: "strategy",
+    date: "May 3, 2026",
+    read: "10 min read",
+    icon: "◉",
+    file: "blog-personal-brand.html"
   },
   {
-  id: 7,
-  title: "The AI Tools That Actually Save Time for Business in 2026",
-  excerpt: "75% of knowledge workers use AI — but most use the wrong tools. A practical guide with a free starter stack.",
-  category: "digital",
-  date: "May 2, 2026",
-  read: "11 min read",
-  icon: "◈",
-  file: "blog-ai-tools-business.html"
+    id: 7,
+    title: "The AI Tools That Actually Save Time for Business in 2026",
+    excerpt: "75% of knowledge workers use AI — but most use the wrong tools. A practical guide with a free starter stack.",
+    category: "digital",
+    date: "May 2, 2026",
+    read: "11 min read",
+    icon: "◈",
+    file: "blog-ai-tools-business.html"
   },
   {
-  id: 6,
-  title: "SEO Has Changed. Here's What Actually Works in 2026.",
-  excerpt: "Keywords alone won't rank your website anymore. 7 SEO strategies that actually work — with a priority checklist.",
-  category: "digital",
-  date: "May 1, 2026",
-  read: "10 min read",
-  icon: "◈",
-  file: "blog-seo-tips-2026.html"
+    id: 6,
+    title: "SEO Has Changed. Here's What Actually Works in 2026.",
+    excerpt: "Keywords alone won't rank your website anymore. 7 SEO strategies that actually work — with a priority checklist.",
+    category: "digital",
+    date: "May 1, 2026",
+    read: "10 min read",
+    icon: "◈",
+    file: "blog-seo-tips-2026.html"
   },
   {
     id: 5,
