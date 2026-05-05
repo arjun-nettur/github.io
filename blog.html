@@ -23,7 +23,7 @@
   --border:      #e2d9cc;
   --navy:        #0d1f35;
   --navy-light:  #162d47;
-  --navy-muted:  #2e4a6a;
+  --navy-muted:  #1e3a5a;
   --gold:        #9a7a2e;
   --gold-light:  #b8963e;
   --gold-pale:   rgba(154,122,46,0.1);
@@ -50,13 +50,13 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 .page-header::before { content: ''; position: absolute; right: -5%; top: -20%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.06) 0%, transparent 65%); pointer-events: none; }
 .page-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; }
 .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 400; color: var(--navy); margin-bottom: 0.9rem; }
-.page-desc { color: var(--navy-muted); font-size: 0.95rem; line-height: 1.8; max-width: 520px; font-weight: 400; }
+.page-desc { color: var(--navy-muted); font-size: 1rem; line-height: 1.8; max-width: 520px; font-weight: 400; }
 .divider { width: 44px; height: 1px; background: var(--gold); margin: 1.3rem 0; }
 
 /* CONTROLS */
 .blog-controls { padding: 1.5rem 4vw; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 1rem; background: var(--surface); }
 .filter-tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-.filter-tab { padding: 0.38rem 1rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--border); color: var(--navy-muted); background: var(--bg); cursor: pointer; transition: all 0.3s; font-family: 'Jost', sans-serif; font-weight: 400; }
+.filter-tab { padding: 0.38rem 1rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--border); color: var(--navy); background: var(--bg); cursor: pointer; transition: all 0.3s; font-family: 'Jost', sans-serif; font-weight: 500; }
 .filter-tab:hover, .filter-tab.active { border-color: var(--gold); color: var(--gold); background: var(--gold-pale); }
 .filter-tab.series-tab { border-color: rgba(154,122,46,0.4); color: var(--gold); }
 .filter-tab.series-tab:hover, .filter-tab.series-tab.active { background: var(--gold-pale); border-color: var(--gold); }
@@ -75,8 +75,8 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 .featured-series-badge { position: absolute; top: 1rem; left: 1rem; background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.4); color: var(--gold); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.7rem; font-weight: 500; }
 .featured-body { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
 .featured-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; font-weight: 600; }
-.featured-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--navy); line-height: 1.2; margin-bottom: 0.9rem; font-weight: 400; }
-.featured-excerpt { font-size: 0.9rem; color: var(--navy-muted); line-height: 1.8; margin-bottom: 1.3rem; flex: 1; font-weight: 400; }
+.featured-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--navy); line-height: 1.2; margin-bottom: 0.9rem; font-weight: 600; }
+.featured-excerpt { font-size: 0.92rem; color: var(--navy-muted); line-height: 1.8; margin-bottom: 1.3rem; flex: 1; font-weight: 400; }
 .read-more-link { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--gold); font-size: 0.77rem; letter-spacing: 0.1em; text-transform: uppercase; transition: gap 0.3s; font-weight: 500; }
 .featured-post:hover .read-more-link { gap: 0.8rem; }
 
@@ -84,7 +84,7 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 .series-section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border); }
 .series-section-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--navy); font-weight: 400; }
 .series-section-badge { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.3); color: var(--gold); padding: 0.2rem 0.7rem; font-weight: 500; }
-.series-ep-count { font-size: 0.72rem; color: var(--navy-muted); margin-left: auto; }
+.series-ep-count { font-size: 0.78rem; color: var(--navy-muted); margin-left: auto; font-weight: 400; }
 
 /* BLOG GRID */
 .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
@@ -99,9 +99,9 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 .ep-badge { position: absolute; bottom: 0.7rem; right: 0.7rem; font-size: 0.6rem; color: var(--navy-muted); letter-spacing: 0.15em; text-transform: uppercase; }
 .blog-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
 .blog-meta { display: flex; gap: 0.8rem; margin-bottom: 0.7rem; align-items: center; flex-wrap: wrap; }
-.blog-date, .blog-read { font-size: 0.72rem; color: var(--navy-muted); }
-.blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--navy); line-height: 1.3; margin-bottom: 0.65rem; font-weight: 400; }
-.blog-card-excerpt { font-size: 0.84rem; color: var(--navy-muted); line-height: 1.7; flex: 1; font-weight: 400; }
+.blog-date, .blog-read { font-size: 0.78rem; color: var(--navy-muted); font-weight: 400; }
+.blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--navy); line-height: 1.3; margin-bottom: 0.65rem; font-weight: 600; }
+.blog-card-excerpt { font-size: 0.88rem; color: var(--navy-muted); line-height: 1.75; flex: 1; font-weight: 400; }
 .card-read-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--gold); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 1.1rem; transition: gap 0.3s; font-weight: 500; }
 .blog-card:hover .card-read-link { gap: 0.75rem; }
 
