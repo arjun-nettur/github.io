@@ -105,6 +105,16 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 .card-read-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--gold); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 1.1rem; transition: gap 0.3s; font-weight: 500; }
 .blog-card:hover .card-read-link { gap: 0.75rem; }
 
+/* ALL ARTICLES HEADING */
+.all-articles-header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 0.9rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); }
+.all-articles-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); letter-spacing: 0.02em; }
+.all-articles-count { font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.08em; font-weight: 400; }
+
+/* ALL POSTS HEADING */
+.all-posts-header { display: flex; align-items: center; justify-content: space-between; padding: 1.8rem 0 1rem; margin-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+.all-posts-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); }
+.all-posts-count { font-size: 0.78rem; color: var(--navy-muted); font-weight: 400; }
+
 /* EMPTY */
 .empty-state { display: none; text-align: center; padding: 4rem; color: var(--navy-muted); }
 .empty-icon { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: rgba(154,122,46,0.3); margin-bottom: 1rem; }
@@ -175,7 +185,8 @@ footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-co
 
 <section class="blog-section">
 
-  <!-- FEATURED — update this block whenever you publish a new post -->
+  <!-- FEATURED — only shown on default All view, hidden during filter/search -->
+  <div id="featuredBlock">
   <a class="featured-post" href="blog-2026may-twiai-ep3.html">
     <div class="featured-img">
       <div class="featured-img-icon">◈</div>
@@ -193,6 +204,13 @@ footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-co
       <span class="read-more-link">Read Full Article →</span>
     </div>
   </a>
+  </div>
+
+  <!-- ALL POSTS HEADING -->
+  <div class="all-posts-header" id="allPostsHeader">
+    <div class="all-posts-title">Explore All Posts</div>
+    <div class="all-posts-count" id="allPostsCount"></div>
+  </div>
 
   <!-- Series header shown only when filtering by ai-series -->
   <div id="seriesHeader" style="display:none;">
@@ -356,25 +374,50 @@ const posts = [
 ];
 
 let activeFilter = 'all';
+let activeSearch = '';
 
 function renderPosts(list) {
   const grid = document.getElementById('blogGrid');
   const empty = document.getElementById('emptyState');
   const seriesHeader = document.getElementById('seriesHeader');
   const epCount = document.getElementById('epCount');
+  const featuredBlock = document.getElementById('featuredBlock');
+  const allPostsHeader = document.getElementById('allPostsHeader');
+  const allPostsCount = document.getElementById('allPostsCount');
+  const allPostsTitle = document.querySelector('.all-posts-title');
+
+  // Hide featured block when filtering or searching
+  const isDefaultView = activeFilter === 'all' && activeSearch === '';
+  featuredBlock.style.display = isDefaultView ? 'block' : 'none';
 
   if (!list.length) {
     grid.innerHTML = '';
     empty.style.display = 'block';
     seriesHeader.style.display = 'none';
+    allPostsCount.textContent = 'No posts found';
+    allPostsTitle.textContent = 'Explore All Posts';
     return;
   }
 
   empty.style.display = 'none';
+
+  // Series header — only for ai-series filter
   const isSeriesFilter = activeFilter === 'ai-series';
   seriesHeader.style.display = isSeriesFilter ? 'block' : 'none';
   if (isSeriesFilter) {
     epCount.textContent = list.length + ' episode' + (list.length !== 1 ? 's' : '');
+  }
+
+  // Update heading and count
+  allPostsCount.textContent = list.length + ' post' + (list.length !== 1 ? 's' : '');
+  if (activeSearch !== '') {
+    allPostsTitle.textContent = 'Search Results';
+  } else if (isSeriesFilter) {
+    allPostsTitle.textContent = 'This Week in AI';
+  } else if (activeFilter !== 'all') {
+    allPostsTitle.textContent = activeFilter.charAt(0).toUpperCase() + activeFilter.slice(1);
+  } else {
+    allPostsTitle.textContent = 'Explore All Posts';
   }
 
   grid.innerHTML = list.map(p => `
@@ -402,18 +445,20 @@ function renderPosts(list) {
 
 function filterPosts(cat, btn) {
   activeFilter = cat;
+  activeSearch = '';
+  document.querySelector('.search-box input').value = '';
   document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
   renderPosts(cat === 'all' ? posts : posts.filter(p => p.category === cat));
 }
 
 function searchPosts(query) {
-  const q = query.toLowerCase();
+  activeSearch = query.toLowerCase();
   const base = activeFilter === 'all' ? posts : posts.filter(p => p.category === activeFilter);
-  renderPosts(base.filter(p =>
-    p.title.toLowerCase().includes(q) ||
-    p.excerpt.toLowerCase().includes(q) ||
-    (p.series && p.series.toLowerCase().includes(q))
+  renderPosts(activeSearch === '' ? base : base.filter(p =>
+    p.title.toLowerCase().includes(activeSearch) ||
+    p.excerpt.toLowerCase().includes(activeSearch) ||
+    (p.series && p.series.toLowerCase().includes(activeSearch))
   ));
 }
 
