@@ -105,11 +105,6 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 .card-read-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--gold); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 1.1rem; transition: gap 0.3s; font-weight: 500; }
 .blog-card:hover .card-read-link { gap: 0.75rem; }
 
-/* ALL ARTICLES HEADING */
-.all-articles-header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 0.9rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); }
-.all-articles-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); letter-spacing: 0.02em; }
-.all-articles-count { font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.08em; font-weight: 400; }
-
 /* ALL POSTS HEADING */
 .all-posts-header { display: flex; align-items: center; justify-content: space-between; padding: 1.8rem 0 1rem; margin-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
 .all-posts-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); }
@@ -123,7 +118,7 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 .social-icon { width: 32px; height: 32px; border: 1px solid var(--border); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.5); text-decoration: none; transition: all 0.3s; }
 .social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); background: rgba(184,150,62,0.08); }
 
-/* FOOTER — kept dark navy matching index.html */
+/* FOOTER */
 footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
 .footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
@@ -174,6 +169,8 @@ footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-co
     <button class="filter-tab"            onclick="filterPosts('business', this)">Business</button>
     <button class="filter-tab"            onclick="filterPosts('strategy', this)">Strategy</button>
     <button class="filter-tab"            onclick="filterPosts('digital', this)">Digital</button>
+    <button class="filter-tab"            onclick="filterPosts('science', this)">Science &amp; Tech</button>
+    <button class="filter-tab"            onclick="filterPosts('finance', this)">Finance</button>
     <button class="filter-tab"            onclick="filterPosts('updates', this)">Updates</button>
     <button class="filter-tab series-tab" onclick="filterPosts('ai-series', this)">📡 This Week in AI</button>
   </div>
@@ -187,23 +184,23 @@ footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-co
 
   <!-- FEATURED — only shown on default All view, hidden during filter/search -->
   <div id="featuredBlock">
-  <a class="featured-post" href="blog-2026may-emerging-markets.html">
-  <div class="featured-img">
-    <div class="featured-img-icon">◉</div>
-    <div class="featured-series-badge">Emerging Markets · Digital Economy</div>
-  </div>
-  <div class="featured-body">
-    <div class="featured-label">✦ Latest Post</div>
-    <div class="featured-title">The World's Next Growth Engines Are Firing Up</div>
-    <p class="featured-excerpt">Emerging markets grow 4% faster than the global average and account for 40% of global GDP. India, Southeast Asia, and Africa are reshaping global commerce through digital adoption and fintech.</p>
-    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
-      <span style="font-size:0.75rem;color:var(--navy-muted);">May 9, 2026</span>
-      <span style="font-size:0.75rem;color:var(--navy-muted);">· 11 min read</span>
-      <span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;">Emerging Markets</span>
-    </div>
-    <span class="read-more-link">Read Full Article →</span>
-  </div>
-</a>
+    <a class="featured-post" href="blog-2026may-emerging-markets.html">
+      <div class="featured-img">
+        <div class="featured-img-icon">◉</div>
+        <div class="featured-series-badge">Emerging Markets · Digital Economy</div>
+      </div>
+      <div class="featured-body">
+        <div class="featured-label">✦ Latest Post</div>
+        <div class="featured-title">The World's Next Growth Engines Are Firing Up</div>
+        <p class="featured-excerpt">Emerging markets grow 4% faster than the global average and account for 40% of global GDP. India, Southeast Asia, and Africa are reshaping global commerce through digital adoption and fintech.</p>
+        <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
+          <span style="font-size:0.75rem;color:var(--navy-muted);">May 9, 2026</span>
+          <span style="font-size:0.75rem;color:var(--navy-muted);">· 11 min read</span>
+          <span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;">Emerging Markets</span>
+        </div>
+        <span class="read-more-link">Read Full Article →</span>
+      </div>
+    </a>
   </div>
 
   <!-- ALL POSTS HEADING -->
@@ -228,7 +225,7 @@ footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-co
 
 </section>
 
-<!-- FOOTER — dark navy matching index.html -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
   <div class="footer-links">
@@ -259,45 +256,60 @@ footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-co
 <script>
 /* =====================================================
    HOW TO ADD A NEW POST
-   Next id to use: 11
+   Next id to use: 15
+
+   CATEGORIES AVAILABLE:
+   "income"    — Online Income, Freelancing
+   "business"  — Business, AI Tools, Digital Products
+   "strategy"  — Personal Brand, How Things Work
+   "digital"   — SEO, Claude Mythos
+   "science"   — Breakthrough Tech, How Things Work, Quantum
+   "finance"   — Money Mindset, Emerging Markets
+   "updates"   — General updates
+   "ai-series" — This Week in AI episodes
    ===================================================== */
 
 const posts = [
-  { id: 14, 
-   title: "The World's Next Growth Engines Are Firing Up", excerpt: "Emerging markets grow 4% faster than the global average. India, Southeast Asia and Africa are reshaping global commerce through digital adoption and fintech.", 
-   category: "updates", 
-   date: "May 9, 2026", 
-   read: "11 min read", 
-   icon: "◉", 
-   file: "blog-2026may-emerging-markets.html" 
+
+  {
+    id: 14,
+    title: "The World's Next Growth Engines Are Firing Up",
+    excerpt: "Emerging markets grow 4% faster than the global average. India, Southeast Asia and Africa are reshaping global commerce through digital adoption and fintech.",
+    category: "finance",
+    date: "May 9, 2026",
+    read: "11 min read",
+    icon: "◉",
+    file: "blog-2026may-emerging-markets.html"
   },
   {
-  id: 13,
-  title: "Digital Product Ideas That Make Money While You Sleep",
-  excerpt: "The digital goods market crossed $124B in 2026. Create once, sell forever — 6 product ideas with pricing and platform comparison.",
-  category: "business",
-  date: "May 8, 2026",
-  read: "11 min read",
-  icon: "◇",
-  file: "blog-2026may-digital-products.html"
+    id: 13,
+    title: "Digital Product Ideas That Make Money While You Sleep",
+    excerpt: "The digital goods market crossed $124B in 2026. Create once, sell forever — 6 product ideas with pricing and platform comparison.",
+    category: "business",
+    date: "May 8, 2026",
+    read: "11 min read",
+    icon: "◇",
+    file: "blog-2026may-digital-products.html"
   },
-  { id: 12, 
-   title: "Six Complex Ideas Explained Using Nothing But Everyday Analogies", 
-   excerpt: "The internet. AI. Quantum computing. GPS. Blockchain. Encryption. All explained simply — no jargon, no textbook.", 
-   category: "strategy", 
-   date: "May 7, 2026", 
-   read: "10 min read", 
-   icon: "◉", 
-   file: "blog-2026may-how-things-work.html" },
   {
-  id: 11,
-  title: "The 10 Technologies That Will Change Everything in 2026",
-  excerpt: "MIT Technology Review's 25th annual breakthrough list — agentic AI, sodium-ion batteries, next-gen nuclear, gene editing, space stations, quantum computing and more.",
-  category: "updates",
-  date: "May 6, 2026",
-  read: "12 min read",
-  icon: "◈",
-  file: "blog-2026may-breakthrough-tech.html"
+    id: 12,
+    title: "Six Complex Ideas Explained Using Nothing But Everyday Analogies",
+    excerpt: "The internet. AI. Quantum computing. GPS. Blockchain. Encryption. All explained simply — no jargon, no textbook.",
+    category: "science",
+    date: "May 7, 2026",
+    read: "10 min read",
+    icon: "◉",
+    file: "blog-2026may-how-things-work.html"
+  },
+  {
+    id: 11,
+    title: "The 10 Technologies That Will Change Everything in 2026",
+    excerpt: "MIT Technology Review's 25th annual breakthrough list — agentic AI, sodium-ion batteries, next-gen nuclear, gene editing, space stations, quantum computing and more.",
+    category: "science",
+    date: "May 6, 2026",
+    read: "12 min read",
+    icon: "◈",
+    file: "blog-2026may-breakthrough-tech.html"
   },
   {
     id: 10,
@@ -355,7 +367,7 @@ const posts = [
     id: 5,
     title: "Your Salary Is Not Your Financial Destiny",
     excerpt: "7 money mindset shifts and financial basics every Indian should know — with a practical starter checklist.",
-    category: "income",
+    category: "finance",
     date: "Apr 30, 2026",
     read: "9 min read",
     icon: "◇",
@@ -417,11 +429,9 @@ function renderPosts(list) {
   const seriesHeader = document.getElementById('seriesHeader');
   const epCount = document.getElementById('epCount');
   const featuredBlock = document.getElementById('featuredBlock');
-  const allPostsHeader = document.getElementById('allPostsHeader');
   const allPostsCount = document.getElementById('allPostsCount');
   const allPostsTitle = document.querySelector('.all-posts-title');
 
-  // Hide featured block when filtering or searching
   const isDefaultView = activeFilter === 'all' && activeSearch === '';
   featuredBlock.style.display = isDefaultView ? 'block' : 'none';
 
@@ -436,19 +446,22 @@ function renderPosts(list) {
 
   empty.style.display = 'none';
 
-  // Series header — only for ai-series filter
   const isSeriesFilter = activeFilter === 'ai-series';
   seriesHeader.style.display = isSeriesFilter ? 'block' : 'none';
   if (isSeriesFilter) {
     epCount.textContent = list.length + ' episode' + (list.length !== 1 ? 's' : '');
   }
 
-  // Update heading and count
   allPostsCount.textContent = list.length + ' post' + (list.length !== 1 ? 's' : '');
+
   if (activeSearch !== '') {
     allPostsTitle.textContent = 'Search Results';
-  } else if (isSeriesFilter) {
+  } else if (activeFilter === 'ai-series') {
     allPostsTitle.textContent = 'This Week in AI';
+  } else if (activeFilter === 'science') {
+    allPostsTitle.textContent = 'Science & Tech';
+  } else if (activeFilter === 'finance') {
+    allPostsTitle.textContent = 'Finance';
   } else if (activeFilter !== 'all') {
     allPostsTitle.textContent = activeFilter.charAt(0).toUpperCase() + activeFilter.slice(1);
   } else {
@@ -460,7 +473,7 @@ function renderPosts(list) {
       <div class="blog-card-img">
         <div class="blog-card-img-placeholder">${p.icon}</div>
         <div class="blog-tag ${p.category === 'ai-series' ? 'tag-series' : ''}">
-          ${p.category === 'ai-series' ? '📡 AI Series' : p.category}
+          ${p.category === 'ai-series' ? '📡 AI Series' : p.category === 'science' ? 'Science & Tech' : p.category}
         </div>
         ${p.episode ? `<div class="ep-badge">${p.episode}</div>` : ''}
       </div>
