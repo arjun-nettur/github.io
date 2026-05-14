@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+<title>Chapter 1: Be Clear & Specific — Claude Mastery — NeeAr Ventures</title>
+<meta name="description" content="Learn why clarity is everything when working with Claude. The #1 rule for better Claude results: more details = better results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:          #f7f4ef;
+  --bg-alt:      #f0ece4;
+  --surface:     #ffffff;
+  --border:      #e2d9cc;
+  --navy:        #0d1f35;
+  --navy-light:  #162d47;
+  --navy-muted:  #1e3a5a;
+  --gold:        #9a7a2e;
+  --gold-light:  #b8963e;
+  --gold-pale:   rgba(154,122,46,0.1);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* CHAPTER HEADER */
+.chapter-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; text-align: center; }
+.chapter-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.chapter-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; }
+.chapter-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem; }
+.chapter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; color: var(--navy); line-height: 1.15; margin-bottom: 0.8rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.chapter-subtitle { font-size: 1.05rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.chapter-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+/* CONTENT */
+.chapter-content { max-width: 760px; margin: 0 auto; padding: 4rem 4vw 3rem; }
+
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p strong { color: var(--navy); font-weight: 600; }
+
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); margin: 2.5rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); }
+
+h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.8rem; }
+
+/* BLOCKQUOTE */
+blockquote { background: var(--bg-alt); border-left: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 2rem 0; }
+blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--navy); margin: 0; line-height: 1.6; }
+
+/* CODE BLOCKS */
+.code-block { background: var(--navy); color: #e8e0d0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'Courier New', monospace; font-size: 0.88rem; line-height: 1.7; overflow-x: auto; border-radius: 2px; }
+.code-inline { background: var(--bg-alt); color: var(--navy); padding: 0.15rem 0.5rem; font-family: 'Courier New', monospace; font-size: 0.88em; border: 1px solid var(--border); }
+
+/* EXAMPLE BLOCKS */
+.example-block { margin: 2rem 0; }
+.example-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.example-weak { background: #fff5f5; border-left: 4px solid #d93636; padding: 1rem 1.3rem; margin-bottom: 1rem; }
+.example-strong { background: #f0f9f5; border-left: 4px solid #2d7a4f; padding: 1rem 1.3rem; }
+.example-weak .example-label { color: #d93636; }
+.example-strong .example-label { color: #2d7a4f; }
+
+/* KEY INSIGHT CARD */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.8rem 0; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0; line-height: 1.7; }
+
+/* PRACTICE EXERCISE */
+.practice-box { background: var(--surface); border: 2px solid var(--gold); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+.practice-box .box-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--navy); font-weight: 600; margin-bottom: 0.8rem; }
+.practice-box p { font-size: 0.88rem; line-height: 1.7; }
+
+/* TAKEAWAYS */
+.takeaways { background: var(--bg-alt); padding: 2rem 2.5rem; margin: 3rem 0; border-top: 3px solid var(--gold); }
+.takeaways-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--navy); font-weight: 600; margin-bottom: 1.2rem; text-align: center; }
+.takeaways ul { list-style: none; padding: 0; }
+.takeaways li { padding-left: 2rem; position: relative; margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.7; }
+.takeaways li:before { content: '✅'; position: absolute; left: 0; color: var(--gold); }
+
+/* NAVIGATION */
+.chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 2.5rem 0; border-top: 2px solid var(--border); margin-top: 3rem; flex-wrap: wrap; }
+.nav-btn { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--navy); padding: 1rem 1.5rem; border: 1px solid var(--border); background: var(--surface); transition: all 0.3s; flex: 1; min-width: 200px; }
+.nav-btn:hover { border-color: var(--gold); box-shadow: 0 2px 12px rgba(154,122,46,0.1); }
+.nav-btn.prev { justify-content: flex-start; }
+.nav-btn.next { justify-content: flex-end; }
+.nav-btn .nav-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.nav-btn .nav-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; }
+.nav-center { text-align: center; flex: 0 0 auto; }
+.nav-center a { color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+.nav-center a:hover { color: var(--gold-light); }
+
+/* FOOTER */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .chapter-nav { flex-direction: column; }
+  .nav-btn { width: 100%; }
+  footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="learn.html" class="active">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="chapter-hero">
+  <a href="learn-series-claude-mastery.html" class="back-link">← Back to Claude Mastery</a>
+  <div class="chapter-label">Claude Mastery · Chapter 1 of 30</div>
+  <div class="chapter-number">01</div>
+  <h1 class="chapter-title">Be Clear & Specific</h1>
+  <p class="chapter-subtitle">The #1 Rule for Better Claude Results</p>
+  <div class="chapter-meta">
+    <span>⏱️ 8 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>📊 Beginner</span>
+    <span class="meta-dot">◆</span>
+    <span>🎯 Prompting Fundamentals</span>
+  </div>
+  <div class="divider-line"></div>
+</div>
+
+<div class="chapter-content">
+
+<h3>Introduction</h3>
+
+<p>If I had to teach you only ONE thing about working with Claude, it would be this: <strong>clarity is everything</strong>.</p>
+
+<p>The difference between getting mediocre results and exceptional results from Claude isn't about knowing secret tricks or complex techniques. It's about being clear and specific in what you ask for.</p>
+
+<p>In this chapter, you'll learn why clarity matters, see real examples of weak vs. strong prompts, and practice the technique yourself.</p>
+
+<h3>Why Clarity Matters</h3>
+
+<p>Think about asking a colleague for help. Which request would get you better results?</p>
+
+<p><strong>Request A:</strong> "Can you help me with a presentation?"</p>
+
+<p><strong>Request B:</strong> "Can you create a 10-slide presentation for our Q2 sales meeting next Tuesday? It should cover our Q2 performance highlights, top-selling products, and Q3 sales targets. Please provide an outline with 3-4 key points for each slide."</p>
+
+<p>Request B gives your colleague everything they need: the context (Q2 sales meeting), the deliverable (10 slides), the content areas (performance, products, targets), and the format (outline with key points).</p>
+
+<p><strong>Claude works exactly the same way.</strong></p>
+
+<p>Claude is incredibly capable, but it can't read your mind. When you're vague, Claude has to guess what you mean. When you're specific, Claude can focus all its intelligence on exactly what you need.</p>
+
+<h3>The Golden Rule</h3>
+
+<blockquote>
+<p><strong>More details = Better results</strong><br>
+<strong>More context = Smarter responses</strong></p>
+</blockquote>
+
+<p>This isn't about writing longer prompts for the sake of it. It's about including the essential information Claude needs to help you effectively:</p>
+
+<p>1. <strong>WHAT you need</strong> — The specific deliverable or outcome<br>
+2. <strong>WHY you need it</strong> — The context or purpose<br>
+3. <strong>HOW you want it</strong> — The format, tone, or structure</p>
+
+<h3>Real-World Examples</h3>
+
+<h4>Example 1: Presentations</h4>
+
+<div class="example-block">
+<div class="example-weak">
+<div class="example-label">❌ Weak Prompt</div>
+<div class="code-block">Help me with a presentation.</div>
+</div>
+
+<p><strong>Problems:</strong></p>
+<ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+<li>What kind of presentation? Sales? Training? Pitch?</li>
+<li>How many slides?</li>
+<li>What topic?</li>
+<li>Who's the audience?</li>
+<li>What's the goal?</li>
+</ul>
+
+<div class="example-strong">
+<div class="example-label">✅ Strong Prompt</div>
+<div class="code-block">I need help creating a 10-slide presentation for our quarterly sales meeting. 
+The presentation should cover:
+- Our Q2 sales performance (revenue, growth %)
+- Top-selling products and why they performed well
+- Sales targets for Q3
+
+Audience: Sales team of 15 people
+Goal: Motivate the team and align on Q3 goals
+
+Please provide an outline with key points for each slide.</div>
+</div>
+</div>
+
+<p><strong>What improved:</strong></p>
+<ul style="margin-left: 1.5rem;">
+<li>Specific number of slides (10)</li>
+<li>Clear topics to cover</li>
+<li>Defined audience</li>
+<li>Stated purpose</li>
+<li>Requested format (outline with key points)</li>
+</ul>
+
+<h4>Example 2: Email Writing</h4>
+
+<div class="example-block">
+<div class="example-weak">
+<div class="example-label">❌ Weak Prompt</div>
+<div class="code-block">Write a professional email.</div>
+</div>
+
+<p><strong>Problems:</strong></p>
+<ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+<li>Email to whom?</li>
+<li>About what?</li>
+<li>What tone of "professional"?</li>
+<li>What outcome do you want?</li>
+</ul>
+
+<div class="example-strong">
+<div class="example-label">✅ Strong Prompt</div>
+<div class="code-block">I need to write a professional email to a client about a project delay.
+
+Context:
+- Client: TechCorp, been working together for 6 months
+- Project: Website redesign, originally due next Friday
+- Issue: Design review took longer than expected
+- New timeline: Delivery pushed to 2 weeks from now
+- Our relationship: Good, but they're on a tight timeline
+
+Please draft an email that:
+- Apologizes for the delay professionally
+- Explains the reason briefly (quality focus)
+- Provides the new timeline clearly
+- Reassures them about quality
+- Offers to discuss concerns
+- Maintains positive relationship
+
+Tone: Professional but warm, accountable but confident</div>
+</div>
+</div>
+
+<p><strong>What improved:</strong></p>
+<ul style="margin-left: 1.5rem;">
+<li>Full context provided</li>
+<li>Specific points to address</li>
+<li>Desired tone defined</li>
+<li>Relationship dynamics included</li>
+<li>Clear outcome specified</li>
+</ul>
+
+<h3>The Three Essential Questions</h3>
+
+<p>Before you send a prompt to Claude, ask yourself these three questions:</p>
+
+<h4>1. What exactly do I need?</h4>
+
+<p>Be specific about the deliverable:</p>
+<ul style="margin-left: 1.5rem;">
+<li>"An email" → "A 200-word apology email to a client"</li>
+<li>"A plan" → "A 3-month content calendar with 2 posts per week"</li>
+<li>"Help with code" → "A Python function that validates email addresses"</li>
+</ul>
+
+<h4>2. Why do I need it?</h4>
+
+<p>Context helps Claude understand your situation:</p>
+<ul style="margin-left: 1.5rem;">
+<li>"For a job application"</li>
+<li>"To present to the board"</li>
+<li>"To explain to my team"</li>
+<li>"For social media marketing"</li>
+</ul>
+
+<h4>3. What format do I want?</h4>
+
+<p>Structure helps Claude organize the response:</p>
+<ul style="margin-left: 1.5rem;">
+<li>"As a bullet-point list"</li>
+<li>"In conversational tone"</li>
+<li>"With code examples"</li>
+<li>"Using markdown formatting"</li>
+</ul>
+
+<div class="practice-box">
+<div class="box-title">Practice Exercise</div>
+<p>Let's practice turning vague prompts into clear, specific ones.</p>
+<p><strong>Vague Prompt:</strong> "Help me learn Python"</p>
+<p><strong>Your Turn:</strong> Rewrite this prompt with clarity. Consider:</p>
+<ul style="margin-left: 1.5rem;">
+<li>What aspect of Python? (basics, data science, web dev?)</li>
+<li>What's your current level?</li>
+<li>How much time do you have?</li>
+<li>What's your learning goal?</li>
+<li>What format would help? (tutorial, exercises, project ideas?)</li>
+</ul>
+</div>
+
+<h3>Common Mistakes to Avoid</h3>
+
+<h4>Mistake 1: Being Too Vague</h4>
+<p><strong>Don't:</strong> "Make this better"<br>
+<strong>Do:</strong> "Make this more concise - reduce to under 500 words while keeping all key points"</p>
+
+<h4>Mistake 2: Assuming Context</h4>
+<p><strong>Don't:</strong> "Write an email to them"<br>
+<strong>Do:</strong> "Write an email to our client Sarah at TechCorp, following up on last week's proposal meeting"</p>
+
+<h4>Mistake 3: No Format Guidance</h4>
+<p><strong>Don't:</strong> "Explain this concept"<br>
+<strong>Do:</strong> "Explain this concept in 3 short paragraphs suitable for beginners, using a real-world analogy"</p>
+
+<h4>Mistake 4: Ambiguous Goals</h4>
+<p><strong>Don't:</strong> "Help me with my project"<br>
+<strong>Do:</strong> "Help me outline the architecture for a task management web app with user auth, task CRUD, and team collaboration"</p>
+
+<h3>When to Be More Specific</h3>
+
+<p>You don't always need maximum detail. Simple questions get simple answers:</p>
+
+<p><strong>These are fine as-is:</strong></p>
+<ul style="margin-left: 1.5rem;">
+<li>"What's the capital of France?"</li>
+<li>"Convert 100 USD to EUR"</li>
+<li>"Define 'recursion' in programming"</li>
+</ul>
+
+<p><strong>These need more detail:</strong></p>
+<ul style="margin-left: 1.5rem;">
+<li>"Help me with my business"</li>
+<li>"Write content for me"</li>
+<li>"Analyze this data"</li>
+<li>"Create a strategy"</li>
+</ul>
+
+<p><strong>Rule of thumb:</strong> If the answer requires understanding YOUR specific situation, provide that situation.</p>
+
+<div class="insight-card">
+<div class="card-label">Real Success Story</div>
+<p><strong>Before I learned this technique:</strong> "Help me improve my team's productivity" → Claude gave generic productivity tips that didn't fit my situation.</p>
+<p><strong>After applying clarity:</strong> I provided full context (remote team, 8 developers, 3 time zones, specific issues) and Claude gave targeted, actionable solutions that actually worked for my team.</p>
+<p><strong>The difference? Night and day.</strong></p>
+</div>
+
+<div class="takeaways">
+<div class="takeaways-title">Key Takeaways</div>
+<ul>
+<li><strong>Clarity is the #1 factor</strong> in getting useful results from Claude</li>
+<li><strong>Include three essentials:</strong> What you need, why you need it, how you want it</li>
+<li><strong>Provide context:</strong> The more Claude understands your situation, the better it can help</li>
+<li><strong>Be specific:</strong> "10 slides" beats "a presentation," "200 words" beats "short"</li>
+<li><strong>Define your audience and goal:</strong> Helps Claude match tone and focus</li>
+</ul>
+</div>
+
+<div class="chapter-nav">
+  <div class="nav-btn prev" style="visibility: hidden;">
+    <div>
+      <div class="nav-label">Previous</div>
+      <div class="nav-title">—</div>
+    </div>
+  </div>
+  
+  <div class="nav-center">
+    <a href="learn-series-claude-mastery.html">View All Chapters</a>
+  </div>
+  
+  <a href="learn-series-claude-mastery-chapter-2.html" class="nav-btn next">
+    <div style="text-align: right;">
+      <div class="nav-label">Next Chapter</div>
+      <div class="nav-title">Use Examples to Guide Output →</div>
+    </div>
+  </a>
+</div>
+
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:info@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/neearventures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+</body>
+</html>

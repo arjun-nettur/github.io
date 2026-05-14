@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>Claude Mastery — NeeAr Ventures</title>
+  <meta name="description" content="A complete guide to understanding and working with Claude — from the basics of how it thinks to advanced prompting, agentic workflows, and responsible use.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:          #f7f4ef;
+      --bg-alt:      #f0ece4;
+      --surface:     #ffffff;
+      --border:      #e2d9cc;
+      --navy:        #0d1f35;
+      --navy-light:  #162d47;
+      --navy-muted:  #1e3a5a;
+      --gold:        #9a7a2e;
+      --gold-light:  #b8963e;
+      --gold-pale:   rgba(154,122,46,0.1);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+    .logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+    .logo-text-block { display: flex; flex-direction: column; }
+    .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+    .logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+    .nav-cta:hover { background: var(--gold); color: #fff; }
+
+    /* PAGE HEADER */
+    .series-header { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .series-header::before { content: ''; position: absolute; left: -5%; top: -10%; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.06) 0%, transparent 65%); pointer-events: none; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+    .back-link:hover { color: var(--gold); }
+    .series-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; }
+    .series-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 600; color: var(--navy); margin-bottom: 0.9rem; }
+    .series-subtitle { color: var(--navy-muted); font-size: 1.05rem; line-height: 1.8; max-width: 660px; font-weight: 400; margin-bottom: 1.5rem; }
+    .series-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 1.5rem; }
+    .meta-pill { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); color: var(--gold); padding: 0.25rem 0.8rem; font-weight: 500; }
+    .divider { width: 44px; height: 1px; background: var(--gold); margin: 1.3rem 0; }
+
+    /* SERIES INTRO */
+    .series-intro { padding: 4rem 4vw; max-width: 900px; margin: 0 auto; }
+    .intro-text { font-size: 1rem; line-height: 1.85; color: var(--navy); margin-bottom: 2.5rem; }
+    .intro-text strong { color: var(--navy); font-weight: 600; }
+
+    /* WHAT YOU'LL LEARN */
+    .learn-section { background: var(--bg-alt); padding: 3rem 4vw; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .learn-content { max-width: 900px; margin: 0 auto; }
+    .section-heading { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600; color: var(--navy); margin-bottom: 2rem; text-align: center; }
+    .learn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .learn-card { background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; }
+    .learn-card-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+    .learn-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
+    .learn-card-text { font-size: 0.88rem; line-height: 1.7; color: var(--navy-muted); }
+
+    /* CHAPTERS LIST */
+    .chapters-section { padding: 4rem 4vw; max-width: 900px; margin: 0 auto; }
+    .chapters-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border); }
+    .chapters-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600; color: var(--navy); }
+    .chapters-count { font-size: 0.72rem; color: var(--navy-muted); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; }
+
+    /* CHAPTER CARD */
+    .chapter-card { background: var(--surface); border: 1px solid var(--border); margin-bottom: 1.5rem; display: flex; text-decoration: none; color: inherit; transition: all 0.3s; overflow: hidden; }
+    .chapter-card:hover { border-color: var(--gold); box-shadow: 0 4px 20px rgba(154,122,46,0.1); }
+    .chapter-number { width: 100px; background: linear-gradient(135deg, var(--bg-alt) 0%, rgba(154,122,46,0.08) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 1px solid var(--border); padding: 1.5rem 1rem; flex-shrink: 0; }
+    .chapter-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--gold); line-height: 1; }
+    .chapter-label { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--navy-muted); margin-top: 0.3rem; }
+    .chapter-body { padding: 1.5rem 1.8rem; flex: 1; }
+    .chapter-title { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; line-height: 1.3; }
+    .chapter-subtitle { font-size: 0.82rem; color: var(--gold); margin-bottom: 0.8rem; font-weight: 500; }
+    .chapter-desc { font-size: 0.88rem; line-height: 1.65; color: var(--navy-muted); margin-bottom: 1rem; }
+    .chapter-meta { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; font-size: 0.72rem; color: var(--navy-muted); }
+    .chapter-meta span { display: flex; align-items: center; gap: 0.3rem; }
+    .chapter-meta .dot { color: var(--gold); opacity: 0.5; }
+    .chapter-arrow { margin-left: auto; display: flex; align-items: center; color: var(--gold); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: gap 0.3s; }
+    .chapter-card:hover .chapter-arrow { gap: 0.5rem; }
+
+    /* COMING SOON BADGE */
+    .coming-soon-badge { background: var(--navy-muted); color: #fff; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.2rem 0.6rem; font-weight: 500; display: inline-block; margin-bottom: 0.5rem; }
+    .chapter-card.coming-soon { opacity: 0.6; pointer-events: none; }
+
+    /* FOOTER */
+    footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+    .footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-social { display: flex; gap: 0.8rem; align-items: center; }
+    .social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+    .social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .chapter-card { flex-direction: column; }
+      .chapter-number { width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 1rem; }
+      .learn-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+      .footer-links { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="learn.html" class="active">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="series-header">
+  <a href="learn.html" class="back-link">← Back to Learn With Us</a>
+  <div class="series-label">Learning Series</div>
+  <h1 class="series-title">Claude Mastery</h1>
+  <p class="series-subtitle">A complete guide to understanding and working with Claude — from the basics of how it thinks to advanced prompting, agentic workflows, and responsible use.</p>
+  <div class="series-meta">
+    <span class="meta-pill">AI</span>
+    <span class="meta-pill">30 Chapters</span>
+    <span class="meta-pill">Beginner → Advanced</span>
+    <span class="meta-pill">5 of 30 Available</span>
+  </div>
+  <div class="divider"></div>
+</div>
+
+<div class="series-intro">
+  <p class="intro-text">
+    <strong>Claude Mastery</strong> is your comprehensive guide to working effectively with Claude AI. Whether you're just starting out or looking to master advanced techniques, this series will teach you how to get exceptional results through clear communication, strategic prompting, and thoughtful iteration.
+  </p>
+  <p class="intro-text">
+    This is a <strong>learning-in-public</strong> series. As I discover what works (and what doesn't) in real-world use, I'm documenting everything here. The first 5 chapters cover the foundational techniques that transform how you work with Claude. More advanced chapters are coming as the series grows to 30 total chapters.
+  </p>
+</div>
+
+<div class="learn-section">
+  <div class="learn-content">
+    <h2 class="section-heading">What You'll Learn</h2>
+    <div class="learn-grid">
+      <div class="learn-card">
+        <div class="learn-card-icon">💡</div>
+        <div class="learn-card-title">Effective Prompting</div>
+        <p class="learn-card-text">Learn how to communicate clearly with Claude to get exactly what you need — from emails to complex analysis.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-card-icon">🎯</div>
+        <div class="learn-card-title">Style Matching</div>
+        <p class="learn-card-text">Teach Claude to write in YOUR voice by showing examples instead of describing style.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-card-icon">🧠</div>
+        <div class="learn-card-title">Systematic Thinking</div>
+        <p class="learn-card-text">Use step-by-step reasoning to solve complex problems and make better decisions.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-card-icon">✨</div>
+        <div class="learn-card-title">Iterative Refinement</div>
+        <p class="learn-card-text">Turn good outputs into exceptional ones through targeted feedback and iteration.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-card-icon">🎭</div>
+        <div class="learn-card-title">Multiple Perspectives</div>
+        <p class="learn-card-text">Use role-playing to test ideas, prepare for conversations, and see blind spots.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-card-icon">🚀</div>
+        <div class="learn-card-title">Real-World Application</div>
+        <p class="learn-card-text">Every chapter includes practical examples, exercises, and success stories from actual use.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="chapters-section">
+  <div class="chapters-header">
+    <div class="chapters-title">Chapters</div>
+    <div class="chapters-count">5 of 30 Available</div>
+  </div>
+
+  <!-- Chapter 1 -->
+  <a href="learn-series-claude-mastery-chapter-1.html" class="chapter-card">
+    <div class="chapter-number">
+      <div class="chapter-num">01</div>
+      <div class="chapter-label">Chapter</div>
+    </div>
+    <div class="chapter-body">
+      <div class="chapter-title">Be Clear & Specific</div>
+      <div class="chapter-subtitle">The #1 Rule for Better Claude Results</div>
+      <p class="chapter-desc">Learn why clarity is everything when working with Claude. This chapter teaches you the golden rule: more details = better results. You'll see real examples of weak vs. strong prompts and practice turning vague requests into clear, specific instructions.</p>
+      <div class="chapter-meta">
+        <span>⏱️ 8 min read</span>
+        <span class="dot">◆</span>
+        <span>📊 Beginner</span>
+        <span class="dot">◆</span>
+        <span>🎯 Prompting Fundamentals</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Chapter 2 -->
+  <a href="learn-series-claude-mastery-chapter-2.html" class="chapter-card">
+    <div class="chapter-number">
+      <div class="chapter-num">02</div>
+      <div class="chapter-label">Chapter</div>
+    </div>
+    <div class="chapter-body">
+      <div class="chapter-title">Use Examples to Guide Output</div>
+      <div class="chapter-subtitle">How to Get Claude to Match YOUR Style</div>
+      <p class="chapter-desc">Discover the power of showing instead of telling. This chapter teaches you how to provide examples of your work so Claude instantly understands your tone, style, and formatting preferences — transforming generic outputs into content that sounds like you.</p>
+      <div class="chapter-meta">
+        <span>⏱️ 10 min read</span>
+        <span class="dot">◆</span>
+        <span>📊 Beginner</span>
+        <span class="dot">◆</span>
+        <span>🎯 Style Matching</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Chapter 3 -->
+  <a href="learn-series-claude-mastery-chapter-3.html" class="chapter-card">
+    <div class="chapter-number">
+      <div class="chapter-num">03</div>
+      <div class="chapter-label">Chapter</div>
+    </div>
+    <div class="chapter-body">
+      <div class="chapter-title">Step-by-Step Thinking</div>
+      <div class="chapter-subtitle">How to Unlock Claude's Reasoning Power</div>
+      <p class="chapter-desc">Learn how to get Claude to think systematically through complex problems. This chapter shows you how to request step-by-step analysis that reveals the reasoning behind answers — dramatically improving accuracy and helping you make better decisions.</p>
+      <div class="chapter-meta">
+        <span>⏱️ 12 min read</span>
+        <span class="dot">◆</span>
+        <span>📊 Intermediate</span>
+        <span class="dot">◆</span>
+        <span>🎯 Problem Solving</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Chapter 4 -->
+  <a href="learn-series-claude-mastery-chapter-4.html" class="chapter-card">
+    <div class="chapter-number">
+      <div class="chapter-num">04</div>
+      <div class="chapter-label">Chapter</div>
+    </div>
+    <div class="chapter-body">
+      <div class="chapter-title">Iterative Refinement</div>
+      <div class="chapter-subtitle">From Good to Perfect Through Targeted Feedback</div>
+      <p class="chapter-desc">Master the art of refinement. This chapter teaches you how to polish Claude's outputs from good to exceptional through specific, targeted feedback. You'll learn when to iterate, how to give effective feedback, and when good enough is good enough.</p>
+      <div class="chapter-meta">
+        <span>⏱️ 11 min read</span>
+        <span class="dot">◆</span>
+        <span>📊 Intermediate</span>
+        <span class="dot">◆</span>
+        <span>🎯 Quality Improvement</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Chapter 5 -->
+  <a href="learn-series-claude-mastery-chapter-5.html" class="chapter-card">
+    <div class="chapter-number">
+      <div class="chapter-num">05</div>
+      <div class="chapter-label">Chapter</div>
+    </div>
+    <div class="chapter-body">
+      <div class="chapter-title">Role-Playing & Perspective Shifting</div>
+      <div class="chapter-subtitle">See Problems from Every Angle</div>
+      <p class="chapter-desc">Unlock one of Claude's most powerful capabilities: adopting different roles and perspectives. This chapter shows you how to use role-playing to prepare for negotiations, test strategies, practice difficult conversations, and identify blind spots before they become problems.</p>
+      <div class="chapter-meta">
+        <span>⏱️ 13 min read</span>
+        <span class="dot">◆</span>
+        <span>📊 Intermediate-Advanced</span>
+        <span class="dot">◆</span>
+        <span>🎯 Strategic Thinking</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Coming Soon Chapters -->
+  <div class="chapter-card coming-soon">
+    <div class="chapter-number">
+      <div class="chapter-num">06</div>
+      <div class="chapter-label">Chapter</div>
+    </div>
+    <div class="chapter-body">
+      <div class="coming-soon-badge">Coming Soon</div>
+      <div class="chapter-title">Advanced Prompt Engineering</div>
+      <div class="chapter-subtitle">Combining Techniques for Maximum Impact</div>
+      <p class="chapter-desc">Learn how to combine the foundational techniques from Chapters 1-5 into powerful workflows. This chapter covers advanced patterns for complex tasks.</p>
+      <div class="chapter-meta">
+        <span>📊 Advanced</span>
+        <span class="dot">◆</span>
+        <span>🎯 Advanced Techniques</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chapter-card coming-soon">
+    <div class="chapter-number">
+      <div class="chapter-num">07-30</div>
+      <div class="chapter-label">Chapters</div>
+    </div>
+    <div class="chapter-body">
+      <div class="coming-soon-badge">Coming Soon</div>
+      <div class="chapter-title">More Advanced Chapters</div>
+      <div class="chapter-subtitle">Building on the Foundations</div>
+      <p class="chapter-desc">Additional chapters covering agentic workflows, API integration, responsible AI use, domain-specific applications, and more. Released as the series develops.</p>
+      <div class="chapter-meta">
+        <span>📊 Advanced</span>
+        <span class="dot">◆</span>
+        <span>🎯 Multiple Topics</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:info@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/neearventures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+</body>
+</html>
