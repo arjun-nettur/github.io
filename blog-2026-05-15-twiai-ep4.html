@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<title>This Week in AI — Ep. 4: Google Goes All-In, Old Alliances Crack, and AI Starts Firing People — NeeAr Ventures</title>
+<meta name="description" content="Google turns Android into an AI agent. Microsoft and OpenAI quietly divorce. Anthropic powers Wall Street. And AI layoffs hit 93,000. 5 stories that matter this week.">
+
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/blog-2026-05-15-twiai-ep4.html" />
+<meta property="og:title"        content="This Week in AI — Ep. 4: Google Goes All-In, Old Alliances Crack, and AI Starts Firing People — NeeAr Ventures" />
+<meta property="og:description"  content="Google turns Android into an AI agent. Microsoft and OpenAI quietly divorce. Anthropic powers Wall Street. And AI layoffs hit 93,000. 5 stories that matter this week." />
+<meta property="og:image"        content="https://neearventures.com/images/blog-2026-05-15-twiai-ep4-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@neearventures" />
+<meta name="twitter:title"       content="This Week in AI — Ep. 4: Google Goes All-In, Old Alliances Crack, and AI Starts Firing People" />
+<meta name="twitter:description" content="Google turns Android into an AI agent. Microsoft and OpenAI quietly divorce. Anthropic powers Wall Street. And AI layoffs hit 93,000. 5 stories that matter this week." />
+<meta name="twitter:image"       content="https://neearventures.com/images/blog-2026-05-15-twiai-ep4-og.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #f7f4ef; --bg-alt: #f0ece4; --surface: #ffffff; --border: #e2d9cc;
+  --navy: #0d1f35; --navy-light: #162d47; --navy-muted: #1e3a5a;
+  --gold: #9a7a2e; --gold-light: #b8963e; --gold-pale: rgba(154,122,46,0.1);
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; overflow-x: hidden; }
+
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+.article-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; text-align: center; }
+.article-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.article-category { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 600; }
+.article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 600; color: var(--navy); line-height: 1.1; margin-bottom: 1.2rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.article-title em { font-style: italic; color: var(--gold); }
+.article-subtitle { font-size: 1rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.article-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+.article-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 4vw 6rem; }
+.article-lead { font-size: 1.05rem; line-height: 1.9; color: var(--navy); margin-bottom: 2.5rem; padding-left: 1.2rem; border-left: 3px solid var(--gold); font-weight: 400; }
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--navy); margin: 3.5rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.8rem; }
+.num-badge { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: var(--navy); color: #fff; border-radius: 50%; font-size: 0.82rem; font-family: 'Jost', sans-serif; font-weight: 500; flex-shrink: 0; }
+
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.4rem 0 1.8rem; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0; line-height: 1.7; }
+
+.tip-row { display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--border); padding: 1.1rem 1.3rem; margin: 1.4rem 0; align-items: flex-start; }
+.tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.tip-row p { font-size: 0.88rem; margin: 0; color: var(--navy-muted); }
+.tip-row strong { color: var(--navy); }
+
+.stat-callout { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; background: var(--navy); padding: 1.8rem; margin: 2rem 0; }
+.stat-item { text-align: center; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold-light); line-height: 1; }
+.stat-label { font-size: 0.68rem; color: rgba(232,224,208,0.7); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; max-width: 120px; line-height: 1.4; }
+
+.content-card { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 1.2rem 0; transition: box-shadow 0.3s; }
+.content-card:hover { box-shadow: 0 2px 16px rgba(154,122,46,0.1); }
+.content-card .cc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--navy); font-weight: 600; margin-bottom: 0.5rem; }
+.content-card .cc-meta { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); padding: 0.15rem 0.6rem; font-weight: 600; display: inline-block; margin-bottom: 0.6rem; }
+.content-card p { font-size: 0.87rem; color: var(--navy-muted); margin: 0; line-height: 1.65; }
+.content-card p strong { color: var(--navy); }
+
+blockquote { background: var(--bg-alt); border-left: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 2rem 0; }
+blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--navy); margin: 0; line-height: 1.6; font-weight: 400; }
+blockquote cite { display: block; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.8rem; font-style: normal; font-weight: 600; }
+
+.section-ornament { text-align: center; color: var(--gold); opacity: 0.4; letter-spacing: 12px; font-size: 0.9rem; margin: 3rem 0; }
+
+.tags-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.tags-label { font-size: 0.7rem; color: var(--navy-muted); letter-spacing: 0.2em; text-transform: uppercase; margin-right: 0.3rem; font-weight: 500; }
+.tag { background: var(--bg-alt); border: 1px solid var(--border); padding: 0.25rem 0.8rem; font-size: 0.73rem; color: var(--navy-muted); transition: all 0.3s; }
+.tag:hover { border-color: var(--gold); color: var(--gold); }
+
+.share-row { display: flex; gap: 1rem; align-items: center; margin-top: 2rem; flex-wrap: wrap; }
+.share-label { font-size: 0.72rem; color: var(--navy-muted); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+.share-btn { background: transparent; border: 1px solid var(--border); color: var(--navy-muted); padding: 0.38rem 1rem; font-size: 0.75rem; font-family: 'Jost', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; font-weight: 400; }
+.share-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .article-title { font-size: 2rem; }
+  .stat-callout { gap: 1rem; }
+  footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 1rem; }
+  .footer-social { gap: 0.6rem; }
+  .social-icon { width: 36px; height: 36px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="learn.html">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="article-hero">
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+  <div class="article-category">📡 This Week in AI · Episode 4</div>
+  <h1 class="article-title">Google Goes <em>All-In</em>, Old Alliances Crack, and AI Starts Firing People</h1>
+  <p class="article-subtitle">Five stories from the week that quietly rewrote the rules of the AI industry — and what each one means for you.</p>
+  <div class="article-meta">
+    <span>NeeAr Ventures Editorial</span>
+    <span class="meta-dot">◆</span>
+    <span>May 15, 2026</span>
+    <span class="meta-dot">◆</span>
+    <span>9 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>This Week in AI</span>
+  </div>
+  <div class="divider-line"></div>
+</div>
+
+<div class="article-wrap">
+
+  <p class="article-lead">This was the week AI stopped being a feature and started being the operating layer. Google declared Android an "intelligence system." Microsoft and OpenAI quietly renegotiated their seven-year alliance. Anthropic embedded itself into Wall Street. And AI-linked layoffs crossed 93,000 in 2026 alone. Five stories. All connected. Here's what actually matters.</p>
+
+  <div class="stat-callout">
+    <div class="stat-item"><div class="stat-num">93K+</div><div class="stat-label">Tech jobs cut in 2026, many citing AI</div></div>
+    <div class="stat-item"><div class="stat-num">76%</div><div class="stat-label">Companies now have a Chief AI Officer</div></div>
+    <div class="stat-item"><div class="stat-num">$135B</div><div class="stat-label">Meta's AI capex target for 2026</div></div>
+    <div class="stat-item"><div class="stat-num">250M</div><div class="stat-label">Cars with Android Auto, now Gemini-powered</div></div>
+  </div>
+
+  <h2><span class="num-badge">1</span> Google Turns Android Into an AI Agent</h2>
+
+  <p>Google did something significant this week — it didn't just add AI to Android. It announced it is rebuilding Android around AI. The company's Android Show event, held days before its annual Google I/O developer conference on May 19, unveiled Gemini Intelligence: a suite of agentic features that can move across apps, read your screen, and complete multi-step tasks without you having to switch between services.</p>
+
+  <p>Practical examples shared include building a grocery shopping cart from a notes app with a long press, booking a spin class in the background, and browsing the web autonomously through a new Chrome "auto-browse" mode. Android chief Sameer Samat summed it up plainly: "We're transitioning from an operating system to an intelligence system."</p>
+
+  <div class="content-card">
+    <div class="cc-meta">Also Announced</div>
+    <div class="cc-title">Googlebooks — A New Laptop Category</div>
+    <p>Google revealed a new line of premium laptops built in partnership with Asus, Acer, Dell, HP, and Lenovo, designed from the ground up for Gemini Intelligence. <strong>Wiggle the cursor at anything on screen and Gemini suggests what it can do.</strong> It's Google's answer to Microsoft's Copilot+ PCs — and a cleaner execution of the same idea. Launches this fall.</p>
+  </div>
+
+  <div class="insight-card">
+    <div class="card-label">Why This Matters</div>
+    <p>Google I/O on May 19 is expected to go even further with a likely new Gemini model, Android XR smart glasses preview, and deeper agentic integrations. This week's Android Show was the warm-up act. If Google can make Gemini feel natural rather than intrusive — unlike Microsoft's Copilot backlash — it wins the device layer of AI.</p>
+  </div>
+
+  <h2><span class="num-badge">2</span> Microsoft and OpenAI's Seven-Year Alliance Just Changed Shape</h2>
+
+  <p>The original 2019 Microsoft-OpenAI deal — billions in cloud credits for exclusive compute access and AGI rights — has been renegotiated. The new arrangement keeps Microsoft as the primary cloud partner and preserves a non-exclusive IP licence through 2032, but removes the cloud exclusivity that had locked OpenAI into Azure infrastructure.</p>
+
+  <p>OpenAI can now multi-source its compute across Oracle, CoreWeave, and Google TPUs. Microsoft, freed from sole-provider obligations, has moved fast: Microsoft 365 Copilot now defaults to a multi-model architecture where Anthropic's Claude handles enterprise reasoning tasks and OpenAI's GPT models continue on the consumer side. Inside Office, Excel formula generation and PowerPoint drafting are increasingly being routed through Claude.</p>
+
+  <blockquote>
+    <p>"This is a reset, not an uncoupling — yet the precedent is important."</p>
+    <cite>— Air Street Press, State of AI: May 2026</cite>
+  </blockquote>
+
+  <div class="insight-card">
+    <div class="card-label">The Bigger Picture</div>
+    <p>The story here isn't that two companies changed a contract. It's that the AI infrastructure market is now genuinely competitive. OpenAI no longer needs any single cloud provider, and Microsoft no longer needs OpenAI as its only AI source. Every large enterprise AI deployment will soon face the same question: which model, on which cloud, for which task?</p>
+  </div>
+
+  <h2><span class="num-badge">3</span> Anthropic Is Building the Operating Layer for Wall Street</h2>
+
+  <p>In New York this week, Anthropic held an invite-only financial services briefing attended by JPMorgan CEO Jamie Dimon. The announcements: a suite of pre-built AI agents for major banks, and Claude Opus 4.7 — described as its most capable model for financial work yet.</p>
+
+  <p>This follows Anthropic's deeper embedding into Microsoft 365 Copilot and builds on its earlier Claude Mythos security research. The pattern is clear: Anthropic is not competing for consumer users. It is quietly becoming the infrastructure layer for high-stakes professional workflows — finance, law, coding, and enterprise operations.</p>
+
+  <div class="tip-row">
+    <div class="tip-icon">📡</div>
+    <p><strong>Also this week:</strong> Anthropic expanded public beta access to tools that let AI agents coordinate sub-agents and evaluate their own work using rubric-based outcomes — a step toward genuinely self-managing AI systems that can run for extended periods without human check-ins.</p>
+  </div>
+
+  <h2><span class="num-badge">4</span> AI Layoffs Cross 93,000 — and the Numbers Are Getting Harder to Dismiss</h2>
+
+  <p>Coinbase cut 14% of its workforce — roughly 700 employees — this week, with CEO Brian Armstrong citing AI-enabled productivity as a core reason. The company is reorganising around "AI-native pods," where small teams direct agents that handle the combined responsibilities of engineers, designers, and product managers.</p>
+
+  <p>Coinbase joins a growing list: Block, Snap, Cloudflare, Meta, Freshworks, Oracle, and Chegg have all made significant cuts in 2026, many citing AI-driven efficiency. Total tech layoffs in 2026 now stand at over 93,000 according to Layoffs.fyi. IBM's latest survey found 76% of organisations now have a Chief AI Officer — up from just 26% in 2025 — and 93% cite cultural resistance, not technical limitations, as the main barrier to AI adoption.</p>
+
+  <div class="content-card">
+    <div class="cc-meta">Worth Noting</div>
+    <div class="cc-title">Not All of This Is AI's Fault</div>
+    <p>Several analysts point out that companies like Coinbase are also navigating poor earnings and crypto downturns. <strong>Blaming AI is easier than admitting a bad quarter.</strong> The Jevons Paradox argument — that AI increases demand for human workers rather than replacing them — still has serious supporters, including Microsoft CEO Satya Nadella. The honest answer: both things are happening simultaneously.</p>
+  </div>
+
+  <h2><span class="num-badge">5</span> Meta Goes Proprietary — And That Changes the Open Source Story</h2>
+
+  <p>Meta announced AI capital expenditure of between $115 billion and $135 billion for 2026, and alongside this, revealed a proprietary frontier model that outperforms parts of its own Llama 4 mid-size lineup at significantly lower compute cost. The model performs strongly across multimodal reasoning, health tasks, and agentic workflows.</p>
+
+  <p>This matters because Meta has spent years positioning itself as the champion of open-source AI. The Llama series has been widely celebrated by developers for its accessibility and flexibility. Quietly developing closed frontier systems alongside open releases is a signal that the competitive reality behind the scenes doesn't fully match the public narrative. Open source was always at least partly strategic — and strategy changes when the stakes get high enough.</p>
+
+  <div class="insight-card">
+    <div class="card-label">For Developers</div>
+    <p>If you're building on Meta's models today, watch the proprietary roadmap closely. The centre of gravity may gradually shift away from fully open releases as Meta's internal models grow more capable than what it's willing to share publicly.</p>
+  </div>
+
+  <div class="section-ornament">◆ ◆ ◆</div>
+
+  <h2 style="border:none; margin-top:0; display:block; font-size:1.5rem;">The Pattern Underneath All Five Stories</h2>
+
+  <p>Read these five stories together and a single thread emerges: AI is moving from the product layer to the infrastructure layer. Google wants to own the device. Microsoft and Anthropic want to own the enterprise workflow. Meta wants to own the frontier model capability, open or otherwise. And companies everywhere are using AI efficiency as both a genuine tool and a convenient explanation for decisions driven by other forces.</p>
+
+  <p>For anyone building a career, a business, or a skill set right now — the question isn't whether AI will affect your work. It already is. The more useful question is: which layer are you on, and which layer do you want to be on? The people who understand the infrastructure — not just the tools — will navigate this era best. Stay curious. That's what this series is for.</p>
+
+  <div class="share-row">
+    <span class="share-label">Share:</span>
+    <button class="share-btn" onclick="copyLink()">Copy Link</button>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://neearventures.com/blog-2026-05-15-twiai-ep4.html" target="_blank" class="share-btn">Facebook</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://neearventures.com/blog-2026-05-15-twiai-ep4.html" target="_blank" class="share-btn">LinkedIn</a>
+    <a href="https://twitter.com/intent/tweet?url=https://neearventures.com/blog-2026-05-15-twiai-ep4.html" target="_blank" class="share-btn">Twitter / X</a>
+  </div>
+
+  <div class="tags-row">
+    <span class="tags-label">Topics:</span>
+    <span class="tag">This Week in AI</span>
+    <span class="tag">Google Gemini</span>
+    <span class="tag">Microsoft OpenAI</span>
+    <span class="tag">Anthropic</span>
+    <span class="tag">AI Layoffs</span>
+    <span class="tag">Meta AI</span>
+    <span class="tag">AI News 2026</span>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:info@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/neearventures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+<script>
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => btn.textContent = 'Copy Link', 2000);
+  });
+}
+</script>
+</body>
+</html>
