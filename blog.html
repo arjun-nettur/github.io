@@ -70,9 +70,10 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 /* FEATURED */
 .featured-post { background: var(--surface); border: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; margin-bottom: 2.5rem; overflow: hidden; text-decoration: none; color: inherit; transition: border-color 0.3s, box-shadow 0.3s; }
 .featured-post:hover { border-color: var(--gold); box-shadow: 0 4px 24px rgba(154,122,46,0.1); }
-.featured-img { background: linear-gradient(135deg, var(--bg-alt) 0%, rgba(154,122,46,0.08) 100%); display: flex; align-items: center; justify-content: center; min-height: 280px; position: relative; border-right: 1px solid var(--border); }
-.featured-img-icon { font-family: 'Cormorant Garamond', serif; font-size: 6rem; color: rgba(154,122,46,0.2); }
-.featured-series-badge { position: absolute; top: 1rem; left: 1rem; background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.4); color: var(--gold); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.7rem; font-weight: 500; }
+.featured-img { background: linear-gradient(135deg, var(--bg-alt) 0%, rgba(154,122,46,0.08) 100%); display: flex; align-items: center; justify-content: center; min-height: 280px; position: relative; border-right: 1px solid var(--border); overflow: hidden; }
+.featured-img img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; top: 0; left: 0; }
+.featured-img-icon { font-family: 'Cormorant Garamond', serif; font-size: 6rem; color: rgba(154,122,46,0.2); position: relative; z-index: 1; }
+.featured-series-badge { position: absolute; top: 1rem; left: 1rem; background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.4); color: var(--gold); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.7rem; font-weight: 500; z-index: 2; }
 .featured-body { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
 .featured-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; font-weight: 600; }
 .featured-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--navy); line-height: 1.2; margin-bottom: 0.9rem; font-weight: 600; }
@@ -92,11 +93,19 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; 
 /* BLOG CARD */
 .blog-card { background: var(--surface); border: 1px solid var(--border); transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
 .blog-card:hover { transform: translateY(-3px); border-color: var(--gold); box-shadow: 0 4px 20px rgba(154,122,46,0.1); }
+
+/* Card image area — placeholder (icon) variant */
 .blog-card-img { height: 150px; overflow: hidden; background: linear-gradient(135deg, var(--bg-alt) 0%, rgba(154,122,46,0.08) 100%); display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid var(--border); }
 .blog-card-img-placeholder { font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; color: rgba(154,122,46,0.2); }
-.blog-tag { position: absolute; top: 0.9rem; left: 0.9rem; background: var(--navy); color: #fff; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.65rem; font-weight: 500; }
+
+/* Card image area — real image variant */
+.blog-card-img.has-image { background: var(--bg-alt); }
+.blog-card-img.has-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.blog-card:hover .blog-card-img.has-image img { transform: scale(1.04); }
+
+.blog-tag { position: absolute; top: 0.9rem; left: 0.9rem; background: var(--navy); color: #fff; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.65rem; font-weight: 500; z-index: 2; }
 .blog-tag.tag-series { background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.4); color: var(--gold); }
-.ep-badge { position: absolute; bottom: 0.7rem; right: 0.7rem; font-size: 0.6rem; color: var(--navy-muted); letter-spacing: 0.15em; text-transform: uppercase; }
+.ep-badge { position: absolute; bottom: 0.7rem; right: 0.7rem; font-size: 0.6rem; color: var(--navy-muted); letter-spacing: 0.15em; text-transform: uppercase; z-index: 2; }
 .blog-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
 .blog-meta { display: flex; gap: 0.8rem; margin-bottom: 0.7rem; align-items: center; flex-wrap: wrap; }
 .blog-date, .blog-read { font-size: 0.78rem; color: var(--navy-muted); font-weight: 400; }
@@ -140,7 +149,7 @@ footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-co
 </head>
 <body>
 
-<!-- NAV — updated with Learn With Us -->
+<!-- NAV -->
 <nav>
   <a href="index.html" class="logo-wrap">
     <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
@@ -184,25 +193,29 @@ footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-co
 
 <section class="blog-section">
 
-  <!-- FEATURED — only shown on default All view, hidden during filter/search -->
+  <!-- FEATURED -->
   <div id="featuredBlock">
     <a class="featured-post" href="blog-2026-05-14-philosophy-of-technology.html">
-  <div class="featured-img">
-    <div class="featured-img-icon">◉</div>
-    <div class="featured-series-badge">Big Ideas · Philosophy</div>
-  </div>
-  <div class="featured-body">
-    <div class="featured-label">✦ Latest Post</div>
-    <div class="featured-title">The Philosophy of Technology: Why Our Tools Shape Who We Become</div>
-    <p class="featured-excerpt">Technology isn't neutral. Every tool we adopt reshapes how we think, work, and relate to the world. Explore McLuhan, Heidegger, extended mind theory, surveillance capitalism, and what it means to use tools without being used by them.</p>
-    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
-      <span style="font-size:0.75rem;color:var(--navy-muted);">May 14, 2026</span>
-      <span style="font-size:0.75rem;color:var(--navy-muted);">· 10 min read</span>
-      <span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;">Philosophy</span>
-    </div>
-    <span class="read-more-link">Read Full Article →</span>
-  </div>
-</a>  
+      <div class="featured-img">
+        <img src="images/blog-2026-05-14-philosophy-of-technology-og.jpg"
+             alt="The Philosophy of Technology"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="featured-img-icon">◉</div>
+        <div class="featured-series-badge">Big Ideas · Philosophy</div>
+      </div>
+      <div class="featured-body">
+        <div class="featured-label">✦ Latest Post</div>
+        <div class="featured-title">The Philosophy of Technology: Why Our Tools Shape Who We Become</div>
+        <p class="featured-excerpt">Technology isn't neutral. Every tool we adopt reshapes how we think, work, and relate to the world. Explore McLuhan, Heidegger, extended mind theory, surveillance capitalism, and what it means to use tools without being used by them.</p>
+        <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
+          <span style="font-size:0.75rem;color:var(--navy-muted);">May 14, 2026</span>
+          <span style="font-size:0.75rem;color:var(--navy-muted);">· 10 min read</span>
+          <span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;">Philosophy</span>
+        </div>
+        <span class="read-more-link">Read Full Article →</span>
+      </div>
+    </a>
   </div>
 
   <!-- ALL POSTS HEADING -->
@@ -227,7 +240,7 @@ footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-co
 
 </section>
 
-<!-- FOOTER — updated with Learn With Us -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
   <div class="footer-links">
@@ -259,7 +272,13 @@ footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-co
 <script>
 /* =====================================================
    HOW TO ADD A NEW POST
-   Next id to use: 17
+   Next id to use: 20
+
+   To add an image to a post, add the "image" field:
+   image: "images/blog-YYYY-MM-DD-topic-name-og.jpg"
+
+   Posts WITHOUT an image field will continue to show
+   the icon placeholder — no change to older posts.
 
    CATEGORIES:
    "income"    — Online Income, Freelancing
@@ -273,9 +292,9 @@ footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-co
    ===================================================== */
 
 const posts = [
-  { id: 19, title: "The Philosophy of Technology: Why Our Tools Shape Who We Become", excerpt: "Technology isn't neutral. Every tool we adopt reshapes how we think, work, and relate to the world. Explore McLuhan, Heidegger, extended mind theory, and surveillance capitalism.", category: "science", date: "May 14, 2026", read: "10 min read", icon: "◉", file: "blog-2026-05-14-philosophy-of-technology.html" },
-  { id: 18, title: "India-Specific Online Opportunities: 6 Ways to Tap the $1T Digital Economy", excerpt: "India's digital economy is racing toward $1 trillion by 2030. Discover six opportunities that leverage our unique strengths — from regional content creation to cross-border freelancing.", category: "income", date: "May 13, 2026", read: "8 min read", icon: "◇", file: "blog-2026-05-13-india-online-opportunities.html" },
-  { id: 17, title: "The Mistakes That Kill Online Businesses — Before They Ever Get Started", excerpt: "60% of online businesses fail within 3 years. Most trace back to 8 avoidable mistakes — skipping validation, underpricing, ignoring SEO, no client boundaries, and quitting too early.", category: "business", date: "May 12, 2026", read: "11 min read", icon: "◈", file: "blog-2026-05-12-online-business-mistakes.html" },
+  { id: 19, title: "The Philosophy of Technology: Why Our Tools Shape Who We Become", excerpt: "Technology isn't neutral. Every tool we adopt reshapes how we think, work, and relate to the world. Explore McLuhan, Heidegger, extended mind theory, and surveillance capitalism.", category: "science", date: "May 14, 2026", read: "10 min read", icon: "◉", file: "blog-2026-05-14-philosophy-of-technology.html", image: "images/blog-2026-05-14-philosophy-of-technology-og.jpg" },
+  { id: 18, title: "India-Specific Online Opportunities: 6 Ways to Tap the $1T Digital Economy", excerpt: "India's digital economy is racing toward $1 trillion by 2030. Discover six opportunities that leverage our unique strengths — from regional content creation to cross-border freelancing.", category: "income", date: "May 13, 2026", read: "8 min read", icon: "◇", file: "blog-2026-05-13-india-online-opportunities.html", image: "images/blog-2026-05-13-india-online-opportunities-og.jpg" },
+  { id: 17, title: "The Mistakes That Kill Online Businesses — Before They Ever Get Started", excerpt: "60% of online businesses fail within 3 years. Most trace back to 8 avoidable mistakes — skipping validation, underpricing, ignoring SEO, no client boundaries, and quitting too early.", category: "business", date: "May 12, 2026", read: "11 min read", icon: "◈", file: "blog-2026-05-12-online-business-mistakes.html", image: "images/blog-2026-05-12-online-business-mistakes-og.jpg" },
   { id: 16, title: "Learning How to Learn — The Meta-Skill That Changes Everything", excerpt: "Most people learn inefficiently without knowing it. 7 science-backed techniques — spaced repetition, retrieval practice, the Feynman Technique and more.", category: "strategy", date: "May 11, 2026", read: "11 min read", icon: "◉", file: "blog-2026-05-11-learning-how-to-learn.html" },
   { id: 15, title: "Work Is Being Rewritten. Here's What That Actually Means for You.", excerpt: "AI is restructuring careers. 64% of companies run hybrid. 40 million digital nomads. Skills depreciate faster than ever. 5 trends and a 6-point action list.", category: "strategy", date: "May 10, 2026", read: "11 min read", icon: "◈", file: "blog-2026may-future-of-work.html" },
   { id: 14, title: "The World's Next Growth Engines Are Firing Up", excerpt: "Emerging markets grow 4% faster than the global average. India, Southeast Asia and Africa are reshaping global commerce through digital adoption and fintech.", category: "finance", date: "May 9, 2026", read: "11 min read", icon: "◉", file: "blog-2026may-emerging-markets.html" },
@@ -292,7 +311,6 @@ const posts = [
   { id: 3, title: "Claude Mythos: The AI Too Dangerous to Release to the Public", excerpt: "Anthropic's most powerful model can hack every major OS overnight — and they've chosen not to release it. Here's what it means for you.", category: "digital", date: "Apr 24, 2026", read: "10 min read", icon: "◈", file: "blog-claude-mythos.html" },
   { id: 2, title: "AI Gets Dangerous, Ambitious, and Very Expensive", excerpt: "Anthropic triggers emergency govt meetings, Meta launches Muse Spark, OpenAI eyes $100B in ads, and AI pricing collapses. 5 stories explained.", category: "ai-series", date: "Apr 20, 2026", read: "8 min read", icon: "◈", file: "blog-twiai-ep1.html", series: "This Week in AI", episode: "Ep. 1" },
   { id: 1, title: "7 Proven Strategies to Build Real Online Income — Starting Part-Time", excerpt: "A strategic breakdown of 7 proven online income models — domaining, freelancing, consulting, blogging, digital products, and more.", category: "income", date: "Apr 16, 2026", read: "12 min read", icon: "◇", file: "blog-online-income.html" },
-
 ];
 
 let activeFilter = 'all';
@@ -343,15 +361,27 @@ function renderPosts(list) {
     allPostsTitle.textContent = 'Explore All Posts';
   }
 
-  grid.innerHTML = list.map(p => `
+  grid.innerHTML = list.map(p => {
+    // Image area: real image if post has "image" field, otherwise icon placeholder
+    const imgArea = p.image
+      ? `<div class="blog-card-img has-image">
+           <img src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';" />
+           <div class="blog-tag ${p.category === 'ai-series' ? 'tag-series' : ''}">
+             ${p.category === 'ai-series' ? '📡 AI Series' : p.category === 'science' ? 'Science & Tech' : p.category}
+           </div>
+           ${p.episode ? `<div class="ep-badge">${p.episode}</div>` : ''}
+         </div>`
+      : `<div class="blog-card-img">
+           <div class="blog-card-img-placeholder">${p.icon}</div>
+           <div class="blog-tag ${p.category === 'ai-series' ? 'tag-series' : ''}">
+             ${p.category === 'ai-series' ? '📡 AI Series' : p.category === 'science' ? 'Science & Tech' : p.category}
+           </div>
+           ${p.episode ? `<div class="ep-badge">${p.episode}</div>` : ''}
+         </div>`;
+
+    return `
     <a class="blog-card" href="${p.file}">
-      <div class="blog-card-img">
-        <div class="blog-card-img-placeholder">${p.icon}</div>
-        <div class="blog-tag ${p.category === 'ai-series' ? 'tag-series' : ''}">
-          ${p.category === 'ai-series' ? '📡 AI Series' : p.category === 'science' ? 'Science & Tech' : p.category}
-        </div>
-        ${p.episode ? `<div class="ep-badge">${p.episode}</div>` : ''}
-      </div>
+      ${imgArea}
       <div class="blog-card-body">
         <div class="blog-meta">
           <span class="blog-date">${p.date}</span>
@@ -362,8 +392,8 @@ function renderPosts(list) {
         <p class="blog-card-excerpt">${p.excerpt}</p>
         <span class="card-read-link">Read Article →</span>
       </div>
-    </a>
-  `).join('');
+    </a>`;
+  }).join('');
 }
 
 function filterPosts(cat, btn) {
