@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<title>Building Your Financial Dashboard — Track What Matters — NeeAr Ventures</title>
+<meta name="description" content="Stop guessing where your money goes. Build a simple financial dashboard that tracks net worth, spending patterns, and progress toward your goals in just 30 minutes monthly.">
+
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/blog-2026-05-18-financial-dashboard.html" />
+<meta property="og:title"        content="Building Your Financial Dashboard — Track What Matters — NeeAr Ventures" />
+<meta property="og:description"  content="Stop guessing where your money goes. Build a simple financial dashboard that tracks net worth, spending patterns, and progress toward your goals in just 30 minutes monthly." />
+<meta property="og:image"        content="https://neearventures.com/images/blog-2026-05-18-financial-dashboard-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@neearventures" />
+<meta name="twitter:title"       content="Building Your Financial Dashboard — Track What Matters — NeeAr Ventures" />
+<meta name="twitter:description" content="Stop guessing where your money goes. Build a simple financial dashboard that tracks net worth, spending patterns, and progress toward your goals in just 30 minutes monthly." />
+<meta name="twitter:image"       content="https://neearventures.com/images/blog-2026-05-18-financial-dashboard-og.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================================
+   NEEAR VENTURES DESIGN SYSTEM — WARM OFF-WHITE THEME
+   Used for: ALL pages (index, blog listing, individual blog posts)
+   Colours: Background #f7f4ef | Text navy #0d1f35 | Gold #9a7a2e
+   Footer: Always dark navy #0d1f35
+====================================================================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:          #f7f4ef;   /* warm off-white page background */
+  --bg-alt:      #f0ece4;   /* slightly deeper cream for hero/sections */
+  --surface:     #ffffff;   /* pure white cards/panels */
+  --border:      #e2d9cc;   /* warm grey border */
+  --navy:        #0d1f35;   /* primary text, headings, nav */
+  --navy-light:  #162d47;   /* hover states */
+  --navy-muted:  #1e3a5a;   /* body text, meta, secondary text */
+  --gold:        #9a7a2e;   /* accent — labels, links, dividers */
+  --gold-light:  #b8963e;   /* hover gold */
+  --gold-pale:   rgba(154,122,46,0.1); /* gold tint backgrounds */
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; overflow-x: hidden; }
+
+/* ── NAV ── */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* ── ARTICLE HERO ── */
+.article-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; text-align: center; }
+.article-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.article-category { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 600; }
+.article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 600; color: var(--navy); line-height: 1.1; margin-bottom: 1.2rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.article-title em { font-style: italic; color: var(--gold); }
+.article-subtitle { font-size: 1rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.article-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+/* ── ARTICLE BODY ── */
+.article-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 4vw 6rem; }
+.article-lead { font-size: 1.05rem; line-height: 1.9; color: var(--navy); margin-bottom: 2.5rem; padding-left: 1.2rem; border-left: 3px solid var(--gold); font-weight: 400; }
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+
+/* ── HEADINGS ── */
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--navy); margin: 3.5rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.8rem; }
+.num-badge { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: var(--navy); color: #fff; border-radius: 50%; font-size: 0.82rem; font-family: 'Jost', sans-serif; font-weight: 500; flex-shrink: 0; }
+
+/* ── CONTENT BLOCKS ── */
+
+/* Insight / Key point card — gold left border on cream background */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.4rem 0 1.8rem; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0; line-height: 1.7; }
+
+/* Tip row — icon + text on white */
+.tip-row { display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--border); padding: 1.1rem 1.3rem; margin: 1.4rem 0; align-items: flex-start; }
+.tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.tip-row p { font-size: 0.88rem; margin: 0; color: var(--navy-muted); }
+.tip-row strong { color: var(--navy); }
+
+/* Stat callout — dark navy block with gold numbers */
+.stat-callout { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; background: var(--navy); padding: 1.8rem; margin: 2rem 0; }
+.stat-item { text-align: center; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold-light); line-height: 1; }
+.stat-label { font-size: 0.68rem; color: rgba(232,224,208,0.7); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; max-width: 120px; line-height: 1.4; }
+
+/* Content card — white surface card */
+.content-card { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 1.2rem 0; transition: box-shadow 0.3s; }
+.content-card:hover { box-shadow: 0 2px 16px rgba(154,122,46,0.1); }
+.content-card .cc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--navy); font-weight: 600; margin-bottom: 0.5rem; }
+.content-card .cc-meta { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); padding: 0.15rem 0.6rem; font-weight: 600; display: inline-block; margin-bottom: 0.6rem; }
+.content-card p { font-size: 0.87rem; color: var(--navy-muted); margin: 0; line-height: 1.65; }
+.content-card p strong { color: var(--navy); }
+
+/* Blockquote */
+blockquote { background: var(--bg-alt); border-left: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 2rem 0; }
+blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--navy); margin: 0; line-height: 1.6; font-weight: 400; }
+blockquote cite { display: block; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.8rem; font-style: normal; font-weight: 600; }
+
+/* Section ornament */
+.section-ornament { text-align: center; color: var(--gold); opacity: 0.4; letter-spacing: 12px; font-size: 0.9rem; margin: 3rem 0; }
+
+/* Tags row */
+.tags-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.tags-label { font-size: 0.7rem; color: var(--navy-muted); letter-spacing: 0.2em; text-transform: uppercase; margin-right: 0.3rem; font-weight: 500; }
+.tag { background: var(--bg-alt); border: 1px solid var(--border); padding: 0.25rem 0.8rem; font-size: 0.73rem; color: var(--navy-muted); transition: all 0.3s; }
+.tag:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Share buttons */
+.share-row { display: flex; gap: 1rem; align-items: center; margin-top: 2rem; flex-wrap: wrap; }
+.share-label { font-size: 0.72rem; color: var(--navy-muted); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+.share-btn { background: transparent; border: 1px solid var(--border); color: var(--navy-muted); padding: 0.38rem 1rem; font-size: 0.75rem; font-family: 'Jost', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; font-weight: 400; }
+.share-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Social icons (footer) */
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+/* ── FOOTER — always dark navy ── */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+
+/* ── MOBILE ── */
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .article-title { font-size: 2rem; }
+  .stat-callout { gap: 1rem; }
+  footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 1rem; }
+  .footer-social { gap: 0.6rem; }
+  .social-icon { width: 36px; height: 36px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="learn.html">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="article-hero">
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+  <div class="article-category">Finance · Money Management</div>
+  <h1 class="article-title">Building Your Financial <em>Dashboard</em> — Track What Matters</h1>
+  <p class="article-subtitle">Stop guessing where your money goes. Build a simple system that tracks net worth, spending patterns, and goal progress in just 30 minutes monthly.</p>
+  <div class="article-meta">
+    <span>NeeAr Ventures Editorial</span>
+    <span class="meta-dot">◆</span>
+    <span>May 18, 2026</span>
+    <span class="meta-dot">◆</span>
+    <span>9 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>Personal Finance</span>
+  </div>
+  <div class="divider-line"></div>
+</div>
+
+<div class="article-wrap">
+
+  <p class="article-lead">Most people track their salary but have no idea where their money actually goes. They check their bank balance when making purchases but don't know if they're getting wealthier or just staying afloat. A financial dashboard changes that — showing you the numbers that actually matter in under 30 minutes per month.</p>
+
+  <p>This isn't about complex spreadsheets or obsessive penny-tracking. It's about creating a simple system that answers three critical questions: Where am I now? Am I moving forward? What needs attention?</p>
+
+  <div class="stat-callout">
+    <div class="stat-item"><div class="stat-num">67%</div><div class="stat-label">Track expenses but not net worth</div></div>
+    <div class="stat-item"><div class="stat-num">30min</div><div class="stat-label">Monthly review time needed</div></div>
+    <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Core metrics that matter most</div></div>
+  </div>
+
+  <h2><span class="num-badge">1</span> Why Salary Isn't the Number That Matters</h2>
+  
+  <p>Your salary tells you what comes in. Your net worth tells you what stays. Someone earning ₹8 lakhs annually with ₹10 lakhs saved is wealthier than someone earning ₹15 lakhs with ₹2 lakhs in debt. Yet most people obsess over income and ignore accumulated wealth.</p>
+
+  <p>Net worth is assets minus liabilities. Every rupee in your savings account, EPF, mutual funds, or property counts as an asset. Every rupee you owe on credit cards, personal loans, or home loans counts as a liability. The difference between the two is your actual financial position.</p>
+
+  <div class="insight-card">
+    <div class="card-label">Key Insight</div>
+    <p>Tracking net worth monthly shows whether you're building wealth or just earning and spending. A positive trend means you're winning financially. A flat or declining trend means lifestyle inflation is eating your income.</p>
+  </div>
+
+  <p>Start by calculating your current net worth. List every asset with its current value — bank accounts, fixed deposits, EPF balance, mutual fund holdings, gold, property equity. Then list every liability — credit card balance, personal loans, car loan, home loan remaining. Subtract liabilities from assets.</p>
+
+  <p>That number might surprise you. It's often smaller than expected because people overestimate assets and underestimate liabilities. But now you have a baseline. Track it monthly and watch it grow.</p>
+
+  <h2><span class="num-badge">2</span> The Three Numbers You Actually Need to Track</h2>
+
+  <p>A good financial dashboard focuses on three core metrics. Everything else is noise.</p>
+
+  <div class="content-card">
+    <div class="cc-meta">Metric 1</div>
+    <div class="cc-title">Net Worth Trend</div>
+    <p>Is it going up consistently? This single number tells you if your financial strategy is working. Track it monthly. A healthy trend shows <strong>5-10% annual growth</strong> minimum through savings and investment returns.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Metric 2</div>
+    <div class="cc-title">Savings Rate</div>
+    <p>What percentage of your income are you keeping? Calculate monthly: (Income - Expenses) ÷ Income × 100. A <strong>20% savings rate</strong> is baseline. 30% is excellent. Below 15% means lifestyle inflation is winning.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Metric 3</div>
+    <div class="cc-title">Spending by Category</div>
+    <p>Where does money disappear? Break spending into 5-6 broad categories — housing, food, transport, shopping, entertainment, miscellaneous. Track percentages, not rupee amounts. <strong>Pattern changes</strong> reveal problems before they compound.</p>
+  </div>
+
+  <p>Notice what's missing: daily expense tracking. You don't need to log every coffee purchase. Monthly category totals from bank statements and UPI apps give you the same insights without the obsessive overhead.</p>
+
+  <div class="tip-row">
+    <div class="tip-icon">💡</div>
+    <p><strong>Pro Tip:</strong> Use a simple spreadsheet with three tabs — Net Worth (monthly snapshot), Savings Rate (monthly calculation), Spending (monthly category breakdown). Update once per month on a fixed date. That's it.</p>
+  </div>
+
+  <h2><span class="num-badge">3</span> Tools That Work in India (Free and Paid)</h2>
+
+  <p>You don't need expensive software. Here's what actually works for tracking finances in the Indian context.</p>
+
+  <div class="content-card">
+    <div class="cc-meta">Free</div>
+    <div class="cc-title">Google Sheets + Manual Entry</div>
+    <p>Simple, flexible, works offline, syncs across devices. Best for people who want full control. Create three tabs as mentioned above. Update monthly from bank statements and investment apps. <strong>Time cost: 30 minutes monthly.</strong></p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Free</div>
+    <div class="cc-title">Splitwise or Walnut (Expense Tracking)</div>
+    <p>Auto-categorizes spending from SMS. Good for understanding spending patterns without manual entry. But doesn't track investments or net worth. <strong>Use as input for your main dashboard.</strong></p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Paid</div>
+    <div class="cc-title">INDMoney or ET Money</div>
+    <p>Links to banks, credit cards, and investment accounts. Auto-tracks net worth across all holdings. Free basic version exists but premium unlocks better features. <strong>Worth it if you value automation.</strong></p>
+  </div>
+
+  <p>The tool matters less than consistency. A simple spreadsheet updated monthly beats a sophisticated app checked irregularly. Start with the simplest system you'll actually use. Upgrade later if needed.</p>
+
+  <div class="tip-row">
+    <div class="tip-icon">⚠️</div>
+    <p><strong>Security Note:</strong> Never share passwords with third-party apps unless they use RBI-approved Account Aggregator framework. For DIY tracking, use view-only statements rather than login credentials.</p>
+  </div>
+
+  <h2><span class="num-badge">4</span> Your Monthly Review Ritual (30 Minutes)</h2>
+
+  <p>Pick one day per month — ideally right after your salary arrives. Block 30 minutes. This becomes your financial review ritual.</p>
+
+  <p><strong>First 10 minutes: Update Numbers</strong></p>
+
+  <p>Check bank balances, credit card statements, investment apps. Update your net worth calculation. Record total income received and total expenses from statements. Calculate savings rate for the month.</p>
+
+  <p><strong>Next 10 minutes: Categorize Spending</strong></p>
+
+  <p>Export or review transactions from primary accounts. Assign to categories. You're looking for percentages — housing took 35%, food took 15%, entertainment took 8%. Compare to last month and identify any significant changes.</p>
+
+  <p><strong>Final 10 minutes: Analyze and Adjust</strong></p>
+
+  <p>Ask three questions: Did net worth increase? If not, why? Is savings rate healthy? If declining, which spending category increased? Are there upcoming expenses to prepare for?</p>
+
+  <div class="insight-card">
+    <div class="card-label">The Power of Pattern Recognition</div>
+    <p>After 3-6 months of tracking, patterns emerge clearly. You'll see that restaurant spending spikes during stressful work weeks. That shopping jumps during festival season. That savings drops when you skip the monthly review. These insights drive better decisions.</p>
+  </div>
+
+  <p>The goal isn't perfection. Some months savings will be low because of planned expenses. Some months categories will shift. What matters is the trend over 6-12 months, not any single month.</p>
+
+  <h2><span class="num-badge">5</span> Red Flags Your Dashboard Reveals</h2>
+
+  <p>Your dashboard will show warning signs before problems become crises. Watch for these patterns.</p>
+
+  <div class="content-card">
+    <div class="cc-title">Net Worth Flatlines for 3+ Months</div>
+    <p>Income is arriving but not accumulating. Lifestyle inflation has matched salary. Either expenses need cutting or income needs increasing. This is the most common trap — earning more but not getting wealthier.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-title">Savings Rate Declining Steadily</div>
+    <p>Small increases in spending categories compound quickly. A few extra subscriptions, slightly more frequent dining out, incremental shopping — these creep up invisibly. The dashboard catches it early.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-title">Credit Card Balance Growing</div>
+    <p>Carrying a balance month-over-month means you're spending future income today. The interest compounds at 36-42% annually. This is an emergency. Track it explicitly until cleared completely.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-title">Unknown Spending Category Above 10%</div>
+    <p>When "miscellaneous" or "other" becomes a large category, it means you've lost visibility. Break it down further. Hidden spending is where money disappears without building value.</p>
+  </div>
+
+  <p>These flags appear months before bank balance problems. That early warning gives you time to adjust course without crisis management.</p>
+
+  <div class="section-ornament">◆ ◆ ◆</div>
+
+  <h2 style="border:none; margin-top:0; display:block; font-size:1.5rem;">From Tracking to Action</h2>
+
+  <p>A dashboard is useful only if it drives decisions. After three months of tracking, you'll know where money goes and whether wealth is building. That knowledge removes the guesswork from financial planning.</p>
+
+  <p>You'll make better trade-off decisions because the impact is visible. Spend ₹3,000 more on dining this month? You'll see savings rate drop 2%. Skip one month of SIP? Net worth trend flattens. Skip the monthly review? Spending categories drift higher.</p>
+
+  <p>The dashboard doesn't judge. It shows reality. What you do with that information determines whether you're building wealth or just earning a salary. Start simple. Track consistently. Review monthly. Adjust based on data, not feelings.</p>
+
+  <blockquote>
+    <p>You can't manage what you don't measure. But measuring everything is paralysis. Track the three numbers that matter, review them monthly, and let the insights guide your decisions.</p>
+    <cite>— Financial Planning Principle</cite>
+  </blockquote>
+
+  <p>Build your dashboard this week. Thirty minutes now, thirty minutes monthly. That small investment creates visibility that most people never achieve. And visibility is the first step to control.</p>
+
+  <div class="share-row">
+    <span class="share-label">Share:</span>
+    <button class="share-btn" onclick="copyLink()">Copy Link</button>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://neearventures.com/blog-2026-05-18-financial-dashboard.html" target="_blank" class="share-btn">Facebook</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://neearventures.com/blog-2026-05-18-financial-dashboard.html" target="_blank" class="share-btn">LinkedIn</a>
+    <a href="https://twitter.com/intent/tweet?url=https://neearventures.com/blog-2026-05-18-financial-dashboard.html" target="_blank" class="share-btn">Twitter / X</a>
+  </div>
+
+  <div class="tags-row">
+    <span class="tags-label">Topics:</span>
+    <span class="tag">Personal Finance</span>
+    <span class="tag">Money Management</span>
+    <span class="tag">Net Worth</span>
+    <span class="tag">Budgeting</span>
+    <span class="tag">Financial Planning</span>
+    <span class="tag">Wealth Building</span>
+    <span class="tag">India Finance</span>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:arjun@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/neearventures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+<script>
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => btn.textContent = 'Copy Link', 2000);
+  });
+}
+</script>
+</body>
+</html>
