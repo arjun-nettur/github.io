@@ -1,0 +1,11 @@
+# NeeAr Ventures - Robots.txt
+# Updated: May 18, 2026
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://neearventures.com/sitemap.xml
+
+# Crawl-delay (optional, helps with server load)
+Crawl-delay: 1
