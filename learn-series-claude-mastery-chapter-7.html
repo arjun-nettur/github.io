@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- SEO: CANONICAL TAG -->
+<link rel="canonical" href="https://neearventures.com/learn-series-claude-mastery-chapter-7.html">
+
+<title>Chapter 7: Advanced Prompting Patterns — Claude Mastery — NeeAr Ventures</title>
+<meta name="description" content="Master professional-grade AI prompting techniques: chain-of-thought, constrained outputs, XML structuring, few-shot learning, and pattern combinations for expert-level results.">
+
+<!-- STRUCTURED DATA (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Advanced Prompting Patterns",
+  "description": "Master professional-grade AI prompting techniques: chain-of-thought, constrained outputs, XML structuring, few-shot learning, and pattern combinations for expert-level results.",
+  "learningResourceType": "Chapter",
+  "educationalLevel": "Advanced",
+  "datePublished": "2026-05-26",
+  "dateModified": "2026-05-26",
+  "author": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures Editorial"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://neearventures.com/logo.png"
+    }
+  },
+  "isPartOf": {
+    "@type": "Course",
+    "name": "Claude Mastery",
+    "url": "https://neearventures.com/learn-series-claude-mastery.html"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neearventures.com/learn-series-claude-mastery-chapter-7.html"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:          #f7f4ef;
+  --bg-alt:      #f0ece4;
+  --surface:     #ffffff;
+  --border:      #e2d9cc;
+  --navy:        #0d1f35;
+  --navy-light:  #162d47;
+  --navy-muted:  #1e3a5a;
+  --gold:        #9a7a2e;
+  --gold-light:  #b8963e;
+  --gold-pale:   rgba(154,122,46,0.1);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* CHAPTER HEADER */
+.chapter-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; text-align: center; }
+.chapter-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.chapter-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; }
+.chapter-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem; }
+.chapter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; color: var(--navy); line-height: 1.15; margin-bottom: 0.8rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.chapter-subtitle { font-size: 1.05rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.chapter-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+/* CONTENT */
+.chapter-content { max-width: 760px; margin: 0 auto; padding: 4rem 4vw 3rem; }
+
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p strong { color: var(--navy); font-weight: 600; }
+
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); margin: 2.5rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); }
+
+h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.8rem; }
+
+ul, ol { margin-left: 1.5rem; margin-bottom: 1.4rem; }
+li { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 0.5rem; }
+
+/* BLOCKQUOTE */
+blockquote { background: var(--bg-alt); border-left: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 2rem 0; }
+blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--navy); margin: 0; line-height: 1.6; }
+
+/* CODE BLOCKS */
+.code-block { background: var(--navy); color: #e8e0d0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'Courier New', monospace; font-size: 0.88rem; line-height: 1.7; overflow-x: auto; border-radius: 2px; white-space: pre-wrap; }
+
+/* KEY INSIGHT CARD */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.8rem 0; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0.5rem 0; line-height: 1.7; }
+
+/* PRACTICE EXERCISE */
+.practice-box { background: var(--surface); border: 2px solid var(--gold); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+.practice-box .box-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--navy); font-weight: 600; margin-bottom: 0.8rem; }
+.practice-box p { font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.8rem; }
+
+/* TAKEAWAYS */
+.takeaways { background: var(--bg-alt); padding: 2rem 2.5rem; margin: 3rem 0; border-top: 3px solid var(--gold); }
+.takeaways-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--navy); font-weight: 600; margin-bottom: 1.2rem; text-align: center; }
+.takeaways ul { list-style: none; padding: 0; margin: 0; }
+.takeaways li { padding-left: 2rem; position: relative; margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.7; }
+.takeaways li:before { content: '✅'; position: absolute; left: 0; color: var(--gold); }
+
+/* NAVIGATION */
+.chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 2.5rem 0; border-top: 2px solid var(--border); margin-top: 3rem; flex-wrap: wrap; }
+.nav-btn { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--navy); padding: 1rem 1.5rem; border: 1px solid var(--border); background: var(--surface); transition: all 0.3s; flex: 1; min-width: 200px; }
+.nav-btn:hover { border-color: var(--gold); box-shadow: 0 2px 12px rgba(154,122,46,0.1); }
+.nav-btn.prev { justify-content: flex-start; }
+.nav-btn.next { justify-content: flex-end; }
+.nav-btn .nav-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.nav-btn .nav-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; }
+.nav-center { text-align: center; flex: 0 0 auto; }
+.nav-center a { color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+.nav-center a:hover { color: var(--gold-light); }
+
+/* FOOTER */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .chapter-nav { flex-direction: column; }
+  .nav-btn { width: 100%; }
+  footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="learn.html" class="active">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="chapter-hero">
+  <a href="learn-series-claude-mastery.html" class="back-link">← Back to Claude Mastery</a>
+  <div class="chapter-label">Claude Mastery · Chapter 7 of 30</div>
+  <div class="chapter-number">07</div>
+  <h1 class="chapter-title">Advanced Prompting Patterns</h1>
+  <p class="chapter-subtitle">Professional-Grade Techniques</p>
+  <div class="chapter-meta">
+    <span>⏱️ 14 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>📊 Advanced</span>
+    <span class="meta-dot">◆</span>
+    <span>🎯 Expert Techniques</span>
+  </div>
+  <div class="divider-line"></div>
+</div>
+
+<div class="chapter-content">
+
+<h3>Introduction</h3>
+
+<p>You've mastered the fundamentals. You know how to be clear, use examples, encourage thinking, refine iteratively, and provide context.</p>
+
+<p><strong>Now it's time to level up.</strong></p>
+
+<p>This chapter introduces advanced prompting patterns that professional AI engineers use for sophisticated tasks. These aren't just "tips and tricks" — they're systematic techniques that unlock Claude's full potential for complex work.</p>
+
+<p>Think of the difference between cooking from a recipe and understanding the culinary techniques that let you improvise. The fundamentals got you following recipes. These advanced patterns let you create your own.</p>
+
+<p><strong>What you'll learn:</strong></p>
+<ul>
+<li>Chain-of-thought prompting for systematic reasoning</li>
+<li>Output constraints for precise formatting</li>
+<li>XML structuring for complex requests</li>
+<li>Few-shot prompting for pattern learning</li>
+<li>Layered prompting for multi-step tasks</li>
+<li>Pattern combinations for expert-level results</li>
+</ul>
+
+<p>Ready? Let's dive into the advanced playbook.</p>
+
+<h3>Pattern 1: Chain-of-Thought (CoT) Prompting</h3>
+
+<p><strong>What it is:</strong> Explicitly asking Claude to show its reasoning process step-by-step before giving an answer.</p>
+
+<p><strong>Why it works:</strong> Forces systematic thinking, reduces errors, makes logic transparent, and improves accuracy on complex problems.</p>
+
+<h4>Basic Format</h4>
+
+<div class="code-block">[Your question]
+
+Think through this step-by-step before answering:
+1. First, [step 1]
+2. Then, [step 2]
+3. Finally, [step 3]
+
+After thinking through each step, provide your answer.</div>
+
+<h4>Real Example</h4>
+
+<p><strong>Without Chain-of-Thought:</strong></p>
+<div class="code-block">A store sells apples for $2 each. If you buy 5 or more, you get 20% off. 
+You buy 6 apples. How much do you pay?</div>
+
+<p>Claude might jump to an answer, potentially making an error.</p>
+
+<p><strong>With Chain-of-Thought:</strong></p>
+<div class="code-block">A store sells apples for $2 each. If you buy 5 or more, you get 20% off. 
+You buy 6 apples. How much do you pay?
+
+Think through this step-by-step:
+1. Calculate the base price (price × quantity)
+2. Determine if the discount applies
+3. Calculate the discount amount
+4. Calculate the final price
+
+Show your work for each step, then give the final answer.</div>
+
+<p>Claude's response now shows:</p>
+<ul>
+<li>Step 1: $2 × 6 = $12</li>
+<li>Step 2: 6 apples ≥ 5, so discount applies</li>
+<li>Step 3: 20% of $12 = $2.40</li>
+<li>Step 4: $12 - $2.40 = $9.60</li>
+</ul>
+
+<p><strong>Final answer: $9.60</strong></p>
+
+<p>The reasoning is transparent, verifiable, and more likely to be correct.</p>
+
+<h4>When to Use Chain-of-Thought</h4>
+
+<ul>
+<li>✅ <strong>Math problems</strong> — Multi-step calculations</li>
+<li>✅ <strong>Logic puzzles</strong> — Complex reasoning</li>
+<li>✅ <strong>Analysis tasks</strong> — Breaking down information</li>
+<li>✅ <strong>Debugging</strong> — Systematic troubleshooting</li>
+<li>✅ <strong>Strategy development</strong> — Thinking through options</li>
+</ul>
+
+<h3>Pattern 2: Constrained Outputs</h3>
+
+<p><strong>What it is:</strong> Specifying the exact format, structure, or constraints for the response.</p>
+
+<p><strong>Why it works:</strong> Ensures Claude's output fits directly into your workflow without manual reformatting.</p>
+
+<h4>Constrain by Format</h4>
+
+<p><strong>Example:</strong></p>
+<div class="code-block">List 5 productivity tools for remote teams.
+
+Requirements:
+- JSON format
+- Each tool must include: name, category, price_range, best_for
+- Sort by price (lowest to highest)
+- Price ranges must be: "free", "budget", "premium"</div>
+
+<p>Result: Clean JSON you can paste directly into code.</p>
+
+<h4>Constrain by Length</h4>
+
+<p><strong>Example:</strong></p>
+<div class="code-block">Explain quantum computing.
+
+Constraints:
+- Exactly 3 paragraphs
+- Paragraph 1: What it is (50 words max)
+- Paragraph 2: How it works (75 words max)
+- Paragraph 3: Real applications (50 words max)</div>
+
+<p>Result: Precise length for a specific context (website copy, presentation slide, etc.)</p>
+
+<h4>Constrain by Structure</h4>
+
+<p><strong>Example:</strong></p>
+<div class="code-block">Analyze this product launch strategy.
+
+Provide your analysis in this exact format:
+
+STRENGTHS (3 bullet points max)
+WEAKNESSES (3 bullet points max)
+OPPORTUNITIES (2 bullet points max)
+THREATS (2 bullet points max)
+RECOMMENDATION (1 paragraph, 100 words max)</div>
+
+<p>Result: Structured SWOT analysis ready to present.</p>
+
+<h4>Industry Example: Marketing Brief</h4>
+
+<div class="code-block">Create a campaign brief for our Q3 product launch.
+
+OUTPUT FORMAT:
+Campaign Name: [single line]
+Target Audience: [2-3 sentences]
+Key Message: [1 sentence, under 20 words]
+Channels: [bullet list, 3-5 items]
+Budget Allocation: [table format with percentages]
+Timeline: [week-by-week breakdown, 8 weeks]
+Success Metrics: [numbered list, 4-5 metrics]
+
+Keep total output under 400 words.</div>
+
+<h3>Pattern 3: XML Tags for Structure</h3>
+
+<p><strong>What it is:</strong> Using XML-like tags to organize complex prompts with multiple sections.</p>
+
+<p><strong>Why it works:</strong> Clear separation of different information types, easy for Claude to parse, handles complexity elegantly.</p>
+
+<h4>Basic Structure</h4>
+
+<div class="code-block">&lt;context&gt;
+[Background information]
+&lt;/context&gt;
+
+&lt;task&gt;
+[What you want Claude to do]
+&lt;/task&gt;
+
+&lt;data&gt;
+[Input data or examples]
+&lt;/data&gt;
+
+&lt;constraints&gt;
+[Rules and limitations]
+&lt;/constraints&gt;
+
+&lt;output_format&gt;
+[How to structure the response]
+&lt;/output_format&gt;</div>
+
+<h4>Real Example: Investment Analysis</h4>
+
+<div class="code-block">&lt;context&gt;
+I'm a startup founder raising a Series A. We have $2M ARR, growing 15% MoM.
+Enterprise SaaS in the HR tech space.
+&lt;/context&gt;
+
+&lt;task&gt;
+Analyze this investment opportunity using systematic reasoning.
+&lt;/task&gt;
+
+&lt;data&gt;
+- Current ARR: $2M
+- Growth rate: 15% month-over-month
+- Burn rate: $400K/month
+- Team size: 25 people
+- Market size: $10B TAM
+- Competitors: 3 major players, market leader at $50M ARR
+&lt;/data&gt;
+
+&lt;analysis_framework&gt;
+STEP 1: Market Analysis
+- Market size and growth trajectory
+- Competitive landscape assessment
+- Defensibility and moat
+
+STEP 2: Financial Health
+- Unit economics evaluation
+- Growth sustainability analysis
+- Path to profitability timeline
+
+STEP 3: Risk Assessment
+- Market risks
+- Execution risks
+- Financial risks
+
+STEP 4: Valuation
+- Comparable companies analysis
+- Growth-adjusted valuation
+- Recommended valuation range
+&lt;/analysis_framework&gt;
+
+&lt;output_format&gt;
+For each step:
+- Analysis (show your reasoning)
+- Key findings (3-5 bullet points)
+- Risk score (1-10 scale)
+
+Final recommendation:
+- Decision: INVEST / PASS / WATCH
+- Rationale (2-3 sentences)
+- Conditions (if applicable)
+&lt;/output_format&gt;</div>
+
+<p><strong>This combines:</strong></p>
+<ul>
+<li>Clear context separation</li>
+<li>Structured analysis framework</li>
+<li>Defined output format</li>
+<li>Chain-of-thought reasoning</li>
+</ul>
+
+<h3>Pattern 4: Few-Shot Prompting</h3>
+
+<p><strong>What it is:</strong> Providing 2-4 examples of the pattern you want Claude to follow.</p>
+
+<p><strong>Why it works:</strong> Shows Claude exactly what you mean, better than explaining. Especially powerful for style, format, or tone.</p>
+
+<h4>The Pattern</h4>
+
+<div class="code-block">Convert [INPUT] into [OUTPUT].
+
+Examples:
+
+INPUT: [Example 1 input]
+OUTPUT: [Example 1 output]
+
+INPUT: [Example 2 input]
+OUTPUT: [Example 2 output]
+
+INPUT: [Example 3 input]
+OUTPUT: [Example 3 output]
+
+Now convert these:
+[Your actual inputs]</div>
+
+<h4>Real Example: Feature → Benefit Copy</h4>
+
+<div class="code-block">Convert product features into benefit-focused marketing copy.
+
+Examples:
+
+Feature: "256-bit encryption"
+Benefit: "Your data stays private and secure, protected by bank-level encryption"
+
+Feature: "Real-time sync across devices"
+Benefit: "Start on your phone, finish on your laptop—your work is always up to date"
+
+Feature: "Automated backups every hour"
+Benefit: "Never lose your work. We save your progress automatically, so you can focus on creating"
+
+Now convert these features:
+- Unlimited cloud storage
+- Advanced analytics dashboard
+- API access with 99.9% uptime
+- Custom branding options</div>
+
+<p>Claude learns the pattern: technical feature → user-focused benefit.</p>
+
+<h4>When Few-Shot Shines</h4>
+
+<ul>
+<li>✅ <strong>Style transfer</strong> — Match a specific writing voice</li>
+<li>✅ <strong>Format conversion</strong> — Transform data structures</li>
+<li>✅ <strong>Tone matching</strong> — Replicate communication style</li>
+<li>✅ <strong>Pattern extraction</strong> — Learn from examples</li>
+</ul>
+
+<h3>Pattern 5: Role Assignment</h3>
+
+<p><strong>What it is:</strong> Asking Claude to adopt a specific role or perspective before responding.</p>
+
+<p><strong>Why it works:</strong> Frames the response from an expert viewpoint with appropriate depth and terminology.</p>
+
+<h4>The Pattern</h4>
+
+<div class="code-block">&lt;role&gt;
+You are a [specific role] with [X years] experience in [domain].
+Your expertise includes [key areas].
+&lt;/role&gt;
+
+&lt;task&gt;
+[Your question or request]
+&lt;/task&gt;</div>
+
+<h4>Real Example</h4>
+
+<div class="code-block">&lt;role&gt;
+You are a senior DevOps engineer with 10 years of experience scaling 
+cloud infrastructure. Your expertise includes Kubernetes, AWS, CI/CD 
+pipelines, and cost optimization.
+&lt;/role&gt;
+
+&lt;task&gt;
+Our API response times increased from 200ms to 2000ms after deploying 
+a new microservice. Walk me through your debugging approach.
+&lt;/task&gt;</div>
+
+<p>Claude now responds with the depth, terminology, and systematic approach of an experienced DevOps engineer.</p>
+
+<h3>Pattern 6: Constrain-Then-Expand</h3>
+
+<p><strong>What it is:</strong> First get a constrained/simplified response, then progressively expand with detail.</p>
+
+<p><strong>Why it works:</strong> Ensures clarity before complexity, creates scaffolding for understanding.</p>
+
+<h4>The Pattern</h4>
+
+<div class="code-block">LEVEL 1 (Simplest):
+Explain [topic] in [constraint: 2 sentences for a 10-year-old]
+
+LEVEL 2 (Moderate):
+Now expand that explanation for [target: college student] in [constraint: 1 paragraph]
+
+LEVEL 3 (Advanced):
+Finally, provide a technical explanation for [target: professional] in [constraint: 2-3 paragraphs with terminology]</div>
+
+<h4>Real Example: Machine Learning Explanation</h4>
+
+<div class="code-block">Explain machine learning.
+
+LEVEL 1: Give me a 2-sentence explanation suitable for a 10-year-old.
+
+LEVEL 2: Expand that explanation for a college student (1 paragraph).
+
+LEVEL 3: Provide a technical explanation for a software engineer 
+(2-3 paragraphs with proper terminology).
+
+Build each level on the previous one.</div>
+
+<p><strong>Result:</strong> Three explanations, each adding appropriate complexity.</p>
+
+<h3>Pattern 7: Conditional Logic</h3>
+
+<p><strong>What it is:</strong> Asking Claude to handle different scenarios differently based on conditions.</p>
+
+<p><strong>Why it works:</strong> One prompt adapts to various situations, reduces back-and-forth.</p>
+
+<h4>The Pattern</h4>
+
+<div class="code-block">Analyze [input].
+
+IF [condition A]:
+- [Action A1]
+- [Action A2]
+
+IF [condition B]:
+- [Action B1]
+- [Action B2]
+
+IF [condition C]:
+- [Action C1]
+- [Action C2]
+
+[Input here]</div>
+
+<h4>Real Example: Code Review</h4>
+
+<div class="code-block">Review this code for bugs and optimization opportunities.
+
+IF the code has bugs:
+- Identify each bug
+- Explain why it's a bug
+- Provide corrected code
+
+IF the code is correct but inefficient:
+- Explain the inefficiency
+- Suggest optimization approach
+- Show optimized version with comments
+
+IF the code is correct and efficient:
+- Confirm it's well-written
+- Suggest minor improvements (if any)
+- Provide edge cases to test
+
+[Your code here]</div>
+
+<p><strong>This ensures Claude provides the RIGHT type of feedback for the situation.</strong></p>
+
+<h3>Combining Patterns: Expert-Level Prompting</h3>
+
+<p>The real power comes from combining multiple patterns strategically.</p>
+
+<h4>Example: Comprehensive Business Analysis</h4>
+
+<div class="code-block">&lt;role&gt;
+You are a senior strategy consultant with 15 years experience in SaaS.
+&lt;/role&gt;
+
+&lt;context&gt;
+Client: B2B marketing automation platform, $5M ARR, 200 customers.
+Challenge: Considering expansion into SMB market (currently enterprise-focused).
+&lt;/context&gt;
+
+&lt;task&gt;
+Analyze this market expansion opportunity using chain-of-thought reasoning.
+&lt;/task&gt;
+
+&lt;analysis_framework&gt;
+STEP 1: Market Assessment
+Think through:
+- SMB market size vs current TAM
+- Competitive landscape in SMB
+- Buyer behavior differences
+
+STEP 2: Business Model Impact
+Think through:
+- Pricing implications (enterprise vs SMB)
+- Sales motion changes (high-touch vs self-serve)
+- Support requirements
+
+STEP 3: Operational Feasibility
+Think through:
+- Product adaptations needed
+- Team/hiring implications
+- Timeline to market
+
+STEP 4: Financial Modeling
+Think through:
+- Revenue projections (3-year)
+- Cost structure changes
+- Break-even timeline
+
+For each step, show your reasoning process before conclusions.
+&lt;/analysis_framework&gt;
+
+&lt;output_format&gt;
+For each step above:
+
+ANALYSIS (your thinking)
+- [Bullet points showing reasoning]
+
+KEY FINDINGS
+- [3-5 critical insights]
+
+RISK LEVEL: [LOW / MEDIUM / HIGH]
+
+After all 4 steps, provide:
+
+FINAL RECOMMENDATION
+Decision: [EXPAND / DON'T EXPAND / PHASE APPROACH]
+Rationale: [2-3 sentences]
+Conditions: [If conditional, what must be true]
+Next Steps: [3-5 immediate actions]
+&lt;/output_format&gt;</div>
+
+<p><strong>This combines:</strong></p>
+<ul>
+<li>Role assignment (expertise)</li>
+<li>XML structure (organization)</li>
+<li>Context provision (background)</li>
+<li>Chain-of-thought (reasoning)</li>
+<li>Constrained output (format)</li>
+<li>Layered analysis (progressive depth)</li>
+</ul>
+
+<h3>When to Use Advanced Patterns</h3>
+
+<h4>Use Advanced Patterns For:</h4>
+
+<ul>
+<li>✅ <strong>Complex analysis</strong> requiring multiple steps</li>
+<li>✅ <strong>Professional deliverables</strong> needing specific formats</li>
+<li>✅ <strong>High-stakes decisions</strong> requiring systematic thinking</li>
+<li>✅ <strong>Technical tasks</strong> with precise requirements</li>
+<li>✅ <strong>Situations where generic responses won't work</strong></li>
+</ul>
+
+<h4>Stick to Simple Prompts For:</h4>
+
+<ul>
+<li>❌ Quick questions</li>
+<li>❌ Straightforward tasks</li>
+<li>❌ Exploratory conversations</li>
+<li>❌ Learning and understanding</li>
+</ul>
+
+<p><strong>Rule:</strong> Match prompt complexity to task complexity.</p>
+
+<h3>Common Mistakes with Advanced Patterns</h3>
+
+<h4>Mistake 1: Over-Engineering Simple Tasks</h4>
+
+<div class="code-block">❌ Using XML tags and chain-of-thought for "What's the capital of France?"
+✅ Just ask the question</div>
+
+<h4>Mistake 2: Unclear Constraints</h4>
+
+<div class="code-block">❌ "Make it concise"
+✅ "Maximum 100 words, 2 paragraphs"</div>
+
+<h4>Mistake 3: Contradictory Requirements</h4>
+
+<div class="code-block">❌ "Be comprehensive but brief, detailed but concise"
+✅ "Cover these 3 points in 150 words total"</div>
+
+<h4>Mistake 4: Too Many Patterns at Once</h4>
+
+<div class="code-block">❌ Trying to use 5 different patterns in one prompt
+✅ Pick 2-3 that complement each other</div>
+
+<div class="takeaways">
+<div class="takeaways-title">Key Takeaways</div>
+<ul>
+<li><strong>Advanced patterns unlock complex capabilities</strong> — Go beyond simple Q&A</li>
+<li><strong>Chain-of-thought improves accuracy</strong> — Explicit reasoning reduces errors</li>
+<li><strong>Constraints ensure usability</strong> — Specify format, length, structure</li>
+<li><strong>XML tags organize complexity</strong> — Clear separation of prompt components</li>
+<li><strong>Few-shot teaches patterns</strong> — Examples show better than explanations</li>
+<li><strong>Combine patterns strategically</strong> — Mix techniques for powerful results</li>
+<li><strong>Match complexity to task</strong> — Don't over-engineer simple questions</li>
+</ul>
+</div>
+
+<div class="practice-box">
+<div class="box-title">Your Turn: Assignment</div>
+<p><strong>Challenge:</strong> Pick a complex task you need to do. Design an advanced prompt using at least 2 patterns from this chapter.</p>
+<p><strong>Requirements:</strong></p>
+<ol>
+<li>Choose appropriate patterns for your task</li>
+<li>Structure the prompt clearly</li>
+<li>Test it with Claude</li>
+<li>Refine based on results</li>
+<li>Compare to how you would have asked before</li>
+</ol>
+<p><strong>Reflection Questions:</strong></p>
+<ul style="margin-left: 1.5rem;">
+<li>Which patterns did you combine?</li>
+<li>How did the output quality compare to simpler prompts?</li>
+<li>What would you do differently next time?</li>
+</ul>
+<p><strong>Share:</strong> What patterns worked best for your use case?</p>
+</div>
+
+<div class="chapter-nav">
+  <a href="learn-series-claude-mastery-chapter-6.html" class="nav-btn prev">
+    <div>
+      <div class="nav-label">Previous Chapter</div>
+      <div class="nav-title">← Using Context Effectively</div>
+    </div>
+  </a>
+  
+  <div class="nav-center">
+    <a href="learn-series-claude-mastery.html">View All Chapters</a>
+  </div>
+  
+  <div class="nav-btn next" style="visibility: hidden;">
+    <div style="text-align: right;">
+      <div class="nav-label">Next Chapter</div>
+      <div class="nav-title">Coming Soon →</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:info@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/neearventures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+</body>
+</html>
