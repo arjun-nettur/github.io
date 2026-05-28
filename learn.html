@@ -118,6 +118,21 @@
     .series-cta { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--gold); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: gap 0.3s; margin-top: auto; }
     .series-card:hover .series-cta { gap: 0.75rem; }
 
+    /* GUIDE CARD — Active */
+    .guides-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1.8rem; margin-top:2.5rem; }
+    .guide-card { background:var(--surface); border:1px solid var(--border); text-decoration:none; color:inherit; display:flex; flex-direction:column; transition:box-shadow 0.3s, border-color 0.3s; }
+    .guide-card:hover { border-color:var(--gold); box-shadow:0 4px 20px rgba(154,122,46,0.12); }
+    .guide-card-image img { width:100%; height:210px; object-fit:cover; display:block; }
+    .guide-card-body { padding:1.4rem 1.5rem; display:flex; flex-direction:column; flex:1; }
+    .guide-card-meta { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem; }
+    .guide-tag { font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); font-weight:600; }
+    .guide-read { font-size:0.74rem; color:var(--navy-muted); }
+    .guide-card-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:0.7rem; }
+    .guide-card-excerpt { font-size:0.84rem; color:var(--navy-muted); line-height:1.7; flex:1; margin-bottom:1.2rem; }
+    .guide-card-footer { display:flex; justify-content:space-between; align-items:center; padding-top:0.9rem; border-top:1px solid var(--border); }
+    .guide-level { font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--navy-muted); background:var(--bg-alt); padding:0.2rem 0.6rem; border:1px solid var(--border); }
+    .guide-cta { font-size:0.78rem; color:var(--gold); font-weight:500; letter-spacing:0.06em; }
+    
     /* COMING SOON CARD */
     .series-card.coming-soon { opacity: 0.6; pointer-events: none; cursor: default; }
     .series-card.coming-soon .series-tag { background: var(--navy-muted); }
@@ -246,16 +261,31 @@
       <div class="format-title">Guides</div>
       <div class="format-count">Single-page · Deep dives</div>
     </div>
-    <div class="coming-section">
-      <div class="coming-title">Coming Soon — Deep-dive guides on topics that deserve more than a blog post.</div>
-      <div class="coming-grid">
-        <div class="coming-pill">The Complete Prompting Guide</div>
-        <div class="coming-pill">Freelancing Starter Kit — India</div>
-        <div class="coming-pill">SEO Fundamentals 2026</div>
-        <div class="coming-pill">Building Your First Digital Product</div>
-        <div class="coming-pill">Understanding the Indian Stock Market</div>
+    <div class="guides-grid">
+
+  <!-- GUIDE CARD 1: SEO vs AEO -->
+  <a href="learn-guide-seo-vs-aeo.html" class="guide-card">
+    <div class="guide-card-image">
+      <img src="images/learn-guide-seo-vs-aeo-thumb.jpg"
+           alt="SEO vs AEO guide — understanding the difference between search engine and answer engine optimization"
+           loading="lazy"
+           width="400" height="210">
+    </div>
+    <div class="guide-card-body">
+      <div class="guide-card-meta">
+        <span class="guide-tag">Digital · Strategy</span>
+        <span class="guide-read">12 min read</span>
+      </div>
+      <h3 class="guide-card-title">SEO vs AEO: What's Changed, What Still Matters, and How to Build for Both</h3>
+      <p class="guide-card-excerpt">Search is no longer just a rankings game. AI engines now answer questions directly — learn the key differences and exactly what your website needs in 2026.</p>
+      <div class="guide-card-footer">
+        <span class="guide-level">Intermediate</span>
+        <span class="guide-cta">Read Guide →</span>
       </div>
     </div>
+  </a>
+
+</div>
   </div>
 
   <!-- ── VIDEO TUTORIALS ── -->
