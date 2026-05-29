@@ -28,7 +28,7 @@
   <!-- Claude Mastery Series Hub -->
   <url>
     <loc>https://neearventures.com/learn-series-claude-mastery.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -76,7 +76,13 @@
   </url>
   <url>
     <loc>https://neearventures.com/learn-series-claude-mastery-chapter-7.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://neearventures.com/learn-series-claude-mastery-chapter-8.html</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
