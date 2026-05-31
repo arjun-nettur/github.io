@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 1. Character encoding and viewport -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- 2. Favicons -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- 3. Canonical tag -->
+<link rel="canonical" href="https://neearventures.com/learn-series-claude-mastery-chapter-9.html">
+
+<!-- 4. Title and meta description -->
+<title>Chapter 9: Projects & Knowledge Organization — Claude Mastery — NeeAr Ventures</title>
+<meta name="description" content="Learn how to use Claude Projects to build persistent workspaces with custom instructions, uploaded knowledge, and memory — so you stop repeating yourself every conversation.">
+
+<!-- 5. Open Graph and Twitter tags -->
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/learn-series-claude-mastery-chapter-9.html" />
+<meta property="og:title"        content="Chapter 9: Projects & Knowledge Organization — Claude Mastery — NeeAr Ventures" />
+<meta property="og:description"  content="Learn how to use Claude Projects to build persistent workspaces with custom instructions, uploaded knowledge, and memory — so you stop repeating yourself every conversation." />
+<meta property="og:image"        content="https://neearventures.com/images/claude-mastery-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@NeeArVentures" />
+<meta name="twitter:title"       content="Chapter 9: Projects & Knowledge Organization — Claude Mastery — NeeAr Ventures" />
+<meta name="twitter:description" content="Learn how to use Claude Projects to build persistent workspaces with custom instructions, uploaded knowledge, and memory — so you stop repeating yourself every conversation." />
+<meta name="twitter:image"       content="https://neearventures.com/images/claude-mastery-og.jpg" />
+
+<!-- 6a. LearningResource schema with Speakable, isPartOf, about, mentions -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "headline": "Chapter 9: Projects & Knowledge Organization — Claude Mastery",
+  "description": "Learn how to use Claude Projects to build persistent workspaces with custom instructions, uploaded knowledge, and memory — so you stop repeating yourself every conversation.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://neearventures.com/images/claude-mastery-og.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": "2026-05-29",
+  "dateModified": "2026-05-29",
+  "author": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures Editorial",
+    "url": "https://neearventures.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://neearventures.com/logo.png"
+    }
+  },
+  "learningResourceType": "Chapter",
+  "educationalLevel": "Intermediate",
+  "teaches": "How to use Claude Projects, custom instructions, knowledge uploads, and Memory for persistent AI workspaces",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".direct-answer", ".article-lead", "h2"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Claude Projects"
+  },
+  "mentions": [
+    { "@type": "Thing", "name": "Claude Projects" },
+    { "@type": "Thing", "name": "Custom instructions" },
+    { "@type": "Thing", "name": "Claude Memory" },
+    { "@type": "Thing", "name": "Knowledge base" },
+    { "@type": "Thing", "name": "Persistent workspace" },
+    { "@type": "Thing", "name": "AI workflow organization" }
+  ],
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Claude Mastery",
+    "url": "https://neearventures.com/learn-series-claude-mastery.html"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neearventures.com/learn-series-claude-mastery-chapter-9.html"
+  }
+}
+</script>
+
+<!-- 6b. BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://neearventures.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Learn With Us",
+      "item": "https://neearventures.com/learn.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Claude Mastery",
+      "item": "https://neearventures.com/learn-series-claude-mastery.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Chapter 9: Projects & Knowledge Organization",
+      "item": "https://neearventures.com/learn-series-claude-mastery-chapter-9.html"
+    }
+  ]
+}
+</script>
+
+<!-- 6c. FAQPage schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are Claude Projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Projects are dedicated persistent workspaces inside Claude that maintain custom instructions, uploaded knowledge documents, conversation history, and memory across all your sessions. Unlike regular chats where context resets every conversation, Projects retain your context, preferences, and reference material so Claude already understands your situation every time you open a new conversation. Projects work best when focused on a specific recurring type of work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I include in Claude custom instructions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Effective custom instructions should cover who you are and your role, what the project is for, your style and tone preferences, important context and terminology Claude should always know, and specific always and never rules for how Claude should behave. Be specific rather than general — instead of 'be professional', write exactly what professional means in your context, with examples of what to do and what to avoid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Claude Projects and Claude Memory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Projects are structured workspaces for specific, focused work — they hold custom instructions, uploaded documents, and all conversations for that context. Claude Memory stores general facts and preferences about you that can inform conversations more broadly. Think of Projects as your organized work environment and Memory as background awareness Claude builds about you over time. Use both, but don't expect one to replace the other."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What documents should I upload to a Claude Project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upload any document you find yourself repeatedly pasting into conversations. Good candidates include brand guidelines, tone of voice guides, product documentation, coding standards, API references, templates, process documents, FAQs, and previous work examples. Once uploaded to a Project, Claude can access these in every conversation without you needing to provide them again. Start with the 2 or 3 documents you paste most often."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many Claude Projects should I create?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Create one Project per distinct recurring context or type of work — not one for everything and not one for each individual task. Good project scopes include things like content creation, software development, client work, or research. A project earns its own workspace when the context-building investment pays off through repeated use. Start with your single most frequent Claude use case, build that project well, then expand."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 7. Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- 8. Styles -->
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:         #f7f4ef;
+  --bg-alt:     #f0ece4;
+  --surface:    #ffffff;
+  --border:     #e2d9cc;
+  --navy:       #0d1f35;
+  --navy-light: #162d47;
+  --navy-muted: #1e3a5a;
+  --gold:       #9a7a2e;
+  --gold-light: #b8963e;
+  --gold-pale:  rgba(154,122,46,0.1);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* CHAPTER HEADER */
+.chapter-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; text-align: center; }
+.chapter-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.chapter-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; }
+.chapter-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem; }
+.chapter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; color: var(--navy); line-height: 1.15; margin-bottom: 0.8rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.chapter-subtitle { font-size: 1.05rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.chapter-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+/* TWO-COLUMN LAYOUT */
+.chapter-body-wrap { max-width: 1160px; margin: 0 auto; padding: 4rem 4vw 3rem; display: grid; grid-template-columns: 1fr 260px; gap: 3.5rem; align-items: start; }
+.chapter-content { min-width: 0; }
+
+/* STICKY SIDEBAR */
+.chapter-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.5rem; }
+
+/* TOC WIDGET */
+.toc-widget { background: var(--surface); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.toc-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+.toc-list { list-style: none; padding: 0; margin: 0; }
+.toc-list li { border-bottom: 1px solid var(--border); }
+.toc-list li:last-child { border-bottom: none; }
+.toc-list a { display: block; padding: 0.55rem 0; font-size: 0.8rem; color: var(--navy-muted); text-decoration: none; line-height: 1.45; transition: color 0.25s, padding-left 0.25s; }
+.toc-list a:hover { color: var(--gold); padding-left: 0.4rem; }
+.toc-list a.toc-active { color: var(--gold); font-weight: 500; padding-left: 0.4rem; border-left: 2px solid var(--gold); margin-left: -1px; }
+
+/* PROGRESS WIDGET */
+.progress-widget { background: var(--surface); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.progress-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+.progress-series { font-size: 0.78rem; color: var(--navy-muted); margin-bottom: 0.5rem; display: flex; justify-content: space-between; }
+.progress-bar-track { background: var(--border); height: 4px; width: 100%; margin-bottom: 1.2rem; }
+.progress-bar-fill { background: var(--gold); height: 4px; width: 30%; }
+.progress-chapter-list { list-style: none; padding: 0; margin: 0; }
+.progress-chapter-list li { font-size: 0.78rem; padding: 0.35rem 0; color: var(--navy-muted); display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border); }
+.progress-chapter-list li:last-child { border-bottom: none; }
+.progress-chapter-list li.current { color: var(--gold); font-weight: 500; }
+.progress-chapter-list li.done::before { content: '✓'; color: var(--gold); font-size: 0.72rem; flex-shrink: 0; }
+.progress-chapter-list li.current::before { content: '▶'; color: var(--gold); font-size: 0.6rem; flex-shrink: 0; }
+.progress-chapter-list li.upcoming::before { content: '○'; color: var(--border); font-size: 0.72rem; flex-shrink: 0; }
+
+/* SERIES WIDGET */
+.series-widget { background: var(--bg-alt); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.series-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.8rem; }
+.series-widget p { font-size: 0.8rem; color: var(--navy-muted); line-height: 1.6; margin-bottom: 1rem; }
+.series-widget-link { display: block; text-align: center; background: transparent; border: 1px solid var(--gold); color: var(--gold); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.55rem 1rem; text-decoration: none; transition: all 0.3s; font-weight: 500; }
+.series-widget-link:hover { background: var(--gold); color: #fff; }
+
+@media (max-width: 1024px) {
+  .chapter-body-wrap { grid-template-columns: 1fr 220px; gap: 2.5rem; }
+}
+@media (max-width: 768px) {
+  .chapter-body-wrap { grid-template-columns: 1fr; padding: 2.5rem 4vw 2rem; }
+  .chapter-sidebar { position: static; display: none; }
+}
+
+/* AEO: DIRECT ANSWER BLOCK */
+.direct-answer { background: var(--navy); padding: 1.6rem 1.8rem; margin: 1.8rem 0 2.2rem; border-left: 4px solid var(--gold); }
+.direct-answer .da-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.7rem; }
+.direct-answer p { font-size: 0.92rem; color: rgba(232,224,208,0.9); line-height: 1.75; margin: 0; }
+.direct-answer p strong { color: var(--gold); }
+
+/* TYPOGRAPHY */
+.article-lead { font-size: 1.05rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p strong { color: var(--navy); font-weight: 600; }
+
+/* AEO: H2 as questions with id + scroll margin */
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; color: var(--navy); margin: 3rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); scroll-margin-top: 90px; }
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.8rem; }
+h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin: 1.6rem 0 0.6rem; }
+
+ul, ol { margin-left: 1.5rem; margin-bottom: 1.4rem; }
+li { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 0.5rem; }
+
+/* CODE BLOCKS */
+.code-block { background: var(--navy); color: #e8e0d0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'Courier New', monospace; font-size: 0.88rem; line-height: 1.7; overflow-x: auto; border-radius: 2px; white-space: pre-wrap; }
+
+/* COMPARISON TABLE */
+.comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.88rem; }
+.comparison-table th { background: var(--navy); color: #e8e0d0; padding: 0.7rem 1rem; text-align: left; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.comparison-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--navy); line-height: 1.6; vertical-align: top; }
+.comparison-table tr:nth-child(even) td { background: var(--bg-alt); }
+.comparison-table tr:last-child td { border-bottom: none; }
+
+/* INSIGHT CARD */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.8rem 0; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0.5rem 0; line-height: 1.7; }
+
+/* SETUP CARD — for real-world project examples */
+.setup-card { background: var(--surface); border: 1px solid var(--border); margin: 2rem 0; overflow: hidden; }
+.setup-card-header { background: var(--navy); padding: 1rem 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
+.setup-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: #e8e0d0; }
+.setup-card-badge { font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase; background: rgba(154,122,46,0.25); border: 1px solid var(--gold); color: var(--gold); padding: 0.18rem 0.65rem; font-weight: 600; white-space: nowrap; }
+.setup-card-body { padding: 1.4rem 1.5rem; }
+.setup-card-body p { font-size: 0.88rem; line-height: 1.7; color: var(--navy-muted); margin-bottom: 0.8rem; }
+.setup-card-body ul { margin-left: 1.2rem; margin-bottom: 0.8rem; }
+.setup-card-body li { font-size: 0.88rem; line-height: 1.7; color: var(--navy-muted); margin-bottom: 0.3rem; }
+.setup-section-label { font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin: 1rem 0 0.4rem; font-weight: 600; }
+
+/* PRACTICE BOX */
+.practice-box { background: var(--surface); border: 2px solid var(--gold); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+.practice-box .box-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--navy); font-weight: 600; margin-bottom: 0.8rem; }
+.practice-box p { font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.8rem; }
+
+/* TAKEAWAYS */
+.takeaways { background: var(--bg-alt); padding: 2rem 2.5rem; margin: 3rem 0; border-top: 3px solid var(--gold); }
+.takeaways-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--navy); font-weight: 600; margin-bottom: 1.2rem; text-align: center; }
+.takeaways ul { list-style: none; padding: 0; margin: 0; }
+.takeaways li { padding-left: 2rem; position: relative; margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.7; }
+.takeaways li:before { content: '✅'; position: absolute; left: 0; }
+
+/* AEO: FAQ ACCORDION */
+.faq-section { margin: 3.5rem 0; border-top: 2px solid var(--border); padding-top: 2.5rem; }
+.faq-title { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; color: var(--navy); margin-bottom: 1.5rem; scroll-margin-top: 90px; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--navy); gap: 1rem; }
+.faq-question:hover { color: var(--gold); }
+.faq-icon { font-size: 1.3rem; color: var(--gold); font-weight: 300; flex-shrink: 0; transition: transform 0.3s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-item.open .faq-answer { max-height: 500px; }
+.faq-answer p { font-size: 0.91rem; line-height: 1.8; color: var(--navy-muted); padding: 0 0 1.2rem; margin: 0; }
+
+/* CHAPTER NAV */
+.chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 2.5rem 0; border-top: 2px solid var(--border); margin-top: 3rem; flex-wrap: wrap; }
+.nav-btn { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--navy); padding: 1rem 1.5rem; border: 1px solid var(--border); background: var(--surface); transition: all 0.3s; flex: 1; min-width: 200px; }
+.nav-btn:hover { border-color: var(--gold); box-shadow: 0 2px 12px rgba(154,122,46,0.1); }
+.nav-btn.prev { justify-content: flex-start; }
+.nav-btn.next { justify-content: flex-end; }
+.nav-btn .nav-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.nav-btn .nav-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; }
+.nav-center { text-align: center; flex: 0 0 auto; }
+.nav-center a { color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+.nav-center a:hover { color: var(--gold-light); }
+
+/* FOOTER */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .chapter-nav { flex-direction: column; }
+  .nav-btn { width: 100%; }
+  footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures logo" loading="eager" width="44" height="44" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="learn.html" class="active">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<main>
+<article>
+
+<header class="chapter-hero">
+  <a href="learn-series-claude-mastery.html" class="back-link">← Back to Claude Mastery</a>
+  <div class="chapter-label">Claude Mastery · Chapter 9 of 30</div>
+  <div class="chapter-number">09</div>
+  <h1 class="chapter-title">Projects &amp; Knowledge Organization</h1>
+  <p class="chapter-subtitle">Organize Your Work with Claude</p>
+  <div class="chapter-meta">
+    <span>⏱️ 11 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>📊 Intermediate</span>
+    <span class="meta-dot">◆</span>
+    <span>🎯 Workflow &amp; Organization</span>
+  </div>
+  <div class="divider-line"></div>
+</header>
+
+<div class="chapter-body-wrap">
+<div class="chapter-content">
+
+  <p class="article-lead">Here's a frustrating experience most Claude users have had: you spend 20 minutes giving Claude detailed context about your work, get an excellent response, close the tab — and the next day, Claude remembers nothing. You're back to square one.</p>
+
+  <!-- AEO: DIRECT ANSWER BLOCK -->
+  <div class="direct-answer" role="note" aria-label="Quick Answer">
+    <div class="da-label">Quick Answer</div>
+    <p>
+      <strong>Claude Projects</strong> are persistent workspaces that hold your custom instructions, uploaded knowledge documents, and conversation history — so Claude already understands your context in every new session.
+      Instead of re-explaining your role, style, and background each time, you build it once in a Project and Claude applies it automatically.
+      Projects also let you upload reference files — brand guides, code standards, templates — that Claude accesses without you needing to paste them again.
+    </p>
+  </div>
+
+  <p>Think of it this way: without Projects, every Claude conversation is like meeting a new assistant who knows nothing about you. With Projects, every conversation is with an assistant who has studied your company handbook, remembers your preferences, and already understands your context.</p>
+
+  <!-- SECTION 1 -->
+  <section aria-label="What are Claude Projects">
+    <h2 id="what-are-claude-projects">What Are Claude Projects — and What Do They Maintain?</h2>
+
+    <p>Projects are dedicated workspaces inside Claude that maintain four things across all your conversations:</p>
+    <ul>
+      <li><strong>Custom instructions</strong> — Persistent rules Claude follows every conversation</li>
+      <li><strong>Uploaded knowledge</strong> — Documents, files, and reference material Claude can access</li>
+      <li><strong>Conversation history</strong> — All your chats within that project, organized in one place</li>
+      <li><strong>Memory</strong> — Facts and preferences Claude remembers about you across conversations</li>
+    </ul>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Regular Chat</th>
+          <th>Project</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Context resets every conversation</td>
+          <td>Context persists across all conversations</td>
+        </tr>
+        <tr>
+          <td>No custom instructions</td>
+          <td>Custom instructions always active</td>
+        </tr>
+        <tr>
+          <td>No uploaded documents</td>
+          <td>Documents available in every chat</td>
+        </tr>
+        <tr>
+          <td>No memory between sessions</td>
+          <td>Memory builds over time</td>
+        </tr>
+        <tr>
+          <td>One-off interactions</td>
+          <td>Ongoing, evolving workspace</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section aria-label="How to create a Claude Project">
+    <h2 id="how-to-create-a-claude-project">How Do You Create and Set Up a Claude Project?</h2>
+
+    <h3>Step 1: Define the Purpose</h3>
+    <p>Projects work best when they're focused. Before creating one, be clear about its scope.</p>
+
+    <p><strong>Good project scopes:</strong></p>
+    <ul>
+      <li>"Content creation for NeeAr Ventures blog"</li>
+      <li>"Customer support response drafting"</li>
+      <li>"Python development work"</li>
+      <li>"Marketing campaign planning Q3 2024"</li>
+      <li>"Research and writing for book project"</li>
+    </ul>
+
+    <p><strong>Too broad:</strong> "Work stuff", "Writing", "AI experiments"<br>
+    <strong>Too narrow:</strong> "One specific blog post", "This week's emails"</p>
+
+    <div class="insight-card">
+      <div class="card-label">Rule of Thumb</div>
+      <p>A project should have enough recurring work that building context pays off. If you'd use it more than five times, it earns its own project.</p>
+    </div>
+
+    <h3>Step 2: Write Your Custom Instructions</h3>
+    <p>Custom instructions are the heart of a project. They tell Claude who you are, what you're working on, and how you want it to behave — every single conversation. Use this structure:</p>
+
+    <div class="code-block">WHO YOU ARE:
+[Your role, company, background relevant to this project]
+
+WHAT THIS PROJECT IS:
+[What work happens here, what you're trying to achieve]
+
+YOUR STYLE PREFERENCES:
+[Tone, format, length, language, style guidelines]
+
+IMPORTANT CONTEXT:
+[Key facts, terminology, constraints Claude should always know]
+
+HOW TO BEHAVE:
+[Specific rules: always do X, never do Y, respond in Z format]</div>
+
+    <p><strong>Real example — Content Creation Project:</strong></p>
+
+    <div class="code-block">WHO I AM:
+I'm Arjun, founder of NeeAr Ventures — a mutual learning platform
+focused on helping professionals master AI tools. We publish blog
+posts, social media content, and tutorial series.
+
+ABOUT NEEAR VENTURES:
+Brand voice: Warm, expert, accessible. We teach through real
+examples, not theory. Audience: working professionals wanting
+to use AI tools practically.
+Brand colors: Navy #0d1f35, Gold #9a7a2e, Cream #f7f4ef
+Handle: @NeeArVentures | Website: neearventures.com
+
+CONTENT STANDARDS:
+- Always use practical examples over abstract explanations
+- Include before/after comparisons when explaining techniques
+- End every piece with a clear, actionable assignment
+- Avoid jargon; if a technical term is needed, explain it
+
+FORMAT PREFERENCES:
+- Use ## for sections, ### for subsections
+- Bold key terms on first use
+- Short paragraphs (3-4 sentences max)
+- Bullet points for lists of 3+</div>
+
+    <p>Now every conversation in this project starts with Claude already knowing all of this. No re-explaining, no generic responses.</p>
+
+    <h3>Step 3: Upload Knowledge Documents</h3>
+    <p>Projects let you upload reference documents that Claude can access throughout all conversations. Upload any document you repeatedly paste into chats:</p>
+
+    <p><strong>Brand &amp; Style:</strong> Brand guidelines, tone of voice guide, style sheet, approved terminology list</p>
+    <p><strong>Company Knowledge:</strong> Product documentation, FAQs, company overview, team structure</p>
+    <p><strong>Reference Material:</strong> Industry glossaries, process documents, templates, previous work examples</p>
+    <p><strong>Project-Specific:</strong> Research documents, data files, meeting notes, requirements documents</p>
+
+    <p><strong>Real example — Developer Project:</strong> Upload these once, reference forever:</p>
+    <div class="code-block">api-documentation.md     → Your API reference
+coding-standards.md      → Team conventions
+architecture-overview.md → System design
+bug-templates.md         → Standard report formats</div>
+
+    <p>Now when you ask "Write a bug report for the authentication issue," Claude already knows your template format, your system architecture, and your team's conventions.</p>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section aria-label="Writing effective custom instructions">
+    <h2 id="how-to-write-custom-instructions">How Do You Write Custom Instructions That Actually Work?</h2>
+
+    <h3>Principle 1: Be Specific, Not General</h3>
+    <div class="code-block">❌ Weak:
+"Be professional and helpful."
+
+✅ Strong:
+"When drafting emails: use direct subject lines, lead with the
+main point, use short paragraphs, and end with a clear single
+call to action. Maximum 150 words unless the topic requires more."</div>
+
+    <h3>Principle 2: Include Examples</h3>
+    <div class="code-block">❌ Weak:
+"Write in a conversational tone."
+
+✅ Strong:
+"Conversational tone means: write like you're explaining to a
+smart friend, not presenting to a board. Use contractions
+(you'll, it's, don't). Avoid passive voice. Include specific
+examples. Like this paragraph — direct, clear, human."</div>
+
+    <h3>Principle 3: Define What NOT to Do</h3>
+    <div class="code-block">AVOID:
+- Starting responses with "Great question!" or similar filler
+- Excessive bullet points (use prose for explanations)
+- Hedging every statement with "it depends"
+- Adding unnecessary caveats to straightforward advice</div>
+
+    <h3>Principle 4: Structure for Scanning</h3>
+    <div class="code-block">ROLE: You are my content strategist for NeeAr Ventures.
+
+ALWAYS:
+- Reference our brand voice guide when writing
+- Include practical examples in all explanations
+- End articles with an actionable assignment
+
+NEVER:
+- Use corporate jargon
+- Recommend tools we don't use
+- Make our content sound AI-generated
+
+WHEN WRITING BLOG POSTS:
+- Title: Specific, promise a clear benefit
+- Intro: Hook + problem + preview
+- Body: Each section has one main idea
+- End: Key takeaways + assignment</div>
+
+    <h3>Principle 5: Update Regularly</h3>
+    <p>Custom instructions aren't set-and-forget. Review them monthly and update based on patterns:</p>
+    <ul>
+      <li>When Claude makes the same mistake twice → Add a rule</li>
+      <li>When you always give the same follow-up feedback → Bake it in</li>
+      <li>When your project evolves → Update the context</li>
+    </ul>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section aria-label="Claude Memory feature">
+    <h2 id="what-is-claude-memory">What Is Claude Memory and How Does It Work with Projects?</h2>
+
+    <p>Claude's Memory stores facts and preferences about you that persist beyond individual conversations. Think of Projects as your structured workspace and Memory as background awareness Claude builds about you over time.</p>
+
+    <h3>What Memory Stores</h3>
+    <ul>
+      <li>Your profession and role</li>
+      <li>Your communication preferences</li>
+      <li>Your recurring projects and goals</li>
+      <li>Your technical stack or tools</li>
+      <li>Preferences you've expressed</li>
+      <li>Context from past conversations</li>
+    </ul>
+
+    <h3>What Memory Is NOT</h3>
+    <p>Memory is not perfect recall of every conversation. It's more like key facts noted from past interactions, preferences you've expressed, and context that would be useful across sessions. It doesn't replace Projects for focused work — it supplements them.</p>
+
+    <h3>How to Leverage Memory</h3>
+
+    <p><strong>Teach Claude your preferences explicitly:</strong></p>
+    <div class="code-block">"Remember that for all my writing projects, I prefer to receive
+structured outlines before full drafts. Always ask if I want
+an outline first unless I specify otherwise."</div>
+
+    <p><strong>Correct wrong memories:</strong></p>
+    <div class="code-block">"You keep referring to me as a freelancer. I'm actually a full-time
+employee at a mid-size company. Please update that."</div>
+
+    <p><strong>Ask what Claude remembers:</strong></p>
+    <div class="code-block">"What do you remember about me and my projects?"</div>
+
+    <div class="insight-card">
+      <div class="card-label">Important Note</div>
+      <p>Memory availability and scope depends on your Claude plan. How Memory interacts with Projects — whether it is truly global or scoped differently — may also vary. When in doubt, ask Claude directly what it remembers, and check your settings for the latest details.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section aria-label="Project organization strategies">
+    <h2 id="project-organization-strategies">What Are the Best Strategies for Organizing Claude Projects?</h2>
+
+    <h3>Strategy 1: One Project Per Major Context</h3>
+    <p>Don't mix contexts in one project. Keep them separate:</p>
+    <div class="code-block">❌ Bad:  One project called "Work" containing everything
+
+✅ Good: Separate projects for each distinct context:
+- "NeeAr Blog Content"
+- "Client Proposals"
+- "Python Development"
+- "Personal Learning"</div>
+
+    <h3>Strategy 2: The Knowledge Base Project</h3>
+    <p>Create a dedicated project purely as a knowledge repository — not for conversations, but for storing and organizing reference material.</p>
+    <div class="code-block">Setup:
+- Upload all company documents
+- Upload all research
+- Upload all templates
+- Custom instructions: "This is a knowledge base. When asked,
+  retrieve and summarize relevant information accurately."
+
+Use it for:
+"Based on the uploaded brand guidelines, what tone should I use
+for a sales-focused email to enterprise clients?"</div>
+
+    <h3>Strategy 3: Template Projects</h3>
+    <p>Create projects with pre-built templates as uploaded documents:</p>
+    <div class="code-block">Upload:
+- email-templates.md
+- meeting-agenda-template.md
+- project-brief-template.md
+- social-post-templates.md
+
+Instruction:
+"When creating any of these document types, start from the relevant
+template in the uploaded files. Fill in the template with the
+information provided. Only deviate from the template if explicitly asked."</div>
+
+    <h3>Strategy 4: Client-Specific Projects</h3>
+    <p>For consultants, freelancers, or anyone serving multiple clients — one project per client, with the client's brief, brand guide, and past work uploaded. Instructions include client voice, preferences, and constraints. Switching between clients becomes seamless because Claude instantly adapts to each client's context.</p>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section aria-label="Real-world project setups">
+    <h2 id="real-world-project-setups">Real-World Claude Project Setups by Role</h2>
+
+    <!-- Setup 1 -->
+    <div class="setup-card">
+      <div class="setup-card-header">
+        <span class="setup-card-badge">Setup 1</span>
+        <div class="setup-card-title">Content Creator</div>
+      </div>
+      <div class="setup-card-body">
+        <p><strong>Project Name:</strong> "Content Production"</p>
+        <div class="setup-section-label">Custom Instructions (excerpt)</div>
+        <div class="code-block">I create educational content about AI tools for working professionals.
+
+Brand voice: Expert but accessible. Real examples over theory.
+Target reader: Non-technical professional wanting practical AI skills.
+
+For blog posts: 1500-2500 words, hook with a relatable problem,
+step-by-step structure with examples, end with actionable assignment.
+
+For social media:
+- Facebook: 300-400 words, storytelling angle
+- LinkedIn: Professional insight, 400-500 words
+- Instagram: Concise, 200-250 words
+- Twitter: Punchy, under 260 chars per tweet
+
+Never use: "In conclusion", "In summary", "Great question"
+Always use: Specific numbers, before/after examples</div>
+        <div class="setup-section-label">Uploads</div>
+        <ul>
+          <li>Brand style guide</li>
+          <li>Previous top-performing posts (as style examples)</li>
+          <li>Content calendar template</li>
+          <li>Series outline document</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Setup 2 -->
+    <div class="setup-card">
+      <div class="setup-card-header">
+        <span class="setup-card-badge">Setup 2</span>
+        <div class="setup-card-title">Software Developer</div>
+      </div>
+      <div class="setup-card-body">
+        <p><strong>Project Name:</strong> "Product Development"</p>
+        <div class="setup-section-label">Custom Instructions (excerpt)</div>
+        <div class="code-block">I'm a senior Python developer working on a B2B SaaS product.
+
+Stack: Python/FastAPI backend, React frontend, PostgreSQL, AWS
+Team size: 6 developers, following agile sprints
+
+Code standards:
+- PEP 8 for Python
+- Type hints always required
+- Docstrings for all public functions
+- Test coverage expected for new functions
+
+When reviewing code: Focus on security first, then performance,
+then readability. Flag any SQL injection risks or auth issues.</div>
+        <div class="setup-section-label">Uploads</div>
+        <ul>
+          <li>coding-standards.md</li>
+          <li>api-documentation.md</li>
+          <li>database-schema.md</li>
+          <li>architecture-overview.md</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Setup 3 -->
+    <div class="setup-card">
+      <div class="setup-card-header">
+        <span class="setup-card-badge">Setup 3</span>
+        <div class="setup-card-title">Business Manager</div>
+      </div>
+      <div class="setup-card-body">
+        <p><strong>Project Name:</strong> "Operations &amp; Strategy"</p>
+        <div class="setup-section-label">Custom Instructions (excerpt)</div>
+        <div class="code-block">I'm an operations manager at a 50-person SaaS company.
+I handle process design, team coordination, and strategic planning.
+
+Communication style: Direct, data-driven, action-oriented.
+When I ask for analysis: Start with the recommendation, then support it.
+When I ask for documents: Executive summary first, details second.
+
+My team uses: Notion (docs), Linear (projects), Slack, Google Workspace
+
+When creating meeting agendas: Include time allocations, pre-read
+materials, and desired outcomes for each agenda item.</div>
+        <div class="setup-section-label">Uploads</div>
+        <ul>
+          <li>Team org chart</li>
+          <li>Process documentation</li>
+          <li>OKR framework</li>
+          <li>Standard operating procedures</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 -->
+  <section aria-label="Common mistakes with Claude Projects">
+    <h2 id="common-project-mistakes">What Are the Most Common Claude Project Mistakes to Avoid?</h2>
+
+    <h3>Mistake 1: Instructions Too Vague</h3>
+    <div class="code-block">❌ "Be helpful and professional"
+✅ "When drafting responses, always lead with the direct answer
+   before providing context or explanation."</div>
+
+    <h3>Mistake 2: Overloading One Project</h3>
+    <div class="code-block">❌ One project for everything you do
+✅ Separate focused projects with clear, distinct purposes</div>
+
+    <h3>Mistake 3: Never Updating Instructions</h3>
+    <div class="code-block">❌ Set instructions once, never touch them again
+✅ Review monthly — what recurring corrections would become rules?</div>
+
+    <h3>Mistake 4: Not Using Knowledge Uploads</h3>
+    <div class="code-block">❌ Pasting your brand guide into every conversation
+✅ Upload brand guide once, Claude references it forever</div>
+
+    <h3>Mistake 5: Confusing Projects and Memory</h3>
+    <div class="code-block">Projects = workspace for specific, focused recurring work
+Memory  = general facts about you across all conversations
+
+Use both, but don't expect one to replace the other.</div>
+  </section>
+
+  <!-- SECTION 8 -->
+  <section aria-label="Building your project system step by step">
+    <h2 id="building-your-project-system">How Do You Build a Complete Project System from Scratch?</h2>
+
+    <p>Here's a practical four-week framework to get fully set up:</p>
+
+    <h3>Week 1: Audit Your Recurring Work</h3>
+    <p>List the 3–5 types of work you do most often with Claude. These become your projects.</p>
+
+    <h3>Week 2: Write Your First Custom Instructions</h3>
+    <p>Start with your most-used project. Write specific instructions covering role, style, context, and always/never rules.</p>
+
+    <h3>Week 3: Gather Knowledge Documents</h3>
+    <p>Collect documents you repeatedly paste into conversations. These become your project uploads.</p>
+
+    <h3>Week 4: Test and Refine</h3>
+    <p>Use the project for a week. Every time you correct Claude or add context manually — that's a custom instruction waiting to be written.</p>
+
+    <h3>Ongoing: Maintain and Expand</h3>
+    <ul>
+      <li>Add new documents as your work evolves</li>
+      <li>Refine instructions based on recurring patterns</li>
+      <li>Create new projects when new recurring work emerges</li>
+    </ul>
+  </section>
+
+  <div class="takeaways">
+    <div class="takeaways-title">Key Takeaways</div>
+    <ul>
+      <li><strong>Projects eliminate repetitive context</strong> — Build once, benefit every conversation</li>
+      <li><strong>Custom instructions are powerful</strong> — Specific beats general every time</li>
+      <li><strong>Uploads create persistent knowledge</strong> — Stop pasting the same documents</li>
+      <li><strong>Memory complements Projects</strong> — Cross-conversation facts vs. focused workspace</li>
+      <li><strong>One project per context</strong> — Don't mix unrelated work</li>
+      <li><strong>Update instructions regularly</strong> — Recurring corrections become new rules</li>
+      <li><strong>Structure for your workflow</strong> — The best setup is one you'll actually use</li>
+    </ul>
+  </div>
+
+  <div class="practice-box">
+    <div class="box-title">Your Turn: Assignment</div>
+    <p><strong>This week's challenge:</strong> Set up your first (or best) Claude Project.</p>
+    <ol style="margin-left: 1.5rem; margin-bottom: 0.8rem;">
+      <li>Identify your most frequent Claude use case (content, code, writing, analysis)</li>
+      <li>Create a dedicated Project for it</li>
+      <li>Write custom instructions using the framework from this chapter</li>
+      <li>Upload 2–3 relevant documents</li>
+      <li>Have 5 conversations within the project</li>
+    </ol>
+    <p><strong>After 5 conversations, ask yourself:</strong></p>
+    <ul style="margin-left: 1.5rem;">
+      <li>Did I repeat myself less than usual?</li>
+      <li>Were the responses more relevant to my actual situation?</li>
+      <li>What instructions would make it even better?</li>
+    </ul>
+  </div>
+
+  <!-- AEO: VISIBLE FAQ SECTION -->
+  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What are Claude Projects?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Claude Projects are dedicated persistent workspaces inside Claude that maintain custom instructions, uploaded knowledge documents, and conversation history across all your sessions. Unlike regular chats where context resets every conversation, Projects retain your context, preferences, and reference material so Claude already understands your situation every time you open a new conversation. Projects work best when focused on a specific recurring type of work.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What should I include in Claude custom instructions?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Effective custom instructions should cover who you are and your role, what the project is for, your style and tone preferences, important context and terminology Claude should always know, and specific always and never rules for how Claude should behave. Be specific rather than general — instead of "be professional", write exactly what professional means in your context, with examples of what to do and what to avoid.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is the difference between Claude Projects and Claude Memory?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Claude Projects are structured workspaces for specific, focused work — they hold custom instructions, uploaded documents, and all conversations for that context. Claude Memory stores general facts and preferences about you that can inform conversations more broadly. Think of Projects as your organized work environment and Memory as background awareness Claude builds about you over time. Use both, but don't expect one to replace the other.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What documents should I upload to a Claude Project?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Upload any document you find yourself repeatedly pasting into conversations. Good candidates include brand guidelines, tone of voice guides, product documentation, coding standards, API references, templates, process documents, FAQs, and previous work examples. Once uploaded to a Project, Claude can access these in every conversation without you needing to provide them again. Start with the 2 or 3 documents you paste most often.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How many Claude Projects should I create?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Create one Project per distinct recurring context or type of work — not one for everything and not one for each individual task. Good project scopes include things like content creation, software development, client work, or research. A project earns its own workspace when the context-building investment pays off through repeated use. Start with your single most frequent Claude use case, build that project well, then expand.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="chapter-nav">
+    <a href="learn-series-claude-mastery-chapter-8.html" class="nav-btn prev">
+      <div>
+        <div class="nav-label">Previous Chapter</div>
+        <div class="nav-title">← Artifacts &amp; Interactive Content</div>
+      </div>
+    </a>
+
+    <div class="nav-center">
+      <a href="learn-series-claude-mastery.html">View All Chapters</a>
+    </div>
+
+    <div class="nav-btn next" style="visibility: hidden;">
+      <div style="text-align: right;">
+        <div class="nav-label">Next Chapter</div>
+        <div class="nav-title">Coming Soon →</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end .chapter-content -->
+
+  <!-- RIGHT SIDEBAR -->
+  <aside class="chapter-sidebar" aria-label="Chapter navigation sidebar">
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc-widget">
+      <div class="toc-widget-label">In This Chapter</div>
+      <ul class="toc-list">
+        <li><a href="#what-are-claude-projects">What Are Claude Projects?</a></li>
+        <li><a href="#how-to-create-a-claude-project">Creating Your First Project</a></li>
+        <li><a href="#how-to-write-custom-instructions">Writing Custom Instructions</a></li>
+        <li><a href="#what-is-claude-memory">Claude Memory Explained</a></li>
+        <li><a href="#project-organization-strategies">Organization Strategies</a></li>
+        <li><a href="#real-world-project-setups">Real-World Setups</a></li>
+        <li><a href="#common-project-mistakes">Common Mistakes</a></li>
+        <li><a href="#building-your-project-system">Build Your System</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- CHAPTER PROGRESS -->
+    <div class="progress-widget">
+      <div class="progress-widget-label">Series Progress</div>
+      <div class="progress-series">
+        <span>Claude Mastery</span>
+        <span>9 of 30</span>
+      </div>
+      <div class="progress-bar-track"><div class="progress-bar-fill"></div></div>
+      <ul class="progress-chapter-list">
+        <li class="done"><a href="learn-series-claude-mastery-chapter-1.html" style="color:inherit;text-decoration:none;">Ch 1 — Be Clear &amp; Specific</a></li>
+        <li class="done"><a href="learn-series-claude-mastery-chapter-2.html" style="color:inherit;text-decoration:none;">Ch 2 — Use Examples</a></li>
+        <li class="done"><a href="learn-series-claude-mastery-chapter-3.html" style="color:inherit;text-decoration:none;">Ch 3 — Step-by-Step Thinking</a></li>
+        <li class="done"><a href="learn-series-claude-mastery-chapter-4.html" style="color:inherit;text-decoration:none;">Ch 4 — Iterative Refinement</a></li>
+        <li class="done"><a href="learn-series-claude-mastery-chapter-5.html" style="color:inherit;text-decoration:none;">Ch 5 — Role-Playing</a></li>
+        <li class="done"><a href="learn-series-claude-mastery-chapter-6.html" style="color:inherit;text-decoration:none;">Ch 6 — Using Context</a></li>
+        <li class="done"><a href="learn-series-claude-mastery-chapter-7.html" style="color:inherit;text-decoration:none;">Ch 7 — Advanced Patterns</a></li>
+        <li class="done"><a href="learn-series-claude-mastery-chapter-8.html" style="color:inherit;text-decoration:none;">Ch 8 — Artifacts</a></li>
+        <li class="current">Ch 9 — Projects &amp; Knowledge</li>
+        <li class="upcoming">Ch 10 — Document Intelligence</li>
+        <li class="upcoming">Ch 11–30 — Coming Soon</li>
+      </ul>
+    </div>
+
+    <!-- SERIES LINK -->
+    <div class="series-widget">
+      <div class="series-widget-label">Claude Mastery Series</div>
+      <p>A complete 30-chapter guide to working effectively with Claude — from basics to advanced professional techniques.</p>
+      <a href="learn-series-claude-mastery.html" class="series-widget-link">View All Chapters →</a>
+    </div>
+
+  </aside>
+
+</div><!-- end .chapter-body-wrap -->
+</article>
+</main>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:info@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/neearventures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// TOC scroll-spy — highlights active section as user scrolls
+(function () {
+  const tocLinks = document.querySelectorAll('.toc-list a');
+  const sectionIds = Array.from(tocLinks).map(a => a.getAttribute('href').replace('#', ''));
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+  function onScroll() {
+    const scrollY = window.scrollY + 120;
+    let active = sections[0];
+    sections.forEach(sec => { if (sec.offsetTop <= scrollY) active = sec; });
+    tocLinks.forEach(a => {
+      a.classList.toggle('toc-active', a.getAttribute('href') === '#' + active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
