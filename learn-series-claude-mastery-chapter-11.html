@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 1. Character encoding and viewport -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- 2. Favicons -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- 3. Canonical tag -->
+<link rel="canonical" href="https://neearventures.com/learn-series-claude-mastery-chapter-11.html">
+
+<!-- 4. Title and meta description -->
+<title>Chapter 11: Collaborative Workflows — Claude Mastery — NeeAr Ventures</title>
+<meta name="description" content="Learn how to build shared prompt libraries, documented team workflows, quality standards, and an improvement system so entire teams use Claude consistently and effectively.">
+
+<!-- 5. Open Graph and Twitter tags -->
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/learn-series-claude-mastery-chapter-11.html" />
+<meta property="og:title"        content="Chapter 11: Collaborative Workflows — Claude Mastery — NeeAr Ventures" />
+<meta property="og:description"  content="Learn how to build shared prompt libraries, documented team workflows, quality standards, and an improvement system so entire teams use Claude consistently and effectively." />
+<meta property="og:image"        content="https://neearventures.com/images/claude-mastery-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@NeeArVentures" />
+<meta name="twitter:title"       content="Chapter 11: Collaborative Workflows — Claude Mastery — NeeAr Ventures" />
+<meta name="twitter:description" content="Learn how to build shared prompt libraries, documented team workflows, quality standards, and an improvement system so entire teams use Claude consistently and effectively." />
+<meta name="twitter:image"       content="https://neearventures.com/images/claude-mastery-og.jpg" />
+
+<!-- 6a. LearningResource schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "headline": "Chapter 11: Collaborative Workflows — Claude Mastery",
+  "description": "Learn how to build shared prompt libraries, documented team workflows, quality standards, and an improvement system so entire teams use Claude consistently and effectively.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://neearventures.com/images/claude-mastery-og.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "author": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures Editorial",
+    "url": "https://neearventures.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://neearventures.com/logo.png"
+    }
+  },
+  "learningResourceType": "Chapter",
+  "educationalLevel": "Intermediate",
+  "teaches": "How to build shared prompt libraries, team workflows, quality standards, and improvement systems for consistent AI adoption across teams, including an introduction to MCP",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".direct-answer", ".article-lead", "h2"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Collaborative AI Workflows"
+  },
+  "mentions": [
+    { "@type": "Thing", "name": "Shared prompt library" },
+    { "@type": "Thing", "name": "Team AI workflows" },
+    { "@type": "Thing", "name": "Quality standards" },
+    { "@type": "Thing", "name": "Model Context Protocol" },
+    { "@type": "Thing", "name": "MCP connectors" },
+    { "@type": "Thing", "name": "AI team adoption" }
+  ],
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Claude Mastery",
+    "url": "https://neearventures.com/learn-series-claude-mastery.html"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neearventures.com/learn-series-claude-mastery-chapter-11.html"
+  }
+}
+</script>
+
+<!-- 6b. BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",           "item": "https://neearventures.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Learn With Us",  "item": "https://neearventures.com/learn.html" },
+    { "@type": "ListItem", "position": 3, "name": "Claude Mastery", "item": "https://neearventures.com/learn-series-claude-mastery.html" },
+    { "@type": "ListItem", "position": 4, "name": "Chapter 11: Collaborative Workflows", "item": "https://neearventures.com/learn-series-claude-mastery-chapter-11.html" }
+  ]
+}
+</script>
+
+<!-- 6c. FAQPage schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a shared prompt library and why do teams need one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A shared prompt library is a collection of tested, effective prompts stored in a central location that any team member can access and use. Teams need one because without it, valuable prompting knowledge stays trapped with individual team members, output quality varies widely from person to person, and new members spend weeks rediscovering what the team already knows. A shared library ensures everyone benefits from the best approaches that have already been discovered and tested."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is a team workflow different from a single prompt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single prompt asks Claude one question and gets one output. A team workflow is a documented multi-step process that combines multiple prompts with human review points, quality checklists, and defined output formats. Workflows encode institutional judgment — not just what to ask, but when a human should review, what good output actually looks like, and what to check before using the result. They capture knowledge that would otherwise live only in one person's head."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is MCP and how does it help teams use Claude?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MCP (Model Context Protocol) is a standard that lets Claude connect directly to external tools and services such as Google Drive, Gmail, Google Calendar, and project management platforms. For teams, MCP eliminates manual copy-and-paste between tools — Claude can read documents from Drive, check calendars, create tasks, and take actions across multiple systems through a single conversation. This reduces errors from manual data transfer and enables cross-tool workflows that would otherwise require multiple steps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should a team get started building a collaborative AI system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with Layer 1 only: spend one week auditing what prompts team members already use, pick the best versions, and put them in a shared document using a consistent entry format. Do not try to build workflows and standards at the same time. Once five or more prompts are in the library and people are actually using them, document the first workflow for the team's most common AI-assisted task. Build from the bottom of the stack upward, one layer at a time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do teams keep their prompt library and workflows up to date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Designate one person as library owner responsible for monthly reviews. Run a short monthly retrospective covering which prompts are used most, which consistently need manual correction, what new use cases have emerged, and what has changed in the team's work. Share one AI win or discovery in the weekly team standup — five minutes, one thing. Over time, this creates a compounding improvement loop where the team's collective capability grows continuously rather than stagnating."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 7. Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- 8. Styles -->
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:         #f7f4ef;
+  --bg-alt:     #f0ece4;
+  --surface:    #ffffff;
+  --border:     #e2d9cc;
+  --navy:       #0d1f35;
+  --navy-light: #162d47;
+  --navy-muted: #1e3a5a;
+  --gold:       #9a7a2e;
+  --gold-light: #b8963e;
+  --gold-pale:  rgba(154,122,46,0.1);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* CHAPTER HEADER */
+.chapter-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; text-align: center; }
+.chapter-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.chapter-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; }
+.chapter-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem; }
+.chapter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; color: var(--navy); line-height: 1.15; margin-bottom: 0.8rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.chapter-subtitle { font-size: 1.05rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.chapter-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+/* TWO-COLUMN LAYOUT */
+.chapter-body-wrap { max-width: 1160px; margin: 0 auto; padding: 4rem 4vw 3rem; display: grid; grid-template-columns: 1fr 260px; gap: 3.5rem; align-items: start; }
+.chapter-content { min-width: 0; }
+
+/* STICKY SIDEBAR */
+.chapter-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.5rem; }
+
+/* TOC WIDGET */
+.toc-widget { background: var(--surface); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.toc-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+.toc-list { list-style: none; padding: 0; margin: 0; }
+.toc-list li { border-bottom: 1px solid var(--border); }
+.toc-list li:last-child { border-bottom: none; }
+.toc-list a { display: block; padding: 0.55rem 0; font-size: 0.8rem; color: var(--navy-muted); text-decoration: none; line-height: 1.45; transition: color 0.25s, padding-left 0.25s; }
+.toc-list a:hover { color: var(--gold); padding-left: 0.4rem; }
+.toc-list a.toc-active { color: var(--gold); font-weight: 500; padding-left: 0.4rem; border-left: 2px solid var(--gold); margin-left: -1px; }
+
+/* PROGRESS WIDGET */
+.progress-widget { background: var(--surface); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.progress-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+.progress-series { font-size: 0.78rem; color: var(--navy-muted); margin-bottom: 0.5rem; display: flex; justify-content: space-between; }
+.progress-bar-track { background: var(--border); height: 4px; width: 100%; margin-bottom: 1.2rem; }
+.progress-bar-fill { background: var(--gold); height: 4px; width: 37%; }
+.progress-chapter-list { list-style: none; padding: 0; margin: 0; }
+.progress-chapter-list li { font-size: 0.78rem; padding: 0.35rem 0; color: var(--navy-muted); display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border); }
+.progress-chapter-list li:last-child { border-bottom: none; }
+.progress-chapter-list li.current { color: var(--gold); font-weight: 500; }
+.progress-chapter-list li.done::before    { content: '✓'; color: var(--gold); font-size: 0.72rem; flex-shrink: 0; }
+.progress-chapter-list li.current::before { content: '▶'; color: var(--gold); font-size: 0.6rem;  flex-shrink: 0; }
+.progress-chapter-list li.upcoming::before{ content: '○'; color: var(--border); font-size: 0.72rem; flex-shrink: 0; }
+
+/* SERIES WIDGET */
+.series-widget { background: var(--bg-alt); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.series-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.8rem; }
+.series-widget p { font-size: 0.8rem; color: var(--navy-muted); line-height: 1.6; margin-bottom: 1rem; }
+.series-widget-link { display: block; text-align: center; background: transparent; border: 1px solid var(--gold); color: var(--gold); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.55rem 1rem; text-decoration: none; transition: all 0.3s; font-weight: 500; }
+.series-widget-link:hover { background: var(--gold); color: #fff; }
+
+/* TYPOGRAPHY */
+.article-lead { font-size: 1.05rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p strong { color: var(--navy); font-weight: 600; }
+
+/* AEO: DIRECT ANSWER BLOCK */
+.direct-answer { background: var(--navy); padding: 1.6rem 1.8rem; margin: 1.8rem 0 2.2rem; border-left: 4px solid var(--gold); }
+.direct-answer .da-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.7rem; }
+.direct-answer p { font-size: 0.92rem; color: rgba(232,224,208,0.9); line-height: 1.75; margin: 0; }
+.direct-answer p strong { color: var(--gold); }
+
+/* AEO: H2 question-style with id + scroll margin */
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; color: var(--navy); margin: 3rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); scroll-margin-top: 90px; }
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.8rem; }
+h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin: 1.6rem 0 0.6rem; }
+
+ul, ol { margin-left: 1.5rem; margin-bottom: 1.4rem; }
+li { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 0.5rem; }
+
+/* CODE BLOCKS */
+.code-block { background: var(--navy); color: #e8e0d0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'Courier New', monospace; font-size: 0.88rem; line-height: 1.7; overflow-x: auto; border-radius: 2px; white-space: pre-wrap; }
+
+/* STACK DIAGRAM */
+.stack-diagram { background: var(--surface); border: 1px solid var(--border); overflow: hidden; margin: 2rem 0; }
+.stack-layer { padding: 1.1rem 1.5rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1rem; }
+.stack-layer:last-child { border-bottom: none; }
+.stack-layer-num { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--gold); opacity: 0.5; line-height: 1; flex-shrink: 0; width: 28px; }
+.stack-layer-body { flex: 1; }
+.stack-layer-title { font-weight: 600; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.2rem; }
+.stack-layer-desc { font-size: 0.8rem; color: var(--navy-muted); }
+.stack-layer.highlight { background: var(--gold-pale); }
+.stack-layer.highlight .stack-layer-num { opacity: 1; }
+
+/* LAYER BLOCK — for each layer's content */
+.layer-block { background: var(--surface); border: 1px solid var(--border); margin: 2rem 0; overflow: hidden; }
+.layer-header { background: var(--navy); padding: 0.85rem 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
+.layer-badge { font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase; background: rgba(154,122,46,0.25); border: 1px solid var(--gold); color: var(--gold); padding: 0.18rem 0.65rem; font-weight: 600; white-space: nowrap; }
+.layer-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: #e8e0d0; }
+.layer-body { padding: 1.3rem 1.5rem; }
+.layer-body p { font-size: 0.88rem; line-height: 1.7; color: var(--navy-muted); margin-bottom: 0.8rem; }
+
+/* INSIGHT CARD */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.8rem 0; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0.5rem 0; line-height: 1.7; }
+
+/* TEAM SIZE CARDS */
+.team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.5rem 0 2rem; }
+.team-card { background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--gold); padding: 1.3rem 1.5rem; }
+.team-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.8rem; }
+.team-card ul { margin-left: 1.1rem; margin-bottom: 0; }
+.team-card li { font-size: 0.84rem; line-height: 1.65; color: var(--navy-muted); margin-bottom: 0.35rem; }
+
+/* PRACTICE BOX */
+.practice-box { background: var(--surface); border: 2px solid var(--gold); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+.practice-box .box-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--navy); font-weight: 600; margin-bottom: 0.8rem; }
+.practice-box p { font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.8rem; }
+
+/* TAKEAWAYS */
+.takeaways { background: var(--bg-alt); padding: 2rem 2.5rem; margin: 3rem 0; border-top: 3px solid var(--gold); }
+.takeaways-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--navy); font-weight: 600; margin-bottom: 1.2rem; text-align: center; }
+.takeaways ul { list-style: none; padding: 0; margin: 0; }
+.takeaways li { padding-left: 2rem; position: relative; margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.7; }
+.takeaways li:before { content: '✅'; position: absolute; left: 0; }
+
+/* AEO: FAQ ACCORDION */
+.faq-section { margin: 3.5rem 0; border-top: 2px solid var(--border); padding-top: 2.5rem; }
+.faq-title { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; color: var(--navy); margin-bottom: 1.5rem; scroll-margin-top: 90px; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--navy); gap: 1rem; }
+.faq-question:hover { color: var(--gold); }
+.faq-icon { font-size: 1.3rem; color: var(--gold); font-weight: 300; flex-shrink: 0; transition: transform 0.3s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-item.open .faq-answer { max-height: 500px; }
+.faq-answer p { font-size: 0.91rem; line-height: 1.8; color: var(--navy-muted); padding: 0 0 1.2rem; margin: 0; }
+
+/* CHAPTER NAV */
+.chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 2.5rem 0; border-top: 2px solid var(--border); margin-top: 3rem; flex-wrap: wrap; }
+.nav-btn { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--navy); padding: 1rem 1.5rem; border: 1px solid var(--border); background: var(--surface); transition: all 0.3s; flex: 1; min-width: 200px; }
+.nav-btn:hover { border-color: var(--gold); box-shadow: 0 2px 12px rgba(154,122,46,0.1); }
+.nav-btn.prev { justify-content: flex-start; }
+.nav-btn.next { justify-content: flex-end; }
+.nav-btn .nav-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.nav-btn .nav-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; }
+.nav-center { text-align: center; flex: 0 0 auto; }
+.nav-center a { color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+.nav-center a:hover { color: var(--gold-light); }
+
+/* FOOTER */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+@media (max-width: 1024px) {
+  .chapter-body-wrap { grid-template-columns: 1fr 220px; gap: 2.5rem; }
+}
+@media (max-width: 768px) {
+  .chapter-body-wrap { grid-template-columns: 1fr; padding: 2.5rem 4vw 2rem; }
+  .chapter-sidebar { position: static; display: none; }
+  .team-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures logo" loading="eager" width="44" height="44" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="learn.html" class="active">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<main>
+<article>
+
+<header class="chapter-hero">
+  <a href="learn-series-claude-mastery.html" class="back-link">← Back to Claude Mastery</a>
+  <div class="chapter-label">Claude Mastery · Chapter 11 of 30</div>
+  <div class="chapter-number">11</div>
+  <h1 class="chapter-title">Collaborative Workflows</h1>
+  <p class="chapter-subtitle">Using Claude Effectively with Teams</p>
+  <div class="chapter-meta">
+    <span>⏱️ 13 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>📊 Intermediate</span>
+    <span class="meta-dot">◆</span>
+    <span>🎯 Team AI Adoption</span>
+  </div>
+  <div class="divider-line"></div>
+</header>
+
+<div class="chapter-body-wrap">
+<div class="chapter-content">
+
+  <p class="article-lead">Individual Claude mastery is one thing. Team-wide AI adoption is a completely different challenge. One person figures out what works — the right prompts, the right workflows, the right setups — but when the team tries to adopt it, things break down. Everyone uses Claude differently. Output quality varies wildly. Nobody shares what works. The same mistakes get made over and over by different people.</p>
+
+  <!-- AEO: DIRECT ANSWER BLOCK -->
+  <div class="direct-answer" role="note" aria-label="Quick Answer">
+    <div class="da-label">Quick Answer</div>
+    <p>
+      <strong>Collaborative AI workflows</strong> are built on four layers: a shared prompt library (tested prompts everyone can access), documented team workflows (multi-step processes with human review points), quality standards (explicit definitions of what good output looks like), and an improvement system (a mechanism to capture and share learnings over time).
+      When all four layers are in place, individual AI capability becomes team capability — and the team's collective effectiveness compounds instead of stagnating.
+    </p>
+  </div>
+
+  <p>The result of skipping these systems is a team that theoretically uses AI but practically captures only a fraction of its potential. This chapter is about closing that gap — plus an introduction to MCP, the technology that connects Claude directly to the tools teams already use.</p>
+
+  <!-- SECTION 1 -->
+  <section aria-label="Why teams struggle with AI adoption">
+    <h2 id="why-teams-struggle-with-ai-adoption">Why Do Teams Struggle with AI Adoption?</h2>
+
+    <p>Before building solutions, it helps to understand the problems clearly. Four patterns consistently emerge when teams try to adopt AI at scale:</p>
+
+    <h3>Problem 1: The Knowledge Silo</h3>
+    <p>One team member discovers a prompt that saves 30 minutes a day on customer emails. Nobody else knows it exists. Three other team members spend 45 minutes on the same task — with worse results. <strong>The value exists but stays trapped with one person.</strong></p>
+
+    <h3>Problem 2: Inconsistent Quality</h3>
+    <p>Ask five team members to use Claude for the same task — say, writing a product update email. Five completely different outputs emerge: different tones, different lengths, different structures, different quality levels. To customers, these emails come from the same company. They sound like they come from five different companies. <strong>Without standards, AI amplifies inconsistency.</strong></p>
+
+    <h3>Problem 3: Reinventing the Wheel</h3>
+    <p>A new team member joins and spends two weeks figuring out how to use Claude effectively — while everything they need to know already exists in teammates' heads. <strong>Every new person starts from zero instead of standing on what the team has already learned.</strong></p>
+
+    <h3>Problem 4: No Improvement Loop</h3>
+    <p>When someone discovers a better approach, there is no mechanism to share it. When something does not work, there is no record to avoid repeating it. The team's collective AI capability stagnates instead of compounding. <strong>Individual learning never becomes team learning.</strong></p>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section aria-label="The Collaborative AI Stack">
+    <h2 id="the-collaborative-ai-stack">What Is the Collaborative AI Stack?</h2>
+
+    <p>Solving these problems requires building a Collaborative AI Stack — four layers that work together, each one building on the one below:</p>
+
+    <div class="stack-diagram">
+      <div class="stack-layer">
+        <div class="stack-layer-num">4</div>
+        <div class="stack-layer-body">
+          <div class="stack-layer-title">Improvement System</div>
+          <div class="stack-layer-desc">How the team gets better over time</div>
+        </div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-layer-num">3</div>
+        <div class="stack-layer-body">
+          <div class="stack-layer-title">Quality Standards</div>
+          <div class="stack-layer-desc">How the team ensures consistent output</div>
+        </div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-layer-num">2</div>
+        <div class="stack-layer-body">
+          <div class="stack-layer-title">Shared Workflows</div>
+          <div class="stack-layer-desc">How the team completes tasks consistently</div>
+        </div>
+      </div>
+      <div class="stack-layer highlight">
+        <div class="stack-layer-num">1</div>
+        <div class="stack-layer-body">
+          <div class="stack-layer-title">Shared Prompt Library</div>
+          <div class="stack-layer-desc">The foundation — what to ask and how to ask it</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="card-label">Where to Start</div>
+      <p>Build from the bottom up — one layer at a time. Start with 5 prompts that people will actually use this week. Once the library has traction, document the first workflow. Do not attempt all four layers simultaneously.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section aria-label="Layer 1 Shared Prompt Library">
+    <h2 id="how-to-build-a-shared-prompt-library">How Do You Build a Shared Prompt Library That Teams Actually Use?</h2>
+
+    <p>A shared prompt library is a collection of tested, effective prompts stored centrally so any team member can access and use them. Not every prompt belongs in the library — include only prompts that are used regularly by multiple team members, proven to produce consistent quality, specific enough to be useful without major modification, and tested through actual use.</p>
+
+    <div class="layer-block">
+      <div class="layer-header">
+        <span class="layer-badge">Structure</span>
+        <div class="layer-title">Standard Library Entry Format</div>
+      </div>
+      <div class="layer-body">
+        <div class="code-block">PROMPT NAME: [Descriptive, searchable title]
+CATEGORY:    [Customer Service / Marketing / Development / etc.]
+USE CASE:    [When to use this prompt]
+AUTHOR:      [Who created it]
+LAST UPDATED:[Date]
+
+PROMPT:
+[The actual prompt text with [BRACKETS] for customisable parts]
+
+EXAMPLE INPUT:
+[A concrete example of what to fill in]
+
+EXAMPLE OUTPUT:
+[What good output looks like]
+
+NOTES:
+[Tips, variations, what to watch for]</div>
+      </div>
+    </div>
+
+    <h3>Real Example: Customer Support Library Entry</h3>
+    <div class="code-block">PROMPT NAME: Customer Complaint Response — Subscription Issue
+CATEGORY:    Customer Service
+USE CASE:    When a customer complains about billing, subscription
+             changes, or account access issues
+AUTHOR:      Sarah Chen
+LAST UPDATED:2024-03-15
+
+PROMPT:
+You are a senior customer support specialist for [Company Name].
+Voice: professional, empathetic, solution-focused.
+
+Customer message: [PASTE CUSTOMER MESSAGE]
+Customer details:
+- Plan: [Free/Pro/Enterprise]
+- Account age: [Duration]
+- Issue type: [Billing/Access/Feature]
+
+Write a response that:
+- Acknowledges their frustration specifically (not generically)
+- Explains what happened in plain language
+- Provides clear next steps with timeline
+- Offers something concrete if appropriate
+- Ends with confidence (not "hopefully" or "I think")
+Maximum 150 words.
+
+NOTES:
+- Check billing system before sending — personalise with actual
+  charge dates where possible
+- For accounts over 1 year: consider proactive discount offer
+- Escalate to billing team if charge dispute exceeds $100</div>
+
+    <h3>Building the Library: Four-Week Rollout</h3>
+    <ol>
+      <li><strong>Week 1 — Audit:</strong> Each team member lists the 3 prompts they use most often. Collect them all.</li>
+      <li><strong>Week 2 — Standardise:</strong> Pick the best version of each prompt type. Rewrite using the entry structure above.</li>
+      <li><strong>Week 3 — Organise:</strong> Group by category. Create a shared Notion page or Google Doc everyone can access.</li>
+      <li><strong>Week 4 — Socialise:</strong> A 30-minute team session walking through the library with examples showing the quality difference between library prompts and ad-hoc prompts.</li>
+    </ol>
+    <p>Designate one person as library owner — responsible for reviewing, updating, and adding new entries monthly.</p>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section aria-label="Layer 2 Shared Workflows">
+    <h2 id="how-to-document-team-workflows">How Do You Document Team Workflows That Encode Institutional Knowledge?</h2>
+
+    <p>Workflows take prompt libraries one step further. Instead of individual prompts, workflows are documented multi-step processes for completing common tasks — combining prompts with human review points and quality checklists.</p>
+
+    <div class="layer-block">
+      <div class="layer-header">
+        <span class="layer-badge">Template</span>
+        <div class="layer-title">Workflow Documentation Format</div>
+      </div>
+      <div class="layer-body">
+        <div class="code-block">WORKFLOW NAME:  [Descriptive title]
+PURPOSE:        [What this accomplishes]
+OWNER:          [Who maintains this workflow]
+TIME REQUIRED:  [Typical completion time]
+
+INPUTS NEEDED:
+[What information/files you need before starting]
+
+STEPS:
+Step 1: [Action + Claude prompt reference or link]
+Step 2: [Action + Claude prompt reference or link]
+Step 3: [Human review point]
+Step 4: [Action + Claude prompt reference or link]
+Step 5: [Final output format]
+
+QUALITY CHECKLIST:
+□ [Quality check 1]
+□ [Quality check 2]
+□ [Quality check 3]
+
+OUTPUT:
+[What the final deliverable looks like]</div>
+      </div>
+    </div>
+
+    <h3>Real Example: Blog Post Production Workflow</h3>
+    <div class="code-block">WORKFLOW NAME: Blog Post — Full Production
+PURPOSE:       Take a topic from idea to published post
+TIME REQUIRED: 45-60 minutes
+
+INPUTS NEEDED:
+- Topic/title, target keyword (if SEO-focused)
+- Target audience
+- Desired length: short 800w / medium 1500w / long 2500w
+
+STEPS:
+Step 1: Outline Generation (5 min)
+Use [Blog Outline Prompt] from library. Input: topic + audience.
+HUMAN REVIEW: Does the narrative flow? Missing angles?
+
+Step 2: Draft Creation (15 min)
+Use [Blog Draft Prompt]. Input: approved outline + audience notes.
+HUMAN REVIEW: Read through for accuracy and voice consistency.
+
+Step 3: Refinement (10 min)
+Use [Blog Refinement Prompt] with specific feedback from Step 2.
+
+Step 4: SEO Optimisation (5 min)
+Use [SEO Prompt]. Input: draft + target keyword.
+HUMAN REVIEW: Apply changes that feel natural, skip forced ones.
+
+Step 5: Final Polish (10 min)
+Human reads final draft aloud. Check hook, transitions, CTA.
+
+QUALITY CHECKLIST:
+□ Opening hook answers "why should I read this?"
+□ Every H2 section delivers on its promise
+□ Examples are specific, not generic
+□ CTA is clear and singular
+□ Brand voice consistent throughout
+
+OUTPUT: Final .md or .docx ready for publishing platform</div>
+
+    <p>Workflows encode judgment — not just what to ask Claude, but when to involve humans, what to check for, and what good output looks like. They capture institutional knowledge that would otherwise live only in one person's head.</p>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section aria-label="Layer 3 Quality Standards">
+    <h2 id="how-to-set-ai-quality-standards">How Do You Set Quality Standards for AI Output Across a Team?</h2>
+
+    <p>Standards define what "good" looks like for AI output. Without them, good means whatever the person reviewing thinks — which changes person to person and day to day. For each major content type, a clear rubric is needed.</p>
+
+    <div class="layer-block">
+      <div class="layer-header">
+        <span class="layer-badge">Example</span>
+        <div class="layer-title">Email Quality Standard — External Communications</div>
+      </div>
+      <div class="layer-body">
+        <div class="code-block">TONE:
+✅ Professional but warm
+✅ Direct — lead with the main point
+✅ Specific — concrete details over vague statements
+❌ Overly formal or stiff
+❌ Hedging language ("I think," "hopefully," "might")
+
+STRUCTURE:
+✅ Subject line: specific, actionable, under 8 words
+✅ Opening: context in one sentence (no pleasantries)
+✅ Body: one main point per paragraph
+✅ Close: single, clear next step
+❌ Paragraphs over 4 sentences
+❌ More than one call to action
+
+LENGTH:
+✅ Routine updates: under 100 words
+✅ Complex situations: 150-200 words max
+✅ Proposals: up to 300 words
+❌ Anything over 300 words for standard communication</div>
+      </div>
+    </div>
+
+    <p><strong>The reverse-engineering approach</strong> works best for building standards from scratch: collect 10–15 examples of excellent outputs the team has already produced, analyse what makes them excellent, write that down. That becomes the standard — grounded in actual quality rather than invented from theory.</p>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section aria-label="Layer 4 Improvement System">
+    <h2 id="how-to-build-an-ai-improvement-system">How Do You Build a System So Team AI Capability Compounds Over Time?</h2>
+
+    <p>The best teams do not just use AI consistently — they get better at it over time. This requires a system for capturing, sharing, and applying learnings.</p>
+
+    <h3>The Weekly AI Win</h3>
+    <p>Every week, one team member shares one AI discovery in the team standup — a new prompt, a workflow improvement, an unexpected use case. Five minutes. One thing. Over a year, that is 52 improvements. Compounded.</p>
+
+    <h3>The Monthly Prompt Retrospective</h3>
+    <p>A 20-minute monthly session covering: which prompts are being used most, which consistently need manual correction afterwards, what new use cases have emerged, and what has changed in the team's work that requires updating old workflows.</p>
+
+    <h3>New Member Onboarding Pack</h3>
+    <div class="code-block">WELCOME TO OUR AI WORKFLOW
+
+Our Prompt Library:     [Link]
+Our Workflow Docs:      [Link]
+Our Quality Standards:  [Link]
+
+START HERE:
+Week 1: Read the library. Try the 5 most-used prompts.
+Week 2: Complete your first task using a documented workflow.
+Week 3: Suggest one improvement to an existing prompt.
+Week 4: Shadow a team member on a complex AI-assisted task.
+
+WHO TO ASK:
+[Name] owns the prompt library
+[Name] is the AI workflow lead</div>
+    <p>New members get productive faster. The team's knowledge compounds with every person who joins rather than being rebuilt from scratch each time.</p>
+  </section>
+
+  <!-- SECTION 7 -->
+  <section aria-label="Introduction to MCP">
+    <h2 id="what-is-mcp-for-teams">What Is MCP and How Does It Extend Claude for Teams?</h2>
+
+    <p>Everything above is about humans collaborating around Claude. MCP takes this further — it lets Claude itself connect to the tools teams already use.</p>
+
+    <p><strong>MCP (Model Context Protocol)</strong> is a standard that lets Claude connect to external services and data sources. Instead of copying and pasting information from tools into Claude, Claude can access them directly. Think of it as Claude getting a set of keys to the team's tool stack.</p>
+
+    <h3>What MCP Makes Possible</h3>
+    <ul>
+      <li><strong>Access data directly</strong> — Read documents from Google Drive, check emails in Gmail, look up calendar events, query databases</li>
+      <li><strong>Take actions in tools</strong> — Create tasks in project management tools, draft and send emails, update spreadsheets, post to communication channels</li>
+      <li><strong>Connect across systems</strong> — Pull context from multiple tools in one conversation, automate cross-tool tasks through natural language</li>
+    </ul>
+
+    <div class="layer-block">
+      <div class="layer-header">
+        <span class="layer-badge">Before vs After</span>
+        <div class="layer-title">MCP in Practice</div>
+      </div>
+      <div class="layer-body">
+        <p><strong>Without MCP:</strong></p>
+        <div class="code-block">Copy Q3 sales data from Google Sheets →
+paste it into Claude →
+ask for analysis →
+copy the analysis back into a Google Doc.
+(5 manual steps, potential for copy errors)</div>
+        <p><strong>With MCP:</strong></p>
+        <div class="code-block">"Look at our Q3 sales data in the Google Sheet called
+'Sales 2024' and write a summary for the team in the
+Google Doc called 'Q3 Report'."
+
+Claude: [Accesses sheet directly, reads data, writes
+        summary to doc — 1 conversational instruction]</div>
+      </div>
+    </div>
+
+    <h3>Getting Started with MCP</h3>
+    <p>MCP connectors are available in Claude.ai under Settings. Common connectors for teams include Google Drive (access and create documents), Gmail (read and draft emails), Google Calendar (check schedules and events), Slack (access messages via third-party connectors), and Notion (read and create pages).</p>
+
+    <div class="insight-card">
+      <div class="card-label">Coming Up in the Series</div>
+      <p>Chapter 27 covers MCP in depth — advanced integrations, custom workflows, and automation. For now the key insight is: Claude's collaborative capabilities extend beyond conversation into the actual tool ecosystem.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 8 -->
+  <section aria-label="Real team setups by size">
+    <h2 id="real-team-setups-by-size">What Does a Well-Functioning Collaborative AI Setup Look Like in Practice?</h2>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-card-title">Small Team (3–10 people)</div>
+        <ul>
+          <li>Shared prompt library: 20–30 prompts in Notion or Google Docs</li>
+          <li>5–10 documented workflows for most common tasks</li>
+          <li>One-page quality standards per content type</li>
+          <li>Weekly AI win in standup (5 min)</li>
+          <li>Monthly library review (20 min)</li>
+          <li>New member onboarding document</li>
+          <li>Google Workspace connected via MCP</li>
+        </ul>
+      </div>
+      <div class="team-card">
+        <div class="team-card-title">Larger Team (10–50 people)</div>
+        <ul>
+          <li>All of the above, plus:</li>
+          <li>Dedicated AI workflow lead (owns library and standards)</li>
+          <li>Department-specific sub-libraries (marketing, support, product)</li>
+          <li>Formal review process for adding library entries</li>
+          <li>Quarterly AI capability review with leadership</li>
+          <li>Training sessions for new tools and patterns</li>
+          <li>Additional MCP connectors for the full tool stack</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9 -->
+  <section aria-label="Common mistakes in team AI adoption">
+    <h2 id="common-team-ai-mistakes">What Are the Most Common Mistakes in Team AI Adoption?</h2>
+
+    <h3>Mistake 1: Mandate Without Support</h3>
+    <div class="code-block">❌ "Everyone should use Claude for X by next Monday"
+✅ Show the value, build the tools, then expand adoption</div>
+
+    <h3>Mistake 2: No Quality Gate</h3>
+    <div class="code-block">❌ Share AI outputs directly with customers without review
+✅ Always define which outputs require human review before use</div>
+
+    <h3>Mistake 3: One-Size Prompt for All Team Members</h3>
+    <div class="code-block">❌ Same prompt for junior and senior team members
+✅ Prompts adapted for different skill levels and contexts</div>
+
+    <h3>Mistake 4: Building the Library, Never Using It</h3>
+    <div class="code-block">❌ Spend a week building a library nobody opens
+✅ Start with 5 prompts people will actually use this week</div>
+
+    <h3>Mistake 5: Treating AI as Replacement, Not Augmentation</h3>
+    <div class="code-block">❌ "Claude will handle that now"
+✅ "Claude drafts it, [person] reviews and refines it"</div>
+    <p>Human judgment remains essential. The goal is faster, better work — not fewer people in the loop.</p>
+  </section>
+
+  <div class="takeaways">
+    <div class="takeaways-title">Key Takeaways</div>
+    <ul>
+      <li><strong>Teams need systems, not just tools</strong> — Individual capability does not automatically become team capability</li>
+      <li><strong>Shared prompt libraries prevent reinvention</strong> — Build once, benefit everyone who joins after</li>
+      <li><strong>Workflows encode judgment</strong> — Not just what to ask, but when to review and what good looks like</li>
+      <li><strong>Quality standards make consistency possible</strong> — Define "good" explicitly so it means the same thing to everyone</li>
+      <li><strong>Improvement compounds</strong> — Small weekly learnings add up to transformational capability over a year</li>
+      <li><strong>MCP extends Claude into the tool stack</strong> — Conversation becomes action across the platforms teams already use</li>
+      <li><strong>Start small, scale deliberately</strong> — Five great prompts beat fifty mediocre ones</li>
+    </ul>
+  </div>
+
+  <div class="practice-box">
+    <div class="box-title">Assignment: Build the First Layer</div>
+    <p><strong>Option A (Working Alone):</strong> Document the 3 prompts used most often in the standard library entry format. Share them with at least one colleague this week.</p>
+    <p><strong>Option B (Team Lead):</strong> Run a 30-minute session where each team member shares their best prompt. Collect them into a shared document. Schedule a follow-up to clean them up and apply the standard format.</p>
+    <p><strong>Option C (AI Champion):</strong> Draft a complete workflow for the team's most common AI-assisted task — including human review points, quality checklist, and example output.</p>
+    <p><strong>Reflection questions:</strong> What is the biggest AI knowledge silo in the team right now? Which workflow, if documented, would save the most time? Who on the team has prompts others should know about?</p>
+  </div>
+
+  <!-- AEO: FAQ ACCORDION -->
+  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is a shared prompt library and why do teams need one?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>A shared prompt library is a collection of tested, effective prompts stored in a central location that any team member can access and use. Teams need one because without it, valuable prompting knowledge stays trapped with individual team members, output quality varies widely from person to person, and new members spend weeks rediscovering what the team already knows. A shared library ensures everyone benefits from the best approaches that have already been discovered and tested.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How is a team workflow different from a single prompt?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>A single prompt asks Claude one question and gets one output. A team workflow is a documented multi-step process that combines multiple prompts with human review points, quality checklists, and defined output formats. Workflows encode institutional judgment — not just what to ask, but when a human should review, what good output actually looks like, and what to check before using the result. They capture knowledge that would otherwise live only in one person's head.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is MCP and how does it help teams use Claude?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>MCP (Model Context Protocol) is a standard that lets Claude connect directly to external tools and services such as Google Drive, Gmail, Google Calendar, and project management platforms. For teams, MCP eliminates manual copy-and-paste between tools — Claude can read documents from Drive, check calendars, create tasks, and take actions across multiple systems through a single conversation. This reduces errors from manual data transfer and enables cross-tool workflows that would otherwise require multiple steps.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How should a team get started building a collaborative AI system?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Start with Layer 1 only: spend one week auditing what prompts team members already use, pick the best versions, and put them in a shared document using a consistent entry format. Do not try to build workflows and standards at the same time. Once five or more prompts are in the library and people are actually using them, document the first workflow for the team's most common AI-assisted task. Build from the bottom of the stack upward, one layer at a time.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How do teams keep their prompt library and workflows up to date?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Designate one person as library owner responsible for monthly reviews. Run a short monthly retrospective covering which prompts are used most, which consistently need manual correction, what new use cases have emerged, and what has changed in the team's work. Share one AI win or discovery in the weekly team standup — five minutes, one thing. Over time, this creates a compounding improvement loop where the team's collective capability grows continuously rather than stagnating.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="chapter-nav">
+    <a href="learn-series-claude-mastery-chapter-10.html" class="nav-btn prev">
+      <div>
+        <div class="nav-label">Previous Chapter</div>
+        <div class="nav-title">← Document Intelligence</div>
+      </div>
+    </a>
+
+    <div class="nav-center">
+      <a href="learn-series-claude-mastery.html">View All Chapters</a>
+    </div>
+
+    <div class="nav-btn next" style="visibility: hidden;">
+      <div style="text-align: right;">
+        <div class="nav-label">Next Chapter</div>
+        <div class="nav-title">Coming Soon →</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end .chapter-content -->
+
+<!-- RIGHT SIDEBAR -->
+<aside class="chapter-sidebar" aria-label="Chapter navigation sidebar">
+
+  <div class="toc-widget">
+    <div class="toc-widget-label">In This Chapter</div>
+    <ul class="toc-list">
+      <li><a href="#why-teams-struggle-with-ai-adoption">Why Teams Struggle</a></li>
+      <li><a href="#the-collaborative-ai-stack">The Collaborative AI Stack</a></li>
+      <li><a href="#how-to-build-a-shared-prompt-library">Shared Prompt Library</a></li>
+      <li><a href="#how-to-document-team-workflows">Team Workflows</a></li>
+      <li><a href="#how-to-set-ai-quality-standards">Quality Standards</a></li>
+      <li><a href="#how-to-build-an-ai-improvement-system">Improvement System</a></li>
+      <li><a href="#what-is-mcp-for-teams">Intro to MCP</a></li>
+      <li><a href="#real-team-setups-by-size">Team Setup Examples</a></li>
+      <li><a href="#common-team-ai-mistakes">Common Mistakes</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+
+  <div class="progress-widget">
+    <div class="progress-widget-label">Series Progress</div>
+    <div class="progress-series">
+      <span>Claude Mastery</span>
+      <span>11 of 30</span>
+    </div>
+    <div class="progress-bar-track"><div class="progress-bar-fill"></div></div>
+    <ul class="progress-chapter-list">
+      <li class="done"><a href="learn-series-claude-mastery-chapter-1.html"  style="color:inherit;text-decoration:none;">Ch 1 — Be Clear &amp; Specific</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-2.html"  style="color:inherit;text-decoration:none;">Ch 2 — Use Examples</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-3.html"  style="color:inherit;text-decoration:none;">Ch 3 — Step-by-Step Thinking</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-4.html"  style="color:inherit;text-decoration:none;">Ch 4 — Iterative Refinement</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-5.html"  style="color:inherit;text-decoration:none;">Ch 5 — Role-Playing</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-6.html"  style="color:inherit;text-decoration:none;">Ch 6 — Using Context</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-7.html"  style="color:inherit;text-decoration:none;">Ch 7 — Advanced Patterns</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-8.html"  style="color:inherit;text-decoration:none;">Ch 8 — Artifacts</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-9.html"  style="color:inherit;text-decoration:none;">Ch 9 — Projects &amp; Knowledge</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-10.html" style="color:inherit;text-decoration:none;">Ch 10 — Document Intelligence</a></li>
+      <li class="current">Ch 11 — Collaborative Workflows</li>
+      <li class="upcoming">Ch 12 — Research &amp; Synthesis</li>
+      <li class="upcoming">Ch 13–30 — Coming Soon</li>
+    </ul>
+  </div>
+
+  <div class="series-widget">
+    <div class="series-widget-label">Claude Mastery Series</div>
+    <p>A complete 30-chapter guide to working effectively with Claude — from basics to advanced professional techniques.</p>
+    <a href="learn-series-claude-mastery.html" class="series-widget-link">View All Chapters →</a>
+  </div>
+
+</aside>
+
+</div><!-- end .chapter-body-wrap -->
+</article>
+</main>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:info@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures"  target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/neearventures"      target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures"  target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// TOC scroll-spy
+(function () {
+  const tocLinks = document.querySelectorAll('.toc-list a');
+  const sectionIds = Array.from(tocLinks).map(a => a.getAttribute('href').replace('#', ''));
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+  function onScroll() {
+    const scrollY = window.scrollY + 120;
+    let active = sections[0];
+    sections.forEach(sec => { if (sec.offsetTop <= scrollY) active = sec; });
+    tocLinks.forEach(a => {
+      a.classList.toggle('toc-active', a.getAttribute('href') === '#' + active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
