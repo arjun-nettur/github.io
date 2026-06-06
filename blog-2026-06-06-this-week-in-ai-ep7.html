@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- 2. FAVICONS -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- 3. CANONICAL TAG -->
+<link rel="canonical" href="https://neearventures.com/blog-2026-06-06-this-week-in-ai-ep7.html">
+
+<!-- 4. TITLE + META DESCRIPTION -->
+<title>This Week in AI — Ep. 7: Anthropic Goes Public, ChatGPT Gets a Memory — NeeAr Ventures</title>
+<meta name="description" content="Anthropic filed for an IPO at $965B. ChatGPT upgraded its memory. SoftBank committed \u20ac75B to AI data centres in Europe. Here&#39;s what actually happened this week in AI.">
+
+<!-- 5. OPEN GRAPH + TWITTER TAGS -->
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/blog-2026-06-06-this-week-in-ai-ep7.html" />
+<meta property="og:title"        content="This Week in AI — Ep. 7: Anthropic Goes Public, ChatGPT Gets a Memory — NeeAr Ventures" />
+<meta property="og:description"  content="Anthropic filed for an IPO at $965B. ChatGPT upgraded its memory. SoftBank committed \u20ac75B to AI data centres in Europe. Here&#39;s what actually happened this week in AI." />
+<meta property="og:image"        content="https://neearventures.com/images/blog-2026-06-06-this-week-in-ai-ep7-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@NeeArVentures" />
+<meta name="twitter:title"       content="This Week in AI — Ep. 7: Anthropic Goes Public, ChatGPT Gets a Memory — NeeAr Ventures" />
+<meta name="twitter:description" content="Anthropic filed for an IPO at $965B. ChatGPT upgraded its memory. SoftBank committed \u20ac75B to AI data centres in Europe. Here&#39;s what actually happened this week in AI." />
+<meta name="twitter:image"       content="https://neearventures.com/images/blog-2026-06-06-this-week-in-ai-ep7-og.jpg" />
+
+<!-- 6a. BLOGPOSTING SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "This Week in AI — Ep. 7: Anthropic Goes Public, ChatGPT Gets a Memory, and \u20ac75 Billion Heads to Europe",
+  "description": "Anthropic filed for an IPO at $965B. ChatGPT upgraded its memory system. SoftBank committed \u20ac75B to AI data centres in France. Here&#39;s what actually happened this week in AI.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://neearventures.com/images/blog-2026-06-06-this-week-in-ai-ep7-og.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": "2026-06-06",
+  "dateModified": "2026-06-06",
+  "author": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures Editorial",
+    "url": "https://neearventures.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://neearventures.com/logo.png"
+    }
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".direct-answer", ".article-lead", "h2"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Artificial Intelligence Weekly News"
+  },
+  "mentions": [
+    { "@type": "Thing", "name": "Anthropic IPO" },
+    { "@type": "Thing", "name": "ChatGPT Dreaming V3 Memory" },
+    { "@type": "Thing", "name": "SoftBank AI Infrastructure France" },
+    { "@type": "Thing", "name": "Microsoft Build 2026" },
+    { "@type": "Thing", "name": "NVIDIA RTX Spark" }
+  ],
+  "keywords": "AI news, Anthropic IPO, ChatGPT memory, SoftBank France, Microsoft Build, NVIDIA RTX Spark, This Week in AI",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neearventures.com/blog-2026-06-06-this-week-in-ai-ep7.html"
+  }
+}
+</script>
+
+<!-- 6b. BREADCRUMB SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://neearventures.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://neearventures.com/blog.html" },
+    { "@type": "ListItem", "position": 3, "name": "This Week in AI — Ep. 7", "item": "https://neearventures.com/blog-2026-06-06-this-week-in-ai-ep7.html" }
+  ]
+}
+</script>
+
+<!-- 6c. FAQPAGE SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What happened in AI this week (June 2\u20136, 2026)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anthropic confidentially filed for an IPO valuing it at approximately $965 billion. OpenAI upgraded ChatGPT\u2019s memory with Dreaming V3, a system that synthesises context from past conversations automatically. SoftBank committed \u20ac75 billion to build AI data centres in France. Microsoft Build 2026 showcased Windows Agent Framework APIs and a $9.69 billion DoD contract. NVIDIA announced RTX Spark, a desktop PC with up to 128GB of unified memory for running AI models locally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Anthropic\u2019s IPO filing significant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anthropic\u2019s confidential S-1 filing on June 1, 2026 values the company at approximately $965 billion, making it the most valuable AI startup in history, ahead of OpenAI\u2019s $852 billion private-market valuation. The company\u2019s annualised revenue run rate hit $47 billion in May 2026, up roughly 5x from $10 billion the prior year. Combined with OpenAI\u2019s filing and SpaceX\u2019s planned listing, the fall 2026 IPO window could bring over $200 billion in AI public-market value to investors at once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is ChatGPT Dreaming V3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dreaming V3 is OpenAI\u2019s rebuilt memory architecture for ChatGPT, launched June 4, 2026. Unlike the previous system that required users to explicitly ask ChatGPT to save information, Dreaming V3 runs a background process after conversations end to automatically synthesise relevant preferences, constraints, and ongoing context. It rolled out first to Plus and Pro users in the US, with Free and Go users to follow. According to OpenAI\u2019s internal benchmarks, it improves factual recall from 67.9% to 82.8% and preference adherence from 55.3% to 71.3%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is SoftBank investing \u20ac75 billion in France?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SoftBank announced on June 1, 2026 at the Choose France summit that it would build 5 gigawatts of AI data centre capacity in France, with an initial \u20ac45 billion phase targeting sites in northern France by 2031. France\u2019s nuclear-powered electricity grid gives it a structural energy cost advantage over most of Europe, making it attractive for compute-intensive AI infrastructure. The announcement was the single largest investment at a summit that attracted \u20ac93 billion in total foreign investment commitments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What was announced at Microsoft Build 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Microsoft Build 2026, held the week of June 2 in San Francisco, announced homegrown MAI models for GitHub Copilot, Windows Agent Framework APIs for OS-level autonomous agents, Copilot Agent Mode for multi-step GitHub coding workflows, and Azure AI Foundry formally adding Anthropic Claude. Microsoft also announced a $9.69 billion DoD enterprise contract for Microsoft 365, Azure, and AI Copilot services across approximately 2.8 million Department of Defense staff \u2014 the largest single Microsoft government contract in company history."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 7. FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- 8. STYLES -->
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #f7f4ef; --bg-alt: #f0ece4; --surface: #ffffff;
+  --border: #e2d9cc; --navy: #0d1f35; --navy-light: #162d47;
+  --navy-muted: #1e3a5a; --gold: #9a7a2e; --gold-light: #b8963e;
+  --gold-pale: rgba(154,122,46,0.1);
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* ARTICLE HERO — full-width, above main grid */
+.article-hero { padding: 8rem 4vw 0; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; text-align: center; }
+.article-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.article-category { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 600; }
+.article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 600; color: var(--navy); line-height: 1.1; margin-bottom: 1.2rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.article-title em { font-style: italic; color: var(--gold); }
+.article-subtitle { font-size: 1rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.article-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.6rem auto 2rem; }
+.hero-image { max-width: 860px; width: 100%; height: auto; display: block; border-radius: 3px 3px 0 0; box-shadow: 0 4px 20px rgba(13,31,53,0.08); margin: 0 auto; }
+/* TOC SIDEBAR */
+.toc-sidebar { grid-area: toc; position: sticky; top: 110px; align-self: start; padding: 1.6rem; border: 1px solid var(--border); background: var(--surface); margin: 2.5rem 1.6rem 0 0; }
+.toc-box-title { font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border); }
+.toc-box-section { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy-muted); font-weight: 600; margin: 1rem 0 0.4rem; }
+.toc-box-list { list-style: none; padding: 0; margin: 0 0 0.4rem; }
+.toc-box-list li { margin: 0; }
+.toc-box-list a { display: block; font-size: 0.8rem; color: var(--navy-muted); text-decoration: none; padding: 0.32rem 0 0.32rem 0.7rem; border-left: 2px solid transparent; line-height: 1.4; transition: color 0.2s, border-color 0.2s; }
+.toc-box-list a:hover { color: var(--gold); border-left-color: var(--gold); }
+.toc-box-divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+
+/* CONTENT LAYOUT */
+.content-layout { display: grid; grid-template-columns: 1fr 260px; grid-template-areas: "article toc"; gap: 0; max-width: 1200px; margin: 0 auto; align-items: start; }
+.article-col { grid-area: article; min-width: 0; order: 1; }
+.article-col .article-wrap { max-width: 760px; margin: 0; padding: 3rem 4vw 6rem; }
+
+/* ARTICLE BODY */
+.article-lead { font-size: 1.08rem; line-height: 1.85; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 1.2rem; margin-bottom: 2rem; font-weight: 400; }
+.direct-answer { background: #0d1f35; padding: 1.6rem 1.8rem; margin: 1.8rem 0 2.2rem; border-left: 4px solid #9a7a2e; }
+.direct-answer .da-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: #9a7a2e; font-weight: 600; margin-bottom: 0.7rem; }
+.direct-answer p { font-size: 0.92rem; color: rgba(232,224,208,0.9); line-height: 1.75; margin: 0; }
+.direct-answer p strong { color: #9a7a2e; }
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; color: var(--navy); margin: 3rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); scroll-margin-top: 90px; display: flex; align-items: baseline; gap: 0.6rem; }
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.6rem; scroll-margin-top: 90px; }
+p { font-size: 0.95rem; line-height: 1.85; color: var(--navy-muted); margin-bottom: 1.2rem; }
+p strong { color: var(--navy); }
+.num-badge { background: var(--gold); color: #fff; font-family: 'Jost', sans-serif; font-size: 0.7rem; font-weight: 600; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; }
+
+/* STAT CALLOUT */
+.stat-callout { display: flex; gap: 1.5rem; margin: 2rem 0; flex-wrap: wrap; border: 1px solid var(--border); padding: 1.4rem 1.6rem; background: var(--surface); }
+.stat-item { flex: 1; min-width: 110px; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600; color: var(--gold); line-height: 1.1; }
+.stat-label { font-size: 0.72rem; color: var(--navy-muted); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.3rem; font-weight: 500; }
+
+/* INSIGHT CARD */
+.insight-card { background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.6rem 0; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.6rem; }
+.insight-card p { font-size: 0.9rem; color: var(--navy); margin: 0; line-height: 1.7; }
+
+/* CONTENT CARD */
+.content-card { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 1.2rem 0; transition: box-shadow 0.3s; }
+.content-card:hover { box-shadow: 0 2px 16px rgba(154,122,46,0.1); }
+.content-card .cc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--navy); font-weight: 600; margin-bottom: 0.5rem; }
+.content-card .cc-meta { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); padding: 0.15rem 0.6rem; font-weight: 600; display: inline-block; margin-bottom: 0.6rem; }
+.content-card p { font-size: 0.87rem; color: var(--navy-muted); margin: 0; line-height: 1.65; }
+.content-card p strong { color: var(--navy); }
+
+/* TIP ROW */
+.tip-row { display: flex; gap: 0.9rem; align-items: flex-start; background: var(--bg-alt); border: 1px solid var(--border); padding: 1.1rem 1.4rem; margin: 1.4rem 0; }
+.tip-icon { font-size: 1.1rem; flex-shrink: 0; line-height: 1.6; }
+.tip-row p { font-size: 0.88rem; color: var(--navy-muted); margin: 0; line-height: 1.7; }
+.tip-row p strong { color: var(--navy); }
+
+/* BLOCKQUOTE */
+blockquote { background: var(--bg-alt); border-left: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 2rem 0; }
+blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--navy); margin: 0; line-height: 1.6; font-weight: 400; }
+blockquote cite { display: block; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.8rem; font-style: normal; font-weight: 600; }
+
+/* SECTION ORNAMENT */
+.section-ornament { text-align: center; color: var(--gold); opacity: 0.4; letter-spacing: 12px; font-size: 0.9rem; margin: 3rem 0; }
+
+/* QUICK HITS */
+.quick-hits { background: var(--navy); padding: 1.6rem 1.8rem; margin: 2rem 0; }
+.quick-hits .qh-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+.quick-hits ul { list-style: none; padding: 0; margin: 0; }
+.quick-hits li { font-size: 0.88rem; color: rgba(232,224,208,0.85); line-height: 1.75; padding: 0.55rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.quick-hits li:last-child { border-bottom: none; }
+.quick-hits li strong { color: var(--gold-light); }
+
+/* FAQ */
+.faq-section { margin: 3.5rem 0 2rem; }
+.faq-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 1.4rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--border); }
+.faq-item { border: 1px solid var(--border); margin-bottom: 0.5rem; }
+.faq-question { width: 100%; background: var(--surface); border: none; padding: 1rem 1.4rem; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-family: 'Jost', sans-serif; font-size: 0.92rem; font-weight: 500; color: var(--navy); line-height: 1.5; transition: background 0.2s; }
+.faq-question:hover { background: var(--bg-alt); }
+.faq-icon { font-size: 1.2rem; color: var(--gold); flex-shrink: 0; font-weight: 300; transition: transform 0.3s; }
+.faq-item.open .faq-question { background: var(--bg-alt); }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-item.open .faq-answer { max-height: 600px; }
+.faq-answer p { padding: 0.9rem 1.4rem 1.1rem; font-size: 0.9rem; color: var(--navy-muted); line-height: 1.8; margin: 0; border-top: 1px solid var(--border); }
+
+/* SHARE + TAGS */
+.tags-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.tags-label { font-size: 0.7rem; color: var(--navy-muted); letter-spacing: 0.2em; text-transform: uppercase; margin-right: 0.3rem; font-weight: 500; }
+.tag { background: var(--bg-alt); border: 1px solid var(--border); padding: 0.25rem 0.8rem; font-size: 0.73rem; color: var(--navy-muted); transition: all 0.3s; }
+.tag:hover { border-color: var(--gold); color: var(--gold); }
+.share-row { display: flex; gap: 1rem; align-items: center; margin-top: 2rem; flex-wrap: wrap; }
+.share-label { font-size: 0.72rem; color: var(--navy-muted); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+.share-btn { background: transparent; border: 1px solid var(--border); color: var(--navy-muted); padding: 0.38rem 1rem; font-size: 0.75rem; font-family: 'Jost', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; font-weight: 400; }
+.share-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+/* SOCIAL ICONS FOOTER */
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+/* FOOTER */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+
+
+
+
+
+/* SIDEBAR FAQ */
+
+
+
+/* MOBILE TOC */
+.toc-mobile { display: none; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--gold); margin: 0; }
+.toc-mobile-toggle { width: 100%; background: none; border: none; padding: 0.9rem 1.2rem; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--navy); letter-spacing: 0.1em; text-transform: uppercase; }
+.toc-mobile-toggle-icon { font-size: 1.2rem; color: var(--gold); transition: transform 0.3s; }
+.toc-mobile.open .toc-mobile-toggle-icon { transform: rotate(45deg); }
+.toc-mobile-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.toc-mobile.open .toc-mobile-body { max-height: 400px; }
+.toc-mobile-body .toc-list { padding: 0.5rem 1rem 1rem; }
+.toc-mobile-body .toc-list a { font-size: 0.85rem; padding: 0.4rem 0 0.4rem 0.7rem; }
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .content-layout { display: block; }
+  .toc-sidebar { display: none; }
+  .toc-mobile { display: block; }
+  .article-col .article-wrap { padding: 2.5rem 4vw 5rem; }
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .article-title { font-size: 2rem; }
+  .stat-callout { gap: 1rem; }
+  footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 1rem; }
+  .footer-social { gap: 0.6rem; }
+  .social-icon { width: 36px; height: 36px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" width="44" height="44" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious &middot; Explore &middot; Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="learn.html">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="article-hero" id="article-hero">
+  <a href="blog.html" class="back-link">&#8592; Back to Blog</a>
+  <div class="article-category">&#128225; This Week in AI &middot; Episode 7</div>
+  <h1 class="article-title">This Week in AI &mdash; Ep. 7: <em>Anthropic Goes Public,</em> ChatGPT Gets a Memory, and &euro;75 Billion Heads to Europe</h1>
+  <p class="article-subtitle">From a $965B IPO filing to &euro;75 billion in European AI infrastructure &mdash; this week, AI moved from the lab to the stock market, your phone, and three continents.</p>
+  <div class="article-meta">
+    <span>NeeAr Ventures Editorial</span>
+    <span class="meta-dot">&#9670;</span>
+    <span>June 6, 2026</span>
+    <span class="meta-dot">&#9670;</span>
+    <span>8 min read</span>
+    <span class="meta-dot">&#9670;</span>
+    <span>AI News</span>
+  </div>
+  <div class="divider-line"></div>
+  <img src="images/blog-2026-06-06-this-week-in-ai-ep7-hero.webp"
+       alt="A split visual showing the Anthropic logo alongside stock market ticker graphics and a European data centre skyline, representing the IPO filing and global AI infrastructure expansion of June 2026."
+       class="hero-image"
+       loading="eager"
+       width="800"
+       height="420">
+</div>
+
+<main>
+<div class="content-layout">
+<div class="article-col">
+
+<div class="toc-mobile" id="toc-mobile">
+  <button class="toc-mobile-toggle" onclick="toggleMobileToc()" aria-expanded="false" aria-controls="toc-mobile-body">
+    <span>In This Article</span>
+    <span class="toc-mobile-toggle-icon">+</span>
+  </button>
+  <div class="toc-mobile-body" id="toc-mobile-body">
+    <ul class="toc-list" id="toc-list-mobile">
+      <li><a href="#anthropic-ipo"         data-idx="0">1. Anthropic IPO</a></li>
+      <li><a href="#chatgpt-dreaming-v3"   data-idx="1">2. ChatGPT Dreaming V3</a></li>
+      <li><a href="#softbank-france"       data-idx="2">3. SoftBank &amp; France</a></li>
+      <li><a href="#microsoft-build"       data-idx="3">4. Microsoft Build 2026</a></li>
+      <li><a href="#nvidia-rtx-spark"      data-idx="4">5. NVIDIA RTX Spark</a></li>
+      <li><a href="#quick-hits"            data-idx="5">Quick Hits</a></li>
+      <li><a href="#what-this-week-tells-us" data-idx="6">What This Week Tells Us</a></li>
+    </ul>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <p class="article-lead">Five days. Five stories that will still matter in five years. Anthropic filed to go public at a valuation that makes it the most valuable AI startup in history. OpenAI overhauled how ChatGPT remembers you. SoftBank committed &euro;75 billion to build AI data centres in France. Microsoft showed us what AI-powered Windows looks like. And NVIDIA moved its most powerful hardware off the server rack and onto the desk.</p>
+
+  <div class="direct-answer" role="note" aria-label="Quick Answer">
+    <div class="da-label">Quick Answer</div>
+    <p>
+      <strong>This week in AI (June 2&ndash;6, 2026):</strong> Anthropic confidentially filed for an IPO at a ~$965 billion valuation with a $47B revenue run rate. OpenAI launched Dreaming V3, a rebuilt ChatGPT memory system that synthesises context automatically from past conversations. SoftBank announced a &euro;75 billion commitment to build 5GW of AI data centre capacity in France. Microsoft Build 2026 unveiled Windows Agent Framework APIs and a $9.69B US DoD contract. NVIDIA announced RTX Spark, a desktop PC with up to 128GB unified memory for running AI models locally.
+    </p>
+  </div>
+
+  <p>This is not a slow news week. It is the week AI stopped being a technology story and started being an everything story &mdash; infrastructure, finance, memory, operating systems, and geopolitical capital allocation all in the same five-day window.</p>
+
+  <div class="stat-callout">
+    <div class="stat-item"><div class="stat-num">$965B</div><div class="stat-label">Anthropic Valuation</div></div>
+    <div class="stat-item"><div class="stat-num">$47B</div><div class="stat-label">Anthropic Revenue Run Rate</div></div>
+    <div class="stat-item"><div class="stat-num">&euro;75B</div><div class="stat-label">SoftBank France Commitment</div></div>
+    <div class="stat-item"><div class="stat-num">82.8%</div><div class="stat-label">ChatGPT Memory Recall (up from 67.9%)</div></div>
+  </div>
+
+  <section aria-label="Anthropic IPO">
+  <h2 id="anthropic-ipo"><span class="num-badge">1</span> Anthropic Files for an IPO &mdash; and the Numbers Are Staggering</h2>
+
+  <h3>What happened</h3>
+  <p>On June 1, 2026, Anthropic confidentially submitted a draft S-1 registration statement to the US Securities and Exchange Commission, officially starting the process for an initial public offering. The headline figure: a $65 billion Series H round placed the company&rsquo;s post-money valuation at approximately $965 billion &mdash; the highest ever for a private AI company, ahead of OpenAI&rsquo;s $852 billion valuation.</p>
+  <p>The revenue numbers are equally striking. Anthropic&rsquo;s annualised revenue run rate hit roughly $47 billion in May 2026, up from approximately $10 billion the prior year &mdash; nearly a 5x growth rate in twelve months. Goldman Sachs, JPMorgan Chase, and Morgan Stanley are handling the deal.</p>
+
+  <h3>What it means</h3>
+  <p>Anthropic joins OpenAI (which filed confidentially around May 22) and SpaceX in what could become one of the most consequential IPO windows in decades. If all three list as expected in fall 2026, more than $200 billion in new public market value could arrive at once &mdash; in a year when the entire US IPO market raised only $45 billion.</p>
+
+  <div class="insight-card">
+    <div class="card-label">Why This Matters</div>
+    <p>Going public changes Anthropic&rsquo;s accountability structure permanently. Every quarter, it will have to explain its compute costs, safety research spending, and margins to public shareholders. The tension between commercial scale and the company&rsquo;s stated mission of beneficial AI becomes a very public conversation. That transparency has no precedent in frontier AI lab history.</p>
+  </div>
+
+  <p>There is also an infrastructure signal worth noting: Anthropic currently pays SpaceX $1.25 billion per month to use compute at SpaceX&rsquo;s Colossus 1 data centre in Memphis. That figure, visible in SpaceX&rsquo;s own prospectus, illustrates the capital intensity of running frontier AI at scale.</p>
+
+  <div class="tip-row">
+    <div class="tip-icon">&#9888;</div>
+    <p><strong>Honest caveat:</strong> A confidential filing is not a commitment to go public. Anthropic has said the filing &ldquo;gives us the option&rdquo; to list after SEC review. No price, date, or share count has been set. The direction of travel is clear &mdash; but this is not a done deal.</p>
+  </div>
+  </section>
+
+  <section aria-label="ChatGPT Dreaming V3">
+  <h2 id="chatgpt-dreaming-v3"><span class="num-badge">2</span> ChatGPT Gets a Memory Upgrade &mdash; and It&rsquo;s More Consequential Than It Sounds</h2>
+
+  <h3>What happened</h3>
+  <p>On June 4, 2026, OpenAI began rolling out Dreaming V3 &mdash; a rebuilt memory architecture for ChatGPT &mdash; to Plus and Pro users in the United States. Free and Go users are expected to receive it within weeks. The old system worked like a notepad: you had to explicitly tell ChatGPT to remember something. Dreaming V3 runs a background process after conversations end, automatically synthesising preferences, constraints, ongoing projects, and recurring context &mdash; without you asking.</p>
+
+  <div class="content-card">
+    <div class="cc-meta">Internal Benchmark</div>
+    <div class="cc-title">Dreaming V3 Performance Gains</div>
+    <p>Factual recall improved from <strong>67.9% to 82.8%</strong>. Preference adherence improved from <strong>55.3% to 71.3%</strong>. Accuracy over time improved from <strong>52.2% to 75.1%</strong>. The update also introduces a readable memory summary page where users can see what ChatGPT has stored, edit it, and configure which topics it should raise.</p>
+  </div>
+
+  <h3>What it means</h3>
+  <p>People stop using AI products not because they can&rsquo;t solve hard problems, but because the AI keeps asking them to repeat themselves. Dreaming V3 is fundamentally a relationship repair feature &mdash; it makes ChatGPT feel like it pays attention across sessions, not just within them.</p>
+
+  <blockquote>
+    <p>Memory is becoming the differentiator. The chatbots that feel most useful over time will be the ones that don&rsquo;t start from zero every conversation.</p>
+    <cite>&mdash; NeeAr Ventures Editorial</cite>
+  </blockquote>
+
+  <div class="insight-card">
+    <div class="card-label">Privacy Note to Watch</div>
+    <p>A February 2026 academic paper analysed 2,050 memory entries from 80 ChatGPT users and found that 96% were created by the system unilaterally &mdash; without user prompting. An AI that infers your behavioural profile from your conversations will face growing scrutiny. The EU AI Act&rsquo;s transparency obligations take effect in August 2026, and OpenAI&rsquo;s international rollout falls right before that deadline.</p>
+  </div>
+  </section>
+
+  <section aria-label="SoftBank France AI Investment">
+  <h2 id="softbank-france"><span class="num-badge">3</span> SoftBank Bets &euro;75 Billion on Europe &mdash; and Picks France as the AI Continent</h2>
+
+  <h3>What happened</h3>
+  <p>On June 1, 2026, at France&rsquo;s annual Choose France summit at the Palace of Versailles, SoftBank Group announced it would invest up to &euro;75 billion to build and operate 5 gigawatts of AI data centre capacity in France. The first phase: &euro;45 billion for 3.1 GW of capacity across three new data centres in northern France (Dunkirk, Bosquel, and Bouchain), targeted for completion by 2031.</p>
+  <p>This was the single largest investment at a summit that attracted &euro;93 billion in total foreign investment commitments &mdash; the highest total in the Choose France summit&rsquo;s history. Macron said the projects would create 15,600 jobs in a country where unemployment sits at 8%.</p>
+
+  <h3>What it means</h3>
+  <p>Three things make this globally significant, not just European.</p>
+
+  <div class="content-card">
+    <div class="cc-meta">Signal 1</div>
+    <div class="cc-title">The Infrastructure Race Is No Longer US vs. China</div>
+    <p>For two years, the narrative was that AI infrastructure was concentrated in the United States and China, with Europe struggling to keep pace. SoftBank&rsquo;s commitment &mdash; combined with a separate &euro;50 billion UAE&ndash;France AI data centre deal announced the same week &mdash; signals that <strong>capital is now actively flowing into European AI infrastructure at a scale not visible twelve months ago.</strong></p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Signal 2</div>
+    <div class="cc-title">France&rsquo;s Nuclear Energy Advantage Is Real</div>
+    <p>Europe&rsquo;s high energy costs have been a documented barrier to data centre competitiveness. France&rsquo;s nuclear-powered electricity grid makes it structurally cheaper to run compute-intensive workloads than most European alternatives. <strong>This is showing up in investment decisions, not just policy documents.</strong> SoftBank&rsquo;s shares rose 14% on the announcement day and are up over 70% in 2026 so far.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Signal 3</div>
+    <div class="cc-title">SoftBank as Bellwether for the AI Infrastructure Supercycle</div>
+    <p>SoftBank&rsquo;s investments are concentrated in Arm Holdings (whose chip designs power AI servers globally), OpenAI, and now direct data centre infrastructure. When it commits &euro;75 billion to a single country, it is <strong>pricing in a multi-decade AI infrastructure supercycle &mdash; not a short-term bet.</strong></p>
+  </div>
+
+  <div class="tip-row">
+    <div class="tip-icon">&#128269;</div>
+    <p><strong>Question to track:</strong> Europe&rsquo;s regulatory environment (GDPR, EU AI Act, forthcoming transparency obligations) is significantly more complex than the US. Whether that overhead affects the economics of these data centres &mdash; or becomes a compliance-by-design selling point for enterprises &mdash; will play out over the next three to five years.</p>
+  </div>
+  </section>
+
+  <section aria-label="Microsoft Build 2026">
+  <h2 id="microsoft-build"><span class="num-badge">4</span> Microsoft Build 2026 &mdash; AI Agents Come to Windows</h2>
+
+  <h3>What happened</h3>
+  <p>Microsoft held Build 2026 in San Francisco the week of June 2. The key announcements included: homegrown MAI models for GitHub Copilot (directly addressing the backlash over Copilot&rsquo;s new token-based billing that took effect June 1), Windows Agent Framework APIs for OS-level autonomous agents, Copilot Agent Mode for multi-step GitHub coding workflows, Azure AI Foundry formally adding Anthropic Claude, and a $9.69 billion DoD enterprise contract for Microsoft 365, Azure, and AI Copilot services across approximately 2.8 million US Department of Defense staff &mdash; the largest single Microsoft government contract in company history.</p>
+
+  <h3>What it means</h3>
+  <p>The operating system is becoming an AI platform. Windows Agent Framework APIs mean developers can now build agents that operate at the OS level, executing tasks across applications &mdash; not just inside a browser tab or side panel.</p>
+
+  <div class="insight-card">
+    <div class="card-label">The Billing Backlash Context</div>
+    <p>On June 1, GitHub Copilot switched from flat-subscription to token-based billing. One developer reported that a $29/month subscription could become $750/month under the new model. The backlash was immediate and loud on Reddit, Hacker News, and X. Microsoft&rsquo;s announcement of homegrown coding models at Build was, in part, a direct response &mdash; a signal that they understand the pricing problem and are working on it from the model cost side.</p>
+  </div>
+  </section>
+
+  <section aria-label="NVIDIA RTX Spark">
+  <h2 id="nvidia-rtx-spark"><span class="num-badge">5</span> NVIDIA RTX Spark &mdash; Frontier AI Off the Server Rack and Onto Your Desk</h2>
+
+  <h3>What happened</h3>
+  <p>NVIDIA announced RTX Spark at Microsoft Build &mdash; a desktop PC with up to 128GB of unified memory and CUDA support, designed specifically for running AI models locally on Windows. Paired with Nemotron 3 Ultra (NVIDIA&rsquo;s open enterprise model released the same week), the announcement signals a push to bring serious AI inference capacity out of the cloud and into local environments. Systems are expected to ship in fall 2026.</p>
+
+  <h3>What it means</h3>
+  <p>The AI infrastructure narrative for two years has been: models run in the cloud, you access them through APIs. RTX Spark points at a different trajectory &mdash; where capable models run on your hardware, in your building, without per-query cost or cloud dependency. For privacy-sensitive industries (legal, healthcare, government, financial services), local inference has been the missing piece. This could be it.</p>
+
+  <div class="tip-row">
+    <div class="tip-icon">&#128202;</div>
+    <p><strong>The question fall 2026 will answer:</strong> What are the actual prices, thermals, and buyer demand when systems ship? The announcement is compelling; the market test is still ahead.</p>
+  </div>
+  </section>
+
+  <div class="section-ornament">&#9670; &#9670; &#9670;</div>
+
+  <section aria-label="Quick hits">
+  <h2 id="quick-hits">Quick Hits This Week</h2>
+  <div class="quick-hits">
+    <div class="qh-label">Also Worth Knowing</div>
+    <ul>
+      <li><strong>Project Glasswing expands:</strong> Anthropic extended its program giving vetted organisations access to Claude Mythos Preview for cybersecurity to cover critical infrastructure sectors (June 2). Claude now connects to 28 security platforms through the Claude Compliance API.</li>
+      <li><strong>Claude Sonnet 4.8 rumours:</strong> Speculation about an upcoming Claude Sonnet 4.8 model continued gaining credibility this week. Anthropic has made no announcement &mdash; treat as rumour.</li>
+      <li><strong>AI model benchmarks:</strong> Google&rsquo;s Gemini 3.5 Flash and OpenAI&rsquo;s GPT-5.5 Instant are both positioned as fast, cost-efficient options; Anthropic&rsquo;s Claude Opus 4.8 is generating enterprise momentum from independent benchmarks.</li>
+      <li><strong>AI training costs compressing:</strong> Orion-100B trained a 100-billion-parameter model for $1.25/hour &mdash; a data point in the ongoing trend of frontier model training becoming dramatically cheaper over time.</li>
+    </ul>
+  </div>
+  </section>
+
+  <section aria-label="Conclusion">
+  <h2 id="what-this-week-tells-us" style="border:none; padding:0; display:flex; align-items:baseline; font-size:1.5rem; margin-top:0;">What This Week Actually Tells Us</h2>
+  <p>Take a step back and look at the shape of the week. A company builds AI. It raises money. It goes public. It pays for compute by the billion per month. It competes. Governments decide what rules apply. The hardware gets cheaper and more powerful. The models get embedded in operating systems and enterprise tools. And capital flows across continents to wherever the infrastructure can be built.</p>
+  <p>That is the full loop, and this week had visible pieces of every part of it. The SoftBank story and the NVIDIA story &mdash; the ones that get less attention than the IPO &mdash; will matter most over the next decade. Legislation moves slowly until it doesn&rsquo;t. Hardware that runs frontier models locally changes the economic model of AI deployment entirely.</p>
+  <p>The Anthropic IPO will dominate headlines. The others deserve your attention too. Stay curious.</p>
+  </section>
+
+  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What happened in AI this week (June 2&ndash;6, 2026)?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Anthropic confidentially filed for an IPO valuing it at approximately $965 billion. OpenAI upgraded ChatGPT&rsquo;s memory with Dreaming V3, a system that synthesises context from past conversations automatically. SoftBank committed &euro;75 billion to build AI data centres in France. Microsoft Build 2026 showcased Windows Agent Framework APIs and a $9.69 billion DoD contract. NVIDIA announced RTX Spark, a desktop PC with up to 128GB of unified memory for running AI models locally.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Why is Anthropic&rsquo;s IPO filing significant?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Anthropic&rsquo;s confidential S-1 filing on June 1, 2026 values the company at approximately $965 billion, making it the most valuable AI startup in history, ahead of OpenAI&rsquo;s $852 billion private-market valuation. The company&rsquo;s annualised revenue run rate hit $47 billion in May 2026, up roughly 5x from $10 billion the prior year. Combined with OpenAI&rsquo;s filing and SpaceX&rsquo;s planned listing, the fall 2026 IPO window could bring over $200 billion in AI public-market value to investors at once.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is ChatGPT Dreaming V3?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Dreaming V3 is OpenAI&rsquo;s rebuilt memory architecture for ChatGPT, launched June 4, 2026. Unlike the previous system that required users to explicitly save information, Dreaming V3 runs in the background after conversations end to automatically synthesise relevant context. According to OpenAI&rsquo;s internal benchmarks, it improves factual recall from 67.9% to 82.8% and preference adherence from 55.3% to 71.3%. It rolled out first to Plus and Pro users in the US, with Free users to follow.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Why is SoftBank investing &euro;75 billion in France?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>SoftBank announced on June 1, 2026 at the Choose France summit that it would build 5 gigawatts of AI data centre capacity in France, starting with &euro;45 billion for sites in northern France. France&rsquo;s nuclear-powered electricity grid gives it a structural energy cost advantage over most of Europe, making it attractive for compute-intensive AI infrastructure. The announcement was the single largest investment at a summit that attracted &euro;93 billion in total foreign investment commitments.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What was announced at Microsoft Build 2026?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Microsoft Build 2026 announced homegrown MAI models for GitHub Copilot, Windows Agent Framework APIs for OS-level autonomous agents, Copilot Agent Mode for multi-step coding workflows, Azure AI Foundry adding Anthropic Claude, and a $9.69 billion DoD enterprise contract covering approximately 2.8 million US Department of Defense staff &mdash; the largest single Microsoft government contract ever.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="share-row">
+    <span class="share-label">Share:</span>
+    <button class="share-btn" onclick="copyLink()">Copy Link</button>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://neearventures.com/blog-2026-06-06-this-week-in-ai-ep7.html" target="_blank" class="share-btn">Facebook</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://neearventures.com/blog-2026-06-06-this-week-in-ai-ep7.html" target="_blank" class="share-btn">LinkedIn</a>
+    <a href="https://twitter.com/intent/tweet?url=https://neearventures.com/blog-2026-06-06-this-week-in-ai-ep7.html" target="_blank" class="share-btn">Twitter / X</a>
+  </div>
+
+  <div class="tags-row">
+    <span class="tags-label">Topics:</span>
+    <span class="tag">AI News</span>
+    <span class="tag">Anthropic IPO</span>
+    <span class="tag">ChatGPT Memory</span>
+    <span class="tag">SoftBank</span>
+    <span class="tag">Microsoft Build</span>
+    <span class="tag">NVIDIA</span>
+    <span class="tag">AI Infrastructure</span>
+    <span class="tag">This Week in AI</span>
+  </div>
+
+</div>
+</article>
+</div>
+
+<aside class="toc-sidebar">
+  <div class="toc-box-title">In This Article</div>
+  <ul class="toc-box-list">
+    <li><a href="#anthropic-ipo">1. Anthropic IPO Filing</a></li>
+    <li><a href="#chatgpt-dreaming-v3">2. ChatGPT Dreaming V3</a></li>
+    <li><a href="#softbank-france">3. SoftBank &amp; France</a></li>
+    <li><a href="#microsoft-build">4. Microsoft Build 2026</a></li>
+    <li><a href="#nvidia-rtx-spark">5. NVIDIA RTX Spark</a></li>
+    <li><a href="#quick-hits">Quick Hits</a></li>
+    <li><a href="#what-this-week-tells-us">What This Week Tells Us</a></li>
+  </ul>
+  <hr class="toc-box-divider">
+  <div class="toc-box-section">FAQs</div>
+  <ul class="toc-box-list">
+    <li><a href="#faq" onclick="openFaq(0);return false;">What happened in AI this week?</a></li>
+    <li><a href="#faq" onclick="openFaq(1);return false;">Why is the Anthropic IPO significant?</a></li>
+    <li><a href="#faq" onclick="openFaq(2);return false;">What is ChatGPT Dreaming V3?</a></li>
+    <li><a href="#faq" onclick="openFaq(3);return false;">Why did SoftBank invest &euro;75B in France?</a></li>
+    <li><a href="#faq" onclick="openFaq(4);return false;">What was announced at Microsoft Build?</a></li>
+  </ul>
+</aside>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-copy">&copy; 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:arjun@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/NeeArVentures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0d1f35"/></svg></a>
+  </div>
+</footer>
+
+<script>
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target;
+    btn.textContent = 'Copied \u2713';
+    setTimeout(() => btn.textContent = 'Copy Link', 2000);
+  });
+}
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  });
+});
+function toggleMobileToc() {
+  const toc = document.getElementById('toc-mobile');
+  const btn = toc.querySelector('.toc-mobile-toggle');
+  const isOpen = toc.classList.contains('open');
+  toc.classList.toggle('open');
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+/* Smooth scroll for TOC links */
+document.querySelectorAll('.toc-box-list a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var id = a.getAttribute('href').replace('#','');
+    var el = document.getElementById(id);
+    if (el) { e.preventDefault(); window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' }); }
+  });
+});
+</script>
+
+</body>
+</html>
