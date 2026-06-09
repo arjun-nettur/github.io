@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 1. Character encoding and viewport -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- 2. Favicons -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- 3. Canonical tag -->
+<link rel="canonical" href="https://neearventures.com/learn-series-claude-mastery-chapter-13.html">
+
+<!-- 4. Title and meta description -->
+<title>Chapter 13: Writing Code with Claude — Claude Mastery — NeeAr Ventures</title>
+<meta name="description" content="Learn how to generate clean code, debug effectively, conduct code reviews, write documentation, and automate repetitive tasks with Claude — for developers and non-developers alike.">
+
+<!-- 5. Open Graph and Twitter tags -->
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/learn-series-claude-mastery-chapter-13.html" />
+<meta property="og:title"        content="Chapter 13: Writing Code with Claude — Claude Mastery — NeeAr Ventures" />
+<meta property="og:description"  content="Learn how to generate clean code, debug effectively, conduct code reviews, write documentation, and automate repetitive tasks with Claude — for developers and non-developers alike." />
+<meta property="og:image"        content="https://neearventures.com/images/claude-mastery-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@NeeArVentures" />
+<meta name="twitter:title"       content="Chapter 13: Writing Code with Claude — Claude Mastery — NeeAr Ventures" />
+<meta name="twitter:description" content="Learn how to generate clean code, debug effectively, conduct code reviews, write documentation, and automate repetitive tasks with Claude — for developers and non-developers alike." />
+<meta name="twitter:image"       content="https://neearventures.com/images/claude-mastery-og.jpg" />
+
+<!-- 6a. LearningResource schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "headline": "Chapter 13: Writing Code with Claude — Claude Mastery",
+  "description": "Learn how to generate clean code, debug effectively, conduct code reviews, write documentation, and automate repetitive tasks with Claude — for developers and non-developers alike.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://neearventures.com/images/claude-mastery-og.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": "2026-06-09",
+  "dateModified": "2026-06-09",
+  "author": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures Editorial",
+    "url": "https://neearventures.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://neearventures.com/logo.png"
+    }
+  },
+  "learningResourceType": "Chapter",
+  "educationalLevel": "Advanced",
+  "teaches": "How to generate code, debug with full context, conduct code reviews, write documentation, and automate tasks using Claude — for both developers and non-developers",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".direct-answer", ".article-lead", "h2"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "AI-assisted coding"
+  },
+  "mentions": [
+    { "@type": "Thing", "name": "Code generation" },
+    { "@type": "Thing", "name": "Debugging" },
+    { "@type": "Thing", "name": "Code review" },
+    { "@type": "Thing", "name": "Code documentation" },
+    { "@type": "Thing", "name": "Claude Code" },
+    { "@type": "Thing", "name": "Task automation" }
+  ],
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Claude Mastery",
+    "url": "https://neearventures.com/learn-series-claude-mastery.html"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neearventures.com/learn-series-claude-mastery-chapter-13.html"
+  }
+}
+</script>
+
+<!-- 6b. BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",           "item": "https://neearventures.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Learn With Us",  "item": "https://neearventures.com/learn.html" },
+    { "@type": "ListItem", "position": 3, "name": "Claude Mastery", "item": "https://neearventures.com/learn-series-claude-mastery.html" },
+    { "@type": "ListItem", "position": 4, "name": "Chapter 13: Writing Code with Claude", "item": "https://neearventures.com/learn-series-claude-mastery-chapter-13.html" }
+  ]
+}
+</script>
+
+<!-- 6c. FAQPage schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you need to know how to code to use Claude for coding tasks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The key skill is knowing how to describe what you want clearly — not knowing how to write the code itself. Non-developers can use Claude to write automation scripts, clean up data files, organise folders, and build simple tools without learning programming from scratch. The prompting skills covered throughout the Claude Mastery series — being specific, providing context, showing examples — are the same skills that produce good code from Claude."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What information should you provide when asking Claude to debug code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Provide a complete debugging package: the language and version, a description of intended behaviour, the full code for the relevant function or module, the complete error message including the stack trace, what has already been tried, whether the error always occurs or only under specific conditions, and an example input that triggers the bug. This gives Claude everything needed to diagnose accurately rather than guess. Pasting only the error message without the code and context is the most common debugging mistake."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should a Claude code review cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A comprehensive Claude code review should cover four areas: correctness (logic errors, unhandled edge cases, potential runtime errors), security (SQL injection risks, authentication issues, sensitive data exposure, input validation gaps), performance (inefficient operations, memory concerns, caching opportunities), and code quality (naming clarity, best practices, DRY violations, functions doing too much). Ask Claude to prioritise findings by severity — critical issues to fix before shipping, important issues to address soon, and minor improvements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Claude Code and when should it be used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code is a command-line tool from Anthropic that integrates Claude directly into a development environment. Unlike the web interface where code is pasted in manually, Claude Code can read an entire project, make file edits directly, run shell commands, maintain context across multiple files, and see real test failures to fix them in the codebase. It makes sense for developers working on substantial projects who want AI assistance at the project level rather than snippet level. The web interface approach covered in this chapter works for the vast majority of coding tasks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most important principle for generating good code with Claude?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Specificity is everything. The most common mistake is being too abstract. Effective code prompts specify the programming language and version, the exact input format with types and examples, the expected output with examples, requirements and constraints, edge cases to handle, and coding conventions such as type hints or docstrings. The more precisely the expected behaviour is described, the less revision the resulting code requires. Build incrementally — core functionality first, then features, then optimisation."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 7. Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- 8. Styles -->
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:         #f7f4ef;
+  --bg-alt:     #f0ece4;
+  --surface:    #ffffff;
+  --border:     #e2d9cc;
+  --navy:       #0d1f35;
+  --navy-light: #162d47;
+  --navy-muted: #1e3a5a;
+  --gold:       #9a7a2e;
+  --gold-light: #b8963e;
+  --gold-pale:  rgba(154,122,46,0.1);
+  --green:      #2d7a4f;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* CHAPTER HEADER */
+.chapter-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; text-align: center; }
+.chapter-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.chapter-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; }
+.chapter-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem; }
+.chapter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; color: var(--navy); line-height: 1.15; margin-bottom: 0.8rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.chapter-subtitle { font-size: 1.05rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.chapter-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+/* TWO-COLUMN LAYOUT */
+.chapter-body-wrap { max-width: 1160px; margin: 0 auto; padding: 4rem 4vw 3rem; display: grid; grid-template-columns: 1fr 260px; gap: 3.5rem; align-items: start; }
+.chapter-content { min-width: 0; }
+
+/* STICKY SIDEBAR */
+.chapter-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.5rem; }
+.toc-widget { background: var(--surface); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.toc-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+.toc-list { list-style: none; padding: 0; margin: 0; }
+.toc-list li { border-bottom: 1px solid var(--border); }
+.toc-list li:last-child { border-bottom: none; }
+.toc-list a { display: block; padding: 0.55rem 0; font-size: 0.8rem; color: var(--navy-muted); text-decoration: none; line-height: 1.45; transition: color 0.25s, padding-left 0.25s; }
+.toc-list a:hover { color: var(--gold); padding-left: 0.4rem; }
+.toc-list a.toc-active { color: var(--gold); font-weight: 500; padding-left: 0.4rem; border-left: 2px solid var(--gold); margin-left: -1px; }
+.progress-widget { background: var(--surface); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.progress-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+.progress-series { font-size: 0.78rem; color: var(--navy-muted); margin-bottom: 0.5rem; display: flex; justify-content: space-between; }
+.progress-bar-track { background: var(--border); height: 4px; width: 100%; margin-bottom: 1.2rem; }
+.progress-bar-fill { background: var(--gold); height: 4px; width: 43%; }
+.progress-chapter-list { list-style: none; padding: 0; margin: 0; }
+.progress-chapter-list li { font-size: 0.78rem; padding: 0.35rem 0; color: var(--navy-muted); display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border); }
+.progress-chapter-list li:last-child { border-bottom: none; }
+.progress-chapter-list li.current { color: var(--gold); font-weight: 500; }
+.progress-chapter-list li.done::before    { content: '✓'; color: var(--gold); font-size: 0.72rem; flex-shrink: 0; }
+.progress-chapter-list li.current::before { content: '▶'; color: var(--gold); font-size: 0.6rem; flex-shrink: 0; }
+.progress-chapter-list li.upcoming::before{ content: '○'; color: var(--border); font-size: 0.72rem; flex-shrink: 0; }
+.series-widget { background: var(--bg-alt); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.series-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.8rem; }
+.series-widget p { font-size: 0.8rem; color: var(--navy-muted); line-height: 1.6; margin-bottom: 1rem; }
+.series-widget-link { display: block; text-align: center; background: transparent; border: 1px solid var(--gold); color: var(--gold); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.55rem 1rem; text-decoration: none; transition: all 0.3s; font-weight: 500; }
+.series-widget-link:hover { background: var(--gold); color: #fff; }
+
+/* TYPOGRAPHY */
+.article-lead { font-size: 1.05rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p strong { color: var(--navy); font-weight: 600; }
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; color: var(--navy); margin: 3rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); scroll-margin-top: 90px; }
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.8rem; }
+h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin: 1.6rem 0 0.6rem; }
+ul, ol { margin-left: 1.5rem; margin-bottom: 1.4rem; }
+li { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 0.5rem; }
+
+/* AEO: DIRECT ANSWER BLOCK */
+.direct-answer { background: var(--navy); padding: 1.6rem 1.8rem; margin: 1.8rem 0 2.2rem; border-left: 4px solid var(--gold); }
+.direct-answer .da-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.7rem; }
+.direct-answer p { font-size: 0.92rem; color: rgba(232,224,208,0.9); line-height: 1.75; margin: 0; }
+.direct-answer p strong { color: var(--gold); }
+
+/* CODE BLOCKS */
+.code-block { background: var(--navy); color: #e8e0d0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'Courier New', monospace; font-size: 0.88rem; line-height: 1.7; overflow-x: auto; border-radius: 2px; white-space: pre-wrap; }
+
+/* PART HEADER */
+.part-header { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.1rem 1.5rem; margin: 2.5rem 0 1.5rem; display: flex; align-items: center; gap: 1rem; }
+.part-badge { font-size: 0.64rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 600; background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); padding: 0.18rem 0.7rem; white-space: nowrap; }
+.part-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--navy); }
+
+/* PATTERN BLOCK */
+.pattern-block { background: var(--surface); border: 1px solid var(--border); margin: 2rem 0; overflow: hidden; }
+.pattern-header { background: var(--navy); padding: 0.85rem 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
+.pattern-badge { font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase; background: rgba(154,122,46,0.25); border: 1px solid var(--gold); color: var(--gold); padding: 0.18rem 0.65rem; font-weight: 600; white-space: nowrap; }
+.pattern-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: #e8e0d0; }
+.pattern-body { padding: 1.3rem 1.5rem; }
+.pattern-body p { font-size: 0.88rem; line-height: 1.7; color: var(--navy-muted); margin-bottom: 0.8rem; }
+
+/* AUDIENCE GRID */
+.audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.5rem 0 2rem; }
+.audience-card { padding: 1.3rem 1.5rem; border: 1px solid var(--border); }
+.audience-card.developer { border-left: 4px solid var(--gold); background: var(--bg-alt); }
+.audience-card.non-dev   { border-left: 4px solid var(--green); background: #f0f9f5; }
+.audience-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.7rem; }
+.audience-card.developer .audience-label { color: var(--gold); }
+.audience-card.non-dev   .audience-label { color: var(--green); }
+.audience-card ul { margin-left: 1.1rem; margin-bottom: 0; }
+.audience-card li { font-size: 0.85rem; line-height: 1.65; color: var(--navy); margin-bottom: 0.35rem; }
+
+/* SEVERITY BLOCK */
+.severity-block { background: var(--surface); border: 1px solid var(--border); margin: 1.5rem 0; overflow: hidden; }
+.severity-row { padding: 0.8rem 1.2rem; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.8rem; }
+.severity-row:last-child { border-bottom: none; }
+.sev-icon { font-size: 0.95rem; flex-shrink: 0; margin-top: 0.1rem; }
+.sev-label { font-weight: 600; font-size: 0.85rem; color: var(--navy); margin-bottom: 0.2rem; }
+.sev-desc { font-size: 0.82rem; color: var(--navy-muted); line-height: 1.6; }
+
+/* INSIGHT CARD */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.8rem 0; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0.5rem 0; line-height: 1.7; }
+
+/* PRACTICE BOX */
+.practice-box { background: var(--surface); border: 2px solid var(--gold); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+.practice-box .box-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--navy); font-weight: 600; margin-bottom: 0.8rem; }
+.practice-box p { font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.8rem; }
+
+/* TAKEAWAYS */
+.takeaways { background: var(--bg-alt); padding: 2rem 2.5rem; margin: 3rem 0; border-top: 3px solid var(--gold); }
+.takeaways-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--navy); font-weight: 600; margin-bottom: 1.2rem; text-align: center; }
+.takeaways ul { list-style: none; padding: 0; margin: 0; }
+.takeaways li { padding-left: 2rem; position: relative; margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.7; }
+.takeaways li:before { content: '✅'; position: absolute; left: 0; }
+
+/* FAQ ACCORDION */
+.faq-section { margin: 3.5rem 0; border-top: 2px solid var(--border); padding-top: 2.5rem; }
+.faq-title { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; color: var(--navy); margin-bottom: 1.5rem; scroll-margin-top: 90px; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--navy); gap: 1rem; }
+.faq-question:hover { color: var(--gold); }
+.faq-icon { font-size: 1.3rem; color: var(--gold); font-weight: 300; flex-shrink: 0; transition: transform 0.3s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-item.open .faq-answer { max-height: 500px; }
+.faq-answer p { font-size: 0.91rem; line-height: 1.8; color: var(--navy-muted); padding: 0 0 1.2rem; margin: 0; }
+
+/* CHAPTER NAV */
+.chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 2.5rem 0; border-top: 2px solid var(--border); margin-top: 3rem; flex-wrap: wrap; }
+.nav-btn { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--navy); padding: 1rem 1.5rem; border: 1px solid var(--border); background: var(--surface); transition: all 0.3s; flex: 1; min-width: 200px; }
+.nav-btn:hover { border-color: var(--gold); box-shadow: 0 2px 12px rgba(154,122,46,0.1); }
+.nav-btn.prev { justify-content: flex-start; }
+.nav-btn.next { justify-content: flex-end; }
+.nav-btn .nav-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.nav-btn .nav-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; }
+.nav-center { text-align: center; flex: 0 0 auto; }
+.nav-center a { color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+.nav-center a:hover { color: var(--gold-light); }
+
+/* FOOTER */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+@media (max-width: 1024px) { .chapter-body-wrap { grid-template-columns: 1fr 220px; gap: 2.5rem; } }
+@media (max-width: 768px) {
+  .chapter-body-wrap { grid-template-columns: 1fr; padding: 2.5rem 4vw 2rem; }
+  .chapter-sidebar { position: static; display: none; }
+  .audience-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures logo" loading="eager" width="44" height="44" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="learn.html" class="active">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<main>
+<article>
+
+<header class="chapter-hero">
+  <a href="learn-series-claude-mastery.html" class="back-link">← Back to Claude Mastery</a>
+  <div class="chapter-label">Claude Mastery · Chapter 13 of 30</div>
+  <div class="chapter-number">13</div>
+  <h1 class="chapter-title">Writing Code with Claude</h1>
+  <p class="chapter-subtitle">From Idea to Implementation</p>
+  <div class="chapter-meta">
+    <span>⏱️ 14 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>📊 Advanced</span>
+    <span class="meta-dot">◆</span>
+    <span>🎯 Code &amp; Automation</span>
+  </div>
+  <div class="divider-line"></div>
+</header>
+
+<div class="chapter-body-wrap">
+<div class="chapter-content">
+
+  <p class="article-lead">This chapter is valuable whether or not the reader is a developer. Developers will find that Claude dramatically accelerates their workflow — from first draft to optimised, documented, production-ready code. Non-developers can use Claude to write scripts, automate repetitive tasks, understand code they receive, and build simple tools — without needing to learn programming from scratch.</p>
+
+  <!-- AEO: DIRECT ANSWER BLOCK -->
+  <div class="direct-answer" role="note" aria-label="Quick Answer">
+    <div class="da-label">Quick Answer</div>
+    <p>
+      <strong>Writing code with Claude</strong> is built on one principle: knowing how to describe what you want clearly — not knowing how to write the code itself. The same specificity skills that improve any Claude interaction produce better code: specify the language and version, describe inputs and outputs with examples, list requirements and edge cases, and indicate coding conventions. Code generation, debugging, code review, documentation, and task automation all follow structured prompt patterns covered in this chapter.
+    </p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <section aria-label="Why Claude is good at code">
+    <h2 id="why-is-claude-exceptionally-good-at-code">Why Is Claude Exceptionally Good at Code?</h2>
+
+    <div class="audience-grid">
+      <div class="audience-card developer">
+        <div class="audience-label">For Developers</div>
+        <ul>
+          <li>First draft to production-ready code dramatically faster</li>
+          <li>Debugging conversations that diagnose in minutes, not hours</li>
+          <li>Code reviews that catch security and performance issues</li>
+          <li>Documentation written alongside the code</li>
+          <li>Targeted optimisation with explained improvements</li>
+        </ul>
+      </div>
+      <div class="audience-card non-dev">
+        <div class="audience-label">For Non-Developers</div>
+        <ul>
+          <li>Automation scripts for repetitive file or data tasks</li>
+          <li>Data cleanup tools beyond spreadsheet formula limits</li>
+          <li>Google Apps Scripts for Sheets and Gmail workflows</li>
+          <li>Understanding code received from engineers</li>
+          <li>Simple web scrapers for research tasks</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>Code has properties that make Claude particularly effective. It is unambiguous — either it works or it does not. It has established patterns — Claude has processed millions of examples across languages and frameworks. It is verifiable — code can be run immediately and provides direct feedback. And errors are explicit — error messages say exactly what is wrong and where, making debugging conversations highly productive.</p>
+  </section>
+
+  <!-- PART 1: CODE GENERATION -->
+  <section aria-label="Code generation">
+    <div class="part-header">
+      <span class="part-badge">Part 1</span>
+      <div class="part-title">Code Generation</div>
+    </div>
+
+    <h2 id="how-to-prompt-claude-to-generate-clean-code">How Do You Prompt Claude to Generate Clean, Working Code?</h2>
+
+    <p>The most common mistake in coding prompts is being too abstract. Compare:</p>
+    <div class="code-block">❌ Too abstract:
+Write a function to process user data.
+
+✅ Specific and useful:
+Write a Python function that:
+- Takes a list of user dictionaries as input
+  (each with keys: name, email, signup_date, plan)
+- Filters to users who signed up in the last 30 days
+- Returns a list sorted by signup_date (newest first)
+- Handles missing keys gracefully (default to None)
+- Includes type hints
+
+Example input:
+[
+  {"name": "Alice", "email": "alice@example.com",
+   "signup_date": "2024-03-15", "plan": "pro"},
+  {"name": "Bob", "email": "bob@example.com",
+   "signup_date": "2024-01-10", "plan": "free"}
+]
+
+Expected output: List of user dicts from last 30 days, sorted newest first.</div>
+
+    <h3>The Code Generation Template</h3>
+    <div class="code-block">Write [LANGUAGE] code that:
+
+PURPOSE:
+[What this code needs to accomplish]
+
+INPUTS:
+[What data/parameters it receives, with types and examples]
+
+OUTPUTS:
+[What it should return or produce, with example]
+
+REQUIREMENTS:
+- [Specific requirement 1]
+- [Specific requirement 2]
+
+CONSTRAINTS:
+- [Language version, library restrictions, performance needs]
+- [Style conventions: type hints, docstrings, etc.]
+
+EDGE CASES TO HANDLE:
+- [Edge case 1]
+- [Edge case 2]
+
+Please include:
+- Comments explaining non-obvious logic
+- Error handling where appropriate
+- A brief usage example at the end</div>
+
+    <h3>Language-Specific Examples</h3>
+
+    <div class="pattern-block">
+      <div class="pattern-header">
+        <span class="pattern-badge">Python</span>
+        <div class="pattern-title">Data Processing Script</div>
+      </div>
+      <div class="pattern-body">
+        <div class="code-block">Write a Python script that:
+
+PURPOSE:
+Read a CSV of sales transactions, clean the data,
+and generate a summary report.
+
+INPUT FILE FORMAT:
+CSV with columns: date, product_id, quantity, unit_price,
+customer_id, region
+
+DATA ISSUES TO HANDLE:
+- Some rows have missing quantity (skip those rows)
+- Date format is inconsistent (YYYY-MM-DD and MM/DD/YYYY)
+- Some unit_price values are strings with $ sign
+
+OUTPUT:
+1. A cleaned CSV (same columns, consistent formatting)
+2. A printed summary: total revenue by region, top 5 products,
+   month-over-month trend, rows cleaned vs skipped
+
+Use pandas. Add logging. Python 3.10+, include type hints.</div>
+      </div>
+    </div>
+
+    <div class="pattern-block">
+      <div class="pattern-header">
+        <span class="pattern-badge">JavaScript</span>
+        <div class="pattern-title">API Integration</div>
+      </div>
+      <div class="pattern-body">
+        <div class="code-block">Write a JavaScript function that:
+
+PURPOSE:
+Fetch user data from our API and display it in a formatted table.
+
+API DETAILS:
+- Endpoint: GET https://api.example.com/users
+- Auth: Bearer token in Authorization header
+- Response: { users: [{id, name, email, role, lastLogin}] }
+
+REQUIREMENTS:
+- Async/await pattern
+- Handle loading / error / empty states
+- Sort users by lastLogin (most recent first)
+- Format lastLogin as "X days ago"
+
+DOM TARGETS: #user-table-body, #loading-spinner, #error-message
+
+Vanilla JS only. No external libraries.</div>
+      </div>
+    </div>
+
+    <div class="pattern-block">
+      <div class="pattern-header">
+        <span class="pattern-badge">SQL</span>
+        <div class="pattern-title">Complex Query</div>
+      </div>
+      <div class="pattern-body">
+        <div class="code-block">Write a PostgreSQL query to find high-value customers at churn risk.
+
+TABLES:
+- orders (id, customer_id, created_at, status, total_amount)
+- customers (id, name, email, signup_date, plan_type)
+
+DEFINITIONS:
+- High value: Total spend > $5,000 lifetime
+- Churn risk: No order in last 90 days AND had 2+ orders
+  in the 90 days before that
+
+OUTPUT: customer_id, name, email, lifetime_spend,
+last_order_date, previous_order_count, days_since_last_order
+Sort by lifetime_spend descending. Comment each CTE.</div>
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="card-label">Output Checklist</div>
+      <p>Always request: complete runnable code with no placeholders, required imports at the top, a usage example showing how to call it, any environment variables or configuration needed, and notes on any assumptions made.</p>
+    </div>
+  </section>
+
+  <!-- PART 2: DEBUGGING -->
+  <section aria-label="Debugging">
+    <div class="part-header">
+      <span class="part-badge">Part 2</span>
+      <div class="part-title">Debugging</div>
+    </div>
+
+    <h2 id="how-to-debug-code-with-claude">How Do You Debug Code Effectively with Claude?</h2>
+
+    <p>Debugging is where Claude often provides the most dramatic time savings. A bug that might take an hour to track down can be diagnosed in minutes when the right information is provided. Always supply the complete debugging package — not just the error message.</p>
+
+    <div class="code-block">LANGUAGE & VERSION: [e.g., Python 3.11, Node.js 18]
+
+WHAT I'M TRYING TO DO:
+[Brief description of intended behavior]
+
+THE CODE:
+[Paste the relevant function or module]
+
+THE ERROR MESSAGE:
+[Paste the FULL error message including stack trace]
+
+WHAT I'VE ALREADY TRIED:
+[List what has been attempted so far]
+
+WHEN IT HAPPENS:
+[Always? Only with certain inputs? Specific conditions?]
+
+EXAMPLE INPUT THAT TRIGGERS THE BUG:
+[The exact input that causes the error]</div>
+
+    <h3>Three Debugging Patterns</h3>
+
+    <div class="pattern-block">
+      <div class="pattern-header">
+        <span class="pattern-badge">Pattern 1</span>
+        <div class="pattern-title">Error Message Diagnosis</div>
+      </div>
+      <div class="pattern-body">
+        <div class="code-block">Getting this error in [language]:
+
+[Paste full error with stack trace]
+
+Relevant code:
+[Paste code]
+
+What is causing this and how to fix it?</div>
+      </div>
+    </div>
+
+    <div class="pattern-block">
+      <div class="pattern-header">
+        <span class="pattern-badge">Pattern 2</span>
+        <div class="pattern-title">Logic Bug — No Error, Wrong Output</div>
+      </div>
+      <div class="pattern-body">
+        <div class="code-block">Code runs without errors but produces wrong output.
+
+Expected behavior: [What it should do]
+Actual behavior: [What it actually does]
+
+Code: [Paste code]
+
+Test case:
+Input: [example] | Expected: [expected] | Actual: [actual]
+
+Walk through what the code actually does step by step,
+then identify where the logic goes wrong.</div>
+      </div>
+    </div>
+
+    <div class="pattern-block">
+      <div class="pattern-header">
+        <span class="pattern-badge">Pattern 3</span>
+        <div class="pattern-title">Performance Issue</div>
+      </div>
+      <div class="pattern-body">
+        <div class="code-block">Code works correctly but is too slow.
+Currently: [X seconds] on [dataset size]. Target: under [target].
+
+Code: [Paste code]
+
+Please identify bottlenecks, suggest specific optimizations,
+estimate improvement per optimization, and show optimized version.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PART 3: CODE REVIEW -->
+  <section aria-label="Code review and optimization">
+    <div class="part-header">
+      <span class="part-badge">Part 3</span>
+      <div class="part-title">Code Review &amp; Optimization</div>
+    </div>
+
+    <h2 id="how-to-run-a-comprehensive-code-review-with-claude">How Do You Run a Comprehensive Code Review with Claude?</h2>
+
+    <div class="code-block">Please review this [language] code for:
+
+CORRECTNESS: Logic errors, unhandled edge cases, potential runtime errors
+
+SECURITY: SQL injection, auth issues, sensitive data exposure, input validation
+
+PERFORMANCE: N+1 queries, unnecessary loops, memory concerns, caching
+
+CODE QUALITY: Naming clarity, best practices, DRY violations, bloated functions
+
+Prioritise issues by severity and provide the fixed version.
+
+[Paste code]</div>
+
+    <div class="severity-block">
+      <div class="severity-row">
+        <span class="sev-icon">🔴</span>
+        <div>
+          <div class="sev-label">Critical — fix before shipping</div>
+          <div class="sev-desc">Security vulnerabilities, data loss risks, logic errors producing wrong results</div>
+        </div>
+      </div>
+      <div class="severity-row">
+        <span class="sev-icon">🟡</span>
+        <div>
+          <div class="sev-label">Important — fix soon</div>
+          <div class="sev-desc">Performance bottlenecks, maintainability problems, missing error handling</div>
+        </div>
+      </div>
+      <div class="severity-row">
+        <span class="sev-icon">🟢</span>
+        <div>
+          <div class="sev-label">Minor — nice to have</div>
+          <div class="sev-desc">Naming improvements, style consistency, optional refactoring</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Targeted Optimization</h3>
+    <div class="code-block">Optimize this code specifically for [performance / readability /
+memory usage / maintainability].
+
+Current code: [Paste code]
+
+Constraints:
+- Must maintain the same public interface
+- Python 3.10+ only, standard library, no new dependencies
+
+Show: optimized version, what changed and why, any trade-offs.</div>
+  </section>
+
+  <!-- PART 4: DOCUMENTATION -->
+  <section aria-label="Documentation">
+    <div class="part-header">
+      <span class="part-badge">Part 4</span>
+      <div class="part-title">Documentation</div>
+    </div>
+
+    <h2 id="how-to-generate-code-documentation-with-claude">How Do You Generate Code Documentation with Claude?</h2>
+
+    <h3>Generating Docstrings</h3>
+    <div class="code-block">Write comprehensive docstrings for all functions in this code.
+Follow [Google / NumPy / Sphinx] format.
+
+For each function include: one-line summary, extended description
+(if complex), Args with types and descriptions, Returns type and
+description, Raises for any exceptions, and at least one Example.
+
+[Paste code]</div>
+
+    <h3>Generating README Documentation</h3>
+    <div class="code-block">Write a README.md for this project.
+
+PROJECT CONTEXT: [What it does and who uses it]
+
+Include: title and one-paragraph description, features list,
+prerequisites, step-by-step installation, 3+ usage examples,
+configuration options, contributing guidelines, license section.
+
+Tone: Clear and welcoming. Assume developer unfamiliar with this
+codebase.
+
+[Paste code or describe the project]</div>
+
+    <h3>Explaining Complex Code</h3>
+    <div class="code-block">Explain this code as if teaching a junior developer who knows
+[language] basics but hasn't seen this pattern.
+
+Walk through: high-level summary (2-3 sentences), each major section
+and why it's structured that way, non-obvious design decisions and
+their reasoning, what someone would need to change to modify behavior.
+
+[Paste code]</div>
+  </section>
+
+  <!-- PART 5: NON-DEVELOPERS -->
+  <section aria-label="For non-developers">
+    <div class="part-header">
+      <span class="part-badge">Part 5</span>
+      <div class="part-title">For Non-Developers</div>
+    </div>
+
+    <h2 id="how-can-non-developers-use-claude-for-coding-tasks">How Can Non-Developers Use Claude for Practical Coding Tasks?</h2>
+
+    <p>Four use cases are immediately practical for anyone — regardless of coding background:</p>
+
+    <div class="pattern-block">
+      <div class="pattern-header">
+        <span class="pattern-badge">Use Case 1</span>
+        <div class="pattern-title">Google Sheets Automation</div>
+      </div>
+      <div class="pattern-body">
+        <div class="code-block">Write a Google Apps Script that runs every Monday and sends
+an email summary of a Google Sheet.
+
+Columns: A = Task name, B = Owner, C = Due date,
+         D = Status (Not Started / In Progress / Complete)
+
+Email should include: tasks due this week (sorted by due date),
+overdue tasks (highlighted), % complete across all tasks.
+
+Sheet name: "Project Tracker"</div>
+      </div>
+    </div>
+
+    <div class="pattern-block">
+      <div class="pattern-header">
+        <span class="pattern-badge">Use Case 2</span>
+        <div class="pattern-title">File Organisation Script</div>
+      </div>
+      <div class="pattern-body">
+        <div class="code-block">Write a Python script that organises files in Downloads folder.
+
+Rules:
+- PDFs → ~/Documents/PDFs
+- Images (jpg, png, gif, webp) → ~/Pictures/Downloads
+- Videos (mp4, mov, avi) → ~/Movies/Downloads
+- Zip files → ~/Documents/Archives
+- Everything else → leave in place
+
+Safety: never overwrite (add _1, _2 suffix), print summary
+before moving, ask for confirmation, log to organize_log.txt</div>
+      </div>
+    </div>
+
+    <div class="pattern-block">
+      <div class="pattern-header">
+        <span class="pattern-badge">Use Case 3</span>
+        <div class="pattern-title">CSV Data Cleanup</div>
+      </div>
+      <div class="pattern-body">
+        <div class="code-block">Write a Python script that cleans a CSV exported from [tool].
+
+Issues to fix:
+- Phone numbers inconsistent → standardise to +1-555-123-4567
+- Invalid email addresses → remove those rows
+- Dates in MM/DD/YYYY → convert to YYYY-MM-DD
+- Company names inconsistent → standardise to Title Case
+
+Input: filename as command line argument
+Output: [original_name]_cleaned.csv
+Print: rows processed, rows removed, changes made</div>
+      </div>
+    </div>
+
+    <div class="pattern-block">
+      <div class="pattern-header">
+        <span class="pattern-badge">Use Case 4</span>
+        <div class="pattern-title">Web Scraping for Research</div>
+      </div>
+      <div class="pattern-body">
+        <div class="code-block">Write a Python script using BeautifulSoup to extract job listings
+from [website URL] (only where scraping is permitted).
+
+Extract per listing: job title, company, location, date posted,
+salary range (if available), job URL.
+
+Output: jobs.csv. Add 2-second delays, handle pagination,
+skip listings without a title, print progress.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: CLAUDE CODE -->
+  <section aria-label="Claude Code introduction">
+    <h2 id="what-is-claude-code-for-developers">What Is Claude Code and When Does It Make Sense?</h2>
+
+    <p>For developers who want to go significantly deeper, Anthropic offers <strong>Claude Code</strong> — a command-line tool that brings Claude directly into the development environment. Unlike the web interface where code must be pasted in manually, Claude Code can read an entire project, make file edits with approval, run shell commands, maintain context across files, and see actual test failures to fix them in the codebase.</p>
+
+    <p>Claude Code makes sense for developers working on substantial projects who want AI assistance at the project level rather than at the snippet level, and who are comfortable with terminal tools. The web interface approach covered in this chapter handles the vast majority of coding tasks. Visit Anthropic's documentation for current installation instructions as details evolve.</p>
+  </section>
+
+  <!-- SECTION: MISTAKES -->
+  <section aria-label="Common coding mistakes">
+    <h2 id="what-are-the-most-common-coding-mistakes-with-claude">What Are the Most Common Coding Mistakes When Using Claude?</h2>
+
+    <h3>Mistake 1: Accepting Code Without Testing</h3>
+    <div class="code-block">❌ Copy code directly into production
+✅ Always test with actual data and environment before deploying</div>
+
+    <h3>Mistake 2: Pasting Only the Error, Not the Code</h3>
+    <div class="code-block">❌ "I'm getting a TypeError — what's wrong?"
+✅ Paste the full debugging package: code + error + context</div>
+
+    <h3>Mistake 3: Not Specifying the Environment</h3>
+    <div class="code-block">❌ "Write a Python script for this"
+✅ "Python 3.11. Dependencies allowed: pandas, requests.
+    Must run on Windows and macOS."</div>
+
+    <h3>Mistake 4: Too Many Requirements at Once</h3>
+    <div class="code-block">❌ 20 requirements in one prompt for a complex system
+✅ Build incrementally: core first, then features one at a time</div>
+
+    <h3>Mistake 5: Not Asking for Explanation</h3>
+    <div class="code-block">❌ Copy code you don't understand
+✅ "After writing the code, explain the key design decisions
+    and anything non-obvious."</div>
+    <p>Understanding the code matters — especially when something breaks in production.</p>
+  </section>
+
+  <div class="takeaways">
+    <div class="takeaways-title">Key Takeaways</div>
+    <ul>
+      <li><strong>Specificity is everything</strong> — Input format, output format, edge cases, and constraints produce far better code than abstract requests</li>
+      <li><strong>The debugging package works</strong> — Language, code, full error, what was tried, example input; no guessing required</li>
+      <li><strong>Code review finds what is missed</strong> — Prioritise security and correctness over style</li>
+      <li><strong>Documentation is painless</strong> — Generate it alongside the code; no excuse for undocumented work</li>
+      <li><strong>Non-developers can use this too</strong> — Automation, data cleanup, and file scripts are all accessible with clear descriptions</li>
+      <li><strong>Test everything</strong> — Claude's code is usually correct; the local environment may not match</li>
+      <li><strong>Build incrementally</strong> — Core functionality first, features second, optimisation third</li>
+    </ul>
+  </div>
+
+  <div class="practice-box">
+    <div class="box-title">Assignment</div>
+    <p><strong>For developers:</strong> Take a piece of real code from a current project. Run the comprehensive code review prompt. Implement at least one Critical and one Important finding.</p>
+    <p><strong>For non-developers:</strong> Identify one repetitive manual task — file organising, data formatting, copying between tools. Use Claude to build a script that automates it.</p>
+    <p><strong>For everyone:</strong> Find a piece of code that is not fully understood. Ask Claude to explain it in plain language. Then ask what would need to change to modify its behaviour.</p>
+  </div>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Do you need to know how to code to use Claude for coding tasks?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>No. The key skill is knowing how to describe what you want clearly — not knowing how to write the code itself. Non-developers can use Claude to write automation scripts, clean up data files, organise folders, and build simple tools without learning programming from scratch. The prompting skills covered throughout the Claude Mastery series — being specific, providing context, showing examples — are the same skills that produce good code from Claude.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What information should you provide when asking Claude to debug code?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Provide a complete debugging package: the language and version, a description of intended behaviour, the full code for the relevant function or module, the complete error message including the stack trace, what has already been tried, whether the error always occurs or only under specific conditions, and an example input that triggers the bug. This gives Claude everything needed to diagnose accurately rather than guess. Pasting only the error message without the code and context is the most common debugging mistake.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What should a Claude code review cover?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>A comprehensive Claude code review should cover four areas: correctness (logic errors, unhandled edge cases, potential runtime errors), security (SQL injection risks, authentication issues, sensitive data exposure, input validation gaps), performance (inefficient operations, memory concerns, caching opportunities), and code quality (naming clarity, best practices, DRY violations, functions doing too much). Ask Claude to prioritise findings by severity — critical issues to fix before shipping, important issues to address soon, and minor improvements.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is Claude Code and when should it be used?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Claude Code is a command-line tool from Anthropic that integrates Claude directly into a development environment. Unlike the web interface where code is pasted in manually, Claude Code can read an entire project, make file edits directly, run shell commands, maintain context across multiple files, and see real test failures to fix them in the codebase. It makes sense for developers working on substantial projects who want AI assistance at the project level rather than snippet level. The web interface approach covers the vast majority of coding tasks.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is the most important principle for generating good code with Claude?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Specificity is everything. The most common mistake is being too abstract. Effective code prompts specify the programming language and version, the exact input format with types and examples, the expected output with examples, requirements and constraints, edge cases to handle, and coding conventions such as type hints or docstrings. The more precisely the expected behaviour is described, the less revision the resulting code requires. Build incrementally — core functionality first, then features, then optimisation.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="chapter-nav">
+    <a href="learn-series-claude-mastery-chapter-12.html" class="nav-btn prev">
+      <div>
+        <div class="nav-label">Previous Chapter</div>
+        <div class="nav-title">← Research &amp; Information Synthesis</div>
+      </div>
+    </a>
+    <div class="nav-center">
+      <a href="learn-series-claude-mastery.html">View All Chapters</a>
+    </div>
+    <div class="nav-btn next" style="visibility: hidden;">
+      <div style="text-align: right;">
+        <div class="nav-label">Next Chapter</div>
+        <div class="nav-title">Coming Soon →</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end .chapter-content -->
+
+<!-- RIGHT SIDEBAR -->
+<aside class="chapter-sidebar" aria-label="Chapter navigation sidebar">
+
+  <div class="toc-widget">
+    <div class="toc-widget-label">In This Chapter</div>
+    <ul class="toc-list">
+      <li><a href="#why-is-claude-exceptionally-good-at-code">Why Claude Excels at Code</a></li>
+      <li><a href="#how-to-prompt-claude-to-generate-clean-code">Code Generation</a></li>
+      <li><a href="#how-to-debug-code-with-claude">Debugging</a></li>
+      <li><a href="#how-to-run-a-comprehensive-code-review-with-claude">Code Review</a></li>
+      <li><a href="#how-to-generate-code-documentation-with-claude">Documentation</a></li>
+      <li><a href="#how-can-non-developers-use-claude-for-coding-tasks">For Non-Developers</a></li>
+      <li><a href="#what-is-claude-code-for-developers">Claude Code</a></li>
+      <li><a href="#what-are-the-most-common-coding-mistakes-with-claude">Common Mistakes</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+
+  <div class="progress-widget">
+    <div class="progress-widget-label">Series Progress</div>
+    <div class="progress-series">
+      <span>Claude Mastery</span>
+      <span>13 of 30</span>
+    </div>
+    <div class="progress-bar-track"><div class="progress-bar-fill"></div></div>
+    <ul class="progress-chapter-list">
+      <li class="done"><a href="learn-series-claude-mastery-chapter-1.html"  style="color:inherit;text-decoration:none;">Ch 1 — Be Clear &amp; Specific</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-2.html"  style="color:inherit;text-decoration:none;">Ch 2 — Use Examples</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-3.html"  style="color:inherit;text-decoration:none;">Ch 3 — Step-by-Step Thinking</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-4.html"  style="color:inherit;text-decoration:none;">Ch 4 — Iterative Refinement</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-5.html"  style="color:inherit;text-decoration:none;">Ch 5 — Role-Playing</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-6.html"  style="color:inherit;text-decoration:none;">Ch 6 — Using Context</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-7.html"  style="color:inherit;text-decoration:none;">Ch 7 — Advanced Patterns</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-8.html"  style="color:inherit;text-decoration:none;">Ch 8 — Artifacts</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-9.html"  style="color:inherit;text-decoration:none;">Ch 9 — Projects &amp; Knowledge</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-10.html" style="color:inherit;text-decoration:none;">Ch 10 — Document Intelligence</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-11.html" style="color:inherit;text-decoration:none;">Ch 11 — Collaborative Workflows</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-12.html" style="color:inherit;text-decoration:none;">Ch 12 — Research &amp; Synthesis</a></li>
+      <li class="current">Ch 13 — Writing Code</li>
+      <li class="upcoming">Ch 14 — Data &amp; Analysis</li>
+      <li class="upcoming">Ch 15–30 — Coming Soon</li>
+    </ul>
+  </div>
+
+  <div class="series-widget">
+    <div class="series-widget-label">Claude Mastery Series</div>
+    <p>A complete 30-chapter guide to working effectively with Claude — from basics to advanced professional techniques.</p>
+    <a href="learn-series-claude-mastery.html" class="series-widget-link">View All Chapters →</a>
+  </div>
+
+</aside>
+
+</div><!-- end .chapter-body-wrap -->
+</article>
+</main>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:info@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures"  target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/neearventures"      target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures"  target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  });
+});
+// TOC scroll-spy
+(function () {
+  const tocLinks = document.querySelectorAll('.toc-list a');
+  const sections = Array.from(tocLinks).map(a => document.getElementById(a.getAttribute('href').replace('#', ''))).filter(Boolean);
+  function onScroll() {
+    const y = window.scrollY + 120;
+    let active = sections[0];
+    sections.forEach(s => { if (s.offsetTop <= y) active = s; });
+    tocLinks.forEach(a => a.classList.toggle('toc-active', a.getAttribute('href') === '#' + active.id));
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
