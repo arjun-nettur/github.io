@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 1. Character encoding and viewport -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- 2. Favicons -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- 3. Canonical tag -->
+<link rel="canonical" href="https://neearventures.com/learn-series-claude-mastery-chapter-14.html">
+
+<!-- 4. Title and meta description -->
+<title>Chapter 14: Working with Data & Analysis — Claude Mastery — NeeAr Ventures</title>
+<meta name="description" content="Learn how to use Claude for exploratory data analysis, statistical analysis, Excel formulas, data visualization, and turning numbers into clear narratives for any audience.">
+
+<!-- 5. Open Graph and Twitter tags -->
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/learn-series-claude-mastery-chapter-14.html" />
+<meta property="og:title"        content="Chapter 14: Working with Data & Analysis — Claude Mastery — NeeAr Ventures" />
+<meta property="og:description"  content="Learn how to use Claude for exploratory data analysis, statistical analysis, Excel formulas, data visualization, and turning numbers into clear narratives for any audience." />
+<meta property="og:image"        content="https://neearventures.com/images/claude-mastery-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@NeeArVentures" />
+<meta name="twitter:title"       content="Chapter 14: Working with Data & Analysis — Claude Mastery — NeeAr Ventures" />
+<meta name="twitter:description" content="Learn how to use Claude for exploratory data analysis, statistical analysis, Excel formulas, data visualization, and turning numbers into clear narratives for any audience." />
+<meta name="twitter:image"       content="https://neearventures.com/images/claude-mastery-og.jpg" />
+
+<!-- 6a. LearningResource schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "headline": "Chapter 14: Working with Data & Analysis — Claude Mastery",
+  "description": "Learn how to use Claude for exploratory data analysis, statistical analysis, Excel formulas, data visualization, and turning numbers into clear narratives for any audience.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://neearventures.com/images/claude-mastery-og.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": "2026-06-11",
+  "dateModified": "2026-06-11",
+  "author": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures Editorial",
+    "url": "https://neearventures.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://neearventures.com/logo.png"
+    }
+  },
+  "learningResourceType": "Chapter",
+  "educationalLevel": "Intermediate",
+  "teaches": "How to use Claude for exploratory data analysis, statistical analysis, Excel and Sheets automation, data visualization, and turning numbers into business narratives",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".direct-answer", ".article-lead", "h2"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Data Analysis and Visualization"
+  },
+  "mentions": [
+    { "@type": "Thing", "name": "Exploratory data analysis" },
+    { "@type": "Thing", "name": "Statistical analysis" },
+    { "@type": "Thing", "name": "Excel formulas" },
+    { "@type": "Thing", "name": "Data visualization" },
+    { "@type": "Thing", "name": "Analysis Tool" },
+    { "@type": "Thing", "name": "Cohort analysis" }
+  ],
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Claude Mastery",
+    "url": "https://neearventures.com/learn-series-claude-mastery.html"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neearventures.com/learn-series-claude-mastery-chapter-14.html"
+  }
+}
+</script>
+
+<!-- 6b. BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",           "item": "https://neearventures.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Learn With Us",  "item": "https://neearventures.com/learn.html" },
+    { "@type": "ListItem", "position": 3, "name": "Claude Mastery", "item": "https://neearventures.com/learn-series-claude-mastery.html" },
+    { "@type": "ListItem", "position": 4, "name": "Chapter 14: Working with Data & Analysis", "item": "https://neearventures.com/learn-series-claude-mastery-chapter-14.html" }
+  ]
+}
+</script>
+
+<!-- 6c. FAQPage schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What kinds of data analysis can Claude perform?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude can perform exploratory data analysis (understanding structure, patterns, and quality issues), descriptive statistics (mean, median, standard deviation, percentiles), correlation analysis between variables, time series trend analysis including seasonality and anomaly detection, cohort analysis and segmentation, data cleaning and transformation, and generating Python or JavaScript visualization code. It can also turn quantitative findings into plain-language narratives for any audience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Analysis Tool and when should it be used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Analysis Tool (also called Code Interpreter) allows Claude to execute code, produce real charts and tables from actual data files, handle larger datasets that would exceed the plain chat context limit, and iterate on results within a single session. Use plain chat when you need quick calculations on small pasted datasets, conceptual guidance, or code to run yourself later. Use the Analysis Tool when you have an actual data file to upload, want real rendered visualizations, or need iterative exploratory analysis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should you always do before asking Claude to analyze a dataset?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always start with a data overview request before any specific analysis. Ask Claude to describe the file contents, column names and data types, row count, time period covered, any obvious data quality issues such as missing values or inconsistent formats, and which analyses would be most valuable. This prevents wasted analysis on dirty data, surfaces issues that could corrupt results, and ensures Claude's understanding of the data structure matches reality before deeper work begins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can Claude help with Excel and Google Sheets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude can write complex Excel and Google Sheets formulas that would take an hour to research manually — including nested IF logic, VLOOKUP replacements, dynamic array formulas, and conditional calculations. It can also write Google Apps Scripts for automated recurring workflows such as weekly email summaries, data aggregation across sheets, and conditional formatting triggers. When uploading an Excel file directly, Claude can read values across all sheets and tabs, analyse the data, and produce narrative summaries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you turn data analysis results into a clear narrative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Provide Claude with the key metrics or analysis findings and specify the document type (executive summary, board update, team report), the intended audience (CFO, all-hands, investors, technical team), and the desired length. Ask Claude to lead with the most important finding, use specific numbers to support claims, explain trends in plain language, and end with clear implications or recommended actions. Avoid passive voice and hedging language — specify that active voice and confident conclusions are required."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 7. Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- 8. Styles -->
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:         #f7f4ef;
+  --bg-alt:     #f0ece4;
+  --surface:    #ffffff;
+  --border:     #e2d9cc;
+  --navy:       #0d1f35;
+  --navy-light: #162d47;
+  --navy-muted: #1e3a5a;
+  --gold:       #9a7a2e;
+  --gold-light: #b8963e;
+  --gold-pale:  rgba(154,122,46,0.1);
+  --green:      #2d7a4f;
+  --red:        #d93636;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* CHAPTER HEADER */
+.chapter-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; text-align: center; }
+.chapter-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.chapter-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; }
+.chapter-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem; }
+.chapter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; color: var(--navy); line-height: 1.15; margin-bottom: 0.8rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.chapter-subtitle { font-size: 1.05rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.chapter-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+/* TWO-COLUMN LAYOUT */
+.chapter-body-wrap { max-width: 1160px; margin: 0 auto; padding: 4rem 4vw 3rem; display: grid; grid-template-columns: 1fr 260px; gap: 3.5rem; align-items: start; }
+.chapter-content { min-width: 0; }
+
+/* STICKY SIDEBAR */
+.chapter-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.5rem; }
+.toc-widget { background: var(--surface); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.toc-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+.toc-list { list-style: none; padding: 0; margin: 0; }
+.toc-list li { border-bottom: 1px solid var(--border); }
+.toc-list li:last-child { border-bottom: none; }
+.toc-list a { display: block; padding: 0.55rem 0; font-size: 0.8rem; color: var(--navy-muted); text-decoration: none; line-height: 1.45; transition: color 0.25s, padding-left 0.25s; }
+.toc-list a:hover { color: var(--gold); padding-left: 0.4rem; }
+.toc-list a.toc-active { color: var(--gold); font-weight: 500; padding-left: 0.4rem; border-left: 2px solid var(--gold); margin-left: -1px; }
+.progress-widget { background: var(--surface); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.progress-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+.progress-series { font-size: 0.78rem; color: var(--navy-muted); margin-bottom: 0.5rem; display: flex; justify-content: space-between; }
+.progress-bar-track { background: var(--border); height: 4px; width: 100%; margin-bottom: 1.2rem; }
+.progress-bar-fill { background: var(--gold); height: 4px; width: 47%; }
+.progress-chapter-list { list-style: none; padding: 0; margin: 0; }
+.progress-chapter-list li { font-size: 0.78rem; padding: 0.35rem 0; color: var(--navy-muted); display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border); }
+.progress-chapter-list li:last-child { border-bottom: none; }
+.progress-chapter-list li.current { color: var(--gold); font-weight: 500; }
+.progress-chapter-list li.done::before    { content: '✓'; color: var(--gold); font-size: 0.72rem; flex-shrink: 0; }
+.progress-chapter-list li.current::before { content: '▶'; color: var(--gold); font-size: 0.6rem;  flex-shrink: 0; }
+.progress-chapter-list li.upcoming::before{ content: '○'; color: var(--border); font-size: 0.72rem; flex-shrink: 0; }
+.series-widget { background: var(--bg-alt); border: 1px solid var(--border); padding: 1.4rem 1.5rem; }
+.series-widget-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.8rem; }
+.series-widget p { font-size: 0.8rem; color: var(--navy-muted); line-height: 1.6; margin-bottom: 1rem; }
+.series-widget-link { display: block; text-align: center; background: transparent; border: 1px solid var(--gold); color: var(--gold); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.55rem 1rem; text-decoration: none; transition: all 0.3s; font-weight: 500; }
+.series-widget-link:hover { background: var(--gold); color: #fff; }
+
+/* TYPOGRAPHY */
+.article-lead { font-size: 1.05rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p strong { color: var(--navy); font-weight: 600; }
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; color: var(--navy); margin: 3rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); scroll-margin-top: 90px; }
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.8rem; }
+h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin: 1.6rem 0 0.6rem; }
+ul, ol { margin-left: 1.5rem; margin-bottom: 1.4rem; }
+li { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 0.5rem; }
+
+/* AEO: DIRECT ANSWER BLOCK */
+.direct-answer { background: var(--navy); padding: 1.6rem 1.8rem; margin: 1.8rem 0 2.2rem; border-left: 4px solid var(--gold); }
+.direct-answer .da-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.7rem; }
+.direct-answer p { font-size: 0.92rem; color: rgba(232,224,208,0.9); line-height: 1.75; margin: 0; }
+.direct-answer p strong { color: var(--gold); }
+
+/* CODE BLOCKS */
+.code-block { background: var(--navy); color: #e8e0d0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'Courier New', monospace; font-size: 0.88rem; line-height: 1.7; overflow-x: auto; border-radius: 2px; white-space: pre-wrap; }
+
+/* PART HEADER */
+.part-header { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.1rem 1.5rem; margin: 2.5rem 0 1.5rem; display: flex; align-items: center; gap: 1rem; }
+.part-badge { font-size: 0.64rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 600; background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); padding: 0.18rem 0.7rem; white-space: nowrap; }
+.part-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--navy); }
+
+/* CAPABILITY GRID */
+.capability-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.5rem 0 2rem; }
+.cap-block { padding: 1.2rem 1.4rem; border: 1px solid var(--border); }
+.cap-block.can  { border-left: 4px solid var(--green); background: #f0f9f5; }
+.cap-block.cant { border-left: 4px solid var(--red);   background: #fff5f5; }
+.cap-label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.8rem; }
+.cap-block.can  .cap-label { color: var(--green); }
+.cap-block.cant .cap-label { color: var(--red); }
+.cap-block ul { margin-left: 1rem; margin-bottom: 0; }
+.cap-block li { font-size: 0.85rem; line-height: 1.65; margin-bottom: 0.4rem; color: var(--navy); }
+
+/* TOOL COMPARISON */
+.tool-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.5rem 0 2rem; }
+.tool-card { background: var(--surface); border: 1px solid var(--border); padding: 1.2rem 1.4rem; }
+.tool-card-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.7rem; }
+.tool-card ul { margin-left: 1rem; margin-bottom: 0; }
+.tool-card li { font-size: 0.85rem; line-height: 1.65; margin-bottom: 0.4rem; color: var(--navy); }
+
+/* ANALYSIS STEP BLOCK */
+.step-block { background: var(--surface); border: 1px solid var(--border); margin: 2rem 0; overflow: hidden; }
+.step-header { background: var(--navy); padding: 0.75rem 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
+.step-badge { font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase; background: rgba(154,122,46,0.25); border: 1px solid var(--gold); color: var(--gold); padding: 0.18rem 0.65rem; font-weight: 600; white-space: nowrap; }
+.step-title { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: #e8e0d0; }
+.step-body { padding: 1.2rem 1.5rem; }
+.step-body p { font-size: 0.88rem; line-height: 1.7; color: var(--navy-muted); margin-bottom: 0.8rem; }
+
+/* CHART TYPE TABLE */
+.chart-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.88rem; }
+.chart-table th { background: var(--navy); color: #e8e0d0; padding: 0.7rem 1rem; text-align: left; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.chart-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); color: var(--navy); vertical-align: top; }
+.chart-table tr:nth-child(even) td { background: var(--bg-alt); }
+.chart-table tr:last-child td { border-bottom: none; }
+
+/* INSIGHT CARD */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.8rem 0; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0.5rem 0; line-height: 1.7; }
+
+/* PRACTICE BOX */
+.practice-box { background: var(--surface); border: 2px solid var(--gold); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+.practice-box .box-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--navy); font-weight: 600; margin-bottom: 0.8rem; }
+.practice-box p { font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.8rem; }
+
+/* TAKEAWAYS */
+.takeaways { background: var(--bg-alt); padding: 2rem 2.5rem; margin: 3rem 0; border-top: 3px solid var(--gold); }
+.takeaways-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--navy); font-weight: 600; margin-bottom: 1.2rem; text-align: center; }
+.takeaways ul { list-style: none; padding: 0; margin: 0; }
+.takeaways li { padding-left: 2rem; position: relative; margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.7; }
+.takeaways li:before { content: '✅'; position: absolute; left: 0; }
+
+/* FAQ ACCORDION */
+.faq-section { margin: 3.5rem 0; border-top: 2px solid var(--border); padding-top: 2.5rem; }
+.faq-title { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; color: var(--navy); margin-bottom: 1.5rem; scroll-margin-top: 90px; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.1rem 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--navy); gap: 1rem; }
+.faq-question:hover { color: var(--gold); }
+.faq-icon { font-size: 1.3rem; color: var(--gold); font-weight: 300; flex-shrink: 0; transition: transform 0.3s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-item.open .faq-answer { max-height: 500px; }
+.faq-answer p { font-size: 0.91rem; line-height: 1.8; color: var(--navy-muted); padding: 0 0 1.2rem; margin: 0; }
+
+/* CHAPTER NAV */
+.chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 2.5rem 0; border-top: 2px solid var(--border); margin-top: 3rem; flex-wrap: wrap; }
+.nav-btn { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--navy); padding: 1rem 1.5rem; border: 1px solid var(--border); background: var(--surface); transition: all 0.3s; flex: 1; min-width: 200px; }
+.nav-btn:hover { border-color: var(--gold); box-shadow: 0 2px 12px rgba(154,122,46,0.1); }
+.nav-btn.prev { justify-content: flex-start; }
+.nav-btn.next { justify-content: flex-end; }
+.nav-btn .nav-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.nav-btn .nav-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; }
+.nav-center { text-align: center; flex: 0 0 auto; }
+.nav-center a { color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+.nav-center a:hover { color: var(--gold-light); }
+
+/* FOOTER */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+@media (max-width: 1024px) { .chapter-body-wrap { grid-template-columns: 1fr 220px; gap: 2.5rem; } }
+@media (max-width: 768px) {
+  .chapter-body-wrap { grid-template-columns: 1fr; padding: 2.5rem 4vw 2rem; }
+  .chapter-sidebar { position: static; display: none; }
+  .capability-grid, .tool-compare { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures logo" loading="eager" width="44" height="44" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="learn.html" class="active">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<main>
+<article>
+
+<header class="chapter-hero">
+  <a href="learn-series-claude-mastery.html" class="back-link">← Back to Claude Mastery</a>
+  <div class="chapter-label">Claude Mastery · Chapter 14 of 30</div>
+  <div class="chapter-number">14</div>
+  <h1 class="chapter-title">Working with Data &amp; Analysis</h1>
+  <p class="chapter-subtitle">Analyze, Transform, and Extract Insights</p>
+  <div class="chapter-meta">
+    <span>⏱️ 12 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>📊 Intermediate</span>
+    <span class="meta-dot">◆</span>
+    <span>🎯 Data &amp; Insight</span>
+  </div>
+  <div class="divider-line"></div>
+</header>
+
+<div class="chapter-body-wrap">
+<div class="chapter-content">
+
+  <p class="article-lead">Data is everywhere. Most teams have more of it than they know what to do with. Sales spreadsheets that grow every month. Customer feedback sitting in a CSV. Survey results that nobody has had time to analyse. Financial reports that tell a story — if only someone could read it. The bottleneck is not data. It is analysis.</p>
+
+  <!-- AEO: DIRECT ANSWER BLOCK -->
+  <div class="direct-answer" role="note" aria-label="Quick Answer">
+    <div class="da-label">Quick Answer</div>
+    <p>
+      <strong>Claude compresses the time from raw data to meaningful insight</strong> through six capabilities: exploratory data analysis (understanding structure and quality), statistical analysis (descriptive stats, correlations, time series), Excel and Sheets automation (formulas and Apps Scripts), data visualization (chart code generation), and turning numbers into plain-language narratives. Always start with a data overview before any specific analysis, and always end with the business question — what decision does this data inform?
+    </p>
+  </div>
+
+  <p>This chapter covers what Claude can and cannot do with data, how to use the Analysis Tool for deeper work, and structured workflows for every major data task — from exploratory analysis through to stakeholder-ready narratives.</p>
+
+  <!-- SECTION 1 -->
+  <section aria-label="Claude data capabilities">
+    <h2 id="what-can-claude-do-with-data">What Can Claude Do with Data — and What Are the Limits?</h2>
+
+    <div class="capability-grid">
+      <div class="cap-block can">
+        <div class="cap-label">✅ Claude Does This Well</div>
+        <ul>
+          <li><strong>Exploratory analysis</strong> — Structure, patterns, outliers, data quality</li>
+          <li><strong>Descriptive statistics</strong> — Mean, median, SD, quartiles, distribution</li>
+          <li><strong>Correlation analysis</strong> — Relationships between variables</li>
+          <li><strong>Time series</strong> — Trend, seasonality, anomaly detection</li>
+          <li><strong>Cohort analysis</strong> — Retention and segmentation</li>
+          <li><strong>Cleaning and transformation</strong> — Standardise, reshape, derive columns</li>
+          <li><strong>Visualisation code</strong> — Python, JavaScript, multiple libraries</li>
+          <li><strong>Data narratives</strong> — Numbers into plain-language stories</li>
+        </ul>
+      </div>
+      <div class="cap-block cant">
+        <div class="cap-label">❌ Know the Limitations</div>
+        <ul>
+          <li><strong>Very large datasets</strong> — Works best up to ~50MB; larger needs specialist tools</li>
+          <li><strong>Real-time data</strong> — Uploaded data is static; no live database connections</li>
+          <li><strong>Complex ML modelling</strong> — Basic stats yes; training custom models, no</li>
+          <li><strong>Guaranteed accuracy</strong> — Verify critical calculations; occasional errors on complex multi-step arithmetic</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section aria-label="Analysis Tool">
+    <h2 id="what-is-the-analysis-tool-and-when-to-use-it">What Is the Analysis Tool and When Should It Be Used?</h2>
+
+    <p>The Analysis Tool (also called Code Interpreter) is a significant upgrade for data work. When enabled, Claude can execute code, produce real charts and tables from actual files, handle larger datasets, and iterate on results within the same session.</p>
+
+    <div class="tool-compare">
+      <div class="tool-card">
+        <div class="tool-card-label">Use Plain Chat When</div>
+        <ul>
+          <li>Quick calculations on small datasets you can paste</li>
+          <li>You want a framework or approach, not executed results</li>
+          <li>You're asking conceptual questions about data</li>
+          <li>You need code to run yourself later</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-label">Use Analysis Tool When</div>
+        <ul>
+          <li>You have an actual data file to upload and analyse</li>
+          <li>You want real rendered charts and visualisations</li>
+          <li>The dataset is too large to paste into conversation</li>
+          <li>You want iterative analysis: explore → find something → go deeper</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PART 1: EDA -->
+  <section aria-label="Exploratory data analysis">
+    <div class="part-header">
+      <span class="part-badge">Part 1</span>
+      <div class="part-title">Exploratory Data Analysis</div>
+    </div>
+
+    <h2 id="how-to-start-any-data-analysis-with-claude">How Should Every Data Analysis with Claude Begin?</h2>
+
+    <p>Before any specific analysis, always start with a data overview. This surfaces quality issues before they corrupt results, ensures Claude's understanding of the data matches reality, and identifies the most valuable analyses to run.</p>
+
+    <div class="code-block">I've uploaded [filename]. Before specific questions:
+
+1. What data is in this file? (columns, data types, row count)
+2. What time period does this cover?
+3. Are there obvious data quality issues?
+   (missing values, outliers, inconsistent formats)
+4. What would be the most valuable analyses for this data?
+5. Any columns that might need cleaning before analysis?
+
+Give a clear overview so there is a shared understanding
+before diving into specific questions.</div>
+
+    <h3>Addressing Data Quality</h3>
+    <p>After the overview, fix quality issues before analysis:</p>
+    <div class="code-block">Based on the overview, address data quality before analysis.
+
+For each issue identified:
+1. Describe the issue specifically
+2. Recommend the best approach to handle it
+3. Show code to implement the fix
+
+Then apply all fixes and confirm the cleaned dataset
+is ready for analysis.</div>
+  </section>
+
+  <!-- PART 2: STATISTICAL ANALYSIS -->
+  <section aria-label="Statistical analysis">
+    <div class="part-header">
+      <span class="part-badge">Part 2</span>
+      <div class="part-title">Statistical Analysis</div>
+    </div>
+
+    <h2 id="how-to-run-statistical-analysis-with-claude">How Do You Run Statistical Analysis with Claude?</h2>
+
+    <div class="step-block">
+      <div class="step-header">
+        <span class="step-badge">Technique 1</span>
+        <div class="step-title">Descriptive Statistics</div>
+      </div>
+      <div class="step-body">
+        <div class="code-block">Analyse [column name / dataset] and provide:
+
+CENTRAL TENDENCY:
+- Mean, median, and mode
+- What does the difference between mean and median reveal
+  about the distribution?
+
+SPREAD:
+- Standard deviation and variance
+- Min, max, range
+- 25th and 75th percentile (IQR)
+
+DISTRIBUTION:
+- Is it normally distributed? How can you tell?
+- Significant outliers — define and list them.
+
+PRACTICAL INTERPRETATION:
+- What do these statistics mean in plain language
+  for someone who doesn't think in statistics?</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-header">
+        <span class="step-badge">Technique 2</span>
+        <div class="step-title">Correlation Analysis</div>
+      </div>
+      <div class="step-body">
+        <div class="code-block">Analyse the relationship between [variable A] and [variable B].
+
+1. Calculate the correlation coefficient
+2. Explain what this means in practical terms
+   (not just "0.72 correlation" — what does that actually imply?)
+3. Create a scatter plot showing the relationship
+4. Identify any outliers that distort the correlation
+5. Flag whether correlation implies causation here — and why
+
+Context: [What these variables represent and why the
+relationship matters to the decision being made]</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-header">
+        <span class="step-badge">Technique 3</span>
+        <div class="step-title">Time Series Analysis</div>
+      </div>
+      <div class="step-body">
+        <div class="code-block">Analyse this time series: [column/variable]
+
+TREND:
+- Overall upward, downward, or flat trend?
+- Linear or accelerating/decelerating?
+
+SEASONALITY:
+- Repeating patterns? (weekly, monthly, quarterly)
+- Typical peak period and trough period?
+
+ANOMALIES:
+- Which time periods deviate significantly from trend?
+- What might explain them?
+
+FORECAST:
+- Based on trend and seasonality, what do the next
+  [3/6/12] months look like if the pattern continues?
+- What assumptions does this forecast rely on?
+
+Create a line chart with the trend line overlaid.</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-header">
+        <span class="step-badge">Technique 4</span>
+        <div class="step-title">Cohort Analysis</div>
+      </div>
+      <div class="step-body">
+        <div class="code-block">Customer data with [signup date] and [activity/purchase dates].
+
+Build a cohort analysis showing:
+1. Monthly cohorts (customers grouped by signup month)
+2. Retention rate at 1, 3, 6, and 12 months after signup
+3. Which cohorts retained best? What's different about them?
+4. Revenue retention if revenue data is available
+
+Visualise as a heatmap:
+- Rows = cohort (signup month)
+- Columns = months since signup
+- Cell values = retention rate %
+- Colour intensity = retention rate (darker = better)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PART 3: EXCEL AND SHEETS -->
+  <section aria-label="Excel and Google Sheets">
+    <div class="part-header">
+      <span class="part-badge">Part 3</span>
+      <div class="part-title">Excel &amp; Google Sheets</div>
+    </div>
+
+    <h2 id="how-to-use-claude-with-excel-and-google-sheets">How Do You Use Claude Effectively with Excel and Google Sheets?</h2>
+
+    <h3>The Excel Analysis Workflow</h3>
+    <p>When working with an Excel file, follow three steps:</p>
+
+    <div class="code-block">Step 1 — Upload and orient:
+Uploaded [filename.xlsx]. Tell me:
+- How many sheets and what's in each?
+- Key columns in the main data sheet?
+- Any data that's calculated vs raw?
+- Anything unusual about the structure?
+
+Step 2 — Targeted analysis:
+Using [sheet name] data, please:
+- Calculate [specific metrics]
+- Identify [specific patterns]
+- Compare [period A] vs [period B]
+Show results as a formatted table.
+
+Step 3 — Narrative output:
+Write a 3-paragraph executive summary:
+- Paragraph 1: The headline story (most important finding)
+- Paragraph 2: Supporting detail (2-3 metrics that back it up)
+- Paragraph 3: Implications and recommended actions
+Write for a non-technical audience — no jargon.</div>
+
+    <h3>Writing Complex Excel Formulas</h3>
+    <p>Claude can write formulas that would take an hour to research manually:</p>
+    <div class="code-block">Write an Excel formula for:
+
+GOAL: [What the formula should calculate]
+
+SHEET STRUCTURE:
+- Column A: [Description]
+- Column B: [Description]
+- Column C: [Description]
+
+EXAMPLE:
+If A2 = "Pro", B2 = 150, C2 = "2024-03-15"
+Expected result: [What should be returned]
+
+CONSTRAINTS:
+- Works in Excel 365 / Google Sheets
+- Handles blank cells without errors
+
+Please also explain how the formula works.</div>
+
+    <p><strong>Real example:</strong></p>
+    <div class="code-block">Write a formula for column D that calculates a customer's
+risk score based on:
+- Column A: Days since last purchase
+- Column B: Total lifetime spend
+- Column C: Number of support tickets
+
+Risk logic:
+- HIGH: >90 days since purchase AND lifetime spend > $1,000
+- MED: 30-90 days since purchase OR more than 3 support tickets
+- LOW: everything else
+
+Handle blank values in any column as 0.</div>
+
+    <h3>Google Sheets Automation</h3>
+    <div class="code-block">Write a Google Apps Script that:
+
+TRIGGER: Runs every Monday at 9am
+
+WHAT IT DOES:
+1. Reads data from Sheet "Raw Data" (columns A-F)
+2. Filters rows where column D = "Completed"
+3. Calculates sum of column E per unique value in column B
+4. Writes results to Sheet "Weekly Summary" at A2
+   (overwriting previous week)
+5. Sends email with subject "Weekly Summary - [date]"
+   and the summary table as plain text
+
+COLUMN DESCRIPTIONS:
+A: Date | B: Team name | C: Task | D: Status | E: Hours | F: Notes
+
+Include error handling — if the script fails,
+send an error email with the message.</div>
+  </section>
+
+  <!-- PART 4: VISUALISATION -->
+  <section aria-label="Data visualisation">
+    <div class="part-header">
+      <span class="part-badge">Part 4</span>
+      <div class="part-title">Data Visualisation</div>
+    </div>
+
+    <h2 id="how-to-generate-data-visualisations-with-claude">How Do You Generate Data Visualisations with Claude?</h2>
+
+    <h3>Choosing the Right Chart Type</h3>
+
+    <table class="chart-table">
+      <thead>
+        <tr>
+          <th>Goal</th>
+          <th>Chart Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Trends over time</td><td>Line chart</td></tr>
+        <tr><td>Comparing categories</td><td>Bar chart (vertical) or column chart (horizontal for many categories)</td></tr>
+        <tr><td>Part-to-whole relationships</td><td>Pie chart (max 5 segments) or stacked bar</td></tr>
+        <tr><td>Relationship between two variables</td><td>Scatter plot</td></tr>
+        <tr><td>Distribution of values</td><td>Histogram or box plot</td></tr>
+        <tr><td>Matrix patterns (cohorts, correlations)</td><td>Heatmap</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Generating Visualisation Code</h3>
+    <div class="code-block">Create a [chart type] using [matplotlib / plotly / chart.js].
+
+DATA:
+[Paste data or describe its structure]
+
+REQUIREMENTS:
+- Title: "[Your title]"
+- X-axis: [label and description]
+- Y-axis: [label and description]
+- Colour scheme: [professional / brand colours / sequential]
+- Annotations: [label top 3 values / mark threshold line at Y=X]
+- Size: [dimensions in pixels]
+
+STYLE:
+- Clean, minimal design
+- Suitable for [presentation / dashboard / report]
+
+Provide complete, runnable code with sample data
+so it can be verified before substituting real data.</div>
+
+    <h3>Multi-Chart Dashboard</h3>
+    <div class="code-block">Create a Python dashboard using Plotly Dash showing:
+
+CHARTS:
+1. Monthly revenue trend (line chart) — top left
+2. Revenue by product category (bar chart) — top right
+3. Customer acquisition by channel (pie chart) — bottom left
+4. Monthly active users (line chart) — bottom right
+
+DATA SOURCE: [Describe data structure]
+
+INTERACTIONS:
+- Date range filter applying to all charts
+- Click category in chart 2 to filter all others
+
+STYLE: Clean, professional. Navy and white. Responsive layout.
+
+Provide complete, runnable code.</div>
+  </section>
+
+  <!-- PART 5: NARRATIVES -->
+  <section aria-label="Data narratives">
+    <div class="part-header">
+      <span class="part-badge">Part 5</span>
+      <div class="part-title">Turning Data into Narratives</div>
+    </div>
+
+    <h2 id="how-to-turn-data-into-a-clear-narrative">How Do You Turn Data Findings into a Clear Narrative for Any Audience?</h2>
+
+    <p>One of Claude's most underused data capabilities is turning numbers into stories. Data only becomes valuable when stakeholders understand it — and most stakeholders do not think in statistics.</p>
+
+    <div class="code-block">Data findings:
+[Paste key metrics or analysis results]
+
+Write a [document type] for [audience]:
+
+DOCUMENT TYPE: [Executive summary / Board update / Team report]
+AUDIENCE: [CFO / All-hands / Investors / Technical team]
+LENGTH: [3 paragraphs / 1 page / 500 words]
+
+Requirements:
+- Lead with the most important finding
+- Use specific numbers to support claims
+- Explain trends in plain language
+- End with clear implications or actions
+
+Avoid: jargon, passive voice, hedging ("it appears that")
+Use: active voice, specific facts, confident conclusions</div>
+
+    <h3>Turning a Dashboard into a Briefing</h3>
+    <div class="code-block">Here is what the analytics dashboard shows:
+[Describe your metrics — numbers, trends, comparisons]
+
+Based on these metrics, write:
+
+1. A one-sentence headline for this period
+   (the single most important thing)
+
+2. A 3-bullet summary for a busy executive
+   (one insight per bullet, with specific numbers)
+
+3. A 2-paragraph narrative for a team update
+   (what happened and what it means going forward)
+
+4. Three specific questions this data raises
+   that should be investigated further</div>
+  </section>
+
+  <!-- PART 6: PATTERNS -->
+  <section aria-label="Analysis prompting patterns">
+    <div class="part-header">
+      <span class="part-badge">Part 6</span>
+      <div class="part-title">Analysis Prompting Patterns</div>
+    </div>
+
+    <h2 id="what-are-the-most-effective-data-analysis-prompting-patterns">What Are the Most Effective Data Analysis Prompting Patterns?</h2>
+
+    <h3>The Business Question First</h3>
+    <p>Instead of "analyse this data," start with the decision that needs to be made:</p>
+    <div class="code-block">Business question: [Why are customers churning in month 3?]
+
+Available data: [Describe available datasets]
+
+What analysis would best answer this question?
+What additional data would help?
+Walk through the recommended approach.</div>
+
+    <h3>The Anomaly Investigation</h3>
+    <div class="code-block">A specific anomaly was noticed in the data:
+[Example: Revenue dropped 23% in March despite no price changes]
+
+Help investigate:
+1. Confirm the anomaly is real (not a data artefact)
+2. Identify possible explanations (list 5-7)
+3. Determine which data is needed to test each explanation
+4. Suggest the order to investigate (highest probability first)</div>
+
+    <h3>The Comparison Request</h3>
+    <div class="code-block">Compare [Period A / Group A / Product A] vs
+      [Period B / Group B / Product B].
+
+For each metric:
+- Show absolute difference
+- Show percentage difference
+- Flag if the difference is statistically meaningful
+  or could be normal variation
+
+Key metrics: [List your metrics]
+
+Highlight the 3 most significant differences and suggest
+what might be driving them.</div>
+  </section>
+
+  <!-- SECTION: MISTAKES -->
+  <section aria-label="Common data analysis mistakes">
+    <h2 id="what-are-the-most-common-data-analysis-mistakes">What Are the Most Common Data Analysis Mistakes to Avoid?</h2>
+
+    <h3>Mistake 1: Skipping Exploratory Data Analysis</h3>
+    <div class="code-block">❌ Jump straight to complex analysis on unexamined data
+✅ Always start with the data overview — understand before analysing</div>
+
+    <h3>Mistake 2: Confusing Correlation and Causation</h3>
+    <div class="code-block">❌ "More spend correlates with more revenue,
+    so marketing is causing revenue growth"
+✅ Ask: "What alternative explanations exist?
+    What would confirm this is causal?"</div>
+
+    <h3>Mistake 3: Not Specifying Business Context</h3>
+    <div class="code-block">❌ "Analyse this sales data"
+✅ "Analyse this sales data. Context: preparing for a board meeting
+    to explain Q3 underperformance and present a Q4 recovery plan."</div>
+
+    <h3>Mistake 4: Ignoring Data Quality</h3>
+    <div class="code-block">❌ Running analysis on data that hasn't been checked for errors
+✅ Always ask Claude to flag quality issues before any analysis begins</div>
+
+    <h3>Mistake 5: Not Asking "So What?"</h3>
+    <div class="code-block">❌ Getting a table of numbers and stopping there
+✅ Always follow with: "What does this mean for [business decision]?
+    What actions does this suggest?"</div>
+
+    <div class="insight-card">
+      <div class="card-label">The Core Principle</div>
+      <p>Analysis should answer something specific. The most powerful prompt in data work is not "analyse this" — it is "what does this mean for [the decision]?" Every table of numbers should end in an action or a recommendation.</p>
+    </div>
+  </section>
+
+  <div class="takeaways">
+    <div class="takeaways-title">Key Takeaways</div>
+    <ul>
+      <li><strong>Start with EDA always</strong> — Understand the data before analysing it; quality issues caught early prevent corrupted results</li>
+      <li><strong>Business question first</strong> — Analysis should answer something specific and connect to a decision</li>
+      <li><strong>The Analysis Tool unlocks more</strong> — Execute code, produce real charts, handle larger files iteratively</li>
+      <li><strong>Excel and Sheets work well</strong> — Complex formulas, Google Apps Scripts, and narrative summaries all within reach</li>
+      <li><strong>Visualisation matches the message</strong> — Choose the chart type that fits what is being shown, not what looks impressive</li>
+      <li><strong>Numbers into narratives</strong> — Data only becomes valuable when stakeholders understand it in plain language</li>
+      <li><strong>Always ask "so what?"</strong> — Connect findings to decisions and actions; analysis without application is just interesting reading</li>
+    </ul>
+  </div>
+
+  <div class="practice-box">
+    <div class="box-title">Assignment</div>
+    <p><strong>Beginner:</strong> Take any spreadsheet used regularly. Ask Claude for a data overview and quality check. See what it surfaces that was previously unnoticed.</p>
+    <p><strong>Intermediate:</strong> Pick a dataset with at least 3 months of data. Ask Claude for time series analysis and a visualisation. Use the narrative template to write an executive summary from the findings.</p>
+    <p><strong>Advanced:</strong> Frame a real business question. Design the full workflow — EDA → cleaning → statistical analysis → visualisation → narrative → business recommendations. Execute it with Claude end to end.</p>
+    <p><strong>Reflection questions:</strong> What did EDA reveal that was not previously known about the data? Did correlation analysis surface any relationships that were unexpected? How did turning the numbers into a narrative change the understanding of them?</p>
+  </div>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What kinds of data analysis can Claude perform?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Claude can perform exploratory data analysis (understanding structure, patterns, and quality issues), descriptive statistics (mean, median, standard deviation, percentiles), correlation analysis between variables, time series trend analysis including seasonality and anomaly detection, cohort analysis and segmentation, data cleaning and transformation, and generating Python or JavaScript visualisation code. It can also turn quantitative findings into plain-language narratives for any audience.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is the Analysis Tool and when should it be used?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>The Analysis Tool (also called Code Interpreter) allows Claude to execute code, produce real charts and tables from actual data files, handle larger datasets that would exceed the plain chat context limit, and iterate on results within a single session. Use plain chat when you need quick calculations on small pasted datasets, conceptual guidance, or code to run yourself later. Use the Analysis Tool when you have an actual data file to upload, want real rendered visualisations, or need iterative exploratory analysis.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What should you always do before asking Claude to analyse a dataset?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Always start with a data overview request before any specific analysis. Ask Claude to describe the file contents, column names and data types, row count, time period covered, any obvious data quality issues such as missing values or inconsistent formats, and which analyses would be most valuable. This prevents wasted analysis on dirty data, surfaces issues that could corrupt results, and ensures Claude's understanding of the data structure matches reality before deeper work begins.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How can Claude help with Excel and Google Sheets?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Claude can write complex Excel and Google Sheets formulas that would take an hour to research manually — including nested IF logic, VLOOKUP replacements, dynamic array formulas, and conditional calculations. It can also write Google Apps Scripts for automated recurring workflows such as weekly email summaries, data aggregation across sheets, and conditional formatting triggers. When uploading an Excel file directly, Claude can read values across all sheets, analyse the data, and produce narrative summaries.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How do you turn data analysis results into a clear narrative?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Provide Claude with the key metrics or analysis findings and specify the document type (executive summary, board update, team report), the intended audience (CFO, all-hands, investors, technical team), and the desired length. Ask Claude to lead with the most important finding, use specific numbers to support claims, explain trends in plain language, and end with clear implications or recommended actions. Avoid passive voice and hedging language — specify that active voice and confident conclusions are required.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="chapter-nav">
+    <a href="learn-series-claude-mastery-chapter-13.html" class="nav-btn prev">
+      <div>
+        <div class="nav-label">Previous Chapter</div>
+        <div class="nav-title">← Writing Code with Claude</div>
+      </div>
+    </a>
+    <div class="nav-center">
+      <a href="learn-series-claude-mastery.html">View All Chapters</a>
+    </div>
+    <div class="nav-btn next" style="visibility: hidden;">
+      <div style="text-align: right;">
+        <div class="nav-label">Next Chapter</div>
+        <div class="nav-title">Coming Soon →</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end .chapter-content -->
+
+<!-- RIGHT SIDEBAR -->
+<aside class="chapter-sidebar" aria-label="Chapter navigation sidebar">
+
+  <div class="toc-widget">
+    <div class="toc-widget-label">In This Chapter</div>
+    <ul class="toc-list">
+      <li><a href="#what-can-claude-do-with-data">Capabilities &amp; Limits</a></li>
+      <li><a href="#what-is-the-analysis-tool-and-when-to-use-it">The Analysis Tool</a></li>
+      <li><a href="#how-to-start-any-data-analysis-with-claude">Exploratory Analysis</a></li>
+      <li><a href="#how-to-run-statistical-analysis-with-claude">Statistical Analysis</a></li>
+      <li><a href="#how-to-use-claude-with-excel-and-google-sheets">Excel &amp; Sheets</a></li>
+      <li><a href="#how-to-generate-data-visualisations-with-claude">Visualisation</a></li>
+      <li><a href="#how-to-turn-data-into-a-clear-narrative">Data Narratives</a></li>
+      <li><a href="#what-are-the-most-effective-data-analysis-prompting-patterns">Prompting Patterns</a></li>
+      <li><a href="#what-are-the-most-common-data-analysis-mistakes">Common Mistakes</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+
+  <div class="progress-widget">
+    <div class="progress-widget-label">Series Progress</div>
+    <div class="progress-series">
+      <span>Claude Mastery</span>
+      <span>14 of 30</span>
+    </div>
+    <div class="progress-bar-track"><div class="progress-bar-fill"></div></div>
+    <ul class="progress-chapter-list">
+      <li class="done"><a href="learn-series-claude-mastery-chapter-1.html"  style="color:inherit;text-decoration:none;">Ch 1 — Be Clear &amp; Specific</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-2.html"  style="color:inherit;text-decoration:none;">Ch 2 — Use Examples</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-3.html"  style="color:inherit;text-decoration:none;">Ch 3 — Step-by-Step Thinking</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-4.html"  style="color:inherit;text-decoration:none;">Ch 4 — Iterative Refinement</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-5.html"  style="color:inherit;text-decoration:none;">Ch 5 — Role-Playing</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-6.html"  style="color:inherit;text-decoration:none;">Ch 6 — Using Context</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-7.html"  style="color:inherit;text-decoration:none;">Ch 7 — Advanced Patterns</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-8.html"  style="color:inherit;text-decoration:none;">Ch 8 — Artifacts</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-9.html"  style="color:inherit;text-decoration:none;">Ch 9 — Projects &amp; Knowledge</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-10.html" style="color:inherit;text-decoration:none;">Ch 10 — Document Intelligence</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-11.html" style="color:inherit;text-decoration:none;">Ch 11 — Collaborative Workflows</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-12.html" style="color:inherit;text-decoration:none;">Ch 12 — Research &amp; Synthesis</a></li>
+      <li class="done"><a href="learn-series-claude-mastery-chapter-13.html" style="color:inherit;text-decoration:none;">Ch 13 — Writing Code</a></li>
+      <li class="current">Ch 14 — Data &amp; Analysis</li>
+      <li class="upcoming">Ch 15 — Content Creation</li>
+      <li class="upcoming">Ch 16–30 — Coming Soon</li>
+    </ul>
+  </div>
+
+  <div class="series-widget">
+    <div class="series-widget-label">Claude Mastery Series</div>
+    <p>A complete 30-chapter guide to working effectively with Claude — from basics to advanced professional techniques.</p>
+    <a href="learn-series-claude-mastery.html" class="series-widget-link">View All Chapters →</a>
+  </div>
+
+</aside>
+
+</div><!-- end .chapter-body-wrap -->
+</article>
+</main>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:info@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures"  target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/neearventures"      target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures"  target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  });
+});
+// TOC scroll-spy
+(function () {
+  const tocLinks = document.querySelectorAll('.toc-list a');
+  const sections = Array.from(tocLinks).map(a => document.getElementById(a.getAttribute('href').replace('#', ''))).filter(Boolean);
+  function onScroll() {
+    const y = window.scrollY + 120;
+    let active = sections[0];
+    sections.forEach(s => { if (s.offsetTop <= y) active = s; });
+    tocLinks.forEach(a => a.classList.toggle('toc-active', a.getAttribute('href') === '#' + active.id));
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
