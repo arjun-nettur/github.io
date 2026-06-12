@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="canonical" href="https://neearventures.com/blog-2026-06-13-this-week-in-ai-ep8.html">
+<title>This Week in AI Ep. 8: Fable 5, Apple WWDC &amp; EU AI Act — NeeAr Ventures</title>
+<meta name="description" content="Anthropic released Claude Fable 5 &#8212; the first Mythos-class model for the public. Apple WWDC 2026 brought Claude to the iPhone. The EU AI Act&#39;s August 2 deadline is now under 50 days away.">
+<meta property="og:type"        content="article" />
+<meta property="og:site_name"   content="NeeAr Ventures" />
+<meta property="og:url"         content="https://neearventures.com/blog-2026-06-13-this-week-in-ai-ep8.html" />
+<meta property="og:title"       content="This Week in AI Ep. 8: Fable 5, Apple WWDC &amp; EU AI Act — NeeAr Ventures" />
+<meta property="og:description" content="Anthropic released Claude Fable 5 &#8212; the first Mythos-class model for the public. Apple WWDC 2026 brought Claude to the iPhone. The EU AI Act&#39;s August 2 deadline is now under 50 days away." />
+<meta property="og:image"       content="https://neearventures.com/images/blog-2026-06-13-this-week-in-ai-ep8-og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@NeeArVentures" />
+<meta name="twitter:title"       content="This Week in AI Ep. 8: Fable 5, Apple WWDC &amp; EU AI Act — NeeAr Ventures" />
+<meta name="twitter:description" content="Anthropic released Claude Fable 5 &#8212; the first Mythos-class model for the public. Apple WWDC 2026 brought Claude to the iPhone. The EU AI Act&#39;s August 2 deadline is now under 50 days away." />
+<meta name="twitter:image"       content="https://neearventures.com/images/blog-2026-06-13-this-week-in-ai-ep8-og.jpg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "This Week in AI &#8212; Ep. 8: Fable 5 Is Here, Apple Rewires Siri, and the EU&#39;s Clock Is Ticking",
+  "description": "Anthropic released Claude Fable 5 &#8212; the first Mythos-class model for the public. Apple WWDC 2026 brought Claude to the iPhone via iOS 27. The EU AI Act&#39;s August 2 deadline is now under 50 days away.",
+  "image": { "@type": "ImageObject", "url": "https://neearventures.com/images/blog-2026-06-13-this-week-in-ai-ep8-og.jpg", "width": 1200, "height": 630 },
+  "datePublished": "2026-06-13",
+  "dateModified": "2026-06-13",
+  "author": { "@type": "Organization", "name": "NeeAr Ventures Editorial", "url": "https://neearventures.com" },
+  "publisher": { "@type": "Organization", "name": "NeeAr Ventures", "logo": { "@type": "ImageObject", "url": "https://neearventures.com/logo.png" } },
+  "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".direct-answer", ".article-lead", "h2"] },
+  "about": { "@type": "Thing", "name": "Artificial Intelligence Weekly News" },
+  "mentions": [
+    { "@type": "Thing", "name": "Claude Fable 5" },
+    { "@type": "Thing", "name": "Apple WWDC 2026 iOS 27" },
+    { "@type": "Thing", "name": "Gemini 3.5 Flash" },
+    { "@type": "Thing", "name": "EU AI Act August 2026" },
+    { "@type": "Thing", "name": "Recursive Self-Improvement AI" }
+  ],
+  "keywords": "AI news, Claude Fable 5, Mythos 5, Apple WWDC 2026, iOS 27, Gemini 3.5 Flash, EU AI Act, This Week in AI",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://neearventures.com/blog-2026-06-13-this-week-in-ai-ep8.html" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",  "item": "https://neearventures.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog",  "item": "https://neearventures.com/blog.html" },
+    { "@type": "ListItem", "position": 3, "name": "This Week in AI &#8212; Ep. 8", "item": "https://neearventures.com/blog-2026-06-13-this-week-in-ai-ep8.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Claude Fable 5 and how is it different from Mythos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Claude Fable 5 is Anthropic&#39;s first publicly available Mythos-class model, released June 9, 2026. It shares the same underlying architecture as Mythos 5 but includes safety classifiers that route high-risk requests in cybersecurity, biology, chemistry, and distillation to Claude Opus 4.8 instead. Mythos 5 keeps those capabilities active for vetted Project Glasswing partners only. Fable 5 is priced at $10 per million input tokens and $50 per million output tokens, with free access for paid subscribers through June 22, 2026." }
+    },
+    {
+      "@type": "Question",
+      "name": "What did Apple announce at WWDC 2026 for AI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Apple&#39;s WWDC 2026 keynote on June 8 announced iOS 27 with a new AI Extensions system letting users set Claude, Gemini, or ChatGPT as their preferred assistant inside Siri. Apple also launched Apple Foundation Models on Cloud (AFM Cloud) built in collaboration with Google, running on NVIDIA GPUs in Google&#39;s infrastructure. A redesigned standalone Siri app with conversation history and Mac screen awareness was also announced. It was Tim Cook&#39;s final WWDC as CEO before his transition to Executive Chairman in September 2026." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Google Gemini 3.5 Flash?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Gemini 3.5 Flash is Google&#39;s updated mid-tier AI model, launched in June 2026 at $1.50 input and $9 output per million tokens &#8212; a 3x price increase from Gemini 3 Flash. It is designed for high-volume, cost-sensitive tasks and integrates with Google&#39;s updated agent ecosystem including Antigravity 2.0, Gemini Spark personal AI agent, and Managed Agents in the Gemini API." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the EU AI Act August 2 2026 deadline mean?",
+      "acceptedAnswer": { "@type": "Answer", "text": "August 2, 2026 is the main application date for the EU AI Act, when obligations for General Purpose AI models, chatbot transparency requirements, and high-risk AI system rules come into full force across the EU. Fines can reach &#8364;15M or 3% of global turnover for most violations, and up to &#8364;35M or 7% for the most serious categories. A proposed Digital Omnibus extension has not been formally adopted, so August 2 remains the legally binding deadline today." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is recursive self-improvement in AI and why is Anthropic warning about it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Recursive self-improvement (RSI) refers to an AI system autonomously improving itself without human intervention, creating a feedback loop of capability gains. Anthropic published a public call to major AI labs this week urging a pre-agreed coordinated emergency brake mechanism before any model achieves RSI. The call was published on the same day as the Fable 5 release, reflecting Anthropic&#39;s view that RSI has moved from a theoretical concern to a near-term planning variable." }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f7f4ef;--bg-alt:#f0ece4;--surface:#ffffff;--border:#e2d9cc;--navy:#0d1f35;--navy-light:#162d47;--navy-muted:#1e3a5a;--gold:#9a7a2e;--gold-light:#b8963e;--gold-pale:rgba(154,122,46,0.1)}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--bg);color:var(--navy);font-family:'Jost',sans-serif;font-weight:400}
+.page-wrap{}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:0.75rem 4vw;display:flex;align-items:center;justify-content:space-between;background:rgba(247,244,239,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.logo-wrap{display:flex;align-items:center;gap:0.7rem;text-decoration:none;flex-shrink:0}
+.logo-img{width:44px;height:44px;object-fit:contain;display:block}
+.logo-text-block{display:flex;flex-direction:column}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);line-height:1.25;white-space:nowrap}
+.logo-tagline{font-size:0.62rem;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;white-space:nowrap;margin-top:2px;font-weight:500}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--navy);text-decoration:none;font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.3s;font-weight:400}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:0.42rem 1.2rem;font-family:'Jost',sans-serif;font-size:0.76rem;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;font-weight:500}
+.nav-cta:hover{background:var(--gold);color:#fff}
+.article-hero{padding:9rem 4vw 4.5rem;background:var(--bg-alt);border-bottom:1px solid var(--border);position:relative;overflow:clip;text-align:center}
+.article-hero::before{content:'';position:absolute;left:50%;top:0;transform:translateX(-50%);width:700px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(154,122,46,0.07) 0%,transparent 65%);pointer-events:none}
+.back-link{display:inline-flex;align-items:center;gap:0.5rem;color:var(--navy-muted);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;margin-bottom:2rem;transition:color 0.3s}
+.back-link:hover{color:var(--gold)}
+.article-category{font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;font-weight:600}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.6rem);font-weight:600;color:var(--navy);line-height:1.1;margin-bottom:1.2rem;max-width:820px;margin-left:auto;margin-right:auto}
+.article-title em{font-style:italic;color:var(--gold)}
+.article-subtitle{font-size:1rem;color:var(--navy-muted);line-height:1.75;max-width:580px;margin:0 auto 2rem;font-weight:400}
+.article-meta{display:flex;justify-content:center;align-items:center;gap:1.5rem;font-size:0.78rem;color:var(--navy-muted);letter-spacing:0.1em;flex-wrap:wrap;font-weight:400}
+.meta-dot{color:var(--gold);opacity:0.5}
+.divider-line{width:44px;height:1px;background:var(--gold);margin:1.6rem auto 2rem}
+.hero-image{max-width:820px;width:100%;height:auto;margin:0 auto;display:block;border-radius:3px;box-shadow:0 4px 20px rgba(13,31,53,0.08)}
+.content-layout{display:grid;grid-template-columns:1fr 260px;grid-template-areas:"article toc";gap:0;max-width:1200px;margin:0 auto;align-items:start}
+.article-col{grid-area:article;min-width:0;order:1}
+.article-col .article-wrap{max-width:760px;margin:0;padding:3rem 4vw 6rem}
+.toc-sidebar{grid-area:toc;position:sticky;top:110px;align-self:start;padding:1.6rem;border:1px solid var(--border);background:var(--surface);margin:2.5rem 1.6rem 0 0;order:2}
+.toc-box-title{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border)}
+.toc-box-section{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--navy-muted);font-weight:600;margin:1rem 0 0.4rem}
+.toc-box-list{list-style:none;padding:0;margin:0 0 0.4rem}
+.toc-box-list li{margin:0}
+.toc-box-list a{display:block;font-size:0.8rem;color:var(--navy-muted);text-decoration:none;padding:0.32rem 0 0.32rem 0.7rem;border-left:2px solid transparent;line-height:1.4;transition:color 0.2s,border-color 0.2s}
+.toc-box-list a:hover{color:var(--gold);border-left-color:var(--gold)}
+.toc-box-divider{border:none;border-top:1px solid var(--border);margin:1rem 0}
+.toc-mobile{display:none;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);margin:0}
+.toc-mobile-toggle{width:100%;background:none;border:none;padding:0.9rem 1.2rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-family:'Jost',sans-serif;font-size:0.76rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)}
+.toc-mobile-toggle-icon{font-size:1rem;color:var(--gold);transition:transform 0.3s;flex-shrink:0}
+.toc-mobile.open .toc-mobile-toggle-icon{transform:rotate(45deg)}
+.toc-mobile-body{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.toc-mobile.open .toc-mobile-body{max-height:600px}
+.toc-mobile-body .toc-list{padding:0.4rem 1.2rem 1rem;border-top:1px solid var(--border);list-style:none}
+.toc-mobile-body .toc-list a{display:block;font-size:0.85rem;color:var(--navy-muted);text-decoration:none;padding:0.4rem 0 0.4rem 0.7rem;border-left:2px solid transparent;line-height:1.4;transition:color 0.2s,border-color 0.2s}
+.toc-mobile-body .toc-list a:hover{color:var(--gold);border-left-color:var(--gold)}
+.article-lead{font-size:1.08rem;line-height:1.85;color:var(--navy);border-left:3px solid var(--gold);padding-left:1.2rem;margin-bottom:2rem;font-weight:400}
+.direct-answer{background:#0d1f35;padding:1.6rem 1.8rem;margin:1.8rem 0 2.2rem;border-left:4px solid #9a7a2e}
+.direct-answer .da-label{font-size:0.66rem;letter-spacing:0.28em;text-transform:uppercase;color:#9a7a2e;font-weight:600;margin-bottom:0.7rem}
+.direct-answer p{font-size:0.92rem;color:rgba(232,224,208,0.9);line-height:1.75;margin:0}
+.direct-answer p strong{color:#9a7a2e}
+h2{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:600;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.5rem;border-bottom:2px solid var(--border);scroll-margin-top:90px;display:flex;align-items:baseline;gap:0.6rem}
+h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.6rem;scroll-margin-top:90px}
+p{font-size:0.95rem;line-height:1.85;color:var(--navy-muted);margin-bottom:1.2rem}
+p strong{color:var(--navy)}
+.num-badge{background:var(--gold);color:#fff;font-family:'Jost',sans-serif;font-size:0.7rem;font-weight:600;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;flex-shrink:0}
+.stat-callout{display:flex;gap:1.5rem;margin:2rem 0;flex-wrap:wrap;border:1px solid var(--border);padding:1.4rem 1.6rem;background:var(--surface)}
+.stat-item{flex:1;min-width:110px}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--gold);line-height:1.1}
+.stat-label{font-size:0.72rem;color:var(--navy-muted);letter-spacing:0.12em;text-transform:uppercase;margin-top:0.3rem;font-weight:500}
+.insight-card{background:var(--gold-pale);border:1px solid rgba(154,122,46,0.25);border-left:4px solid var(--gold);padding:1.3rem 1.5rem;margin:1.6rem 0}
+.insight-card .card-label{font-size:0.66rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:0.6rem}
+.insight-card p{font-size:0.9rem;color:var(--navy);margin:0;line-height:1.7}
+.content-card{background:var(--surface);border:1px solid var(--border);border-top:4px solid var(--gold);padding:1.4rem 1.6rem;margin:1.2rem 0;transition:box-shadow 0.3s}
+.content-card:hover{box-shadow:0 2px 16px rgba(154,122,46,0.1)}
+.content-card .cc-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--navy);font-weight:600;margin-bottom:0.5rem}
+.content-card .cc-meta{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);background:var(--gold-pale);border:1px solid rgba(154,122,46,0.25);padding:0.15rem 0.6rem;font-weight:600;display:inline-block;margin-bottom:0.6rem}
+.content-card p{font-size:0.87rem;color:var(--navy-muted);margin:0;line-height:1.65}
+.content-card p strong{color:var(--navy)}
+.tip-row{display:flex;gap:0.9rem;align-items:flex-start;background:var(--bg-alt);border:1px solid var(--border);padding:1.1rem 1.4rem;margin:1.4rem 0}
+.tip-icon{font-size:1.1rem;flex-shrink:0;line-height:1.6}
+.tip-row p{font-size:0.88rem;color:var(--navy-muted);margin:0;line-height:1.7}
+.tip-row p strong{color:var(--navy)}
+blockquote{background:var(--bg-alt);border-left:4px solid var(--gold);padding:1.4rem 1.6rem;margin:2rem 0}
+blockquote p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--navy);margin:0;line-height:1.6;font-weight:400}
+blockquote cite{display:block;font-size:0.72rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;margin-top:0.8rem;font-style:normal;font-weight:600}
+.section-ornament{text-align:center;color:var(--gold);opacity:0.4;letter-spacing:12px;font-size:0.9rem;margin:3rem 0}
+.quick-hits{background:var(--navy);padding:1.6rem 1.8rem;margin:2rem 0}
+.quick-hits .qh-label{font-size:0.66rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:1rem}
+.quick-hits ul{list-style:none;padding:0;margin:0}
+.quick-hits li{font-size:0.88rem;color:rgba(232,224,208,0.85);line-height:1.75;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.quick-hits li:last-child{border-bottom:none}
+.quick-hits li strong{color:var(--gold-light)}
+.faq-section{margin:3.5rem 0 2rem}
+.faq-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--navy);margin-bottom:1.4rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+.faq-item{border:1px solid var(--border);margin-bottom:0.5rem}
+.faq-question{width:100%;background:var(--surface);border:none;padding:1rem 1.4rem;text-align:left;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-family:'Jost',sans-serif;font-size:0.92rem;font-weight:500;color:var(--navy);line-height:1.5;transition:background 0.2s}
+.faq-question:hover{background:var(--bg-alt)}
+.faq-icon{font-size:1.2rem;color:var(--gold);flex-shrink:0;font-weight:300;transition:transform 0.3s}
+.faq-item.open .faq-question{background:var(--bg-alt)}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.faq-item.open .faq-answer{max-height:600px}
+.faq-answer p{padding:0.9rem 1.4rem 1.1rem;font-size:0.9rem;color:var(--navy-muted);line-height:1.8;margin:0;border-top:1px solid var(--border)}
+.tags-row{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.tags-label{font-size:0.7rem;color:var(--navy-muted);letter-spacing:0.2em;text-transform:uppercase;margin-right:0.3rem;font-weight:500}
+.tag{background:var(--bg-alt);border:1px solid var(--border);padding:0.25rem 0.8rem;font-size:0.73rem;color:var(--navy-muted);transition:all 0.3s}
+.tag:hover{border-color:var(--gold);color:var(--gold)}
+.share-row{display:flex;gap:1rem;align-items:center;margin-top:2rem;flex-wrap:wrap}
+.share-label{font-size:0.72rem;color:var(--navy-muted);letter-spacing:0.2em;text-transform:uppercase;font-weight:500}
+.share-btn{background:transparent;border:1px solid var(--border);color:var(--navy-muted);padding:0.38rem 1rem;font-size:0.75rem;font-family:'Jost',sans-serif;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block;font-weight:400}
+.share-btn:hover{border-color:var(--gold);color:var(--gold)}
+.social-icon{width:32px;height:32px;border:1px solid rgba(184,150,62,0.25);background:transparent;display:flex;align-items:center;justify-content:center;color:rgba(232,224,208,0.45);text-decoration:none;transition:all 0.3s}
+.social-icon:hover{border-color:var(--gold-light);color:var(--gold-light)}
+footer{padding:2.2rem 4vw;background:var(--navy);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:0.76rem;color:rgba(232,224,208,0.5)}
+.footer-links{display:flex;gap:1.8rem;flex-wrap:wrap}
+.footer-links a{font-size:0.76rem;color:rgba(232,224,208,0.5);text-decoration:none;transition:color 0.3s}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-social{display:flex;gap:0.8rem;align-items:center}
+@media(max-width:900px){.content-layout{display:block}.toc-sidebar{display:none}.toc-mobile{display:block}.article-col .article-wrap{padding:2.5rem 4vw 5rem}}
+@media(max-width:640px){.nav-links{display:none}.article-title{font-size:2rem}.stat-callout{gap:1rem}footer{flex-direction:column;align-items:flex-start;gap:1.2rem}.footer-links{gap:1rem}.footer-social{gap:0.6rem}.social-icon{width:36px;height:36px}}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" width="44" height="44"/>
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious &middot; Explore &middot; Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="learn.html">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="article-hero">
+  <a href="blog.html" class="back-link">&#8592; Back to Blog</a>
+  <div class="article-category">&#128225; This Week in AI &middot; Episode 8</div>
+  <h1 class="article-title">This Week in AI &mdash; Ep. 8: <em>Fable 5 Is Here,</em> Apple Rewires Siri, and the EU&#39;s Clock Is Ticking</h1>
+  <p class="article-subtitle">Anthropic&#39;s most powerful model went public. Apple handed iPhone users a choice of AI. And the EU&#39;s biggest AI enforcement deadline is now 50 days away.</p>
+  <div class="article-meta">
+    <span>NeeAr Ventures Editorial</span>
+    <span class="meta-dot">&#9670;</span>
+    <span>June 13, 2026</span>
+    <span class="meta-dot">&#9670;</span>
+    <span>8 min read</span>
+    <span class="meta-dot">&#9670;</span>
+    <span>AI News</span>
+  </div>
+  <div class="divider-line"></div>
+  <img src="images/blog-2026-06-13-this-week-in-ai-ep8-hero.webp"
+       alt="A composite image showing the Anthropic Fable 5 model launch, Apple WWDC 2026 keynote stage, and the EU AI Act countdown clock, representing the major AI developments of June 9-13, 2026."
+       class="hero-image" loading="eager" width="800" height="420">
+</div>
+
+<main>
+<div class="content-layout">
+<div class="article-col">
+
+<div class="toc-mobile" id="toc-mobile">
+  <button class="toc-mobile-toggle" onclick="toggleMobileToc()" aria-expanded="false" aria-controls="toc-mobile-body">
+    <span>In This Article</span>
+    <span class="toc-mobile-toggle-icon">+</span>
+  </button>
+  <div class="toc-mobile-body" id="toc-mobile-body">
+    <ul class="toc-list">
+      <li><a href="#fable-5">1. Claude Fable 5</a></li>
+      <li><a href="#apple-wwdc">2. Apple WWDC 2026</a></li>
+      <li><a href="#gemini-flash">3. Gemini 3.5 Flash</a></li>
+      <li><a href="#eu-ai-act">4. EU AI Act Deadline</a></li>
+      <li><a href="#rsi-warning">5. Anthropic&#39;s RSI Warning</a></li>
+      <li><a href="#quick-hits">Quick Hits</a></li>
+      <li><a href="#what-this-week-tells-us">What This Week Tells Us</a></li>
+    </ul>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <p class="article-lead">Two months ago, Anthropic told the world it had built an AI model too dangerous to release publicly. This week, they released it. Claude Fable 5 went live on June 9 &mdash; the first Mythos-class model available to anyone with a subscription. At the same time, Apple opened the iPhone to Claude and Gemini, the EU&#39;s main AI enforcement deadline moved inside 50 days, and Google repriced the mid-tier model market.</p>
+
+  <div class="direct-answer" role="note" aria-label="Quick Answer">
+    <div class="da-label">Quick Answer</div>
+    <p><strong>This week in AI (June 9&ndash;13, 2026):</strong> Anthropic released Claude Fable 5 on June 9 &mdash; the first publicly available Mythos-class model, state-of-the-art across software engineering, vision, and knowledge work, priced at $10/$50 per million tokens with free access for paid subscribers until June 22. Apple&#39;s WWDC 2026 announced iOS 27 with Claude, Gemini, and ChatGPT all selectable inside Siri. Google launched Gemini 3.5 Flash at $1.50/$9 per million tokens. The EU AI Act&#39;s August 2, 2026 enforcement deadline is now under 50 days away. And Anthropic called for a global emergency brake mechanism on frontier AI development the same day it launched Fable 5.</p>
+  </div>
+
+  <p>This week was about AI growing up &mdash; becoming available, becoming embedded, becoming regulated. Five stories, one consistent direction of travel.</p>
+
+  <div class="stat-callout">
+    <div class="stat-item"><div class="stat-num">$10</div><div class="stat-label">Fable 5 per 1M input tokens</div></div>
+    <div class="stat-item"><div class="stat-num">17.4%</div><div class="stat-label">Tool use gain vs Opus 4.8</div></div>
+    <div class="stat-item"><div class="stat-num">1B+</div><div class="stat-label">Active iPhones (iOS 27 reach)</div></div>
+    <div class="stat-item"><div class="stat-num">&lt;50</div><div class="stat-label">Days to EU AI Act enforcement</div></div>
+  </div>
+
+  <section aria-label="Claude Fable 5 launch">
+  <h2 id="fable-5"><span class="num-badge">1</span> Claude Fable 5 &mdash; Anthropic&#39;s Most Powerful Model Goes Public</h2>
+
+  <h3>What happened</h3>
+  <p>On June 9, 2026, Anthropic released Claude Fable 5 &mdash; the first publicly available model in the Mythos class, a tier that sits above the Opus class in capability. The name reflects its lineage: <em>Fable</em> comes from the Latin <em>fabula</em>, the same root as the Greek <em>mythos</em>.</p>
+  <p>Anthropic shipped two models simultaneously: <strong>Fable 5</strong> (public, safety classifiers active) and <strong>Mythos 5</strong> (same underlying model, restricted to vetted Project Glasswing partners). Fable 5 is state-of-the-art on nearly all tested benchmarks &mdash; software engineering, knowledge work, vision, scientific research. Key numbers from Vellum.ai (June 9): tool use score up 17.4% vs Opus 4.8; legal benchmark up 13.3%; OSWorld-Verified at 83.4%; FrontierCode Diamond at 29.3%. Anthropic&#39;s stated design principle: &ldquo;the longer and more complex the task, the larger Fable 5&#39;s lead over our other models.&rdquo;</p>
+
+  <div class="content-card">
+    <div class="cc-meta">Safety Architecture</div>
+    <div class="cc-title">One Model, Two Products</div>
+    <p>During red-team testing of Mythos Preview (April), the model identified and exploited zero-day vulnerabilities in every major OS and browser &mdash; including a <strong>27-year-old flaw in OpenBSD</strong> and a 17-year-old NFS server bug (CVE-2026-4747). Fable 5 routes flagged requests in cybersecurity, biology, chemistry, and distillation to Claude Opus 4.8. Mythos 5 keeps those capabilities active for approved defenders only. Same model. Two safety profiles.</p>
+  </div>
+
+  <h3>What it means</h3>
+  <p>Anthropic&#39;s one-model-two-products architecture may become a template for how frontier labs handle capability-safety tradeoffs. The timing is also strategic: the IPO is expected in fall 2026. Fable 5 is the product that anchors the public market story.</p>
+
+  <div class="insight-card">
+    <div class="card-label">The June 22 Cliff</div>
+    <p>Free access for Pro, Max, Team, and seat-based Enterprise subscribers runs until June 22 &mdash; after which usage credits are required until Anthropic can restore Fable 5 as a standard subscription feature. The 13-day free window seeds demand and stress-tests compute infrastructure simultaneously. Anthropic has already acknowledged struggling to keep up with soaring demand.</p>
+  </div>
+  </section>
+
+  <section aria-label="Apple WWDC 2026">
+  <h2 id="apple-wwdc"><span class="num-badge">2</span> Apple WWDC 2026 &mdash; Claude Comes to the iPhone</h2>
+
+  <h3>What happened</h3>
+  <p>Apple&#39;s Worldwide Developers Conference ran June 8&ndash;12, with the keynote on June 8 &mdash; Tim Cook&#39;s final WWDC as CEO before his transition to Executive Chairman in September 2026.</p>
+  <p>The headline AI announcement: <strong>iOS 27 introduces an Extensions system</strong> letting users set Claude, Gemini, or ChatGPT as their preferred AI assistant inside Siri, via Settings &gt; Apple Intelligence &amp; Siri. Previously, only ChatGPT was integrated. A dedicated Extensions section in the App Store will serve as the discovery hub. Apple also launched <strong>Apple Foundation Models on Cloud (AFM Cloud)</strong> &mdash; built in collaboration with Google, running on NVIDIA GPUs in Google&#39;s infrastructure. AFM Cloud Pro is described as comparable in quality to Gemini Frontier models.</p>
+
+  <h3>What it means</h3>
+  <p>OpenAI&#39;s unique iPhone advantage &mdash; held for two years &mdash; ends in iOS 27. Claude, Gemini, and any approved third-party model can now compete directly inside the world&#39;s most-used mobile OS.</p>
+
+  <blockquote>
+    <p>For Anthropic, iPhone integration is a distribution event. Claude goes from a standalone app users have to find, to an option presented at the system level every time someone asks Siri a question.</p>
+    <cite>&mdash; NeeAr Ventures Editorial</cite>
+  </blockquote>
+
+  <div class="tip-row">
+    <div class="tip-icon">&#128161;</div>
+    <p><strong>The AFM Cloud signal:</strong> Apple is relying on Google&#39;s cloud infrastructure for its highest-capability AI workloads. That is a statement about on-device compute limits &mdash; and about Google&#39;s data centre infrastructure becoming load-bearing for the entire AI ecosystem.</p>
+  </div>
+  </section>
+
+  <section aria-label="Gemini 3.5 Flash">
+  <h2 id="gemini-flash"><span class="num-badge">3</span> Gemini 3.5 Flash &mdash; Google Reprices the Middle of the Market</h2>
+
+  <h3>What happened</h3>
+  <p>Google launched Gemini 3.5 Flash this week &mdash; priced at <strong>$1.50 input / $9 output per million tokens</strong>, a 3x increase from Gemini 3 Flash ($0.50/$3). The price increase reflects improved capability and Google&#39;s repositioning of Flash as a genuine workhorse model for high-volume, cost-sensitive tasks.</p>
+  <p>Gemini 3.5 Pro is expected to follow, likely in the $2&ndash;4 input / $12&ndash;25 output range if the Flash-to-Pro ratio holds &mdash; putting it directly against Claude Opus 4.8 ($5/$25) and GPT-5.5. Google simultaneously updated its agent ecosystem: Antigravity 2.0, Gemini Spark (personal AI agent), and Managed Agents in the Gemini API are all designed to work with the 3.5 family.</p>
+
+  <h3>What it means</h3>
+  <p>The mid-tier model market is now genuinely competitive. Six months ago, fast and cheap meant low quality. Gemini 3.5 Flash challenges that framing. When Gemini 3.5 Pro launches, all four major providers will have strong offerings in the $5&ndash;25/million token range &mdash; and the competition shifts from pricing to latency, reliability, and ecosystem. That is a more mature market, and a harder one for smaller entrants.</p>
+  </section>
+
+  <section aria-label="EU AI Act enforcement deadline">
+  <h2 id="eu-ai-act"><span class="num-badge">4</span> The EU AI Act&#39;s August 2 Deadline &mdash; 50 Days and Counting</h2>
+
+  <h3>What happened</h3>
+  <p><strong>August 2, 2026 is now under 50 days away.</strong> That is the main application date for the EU AI Act &mdash; when General Purpose AI model obligations, chatbot transparency requirements, and most high-risk AI system rules come into full force for companies operating in the EU.</p>
+  <p>A proposed amendment package (Digital Omnibus) would extend deadlines for high-risk AI to December 2027 (standalone) and August 2028 (product-embedded) &mdash; but the trilogue between Parliament, Council, and Commission has not concluded. The Cypriot Presidency ends June 30 without a deal; Lithuania takes over July 1.</p>
+
+  <div class="content-card">
+    <div class="cc-meta">What applies from August 2</div>
+    <div class="cc-title">Key Obligations &amp; Fines</div>
+    <p>GPAI model providers: technical documentation, transparency, human oversight, post-market monitoring. Chatbot transparency: users must be told they&#39;re talking to AI. AI-generated content labelling (short deferral to December 2). <strong>Fines: up to &euro;15M or 3% of global turnover; up to &euro;35M or 7% for the most serious categories.</strong></p>
+  </div>
+
+  <div class="tip-row">
+    <div class="tip-icon">&#9888;</div>
+    <p><strong>Legal reality:</strong> August 2 remains the legally binding deadline until an extension is formally adopted. Any company treating the proposed 2027 date as settled law is operating on legislative optimism rather than legal fact.</p>
+  </div>
+  </section>
+
+  <section aria-label="Anthropic RSI warning">
+  <h2 id="rsi-warning"><span class="num-badge">5</span> Anthropic&#39;s &ldquo;Brake Pedal&rdquo; Plea &mdash; and the RSI Warning</h2>
+
+  <h3>What happened</h3>
+  <p>Ahead of the Fable 5 launch, Anthropic published a public call to major global AI labs to establish a coordinated emergency brake mechanism on frontier AI development &mdash; specifically in the event any model approaches <strong>recursive self-improvement (RSI)</strong>: the ability to autonomously improve itself without human intervention, creating a feedback loop of capability gains.</p>
+  <p>The document argues RSI is no longer a theoretical scenario &mdash; it is a near-term planning variable. The call was published on the same day as the Fable 5 release.</p>
+
+  <h3>What it means</h3>
+  <p>The uncomfortable framing: Anthropic is simultaneously releasing more powerful models and calling for industry-wide restraint on releasing more powerful models. That tension is not hypocrisy &mdash; it reflects a genuine strategic dilemma. If safety-focused labs don&#39;t release, competitors do and safety-conscious organisations lose influence at the frontier. If they do release, they advance the very capabilities they&#39;re worried about.</p>
+
+  <div class="insight-card">
+    <div class="card-label">The RSI Brake Pedal</div>
+    <p>Anthropic&#39;s RSI warning is grounded in first-hand knowledge. Their red-team reports on Mythos Preview &mdash; the zero-day exploits, the autonomous code execution, the 27-year-old OS vulnerability &mdash; inform this call directly. Whether other labs respond publicly will tell you something important about the industry&#39;s actual risk posture, not just its stated one.</p>
+  </div>
+  </section>
+
+  <div class="section-ornament">&#9670; &#9670; &#9670;</div>
+
+  <section aria-label="Quick hits">
+  <h2 id="quick-hits">Quick Hits This Week</h2>
+  <div class="quick-hits">
+    <div class="qh-label">Also Worth Knowing</div>
+    <ul>
+      <li><strong>OpenAI also filed confidentially for IPO</strong> this week &mdash; one week after Anthropic. Both S-1s are now with the SEC. The fall 2026 AI IPO window is taking shape fast.</li>
+      <li><strong>Google AI Mode Pro visuals go free</strong> this summer, with Gemini tools integration announced for the 2026 FIFA World Cup &mdash; AI-powered real-time sports search and analysis at massive scale.</li>
+      <li><strong>Cohere launched North Mini Code</strong> (June 9) &mdash; a 30B parameter mixture-of-experts open-source agentic coding model with just 3B active parameters, targeting enterprise coding workloads.</li>
+      <li><strong>MiniMax M3</strong> launched on MiniMax Sparse Attention (MSA) architecture, cutting per-token compute to 1/20th of previous models &mdash; 9x faster prefilling and 15x faster decoding at 1M token context.</li>
+    </ul>
+  </div>
+  </section>
+
+  <section aria-label="Conclusion">
+  <h2 id="what-this-week-tells-us" style="border:none;display:flex;font-size:1.5rem;margin-top:0">What This Week Actually Tells Us</h2>
+  <p>Three things happened this week that belong in the same sentence. Anthropic released the most capable AI model ever made publicly available &mdash; and simultaneously called for a coordinated global brake mechanism. Apple opened the iPhone to multiple AI assistants. The EU&#39;s main AI enforcement deadline moved inside 50 days.</p>
+  <p>AI is simultaneously becoming more capable, more widely distributed, and more formally regulated &mdash; all in the same week. That is not a contradiction. That is what a technology transition looks like when it matures.</p>
+  <p>Two months ago, Anthropic said it had built a model too dangerous to release. This week, it released a version of that model to anyone with a paid subscription. That sentence captures where we are. Stay curious.</p>
+  </section>
+
+  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is Claude Fable 5 and how is it different from Mythos?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Fable 5 is Anthropic&#39;s first publicly available Mythos-class model, released June 9, 2026. It shares the same underlying architecture as Mythos 5 but includes safety classifiers routing high-risk requests in cybersecurity, biology, chemistry, and distillation to Claude Opus 4.8 instead. Mythos 5 keeps those capabilities active for vetted Project Glasswing partners only. Fable 5 is priced at $10/$50 per million tokens, with free access for paid subscribers through June 22.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What did Apple announce at WWDC 2026 for AI?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>iOS 27, announced June 8, introduces an Extensions system letting users set Claude, Gemini, or ChatGPT as their preferred assistant inside Siri. Apple also launched Apple Foundation Models on Cloud (AFM Cloud) built with Google, running on NVIDIA GPUs in Google&#39;s infrastructure. A redesigned standalone Siri app with conversation history and Mac screen awareness was announced. It was Tim Cook&#39;s final WWDC as CEO before transitioning to Executive Chairman in September 2026.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is Google Gemini 3.5 Flash?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Gemini 3.5 Flash is Google&#39;s updated mid-tier model, launched in June 2026 at $1.50 input / $9 output per million tokens &mdash; a 3x price increase from Gemini 3 Flash. It is designed for high-volume, cost-sensitive tasks and integrates with Google&#39;s updated agent ecosystem including Antigravity 2.0, Gemini Spark, and Managed Agents in the Gemini API.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What does the EU AI Act August 2, 2026 deadline mean?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>August 2, 2026 is the main application date for the EU AI Act, when GPAI model obligations, chatbot transparency requirements, and high-risk AI system rules come into force across the EU. Fines can reach &euro;15M or 3% of global turnover for most violations, and up to &euro;35M or 7% for the most serious categories. A proposed Digital Omnibus extension has not been formally adopted, so August 2 remains the legally binding deadline today.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is recursive self-improvement in AI and why is Anthropic warning about it?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Recursive self-improvement (RSI) is an AI system&#39;s ability to autonomously improve itself without human intervention, creating a feedback loop of capability gains. Anthropic published a public call this week urging major AI labs to pre-agree on a coordinated emergency brake mechanism before any model achieves RSI. The call was published on the same day as the Fable 5 release, reflecting the view that RSI has moved from theoretical concern to near-term planning variable.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="share-row">
+    <span class="share-label">Share:</span>
+    <button class="share-btn" onclick="copyLink()">Copy Link</button>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://neearventures.com/blog-2026-06-13-this-week-in-ai-ep8.html" target="_blank" class="share-btn">Facebook</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://neearventures.com/blog-2026-06-13-this-week-in-ai-ep8.html" target="_blank" class="share-btn">LinkedIn</a>
+    <a href="https://twitter.com/intent/tweet?url=https://neearventures.com/blog-2026-06-13-this-week-in-ai-ep8.html" target="_blank" class="share-btn">Twitter / X</a>
+  </div>
+
+  <div class="tags-row">
+    <span class="tags-label">Topics:</span>
+    <span class="tag">AI News</span>
+    <span class="tag">Claude Fable 5</span>
+    <span class="tag">Apple WWDC 2026</span>
+    <span class="tag">Gemini 3.5 Flash</span>
+    <span class="tag">EU AI Act</span>
+    <span class="tag">Anthropic</span>
+    <span class="tag">iOS 27</span>
+    <span class="tag">This Week in AI</span>
+  </div>
+
+</div>
+</article>
+</div>
+
+<aside class="toc-sidebar" aria-label="Table of contents">
+  <div class="toc-box-title">In This Article</div>
+  <ul class="toc-box-list">
+    <li><a href="#fable-5">1. Claude Fable 5</a></li>
+    <li><a href="#apple-wwdc">2. Apple WWDC 2026</a></li>
+    <li><a href="#gemini-flash">3. Gemini 3.5 Flash</a></li>
+    <li><a href="#eu-ai-act">4. EU AI Act Deadline</a></li>
+    <li><a href="#rsi-warning">5. Anthropic&#39;s RSI Warning</a></li>
+    <li><a href="#quick-hits">Quick Hits</a></li>
+    <li><a href="#what-this-week-tells-us">What This Week Tells Us</a></li>
+  </ul>
+  <hr class="toc-box-divider">
+  <div class="toc-box-section">FAQs</div>
+  <ul class="toc-box-list">
+    <li><a href="#faq" onclick="openFaq(0);return false;">What is Claude Fable 5?</a></li>
+    <li><a href="#faq" onclick="openFaq(1);return false;">What was announced at WWDC 2026?</a></li>
+    <li><a href="#faq" onclick="openFaq(2);return false;">What is Gemini 3.5 Flash?</a></li>
+    <li><a href="#faq" onclick="openFaq(3);return false;">What is the EU AI Act deadline?</a></li>
+    <li><a href="#faq" onclick="openFaq(4);return false;">What is RSI in AI?</a></li>
+  </ul>
+</aside>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-copy">&copy; 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:arjun@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/NeeArVentures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0d1f35"/></svg></a>
+  </div>
+</footer>
+</div>
+
+<script>
+function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>{const b=event.target;b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy Link',2000)});}
+function openFaq(i){var items=document.querySelectorAll('.faq-item');if(!items[i])return;items.forEach(function(x){x.classList.remove('open');x.querySelector('.faq-question').setAttribute('aria-expanded','false')});items[i].classList.add('open');items[i].querySelector('.faq-question').setAttribute('aria-expanded','true');setTimeout(function(){items[i].scrollIntoView({behavior:'smooth',block:'center'})},80);}
+document.querySelectorAll('.faq-question').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));document.querySelectorAll('.faq-question').forEach(b=>b.setAttribute('aria-expanded','false'));if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}});});
+function toggleMobileToc(){const t=document.getElementById('toc-mobile');const b=t.querySelector('.toc-mobile-toggle');const o=t.classList.contains('open');t.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+document.querySelectorAll('.toc-box-list a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(h==='#faq')return;var el=document.getElementById(h.replace('#',''));if(el){e.preventDefault();window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});}});});
+</script>
+</body>
+</html>
