@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- FAVICONS -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- CANONICAL TAG -->
+<link rel="canonical" href="https://neearventures.com/blog-2026-06-16-grid-scale-energy-storage.html">
+
+<!-- TITLE + META DESCRIPTION -->
+<title>Grid-Scale Energy Storage Explained — NeeAr Ventures</title>
+<meta name="description" content="Grid-scale energy storage lets solar and wind power the grid around the clock. Here's how it works, the leading technologies, and why it matters now.">
+
+<!-- OPEN GRAPH + TWITTER TAGS -->
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/blog-2026-06-16-grid-scale-energy-storage.html" />
+<meta property="og:title"        content="Grid-Scale Energy Storage Explained — NeeAr Ventures" />
+<meta property="og:description"  content="Grid-scale energy storage lets solar and wind power the grid around the clock. Here's how it works, the leading technologies, and why it matters now." />
+<meta property="og:image"        content="https://neearventures.com/images/blog-2026-06-16-grid-scale-energy-storage-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@NeeArVentures" />
+<meta name="twitter:title"       content="Grid-Scale Energy Storage Explained — NeeAr Ventures" />
+<meta name="twitter:description" content="Grid-scale energy storage lets solar and wind power the grid around the clock. Here's how it works, the leading technologies, and why it matters now." />
+<meta name="twitter:image"       content="https://neearventures.com/images/blog-2026-06-16-grid-scale-energy-storage-og.jpg" />
+
+<!-- BLOGPOSTING SCHEMA — AEO v4.0 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Grid-Scale Energy Storage Explained",
+  "description": "Grid-scale energy storage lets solar and wind power the grid around the clock. Here's how it works, the leading technologies, and why it matters now.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://neearventures.com/images/blog-2026-06-16-grid-scale-energy-storage-og.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": "2026-06-16",
+  "dateModified": "2026-06-16",
+  "author": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures Editorial",
+    "url": "https://neearventures.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://neearventures.com/logo.png"
+    }
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".direct-answer", ".article-lead", "h2"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Grid-Scale Energy Storage"
+  },
+  "mentions": [
+    { "@type": "Thing", "name": "Battery Energy Storage System (BESS)" },
+    { "@type": "Thing", "name": "Pumped Hydro Storage" },
+    { "@type": "Thing", "name": "Flow Batteries" },
+    { "@type": "Thing", "name": "Renewable Energy Integration" }
+  ],
+  "keywords": "grid-scale energy storage, renewable energy storage, battery energy storage system, pumped hydro storage, energy transition",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neearventures.com/blog-2026-06-16-grid-scale-energy-storage.html"
+  }
+}
+</script>
+
+<!-- BREADCRUMB SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://neearventures.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://neearventures.com/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Grid-Scale Energy Storage Explained",
+      "item": "https://neearventures.com/blog-2026-06-16-grid-scale-energy-storage.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQPAGE SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is grid-scale energy storage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grid-scale energy storage refers to large industrial systems that store electricity from the power grid and release it back when needed. These systems range from 10 megawatts to multi-gigawatt scale and use technologies like lithium-ion batteries, pumped hydro, flow batteries, and compressed air. Their main role is to balance electricity supply and demand, especially as more renewable energy enters the grid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is energy storage important for renewable energy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solar and wind power are intermittent — they don't produce electricity at a constant rate throughout the day. Grid-scale storage captures excess renewable energy when production is high and releases it when production drops or demand rises. Without storage at scale, grids cannot rely heavily on renewables without risking instability or blackouts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the main types of grid-scale energy storage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main types are lithium-ion battery storage (BESS), pumped hydro storage, flow batteries, and compressed air energy storage (CAES). Lithium-ion batteries are currently the most widely deployed due to fast response times and modular installation. Pumped hydro remains the largest by total capacity globally but is limited by geography."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How big is the grid-scale energy storage market?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The global grid-scale storage market was valued at roughly 40.7 billion dollars in 2024 and is projected to reach approximately 151.2 billion dollars by 2029. Global installations reached about 92 gigawatts and 247 gigawatt-hours in 2025, around 23 percent higher than the previous year. Growth is being driven by falling battery costs, renewable energy expansion, and supportive government policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the future of grid-scale energy storage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The future involves combining multiple storage technologies to handle different timescales, from millisecond grid stability to seasonal energy balancing. Artificial intelligence is increasingly used to optimize when systems charge and discharge for maximum efficiency and grid stability. Most grids still fall short of the storage capacity needed for high renewable penetration, meaning continued rapid growth is expected through the rest of the decade."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- STYLES -->
+<style>
+/* =====================================================================
+   NEEAR VENTURES DESIGN SYSTEM — WARM OFF-WHITE THEME v4.0
+   Background #f7f4ef | Text navy #0d1f35 | Gold #9a7a2e
+   Footer: Always dark navy #0d1f35
+====================================================================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:          #f7f4ef;
+  --bg-alt:      #f0ece4;
+  --surface:     #ffffff;
+  --border:      #e2d9cc;
+  --navy:        #0d1f35;
+  --navy-light:  #162d47;
+  --navy-muted:  #1e3a5a;
+  --gold:        #9a7a2e;
+  --gold-light:  #b8963e;
+  --gold-pale:   rgba(154,122,46,0.1);
+}
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; }
+.page-wrap { }
+
+/* ── NAV ── */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* ── ARTICLE HERO ── */
+.article-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: clip; text-align: center; }
+.article-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.article-category { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 600; }
+.article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 600; color: var(--navy); line-height: 1.1; margin-bottom: 1.2rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.article-title em { font-style: italic; color: var(--gold); }
+.article-subtitle { font-size: 1rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.article-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.6rem auto 2rem; }
+
+/* ── HERO IMAGE ── */
+.hero-image {
+  max-width: 820px;
+  width: 100%;
+  height: auto;
+  margin: 2rem auto 0;
+  display: block;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(13,31,53,0.08);
+}
+
+/* ── ARTICLE BODY ── */
+.article-wrap { max-width: 760px; margin: 0; padding: 4rem 4vw 6rem; }
+.article-lead { font-size: 1.05rem; line-height: 1.9; color: var(--navy); margin-bottom: 2.5rem; padding-left: 1.2rem; border-left: 3px solid var(--gold); font-weight: 400; }
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+
+/* ── DIRECT ANSWER BLOCK (AEO) ── */
+.direct-answer { background: #0d1f35; padding: 1.6rem 1.8rem; margin: 1.8rem 0 2.2rem; border-left: 4px solid #9a7a2e; }
+.direct-answer .da-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: #9a7a2e; font-weight: 600; margin-bottom: 0.7rem; }
+.direct-answer p { font-size: 0.92rem; color: rgba(232,224,208,0.9); line-height: 1.75; margin: 0; }
+.direct-answer p strong { color: #9a7a2e; }
+
+/* ── HEADINGS ── */
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--navy); margin: 3.5rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.8rem; scroll-margin-top: 90px; }
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.7rem; scroll-margin-top: 90px; }
+.num-badge { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: var(--navy); color: #fff; border-radius: 50%; font-size: 0.82rem; font-family: 'Jost', sans-serif; font-weight: 500; flex-shrink: 0; }
+
+/* ── MID-ARTICLE FIGURE ── */
+.article-figure { margin: 2.5rem 0; text-align: center; }
+.article-figure img { max-width: 100%; height: auto; border-radius: 3px; box-shadow: 0 2px 16px rgba(13,31,53,0.08); border: 1px solid var(--border); }
+.article-figure figcaption { font-size: 0.78rem; color: var(--navy-muted); font-style: italic; margin-top: 0.8rem; line-height: 1.6; text-align: center; }
+
+/* ── CONTENT BLOCKS ── */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.4rem 0 1.8rem; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0; line-height: 1.7; }
+
+.tip-row { display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--border); padding: 1.1rem 1.3rem; margin: 1.4rem 0; align-items: flex-start; }
+.tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.tip-row p { font-size: 0.88rem; margin: 0; color: var(--navy-muted); }
+.tip-row strong { color: var(--navy); }
+
+.stat-callout { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; background: var(--navy); padding: 1.8rem; margin: 2rem 0; }
+.stat-item { text-align: center; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold-light); line-height: 1; }
+.stat-label { font-size: 0.68rem; color: rgba(232,224,208,0.7); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; max-width: 120px; line-height: 1.4; }
+
+.content-card { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 1.2rem 0; transition: box-shadow 0.3s; }
+.content-card:hover { box-shadow: 0 2px 16px rgba(154,122,46,0.1); }
+.content-card .cc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--navy); font-weight: 600; margin-bottom: 0.5rem; }
+.content-card .cc-meta { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); padding: 0.15rem 0.6rem; font-weight: 600; display: inline-block; margin-bottom: 0.6rem; }
+.content-card p { font-size: 0.87rem; color: var(--navy-muted); margin: 0; line-height: 1.65; }
+.content-card p strong { color: var(--navy); }
+
+blockquote { background: var(--bg-alt); border-left: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 2rem 0; }
+blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--navy); margin: 0; line-height: 1.6; font-weight: 400; }
+blockquote cite { display: block; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.8rem; font-style: normal; font-weight: 600; }
+
+.section-ornament { text-align: center; color: var(--gold); opacity: 0.4; letter-spacing: 12px; font-size: 0.9rem; margin: 3rem 0; }
+
+/* ── FAQ SECTION (AEO) ── */
+.faq-section { margin: 3.5rem 0 2rem; }
+.faq-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 1.4rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--border); }
+.faq-item { border: 1px solid var(--border); margin-bottom: 0.5rem; }
+.faq-question { width: 100%; background: var(--surface); border: none; padding: 1rem 1.4rem; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-family: 'Jost', sans-serif; font-size: 0.92rem; font-weight: 500; color: var(--navy); line-height: 1.5; transition: background 0.2s; }
+.faq-question:hover { background: var(--bg-alt); }
+.faq-icon { font-size: 1.2rem; color: var(--gold); flex-shrink: 0; font-weight: 300; transition: transform 0.3s; }
+.faq-item.open .faq-question { background: var(--bg-alt); }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-item.open .faq-answer { max-height: 400px; }
+.faq-answer p { padding: 0.9rem 1.4rem 1.1rem; font-size: 0.9rem; color: var(--navy-muted); line-height: 1.8; margin: 0; border-top: 1px solid var(--border); }
+
+/* Tags row */
+.tags-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.tags-label { font-size: 0.7rem; color: var(--navy-muted); letter-spacing: 0.2em; text-transform: uppercase; margin-right: 0.3rem; font-weight: 500; }
+.tag { background: var(--bg-alt); border: 1px solid var(--border); padding: 0.25rem 0.8rem; font-size: 0.73rem; color: var(--navy-muted); transition: all 0.3s; }
+.tag:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Share buttons */
+.share-row { display: flex; gap: 1rem; align-items: center; margin-top: 2rem; flex-wrap: wrap; }
+.share-label { font-size: 0.72rem; color: var(--navy-muted); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+.share-btn { background: transparent; border: 1px solid var(--border); color: var(--navy-muted); padding: 0.38rem 1rem; font-size: 0.75rem; font-family: 'Jost', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; font-weight: 400; }
+.share-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Social icons (footer) */
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+/* ── FOOTER — always dark navy ── */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+
+/* ── CONTENT LAYOUT — two-column: article + TOC sidebar ── */
+.content-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  grid-template-areas: "article toc";
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* ── ARTICLE COLUMN ── */
+.article-col { grid-area: article; min-width: 0; order: 1; }
+.article-col .article-wrap { max-width: 760px; margin: 0; padding: 3rem 4vw 6rem; }
+
+/* ── TOC SIDEBAR — static sticky box ── */
+.toc-sidebar {
+  grid-area: toc;
+  position: sticky;
+  top: 110px;
+  align-self: start;
+  padding: 1.6rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin: 2.5rem 1.6rem 0 0;
+  order: 2;
+}
+
+.toc-box-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.toc-box-section {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--navy-muted);
+  font-weight: 600;
+  margin: 1rem 0 0.4rem;
+}
+
+.toc-box-list { list-style: none; padding: 0; margin: 0 0 0.4rem; }
+.toc-box-list li { margin: 0; }
+.toc-box-list a {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--navy-muted);
+  text-decoration: none;
+  padding: 0.32rem 0 0.32rem 0.7rem;
+  border-left: 2px solid transparent;
+  line-height: 1.4;
+  transition: color 0.2s, border-color 0.2s;
+}
+.toc-box-list a:hover { color: var(--gold); border-left-color: var(--gold); }
+
+.toc-box-divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+
+/* MOBILE TOC */
+.toc-mobile {
+  display: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  margin: 0;
+}
+
+.toc-mobile-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.toc-mobile-toggle-icon {
+  font-size: 1rem;
+  color: var(--gold);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.toc-mobile.open .toc-mobile-toggle-icon { transform: rotate(45deg); }
+
+.toc-mobile-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.toc-mobile.open .toc-mobile-body { max-height: 600px; }
+
+.toc-mobile-body .toc-list {
+  padding: 0.4rem 1.2rem 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.toc-mobile-body .toc-list a {
+  font-size: 0.85rem;
+  padding: 0.4rem 0 0.4rem 0.7rem;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  .content-layout {
+    display: block;
+  }
+  .toc-sidebar {
+    display: none;
+  }
+  .toc-mobile {
+    display: block;
+  }
+  .article-col .article-wrap {
+    padding: 2.5rem 4vw 5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .article-title { font-size: 2rem; }
+  .stat-callout { gap: 1rem; }
+  footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 1rem; }
+  .footer-social { gap: 0.6rem; }
+  .social-icon { width: 36px; height: 36px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="page-wrap">
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" width="44" height="44" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="learn.html">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+  <div class="article-category">Energy · Infrastructure</div>
+  <h1 class="article-title">Grid-Scale Energy Storage: The Quiet <em>Backbone</em> of the Renewable Energy Boom</h1>
+  <p class="article-subtitle">Solar and wind don't run on a schedule. Here's the technology quietly making sure the grid doesn't notice.</p>
+  <div class="article-meta">
+    <span>NeeAr Ventures Editorial</span>
+    <span class="meta-dot">◆</span>
+    <span>June 16, 2026</span>
+    <span class="meta-dot">◆</span>
+    <span>7 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>Energy Storage</span>
+  </div>
+  <div class="divider-line"></div>
+
+  <img src="images/blog-2026-06-16-grid-scale-energy-storage-hero.webp"
+       alt="Rows of large grid-scale battery storage containers connected to electrical infrastructure beside solar panels and wind turbines."
+       class="hero-image"
+       loading="eager"
+       width="800"
+       height="420">
+</div>
+
+<!-- ARTICLE BODY -->
+<main>
+<div class="content-layout">
+
+<div class="article-col">
+
+<!-- MOBILE TOC -->
+<div class="toc-mobile" id="toc-mobile">
+  <button class="toc-mobile-toggle" onclick="toggleMobileToc()" aria-expanded="false" aria-controls="toc-mobile-body">
+    <span>In This Article</span>
+    <span class="toc-mobile-toggle-icon">+</span>
+  </button>
+  <div class="toc-mobile-body" id="toc-mobile-body">
+    <ul class="toc-list" id="toc-list-mobile">
+      <li><a href="#what-is-grid-scale-storage">1. What Is Grid-Scale Energy Storage?</a></li>
+      <li><a href="#how-grid-scale-storage-works">2. How Does It Actually Work?</a></li>
+      <li><a href="#grid-scale-storage-technologies">3. What Technologies Are Used?</a></li>
+      <li><a href="#grid-scale-storage-market-size">4. How Big Is the Market?</a></li>
+      <li><a href="#whats-next-grid-scale-storage">5. What's Next?</a></li>
+      <li><a href="#what-this-means">What This Means for You</a></li>
+    </ul>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <p class="article-lead">Solar panels generate no electricity after sunset. Wind turbines fall still on calm days. Grid-scale energy storage is the technology that closes this gap — capturing surplus electricity when supply is abundant and releasing it back when demand requires it. It has quietly become one of the most important pieces of infrastructure in the global energy transition.</p>
+
+  <div class="direct-answer" role="note" aria-label="Quick Answer">
+    <div class="da-label">Quick Answer</div>
+    <p>
+      <strong>Grid-scale energy storage</strong> refers to large industrial systems — typically ranging from 10 megawatts to multi-gigawatt scale — that store electricity from the power grid and release it back when demand rises or supply drops. The most widely deployed form today is lithium-ion battery storage (BESS), alongside pumped hydro, flow batteries, and compressed air systems. These systems allow renewable sources like solar and wind to supply power reliably even when generation conditions aren't ideal — without storage at scale, renewable-heavy grids become unstable.
+    </p>
+  </div>
+
+  <p>This article looks at what grid-scale storage actually is, how it works behind the scenes, the main technologies competing for dominance, how large this market has become, and where the industry is heading next.</p>
+
+  <!-- STAT CALLOUT -->
+  <div class="stat-callout">
+    <div class="stat-item"><div class="stat-num">247 GWh</div><div class="stat-label">Global storage installed in 2025</div></div>
+    <div class="stat-item"><div class="stat-num">$151.2B</div><div class="stat-label">Projected market size by 2029</div></div>
+    <div class="stat-item"><div class="stat-num">24 GW</div><div class="stat-label">New U.S. battery storage planned for 2026</div></div>
+    <div class="stat-item"><div class="stat-num">15%</div><div class="stat-label">Ideal storage share of grid capacity</div></div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <section aria-label="What grid-scale energy storage is">
+  <h2 id="what-is-grid-scale-storage"><span class="num-badge">1</span> What Is Grid-Scale Energy Storage and Why Does It Matter?</h2>
+  <p>Grid-scale energy storage is large-capacity infrastructure — usually built at 10 megawatts or larger — that captures electricity from the grid and holds it until it's needed elsewhere. Unlike the battery in a phone or an electric car, these systems are designed to interact directly with the electricity network itself, charging and discharging in response to grid-wide supply and demand.</p>
+
+  <p>The reason this matters has everything to do with how renewable energy behaves. A coal or gas plant can run continuously and adjust output on demand. Solar and wind cannot — their output depends entirely on weather and time of day. As more renewable generation is added to a grid, the mismatch between when electricity is produced and when it is actually needed grows wider. Storage is what bridges that mismatch.</p>
+
+  <div class="insight-card">
+    <div class="card-label">Key Insight</div>
+    <p>A grid running heavily on solar and wind isn't unstable because the generation technology is unreliable — it's unstable because supply and demand rarely line up in time. Storage is what allows a renewable-heavy grid to behave like a traditional one: power available on demand, regardless of weather or time of day. The renewables aren't the missing piece. The storage is.</p>
+  </div>
+
+  <p>This is why grid-scale storage has moved from a niche engineering concern to one of the most closely watched categories in the entire energy sector — it is, in many ways, the constraint that determines how fast the rest of the transition can move.</p>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section aria-label="How grid-scale storage works">
+  <h2 id="how-grid-scale-storage-works"><span class="num-badge">2</span> How Does Grid-Scale Storage Actually Work?</h2>
+  <p>At its core, grid-scale storage follows a simple cycle: charge when electricity is abundant or cheap — typically during midday solar generation — and discharge when demand peaks, usually in the evening. The system absorbs surplus power instead of letting it go to waste, then feeds it back into the grid hours later.</p>
+
+  <p>Beyond this basic cycle, grid-scale storage performs three critical services that keep the wider electricity network stable:</p>
+
+  <div class="content-card">
+    <div class="cc-meta">Service 1</div>
+    <div class="cc-title">Frequency Regulation</div>
+    <p>Electricity grids must maintain a precise frequency (50 or 60 Hz depending on the region) at all times. Storage systems can inject or absorb power within milliseconds — far faster than traditional power plants — making them ideal for keeping grid frequency stable second by second.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Service 2</div>
+    <div class="cc-title">Peak Shaving</div>
+    <p>Electricity demand spikes at predictable times — typically early evening, when solar generation is dropping but household demand is rising. Storage discharges during these peaks, reducing strain on the grid and lowering the need for expensive, fast-start backup power plants.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Service 3</div>
+    <div class="cc-title">Black Start Capability</div>
+    <p>After a major outage, restarting a grid from zero is a complex process that traditionally relies on specific power plants designed for the task. Battery storage systems can provide this "black start" power, helping bring the grid back online faster after a blackout.</p>
+  </div>
+
+  <div class="tip-row">
+    <div class="tip-icon">💡</div>
+    <p><strong>Think of it this way:</strong> grid-scale storage doesn't generate power — it's a shock absorber for the electricity grid, smoothing out the gap between when power is made and when it's actually needed.</p>
+  </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section aria-label="Grid-scale storage technologies">
+  <h2 id="grid-scale-storage-technologies"><span class="num-badge">3</span> What Technologies Are Used for Grid-Scale Storage?</h2>
+  <p>No single storage technology dominates every use case — different technologies are suited to different durations, from seconds of frequency support to seasons of energy balancing. Four technologies currently lead the field.</p>
+
+  <div class="content-card">
+    <div class="cc-meta">Most Widely Deployed</div>
+    <div class="cc-title">Lithium-Ion Battery Storage (BESS)</div>
+    <p>Battery Energy Storage Systems are the dominant technology today, thanks to fast response times, modular design, and rapidly falling costs. BESS installations can be built in months rather than years, making them the default choice for utilities needing storage quickly. Their main limitation is duration — most are optimised for hours, not days.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Largest by Capacity</div>
+    <div class="cc-title">Pumped Hydro Storage</div>
+    <p>Pumped hydro remains the largest source of grid storage capacity globally by far. It works by pumping water uphill to a reservoir when electricity is abundant, then releasing it through turbines to generate power when needed. Its limitation is geography — it requires specific elevation and water availability that most locations simply don't have.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Long-Duration Candidate</div>
+    <div class="cc-title">Flow Batteries</div>
+    <p>Flow batteries store energy in two liquid electrolytes held in separate tanks, with power generated as the liquids flow through a cell stack. A key advantage is that power capacity and energy capacity can be scaled independently — making them well-suited for longer-duration storage. They also tend to be safer and longer-lasting than lithium-ion alternatives.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Mechanical Approach</div>
+    <div class="cc-title">Compressed Air Energy Storage (CAES)</div>
+    <p>CAES systems store energy by compressing air into large underground caverns or tanks during periods of excess electricity, then releasing it to drive turbines when power is needed. It's a mechanical, large-scale approach with long lifecycles, though it shares pumped hydro's dependence on suitable geology.</p>
+  </div>
+
+  <blockquote>
+    <p>The storage technology that "wins" depends entirely on the question being asked — milliseconds, hours, or seasons each demand a different answer.</p>
+    <cite>— Grid Storage Industry Perspective</cite>
+  </blockquote>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section aria-label="Grid-scale storage market size">
+  <h2 id="grid-scale-storage-market-size"><span class="num-badge">4</span> How Big Is the Grid-Scale Storage Market Right Now?</h2>
+  <p>The grid-scale storage market has moved from a developing niche to one of the fastest-growing categories in global energy infrastructure. Approximately 92 gigawatts and 247 gigawatt-hours of storage were installed worldwide in 2025 — around 23% more than the year before — with even higher installations expected in 2026.</p>
+
+  <p>Three forces are driving this growth. First, renewable energy penetration continues to climb across nearly every major grid, increasing the need for storage to manage intermittency. Second, national decarbonisation policies are increasingly treating storage as essential infrastructure rather than an optional add-on. Third, and perhaps most importantly, battery manufacturing costs have fallen enough that grid storage is now frequently the most economical way to manage peak demand — cheaper, in many cases, than building new gas-fired peaking plants.</p>
+
+  <p>Regionally, a small number of markets account for the bulk of new capacity. In the United States, Texas's ERCOT grid and California's CAISO grid are both expected to exceed major capacity milestones well ahead of the rest of the country, driven by a combination of renewable buildout and grid operators actively procuring storage as a planning tool.</p>
+
+  <p>From a financing perspective, grid-scale storage has also become a significant investment category in its own right — utilities, independent power producers, and infrastructure funds are increasingly treating storage assets the way they once treated power plants: as long-term, revenue-generating infrastructure.</p>
+  </section>
+
+  <div class="section-ornament">◆ ◆ ◆</div>
+
+  <!-- SECTION 5 -->
+  <section aria-label="The future of grid-scale storage">
+  <h2 id="whats-next-grid-scale-storage"><span class="num-badge">5</span> What's Next for Grid-Scale Energy Storage?</h2>
+  <p>The next phase of grid-scale storage isn't about choosing one winning technology — it's about combining several to cover different timescales simultaneously. Multi-timescale storage architectures are emerging that pair fast-response systems, such as supercapacitors, with slower, longer-duration systems like flow batteries, coordinated through increasingly sophisticated control software.</p>
+
+  <p>Artificial intelligence is playing a growing role in this coordination. Reinforcement learning approaches are being developed to optimise when storage systems charge and discharge — balancing economic factors (when electricity is cheapest) with safety and grid-stability requirements in real time.</p>
+
+  <p>Despite the rapid growth, a significant gap remains. Research suggests that grids integrating high shares of renewable energy should ideally have storage equal to around 15% of total grid capacity for optimal stability — a target most grids globally are still far from reaching. This gap is, in effect, the runway for continued growth in the sector over the coming decade.</p>
+
+  <p>On the technology side, research into next-generation battery chemistries continues, including layered flow-battery membranes designed to push energy retention and performance further. And as storage becomes more deeply embedded in grid control infrastructure, cybersecurity is emerging as a critical design requirement — these systems are no longer just batteries, they're part of the grid's operating nervous system.</p>
+  </section>
+
+  <div class="section-ornament">◆ ◆ ◆</div>
+
+  <!-- CLOSING SECTION -->
+  <section aria-label="Conclusion">
+  <h2 id="what-this-means" style="border:none; margin-top:0; display:block; font-size:1.5rem;">What This Means for You</h2>
+  <p>Grid-scale energy storage rarely makes headlines the way new solar farms or wind projects do — but it's quickly becoming the piece of infrastructure that determines how fast the rest of the renewable transition can actually move. Whether you're following this as an energy enthusiast, an investor, or simply someone curious about how the grid of the future will work, storage is one of those unglamorous technologies worth watching closely. As costs continue to fall, it may become as fundamental to power grids as transformers and transmission lines are today. Staying curious about the infrastructure behind the headlines is often where the most interesting insights are found — and that's exactly the kind of exploration we enjoy at NeeAr Ventures.</p>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is grid-scale energy storage?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Grid-scale energy storage refers to large industrial systems that store electricity from the power grid and release it back when needed. These systems range from 10 megawatts to multi-gigawatt scale and use technologies like lithium-ion batteries, pumped hydro, flow batteries, and compressed air. Their main role is to balance electricity supply and demand, especially as more renewable energy enters the grid.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Why is energy storage important for renewable energy?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Solar and wind power are intermittent — they don't produce electricity at a constant rate throughout the day. Grid-scale storage captures excess renewable energy when production is high and releases it when production drops or demand rises. Without storage at scale, grids cannot rely heavily on renewables without risking instability or blackouts.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What are the main types of grid-scale energy storage?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>The main types are lithium-ion battery storage (BESS), pumped hydro storage, flow batteries, and compressed air energy storage (CAES). Lithium-ion batteries are currently the most widely deployed due to fast response times and modular installation. Pumped hydro remains the largest by total capacity globally but is limited by geography.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How big is the grid-scale energy storage market?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>The global grid-scale storage market was valued at roughly 40.7 billion dollars in 2024 and is projected to reach approximately 151.2 billion dollars by 2029. Global installations reached about 92 gigawatts and 247 gigawatt-hours in 2025, around 23 percent higher than the previous year. Growth is being driven by falling battery costs, renewable energy expansion, and supportive government policy.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is the future of grid-scale energy storage?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>The future involves combining multiple storage technologies to handle different timescales, from millisecond grid stability to seasonal energy balancing. Artificial intelligence is increasingly used to optimize when systems charge and discharge for maximum efficiency and grid stability. Most grids still fall short of the storage capacity needed for high renewable penetration, meaning continued rapid growth is expected through the rest of the decade.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SHARE ROW -->
+  <div class="share-row">
+    <span class="share-label">Share:</span>
+    <button class="share-btn" onclick="copyLink()">Copy Link</button>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://neearventures.com/blog-2026-06-16-grid-scale-energy-storage.html" target="_blank" class="share-btn">Facebook</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://neearventures.com/blog-2026-06-16-grid-scale-energy-storage.html" target="_blank" class="share-btn">LinkedIn</a>
+    <a href="https://twitter.com/intent/tweet?url=https://neearventures.com/blog-2026-06-16-grid-scale-energy-storage.html" target="_blank" class="share-btn">Twitter / X</a>
+  </div>
+
+  <!-- TAGS ROW -->
+  <div class="tags-row">
+    <span class="tags-label">Topics:</span>
+    <span class="tag">Grid-Scale Energy Storage</span>
+    <span class="tag">Renewable Energy</span>
+    <span class="tag">Battery Storage</span>
+    <span class="tag">BESS</span>
+    <span class="tag">Pumped Hydro</span>
+    <span class="tag">Flow Batteries</span>
+    <span class="tag">Energy Transition</span>
+    <span class="tag">Clean Energy Infrastructure</span>
+  </div>
+
+</div>
+</article>
+</div><!-- /.article-col -->
+
+<!-- TOC SIDEBAR -->
+<aside class="toc-sidebar" aria-label="Table of contents">
+  <div class="toc-box-title">In This Article</div>
+  <ul class="toc-box-list">
+    <li><a href="#what-is-grid-scale-storage">1. What Is Grid-Scale Storage?</a></li>
+    <li><a href="#how-grid-scale-storage-works">2. How Does It Work?</a></li>
+    <li><a href="#grid-scale-storage-technologies">3. Storage Technologies</a></li>
+    <li><a href="#grid-scale-storage-market-size">4. Market Size &amp; Growth</a></li>
+    <li><a href="#whats-next-grid-scale-storage">5. What's Next?</a></li>
+  </ul>
+  <hr class="toc-box-divider">
+  <div class="toc-box-section">FAQs</div>
+  <ul class="toc-box-list">
+    <li><a href="#faq" onclick="openFaq(0);return false;">What is grid-scale storage?</a></li>
+    <li><a href="#faq" onclick="openFaq(1);return false;">Why does it matter for renewables?</a></li>
+    <li><a href="#faq" onclick="openFaq(2);return false;">What are the main technologies?</a></li>
+    <li><a href="#faq" onclick="openFaq(3);return false;">How big is the market?</a></li>
+    <li><a href="#faq" onclick="openFaq(4);return false;">What's the future outlook?</a></li>
+  </ul>
+</aside>
+
+</div><!-- /.content-layout -->
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:arjun@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/NeeArVentures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+</div><!-- /.page-wrap -->
+
+<script>
+/* ─── Copy Link button ─── */
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => btn.textContent = 'Copy Link', 2000);
+  });
+}
+
+/* ─── openFaq(N) ─── */
+function openFaq(index) {
+  var items = document.querySelectorAll('.faq-item');
+  if (!items[index]) return;
+  items.forEach(function(i) { i.classList.remove('open'); i.querySelector('.faq-question').setAttribute('aria-expanded','false'); });
+  items[index].classList.add('open');
+  items[index].querySelector('.faq-question').setAttribute('aria-expanded','true');
+  setTimeout(function() { items[index].scrollIntoView({ behavior:'smooth', block:'center' }); }, 80);
+}
+
+/* ─── FAQ Accordion ─── */
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+/* ─── Mobile TOC Toggle ─── */
+function toggleMobileToc() {
+  const toc = document.getElementById('toc-mobile');
+  const btn = toc.querySelector('.toc-mobile-toggle');
+  const isOpen = toc.classList.contains('open');
+  toc.classList.toggle('open');
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+
+/* ─── TOC Smooth Scroll ─── */
+document.querySelectorAll('.toc-box-list a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var href = a.getAttribute('href');
+    if (href === '#faq') return;
+    var el = document.getElementById(href.replace('#', ''));
+    if (el) {
+      e.preventDefault();
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
