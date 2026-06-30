@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NEEAR VENTURES — SOCIAL MEDIA PACK — Rooftop Solar India</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<style>
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+:root { --bg:#f7f4ef; --bg-alt:#f0ece4; --surface:#fff; --border:#e2d9cc; --navy:#0d1f35; --navy-muted:#1e3a5a; --gold:#9a7a2e; --gold-light:#b8963e; }
+body { background:var(--bg-alt); font-family:'Jost',sans-serif; padding:36px 20px 60px; color:var(--navy); }
+.page-title { text-align:center; font-family:'Cormorant Garamond',serif; font-size:26px; color:var(--navy); margin-bottom:4px; }
+.page-sub { text-align:center; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:8px; font-weight:600; }
+.page-date { text-align:center; font-size:12px; color:var(--navy-muted); margin-bottom:36px; }
+
+.section-label { max-width:680px; margin:0 auto 8px; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--navy-muted); font-weight:600; }
+
+.card { max-width:680px; margin:0 auto 20px; background:var(--surface); border-radius:3px; overflow:hidden; border:1px solid var(--border); position:relative; }
+.card-header { padding:13px 20px; display:flex; align-items:center; gap:10px; }
+.fb .card-header { background:#1877F2; }
+.li .card-header { background:#0A66C2; }
+.tw .card-header { background:#000; border-bottom:1px solid #333; }
+.ig .card-header { background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); }
+.yt .card-header { background:#FF0000; }
+.img-card .card-header { background:var(--navy); }
+.sitemap-card .card-header { background:#16a085; }
+.blog-update-card .card-header { background:#8e44ad; }
+.feat .card-header { background:var(--bg-alt); border-bottom:1px solid var(--border); }
+.platform-icon { font-size:18px; }
+.platform-name { font-size:12px; letter-spacing:2px; text-transform:uppercase; color:white; font-weight:600; }
+.feat .platform-name { color:var(--gold); }
+.platform-type { margin-left:auto; background:rgba(255,255,255,0.18); color:white; font-size:10px; padding:2px 10px; border-radius:20px; letter-spacing:1px; text-transform:uppercase; }
+.feat .platform-type { background:rgba(154,122,46,0.15); color:var(--gold); }
+
+.copy-btn { position:absolute; top:13px; right:20px; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.3); color:white; padding:6px 14px; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; border-radius:3px; font-weight:600; transition:all 0.3s; font-family:'Jost',sans-serif; z-index:10; }
+.copy-btn:hover { background:rgba(255,255,255,0.3); border-color:rgba(255,255,255,0.5); }
+.copy-btn.copied { background:#27ae60; border-color:#27ae60; }
+.feat .copy-btn { background:var(--gold); color:white; border-color:var(--gold); }
+.feat .copy-btn:hover { background:var(--gold-light); border-color:var(--gold-light); }
+
+.summary-strip { background:var(--bg-alt); border-bottom:1px solid var(--border); padding:10px 22px; font-size:11px; color:var(--navy-muted); line-height:1.6; }
+.summary-strip strong { color:var(--navy); }
+
+.philosophy-strip { background:var(--navy); border-bottom:1px solid rgba(154,122,46,0.3); padding:10px 22px; font-size:11px; color:rgba(232,224,208,0.75); line-height:1.6; }
+.philosophy-strip strong { color:#b8963e; }
+
+.card-body { padding:22px; }
+.post-text { font-size:14.5px; line-height:1.82; color:var(--navy); margin-bottom:14px; }
+.post-text strong { color:var(--gold); }
+.post-text .hl { color:var(--navy); font-weight:600; }
+.hashtags { font-size:12px; line-height:2; margin-top:10px; }
+.fb .hashtags { color:#1877F2; }
+.li .hashtags { color:#0A66C2; }
+.tw .hashtags { color:var(--navy-muted); }
+.ig .hashtags { color:#833ab4; }
+.yt .hashtags { color:#FF0000; }
+
+.first-comment-note { background:rgba(24,119,242,0.08); border:1px solid rgba(24,119,242,0.2); border-radius:3px; padding:8px 14px; margin-top:14px; font-size:11px; color:#1877F2; font-weight:600; letter-spacing:0.5px; }
+
+.tweet { border-left:3px solid var(--border); padding:8px 0 8px 14px; margin-bottom:10px; }
+.tweet-header { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:6px; }
+.tweet-num { font-size:10px; color:var(--gold); letter-spacing:2px; text-transform:uppercase; font-weight:600; }
+.tweet-rules { font-size:10px; color:var(--navy-muted); font-style:italic; margin-top:2px; }
+.tweet-copy-btn { flex-shrink:0; background:var(--navy); border:1px solid var(--navy); color:#fff; padding:5px 12px; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; border-radius:3px; font-weight:600; transition:all 0.3s; font-family:'Jost',sans-serif; white-space:nowrap; }
+.tweet-copy-btn:hover { background:var(--navy-light,#162d47); border-color:var(--navy-light,#162d47); }
+.tweet-copy-btn.copied { background:#27ae60; border-color:#27ae60; }
+.tweet-text { font-size:14px; line-height:1.65; color:var(--navy); }
+.tweet-text strong { color:var(--gold); }
+.tweet-char { font-size:10px; color:var(--navy-muted); margin-top:4px; }
+
+.prompt-block { background:var(--bg-alt); border:1px solid var(--border); padding:16px 18px; margin-bottom:12px; }
+.prompt-label { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:6px; }
+.prompt-rules { font-size:10px; color:var(--navy-muted); margin-bottom:8px; font-style:italic; line-height:1.5; }
+.prompt-text { font-size:13px; line-height:1.75; color:var(--navy-muted); font-style:italic; }
+.prompt-text strong { color:var(--navy); font-style:normal; }
+
+.yt-field-block { margin-bottom:4px; }
+.yt-field-header { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:8px; }
+.yt-copy-btn { flex-shrink:0; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.35); color:white; padding:5px 12px; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; border-radius:3px; font-weight:600; transition:all 0.3s; font-family:'Jost',sans-serif; white-space:nowrap; }
+.yt-copy-btn:hover { background:rgba(255,255,255,0.3); }
+.yt-copy-btn.copied { background:#27ae60; border-color:#27ae60; }
+.yt-label { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--navy-muted); font-weight:600; margin-bottom:4px; }
+.yt-rules { font-size:10px; color:var(--navy-muted); font-style:italic; line-height:1.5; }
+.yt-char { font-size:10px; color:var(--navy-muted); margin-top:4px; }
+.yt-content { font-size:14px; line-height:1.7; color:var(--navy); margin-bottom:4px; white-space:pre-wrap; }
+.yt-content strong { color:var(--gold); }
+.yt-divider { border:none; border-top:1px solid var(--border); margin:16px 0; }
+.yt-tag-list { display:flex; flex-direction:column; gap:6px; margin-bottom:14px; }
+.yt-tag-row { display:flex; align-items:center; justify-content:space-between; gap:10px; background:var(--bg-alt); border:1px solid var(--border); padding:7px 12px; border-radius:3px; }
+.yt-tag-text { font-size:13px; color:var(--navy); flex:1; font-family:'Jost',sans-serif; }
+.yt-tag-copy-btn { flex-shrink:0; background:var(--navy); border:1px solid var(--navy); color:white; padding:4px 10px; font-size:9px; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; border-radius:3px; font-weight:600; transition:all 0.3s; font-family:'Jost',sans-serif; white-space:nowrap; }
+.yt-tag-copy-btn:hover { background:var(--navy-light,#162d47); }
+.yt-tag-copy-btn.copied { background:#27ae60; border-color:#27ae60; }
+.yt-meta-strip { display:flex; gap:1.2rem; flex-wrap:wrap; background:var(--navy); padding:10px 14px; margin-bottom:4px; font-size:12px; color:rgba(232,224,208,0.6); border-radius:3px; }
+.yt-meta-strip strong { color:#fff; }
+
+.code-block { font-size:12px; color:var(--navy-muted); line-height:1.7; white-space:pre-wrap; font-family:monospace; background:var(--bg-alt); padding:14px; border-radius:2px; border:1px solid var(--border); position:relative; }
+
+.note-strip { max-width:680px; margin:0 auto; background:var(--navy); padding:14px 18px; font-size:13px; color:rgba(232,224,208,0.7); line-height:1.8; }
+.note-strip strong { color:var(--gold-light); }
+.note-strip code { color:var(--gold-light); font-size:11px; }
+.note-strip ol { padding-left:18px; }
+.note-strip li { margin-bottom:4px; }
+
+.slide-count-note { max-width:680px; margin:0 auto 8px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--gold); padding:8px 14px; font-size:11px; color:var(--navy-muted); line-height:1.6; }
+.slide-count-note strong { color:var(--navy); }
+</style>
+</head>
+<body>
+
+<div class="page-title">Social Media Pack v4.0</div>
+<div class="page-sub">Rooftop Solar in India · June 30, 2026 · blog-2026-06-30-rooftop-solar-india.html</div>
+<div class="page-date">Click COPY buttons for easy paste</div>
+
+<!-- =====================================================================
+   📘 FACEBOOK PAGE POST
+====================================================================== -->
+<div class="section-label">📘 FACEBOOK PAGE POST</div>
+<div class="card fb">
+  <div class="card-header">
+    <span class="platform-icon">📘</span>
+    <span class="platform-name">Facebook</span>
+    <span class="platform-type">Page Post</span>
+    <button class="copy-btn" onclick="copyContent(this, 'fb-content')">Copy</button>
+  </div>
+  <div class="philosophy-strip"><strong>Content philosophy:</strong> Full information, not a teaser. Link goes in the first comment, not the post body.</div>
+  <div class="card-body">
+    <div class="post-text" id="fb-content">
+      <span class="hl">Rooftop solar subsidies in India have gotten more generous than ever — so why is adoption still slower than the targets suggest?</span> 🌞<br><br>
+      It's almost never the panels. It's the layer of paperwork, cash flow timing, and trust sitting on top of them.<br><br>
+      Here's what's actually slowing things down, and how households and businesses are working around it:<br><br>
+      <strong>📌 The subsidy doesn't remove the upfront cost —</strong> PM Surya Ghar offers up to ₹78,000 off, but it's usually disbursed AFTER installation and inspection. You still have to front the full amount first.<br><br>
+      <strong>📌 DISCOM approval is the real bottleneck —</strong> Net metering needs a feasibility study, site inspection, and meter installation. Some states clear this in weeks. Others take months — partly because net metering quietly cuts into DISCOM revenue.<br><br>
+      <strong>📌 Apartments face a structural problem —</strong> Roof ownership and electricity consumption are split across multiple flats, so group net metering policies are still immature in most states.<br><br>
+      <strong>📌 Dust can cut output by up to 25% —</strong> Especially in northern and western India. Regular panel cleaning isn't optional, it's part of the ROI.<br><br>
+      <strong>📌 Not everyone has to own the system —</strong> Under the RESCO model, a developer installs and owns the panels on your roof, and you just pay a lower per-unit tariff. No upfront cost at all. Common for businesses and institutions.<br><br>
+      The honest takeaway: the technology has been ready for years. What's catching up now is the system around it — financing, approvals, and trust in installers.<br><br>
+      Follow the page for more deep dives on India's energy transition 👇
+    </div>
+    <div class="hashtags">#RooftopSolar #RenewableEnergyIndia #SolarIndia #NeeArVentures #StayCurious #CleanEnergy #PMSuryaGhar #SustainableLiving</div>
+    <div class="first-comment-note">📌 FIRST COMMENT: Post the link here for better reach → https://neearventures.com/blog-2026-06-30-rooftop-solar-india.html<br>Add: "Full breakdown of barriers + how the RESCO model works 👆 Drop your thoughts below!"</div>
+  </div>
+</div>
+
+<!-- =====================================================================
+   💼 LINKEDIN INSIGHT POST
+====================================================================== -->
+<div class="section-label">💼 LINKEDIN INSIGHT POST</div>
+<div class="card li">
+  <div class="card-header">
+    <span class="platform-icon">💼</span>
+    <span class="platform-name">LinkedIn</span>
+    <span class="platform-type">Insight Post</span>
+    <button class="copy-btn" onclick="copyContent(this, 'li-content')">Copy</button>
+  </div>
+  <div class="philosophy-strip"><strong>Content philosophy:</strong> Full substance, not a teaser. Link in body, framed as additional reading.</div>
+  <div class="card-body">
+    <div class="post-text" id="li-content">
+      India's rooftop solar subsidy can cover up to ₹78,000 per household — yet adoption still trails the 500GW renewable target by a wide margin.<br><br>
+      The gap isn't technological. It's operational — financing structure, DISCOM execution speed, and installer trust.<br><br>
+      Here's what you need to know:<br><br>
+      → Most subsidy schemes disburse AFTER installation and inspection, not upfront — meaning the consumer still has to front the full system cost first.<br>
+      → Net metering approval is the single biggest delay point. DISCOMs vary widely in turnaround, and some are financially disincentivized from approving it quickly since it reduces revenue from high-paying consumers.<br>
+      → The CAPEX model (self-owned) dominates residential adoption, but commercial and institutional users are increasingly shifting to RESCO — a third party owns the system, the building owner just pays a fixed, below-market tariff.<br>
+      → Apartment buildings remain underserved — group net metering policy is still immature across most Indian states, limiting solar access for anyone who doesn't own an independent rooftop.<br>
+      → Maintenance is not a footnote — dust accumulation alone can reduce panel output by 15-25% without a regular cleaning schedule.<br><br>
+      The real signal here: financing innovation (RESCO, leasing, aggregator-led rollouts) is now doing more to move adoption forward than the subsidy headlines.<br><br>
+      For the full breakdown — including a working schematic of how rooftop systems connect to the grid 👇<br>
+      https://neearventures.com/blog-2026-06-30-rooftop-solar-india.html<br><br>
+      Follow NeeAr Ventures for more on India's energy transition.<br><br>
+      Which of these barriers have you seen first-hand — financing, DISCOM delays, or installer trust?
+    </div>
+    <div class="hashtags">#RenewableEnergy #SolarEnergy #IndiaEnergyTransition #NeeArVentures #Sustainability #CleanTech #EnergyPolicy #ESG</div>
+  </div>
+</div>
+
+<!-- =====================================================================
+   𝕏 TWITTER/X THREAD
+====================================================================== -->
+<div class="section-label">𝕏 TWITTER/X THREAD</div>
+<div class="card tw">
+  <div class="card-header">
+    <span class="platform-icon">𝕏</span>
+    <span class="platform-name">Twitter / X</span>
+    <span class="platform-type">Thread · 4 Tweets</span>
+  </div>
+  <div class="card-body">
+    <div class="tweet">
+      <div class="tweet-header">
+        <div>
+          <div class="tweet-num">Tweet 1 — Hook</div>
+        </div>
+        <button class="tweet-copy-btn" onclick="copyContent(this, 'tw-1')">Copy</button>
+      </div>
+      <div class="tweet-text" id="tw-1">India's rooftop solar subsidy covers up to ₹78,000 per home. Adoption is still nowhere near target.
+
+The bottleneck isn't the panels. It's everything around them. 🧵</div>
+      <div class="tweet-char">~185 chars ✅</div>
+    </div>
+    <div class="tweet">
+      <div class="tweet-header">
+        <div>
+          <div class="tweet-num">Tweet 2</div>
+        </div>
+        <button class="tweet-copy-btn" onclick="copyContent(this, 'tw-2')">Copy</button>
+      </div>
+      <div class="tweet-text" id="tw-2"><strong>Cash flow</strong> — Subsidies pay out AFTER installation, not before. You front the full cost first.<br><br><strong>DISCOM delays</strong> — Net metering approval can take weeks in some states, months in others.<br><br><strong>Revenue conflict</strong> — Net metering quietly cuts DISCOM revenue, so approval isn't always fast-tracked.</div>
+      <div class="tweet-char">~258 chars ✅</div>
+    </div>
+    <div class="tweet">
+      <div class="tweet-header">
+        <div>
+          <div class="tweet-num">Tweet 3</div>
+        </div>
+        <button class="tweet-copy-btn" onclick="copyContent(this, 'tw-3')">Copy</button>
+      </div>
+      <div class="tweet-text" id="tw-3"><strong>Apartments lose out</strong> — group net metering is still policy-immature in most states.<br><br><strong>Dust costs you</strong> — can cut output 15-25% without cleaning.<br><br><strong>RESCO is rising</strong> — a developer owns the system, you just pay a lower per-unit tariff. Zero upfront cost.</div>
+      <div class="tweet-char">~252 chars ✅</div>
+    </div>
+    <div class="tweet">
+      <div class="tweet-header">
+        <div>
+          <div class="tweet-num">Tweet 4 — Wrap-up</div>
+        </div>
+        <button class="tweet-copy-btn" onclick="copyContent(this, 'tw-4')">Copy</button>
+      </div>
+      <div class="tweet-text" id="tw-4">The tech has been ready for years. The financing and approval systems around it are finally catching up.
+
+Follow @NeeArVentures for more on India's energy transition 🧠
+
+👉 Full breakdown: neearventures.com/blog-2026-06-30-rooftop-solar-india.html</div>
+      <div class="tweet-char">~248 chars ✅</div>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================================
+   📸 INSTAGRAM STATIC POST + CAPTION
+====================================================================== -->
+<div class="section-label">📸 INSTAGRAM STATIC POST + CAPTION</div>
+<div class="card ig">
+  <div class="card-header">
+    <span class="platform-icon">📸</span>
+    <span class="platform-name">Instagram</span>
+    <span class="platform-type">Static Post + Caption</span>
+    <button class="copy-btn" onclick="copyContent(this, 'ig-content')">Copy</button>
+  </div>
+  <div class="card-body">
+    <div class="post-text" id="ig-content">
+      ₹78,000 subsidy. Still slow adoption. Here's why. 🎯<br><br>
+      It's not the panels — it's DISCOM approval timelines, upfront cash flow, and a market full of installers people don't fully trust yet. The RESCO model (zero upfront cost, you just pay a lower tariff) is quietly changing that for businesses.<br><br>
+      Follow @neearventures for more like this 🔁<br><br>
+      Which barrier surprised you most — the subsidy timing or the DISCOM delays? Drop it below 👇<br><br>
+      Full article in bio if you want to dig deeper.
+    </div>
+    <div class="hashtags">#RooftopSolar #SolarIndia #NeeArVentures #RenewableEnergy #CleanEnergy</div>
+  </div>
+</div>
+
+<!-- =====================================================================
+   ▶️ YOUTUBE SHORT + COMMUNITY POST
+====================================================================== -->
+<div class="section-label">▶️ YOUTUBE SHORT + COMMUNITY POST</div>
+<div class="card yt">
+  <div class="card-header">
+    <span class="platform-icon">▶️</span>
+    <span class="platform-name">YouTube</span>
+    <span class="platform-type">Short + Community Post</span>
+  </div>
+  <div class="card-body">
+
+    <div class="yt-field-block">
+      <div class="yt-field-header">
+        <div>
+          <div class="yt-label">🎬 Title</div>
+        </div>
+        <button class="yt-copy-btn" onclick="copyContent(this, 'yt-title')">Copy</button>
+      </div>
+      <div class="yt-content" id="yt-title">Why Rooftop Solar Adoption in India Is Still Slow #RooftopSolar #Shorts</div>
+      <div class="yt-char">~71 chars (max 100)</div>
+    </div>
+
+    <hr class="yt-divider"/>
+
+    <div class="yt-field-block">
+      <div class="yt-field-header">
+        <div>
+          <div class="yt-label">📝 Description</div>
+        </div>
+        <button class="yt-copy-btn" onclick="copyContent(this, 'yt-desc')">Copy</button>
+      </div>
+      <div class="yt-content" id="yt-desc">India's rooftop solar subsidy covers up to ₹78,000 — so why is adoption still behind target?
+The real barriers: DISCOM approval delays, upfront cash flow timing, and installer trust.
+Plus how the RESCO model removes the upfront cost entirely.
+
+Full breakdown 👇
+https://neearventures.com/blog-2026-06-30-rooftop-solar-india.html
+
+#RooftopSolar #SolarIndia #NeeArVentures #Shorts #RenewableEnergy</div>
+    </div>
+
+    <hr class="yt-divider"/>
+
+    <div class="yt-label" style="margin-bottom:6px;">🏷️ Tags</div>
+    <div class="yt-rules" style="margin-bottom:12px;">8–12 tags. Mix specific keyword phrases with broad terms.</div>
+
+    <div class="yt-tag-list">
+      <div class="yt-tag-row"><span class="yt-tag-text" id="yt-tag-1">rooftop solar india</span><button class="yt-tag-copy-btn" onclick="copyContent(this,'yt-tag-1')">Copy</button></div>
+      <div class="yt-tag-row"><span class="yt-tag-text" id="yt-tag-2">PM Surya Ghar subsidy</span><button class="yt-tag-copy-btn" onclick="copyContent(this,'yt-tag-2')">Copy</button></div>
+      <div class="yt-tag-row"><span class="yt-tag-text" id="yt-tag-3">net metering india</span><button class="yt-tag-copy-btn" onclick="copyContent(this,'yt-tag-3')">Copy</button></div>
+      <div class="yt-tag-row"><span class="yt-tag-text" id="yt-tag-4">renewable energy india</span><button class="yt-tag-copy-btn" onclick="copyContent(this,'yt-tag-4')">Copy</button></div>
+      <div class="yt-tag-row"><span class="yt-tag-text" id="yt-tag-5">solar energy</span><button class="yt-tag-copy-btn" onclick="copyContent(this,'yt-tag-5')">Copy</button></div>
+      <div class="yt-tag-row"><span class="yt-tag-text" id="yt-tag-6">neear ventures</span><button class="yt-tag-copy-btn" onclick="copyContent(this,'yt-tag-6')">Copy</button></div>
+      <div class="yt-tag-row"><span class="yt-tag-text" id="yt-tag-7">shorts</span><button class="yt-tag-copy-btn" onclick="copyContent(this,'yt-tag-7')">Copy</button></div>
+      <div class="yt-tag-row"><span class="yt-tag-text" id="yt-tag-8">stay curious</span><button class="yt-tag-copy-btn" onclick="copyContent(this,'yt-tag-8')">Copy</button></div>
+      <div class="yt-tag-row"><span class="yt-tag-text" id="yt-tag-9">education</span><button class="yt-tag-copy-btn" onclick="copyContent(this,'yt-tag-9')">Copy</button></div>
+      <div class="yt-tag-row"><span class="yt-tag-text" id="yt-tag-10">RESCO model solar</span><button class="yt-tag-copy-btn" onclick="copyContent(this,'yt-tag-10')">Copy</button></div>
+    </div>
+
+    <div class="yt-meta-strip">
+      <span>📂 Category: <strong>Education</strong></span>
+      <span>👁️ Visibility: <strong>Public</strong></span>
+      <span>👶 Audience: <strong>Not made for kids</strong></span>
+    </div>
+
+    <hr class="yt-divider"/>
+
+    <div class="yt-field-block">
+      <div class="yt-field-header">
+        <div>
+          <div class="yt-label">📌 Community Post</div>
+        </div>
+        <button class="yt-copy-btn" onclick="copyContent(this, 'yt-community')">Copy</button>
+      </div>
+      <div class="yt-content" id="yt-community">🌞 Why Rooftop Solar Adoption in India Is Still Slow
+
+Subsidies have never been more generous — so what's actually holding adoption back?
+
+✅ Subsidy disbursed AFTER installation, not before — you front the cost first
+✅ DISCOM net metering approval can take weeks in some states, months in others
+✅ Apartment buildings still underserved — group net metering policy is immature
+✅ Dust can cut panel output by 15-25% without regular cleaning
+✅ RESCO model now lets businesses skip the upfront cost entirely
+
+The tech has been ready for years — the financing and approval systems are finally catching up.
+
+Full article for the complete breakdown + a working schematic 👇
+https://neearventures.com/blog-2026-06-30-rooftop-solar-india.html
+
+Which barrier do you think matters most — financing, DISCOM speed, or installer trust? Let me know in the comments!</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =====================================================================
+   🎨 IMAGE + VIDEO PROMPTS
+====================================================================== -->
+<div class="section-label">🎨 IMAGE + VIDEO PROMPTS</div>
+
+<div class="slide-count-note">
+  <strong>Reel slides:</strong> 5 slides used here (hook + 3 insights + wrap-up). Mid-article diagram prompt omitted — the blog post uses an inline SVG schematic instead of a raster diagram.
+</div>
+
+<div class="card img-card">
+  <div class="card-header">
+    <span class="platform-icon">🎨</span>
+    <span class="platform-name">Image + Video Prompts</span>
+    <span class="platform-type">All Formats</span>
+  </div>
+  <div class="card-body">
+
+    <!-- LANDSCAPE OG IMAGE -->
+    <div class="prompt-block">
+      <div class="prompt-label">🖼️ Landscape Image — OG / Facebook / LinkedIn / Twitter (16:9)</div>
+      <div class="prompt-rules">
+        Export as JPG 80% → 1200×630 px → rename <code>blog-2026-06-30-rooftop-solar-india-og.jpg</code> → upload /images/<br>
+        Also export as JPG 80% → 400×210 px → rename <code>blog-2026-06-30-rooftop-solar-india-thumb.jpg</code> → upload /images/<br>
+        Also export as JPG → convert to WebP at squoosh.app (80–85%) → 800×420 px → rename <code>blog-2026-06-30-rooftop-solar-india-hero.webp</code> → upload /images/
+      </div>
+      <button class="copy-btn" onclick="copyContent(this, 'img-landscape')" style="position:relative; float:right; top:-70px; background:rgba(13,31,53,0.8);">Copy</button>
+      <div class="prompt-text" id="img-landscape">Warm cream off-white background (#f7f4ef), 16:9 landscape. Central visual: a minimal navy line-art illustration of an Indian residential rooftop fitted with solar panels under a bright sun, with a faint gold glow radiating from the panels. Bold navy Cormorant Garamond serif headline: "Rooftop Solar in India." Below it, italic gold (#9a7a2e) Cormorant Garamond subtext: "Barriers and How It's Actually Implemented." Mood: premium, editorial, intellectual, calm confidence. Bottom left corner empty — space for logo. No website URL in image.</div>
+    </div>
+
+    <!-- REEL SLIDES -->
+    <div class="prompt-block">
+      <div class="prompt-label">📱 Slide 1 — Hook (9:16 Vertical)</div>
+      <button class="copy-btn" onclick="copyContent(this, 'img-slide1')" style="position:relative; float:right; top:-50px; background:rgba(13,31,53,0.8);">Copy</button>
+      <div class="prompt-text" id="img-slide1">Warm cream background (#f7f4ef), 9:16 vertical. Minimal navy line-art of a rooftop solar panel with a small gold rupee symbol beside it. Large bold navy Cormorant Garamond serif text: "₹78,000 subsidy. Still slow adoption." Below it, italic gold (#9a7a2e) Cormorant Garamond: "Here's what's actually in the way." Thin gold divider line. Bottom left corner empty — space for logo.</div>
+    </div>
+
+    <div class="prompt-block">
+      <div class="prompt-label">📱 Slide 2 — Key Point (9:16 Vertical)</div>
+      <button class="copy-btn" onclick="copyContent(this, 'img-slide2')" style="position:relative; float:right; top:-50px; background:rgba(13,31,53,0.8);">Copy</button>
+      <div class="prompt-text" id="img-slide2">Warm cream background (#f7f4ef), 9:16 vertical. Small navy uppercase label at top: "BARRIER 1." Large centered text: "Subsidies pay out AFTER installation — not before." Gold (#9a7a2e) highlight on "AFTER installation." Minimal icon of an upside-down hourglass in navy line-art. Bottom left corner empty — space for logo.</div>
+    </div>
+
+    <div class="prompt-block">
+      <div class="prompt-label">📱 Slide 3 — Key Point (9:16 Vertical)</div>
+      <button class="copy-btn" onclick="copyContent(this, 'img-slide3')" style="position:relative; float:right; top:-50px; background:rgba(13,31,53,0.8);">Copy</button>
+      <div class="prompt-text" id="img-slide3">Warm cream background (#f7f4ef), 9:16 vertical. Small navy uppercase label at top: "BARRIER 2." Bold stat-card layout: large gold (#9a7a2e) number "Weeks to Months" with navy caption below: "How long DISCOM net metering approval can take, depending on the state." Clean minimal icon of a meter/gauge in navy line-art. Bottom left corner empty — space for logo.</div>
+    </div>
+
+    <div class="prompt-block">
+      <div class="prompt-label">📱 Slide 4 — Key Point (9:16 Vertical)</div>
+      <button class="copy-btn" onclick="copyContent(this, 'img-slide4')" style="position:relative; float:right; top:-50px; background:rgba(13,31,53,0.8);">Copy</button>
+      <div class="prompt-text" id="img-slide4">Warm cream background (#f7f4ef), 9:16 vertical. Small navy uppercase label at top: "THE WORKAROUND." Large centered text: "RESCO model: zero upfront cost. A developer owns the system, you just pay a lower tariff." Gold (#9a7a2e) highlight on "zero upfront cost." Minimal icon of a handshake or building in navy line-art. Bottom left corner empty — space for logo.</div>
+    </div>
+
+    <!-- LAST SLIDE -->
+    <div class="prompt-block">
+      <div class="prompt-label">📱 Last Slide — Wrap-up + Follow CTA (9:16 Vertical)</div>
+      <button class="copy-btn" onclick="copyContent(this, 'img-slide-last')" style="position:relative; float:right; top:-50px; background:rgba(13,31,53,0.8);">Copy</button>
+      <div class="prompt-text" id="img-slide-last">Warm cream background (#f7f4ef), 9:16 vertical. Upper section: a minimal navy line-art sun icon with soft gold glow. Lower section: bold navy Cormorant Garamond: "The tech was ready years ago. The systems around it are finally catching up." Below it, italic gold (#9a7a2e) Cormorant Garamond: "Stay Curious. Explore What's Next." Below that, small navy Jost text: "Follow @NeeArVentures for more." Thin gold divider between illustration and text. Bottom left corner empty — space for logo.</div>
+    </div>
+
+    <!-- VOICEOVER -->
+    <div class="prompt-block">
+      <div class="prompt-label">🎙️ Voiceover (2 sentences, ~12–15 seconds)</div>
+      <button class="copy-btn" onclick="copyContent(this, 'voiceover')" style="position:relative; float:right; top:-50px; background:rgba(13,31,53,0.8);">Copy</button>
+      <div class="prompt-text" id="voiceover">"India's rooftop solar subsidy covers up to seventy-eight thousand rupees — but adoption is still nowhere near target. In this Short, you'll see the real barriers, from DISCOM delays to financing, and the RESCO model that's helping businesses skip them entirely."</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =====================================================================
+   🗺️ SITEMAP.XML UPDATE
+====================================================================== -->
+<div class="section-label">🗺️ SITEMAP.XML UPDATE — Add to sitemap.xml</div>
+<div class="card sitemap-card">
+  <div class="card-header">
+    <span class="platform-icon">🗺️</span>
+    <span class="platform-name">Sitemap.xml Update</span>
+    <span class="platform-type">Add New Post + Update blog.html</span>
+    <button class="copy-btn" onclick="copyContent(this, 'sitemap-new-post')">Copy New Post</button>
+  </div>
+  <div class="card-body">
+
+    <div style="margin-bottom:20px;">
+      <div style="font-size:11px; color:var(--navy-muted); margin-bottom:10px; font-weight:600; letter-spacing:1px; text-transform:uppercase;">Step 1: Add New Blog Post (at TOP of "Blog Posts" section)</div>
+      <div class="code-block" id="sitemap-new-post">&lt;!-- Blog Posts (sorted by date, newest first) --&gt;
+&lt;url&gt;
+  &lt;loc&gt;https://neearventures.com/blog-2026-06-30-rooftop-solar-india.html&lt;/loc&gt;
+  &lt;lastmod&gt;2026-06-30&lt;/lastmod&gt;
+  &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+  &lt;priority&gt;0.8&lt;/priority&gt;
+&lt;/url&gt;
+
+&lt;!-- ... existing posts below ... --&gt;</div>
+    </div>
+
+    <div>
+      <div style="font-size:11px; color:var(--navy-muted); margin-bottom:10px; font-weight:600; letter-spacing:1px; text-transform:uppercase;">Step 2: Update blog.html Entry (find and update lastmod)</div>
+      <button class="copy-btn" onclick="copyContent(this, 'sitemap-blog-html')" style="position:relative; float:right; top:-35px; background:rgba(22,160,133,0.8);">Copy</button>
+      <div class="code-block" id="sitemap-blog-html">&lt;url&gt;
+  &lt;loc&gt;https://neearventures.com/blog.html&lt;/loc&gt;
+  &lt;lastmod&gt;2026-06-30&lt;/lastmod&gt;
+  &lt;changefreq&gt;daily&lt;/changefreq&gt;
+  &lt;priority&gt;0.9&lt;/priority&gt;
+&lt;/url&gt;</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =====================================================================
+   📋 BLOG.HTML — POSTS ARRAY ENTRY
+====================================================================== -->
+<div class="section-label">📋 BLOG.HTML — POSTS ARRAY ENTRY</div>
+<div class="card blog-update-card">
+  <div class="card-header">
+    <span class="platform-icon">📋</span>
+    <span class="platform-name">blog.html Posts Array</span>
+    <span class="platform-type">Add at TOP of posts[]</span>
+    <button class="copy-btn" onclick="copyContent(this, 'posts-array')">Copy</button>
+  </div>
+  <div class="summary-strip"><strong>Note:</strong> id and icon below are placeholders — confirm actual next post ID and icon rotation against the live posts array before publishing (last confirmed: Post 31, icon ◇, energy category).</div>
+  <div class="card-body">
+    <div class="code-block" id="posts-array">{ id: 32, title: "Rooftop Solar in India: Barriers and How It's Actually Implemented", excerpt: "The real barriers to rooftop solar adoption in India — and the financing models households and businesses actually use to work around them.", category: "science", date: "June 30, 2026", read: "9 min read", icon: "◉", file: "blog-2026-06-30-rooftop-solar-india.html", image: "images/blog-2026-06-30-rooftop-solar-india-thumb.jpg" },</div>
+    <div style="margin-top:12px; font-size:11px; color:var(--navy-muted); line-height:1.7;">
+      <strong style="color:var(--navy);">Categories:</strong> income | business | strategy | digital | science | finance | updates | ai-series<br>
+      <strong style="color:var(--navy);">Icons (rotate):</strong> ◈ ◇ ◉ ◆ ❖ — Post 31 used ◇, so next in rotation is ◉<br>
+      <strong style="color:var(--navy);">Important:</strong> Use THUMBNAIL (.jpg, 400×210px) for the image field — not the hero WebP or OG image
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================================
+   ⭐ BLOG.HTML — FEATURED BLOCK
+====================================================================== -->
+<div class="section-label">⭐ BLOG.HTML — FEATURED BLOCK</div>
+<div class="card feat">
+  <div class="card-header">
+    <span class="platform-icon">⭐</span>
+    <span class="platform-name">blog.html Featured Block</span>
+    <span class="platform-type">Replace Existing</span>
+    <button class="copy-btn" onclick="copyContent(this, 'featured-block')">Copy</button>
+  </div>
+  <div class="card-body">
+    <div class="code-block" id="featured-block">&lt;a class="featured-post" href="blog-2026-06-30-rooftop-solar-india.html"&gt;
+  &lt;div class="featured-img"&gt;
+    &lt;img src="images/blog-2026-06-30-rooftop-solar-india-og.jpg"
+         alt="Rooftop Solar in India: Barriers and How It's Actually Implemented"
+         loading="lazy"
+         width="1200"
+         height="630"
+         onerror="this.style.display='none'" /&gt;
+    &lt;div class="featured-img-icon"&gt;◉&lt;/div&gt;
+    &lt;div class="featured-series-badge"&gt;Science & Tech · Energy&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="featured-body"&gt;
+    &lt;div class="featured-label"&gt;✦ Latest Post&lt;/div&gt;
+    &lt;div class="featured-title"&gt;Rooftop Solar in India: Barriers and How It's Actually Implemented&lt;/div&gt;
+    &lt;p class="featured-excerpt"&gt;The real barriers to rooftop solar adoption in India — and the financing models households and businesses actually use to work around them.&lt;/p&gt;
+    &lt;div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;"&gt;
+      &lt;span style="font-size:0.75rem;color:var(--navy-muted);"&gt;June 30, 2026&lt;/span&gt;
+      &lt;span style="font-size:0.75rem;color:var(--navy-muted);"&gt;· 9 min read&lt;/span&gt;
+      &lt;span style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;"&gt;Renewable Energy&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span class="read-more-link"&gt;Read Full Article →&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/a&gt;</div>
+  </div>
+</div>
+
+<!-- =====================================================================
+   📌 GITHUB UPLOAD CHECKLIST
+====================================================================== -->
+<div class="note-strip">
+  <strong>GitHub Upload Checklist — Rooftop Solar India Post:</strong>
+  <ol>
+    <li>Generate landscape image from the OG prompt above → open in Canva</li>
+    <li>Export as <strong>JPG 80%</strong> → resize to <strong>1200×630 px</strong> → rename <code>blog-2026-06-30-rooftop-solar-india-og.jpg</code> → upload to <code>/images/</code></li>
+    <li>Export same Canva file as <strong>JPG 80%</strong> → resize to <strong>400×210 px</strong> → rename <code>blog-2026-06-30-rooftop-solar-india-thumb.jpg</code> → upload to <code>/images/</code></li>
+    <li>Export same Canva file as <strong>JPG</strong> → resize to <strong>800×420 px</strong> → convert to WebP at <strong>squoosh.app</strong> → rename <code>blog-2026-06-30-rooftop-solar-india-hero.webp</code> → upload to <code>/images/</code></li>
+    <li><strong>No separate diagram file needed</strong> — the blog post uses an inline SVG schematic, not a raster image</li>
+    <li>Upload <code>blog-2026-06-30-rooftop-solar-india.html</code> to repo root</li>
+    <li>Edit <code>blog.html</code> → add posts array entry (confirm real next ID first) at <strong>TOP</strong> of posts[] → update Featured block → commit</li>
+    <li>Edit <code>sitemap.xml</code> → add new post at TOP → update blog.html lastmod → commit</li>
+    <li>Schedule all social posts for publish date and time</li>
+    <li>For Facebook: schedule post without link → post link as <strong>first comment</strong> immediately after publish</li>
+    <li>After FB/LinkedIn links are shared → use <strong>Facebook Sharing Debugger</strong> + <strong>LinkedIn Post Inspector</strong> to refresh OG cache</li>
+    <li>Run post-publish AEO validation: Google Rich Results Test → verify canonical → verify FAQ schema → PageSpeed Insights</li>
+    <li>✅ <strong>Confirm true next post ID against live blog.html before publishing — placeholder used here is 32</strong></li>
+  </ol>
+</div>
+
+<script>
+function copyContent(button, elementId) {
+  const element = document.getElementById(elementId);
+  const text = element.innerText || element.textContent;
+  const originalText = button.textContent;
+
+  function onSuccess() {
+    button.textContent = 'Copied ✓';
+    button.classList.add('copied');
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.classList.remove('copied');
+    }, 2000);
+  }
+
+  function fallbackCopy(str) {
+    const ta = document.createElement('textarea');
+    ta.value = str;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none;';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    ta.setSelectionRange(0, 99999);
+    try {
+      const ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      if (ok) onSuccess();
+      else alert('Copy failed. Please long-press and copy manually.');
+    } catch(e) {
+      document.body.removeChild(ta);
+      alert('Copy failed. Please long-press and copy manually.');
+    }
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(onSuccess).catch(() => fallbackCopy(text));
+  } else {
+    fallbackCopy(text);
+  }
+}
+</script>
+
+</body>
+</html>
