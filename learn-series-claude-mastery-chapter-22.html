@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- FAVICONS -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- CANONICAL TAG -->
+<link rel="canonical" href="https://neearventures.com/learn-series-claude-mastery-chapter-22.html">
+
+<!-- TITLE + META DESCRIPTION -->
+<title>Chapter 22: Project Management & Planning — Claude Mastery — NeeAr Ventures</title>
+<meta name="description" content="Use Claude to scope projects properly, build dependency-based timelines, surface risks early, and write stakeholder updates for the right audience.">
+
+<!-- OPEN GRAPH + TWITTER TAGS -->
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/learn-series-claude-mastery-chapter-22.html" />
+<meta property="og:title"        content="Chapter 22: Project Management & Planning — Claude Mastery — NeeAr Ventures" />
+<meta property="og:description"  content="Use Claude to scope projects properly, build dependency-based timelines, surface risks early, and write stakeholder updates for the right audience." />
+<meta property="og:image"        content="https://neearventures.com/images/learn-series-claude-mastery-chapter-22-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@NeeArVentures" />
+<meta name="twitter:title"       content="Chapter 22: Project Management & Planning — Claude Mastery — NeeAr Ventures" />
+<meta name="twitter:description" content="Use Claude to scope projects properly, build dependency-based timelines, surface risks early, and write stakeholder updates for the right audience." />
+<meta name="twitter:image"       content="https://neearventures.com/images/learn-series-claude-mastery-chapter-22-og.jpg" />
+
+<!-- LEARNINGRESOURCE SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Chapter 22: Project Management & Planning",
+  "headline": "Chapter 22: Project Management & Planning",
+  "description": "Use Claude to scope projects properly, build dependency-based timelines, surface risks early, and write stakeholder updates for the right audience.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://neearventures.com/images/learn-series-claude-mastery-chapter-22-og.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "learningResourceType": "Chapter",
+  "educationalLevel": "Advanced",
+  "teaches": "How to use Claude for project scoping, dependency-based timeline development, risk identification, pressure-testing plan assumptions, and audience-specific stakeholder communication.",
+  "datePublished": "2026-07-03",
+  "dateModified": "2026-07-03",
+  "author": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures Editorial",
+    "url": "https://neearventures.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://neearventures.com/logo.png"
+    }
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Claude Mastery",
+    "url": "https://neearventures.com/learn.html#claude-mastery"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".direct-answer", ".article-lead", "h2"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Project Management with AI"
+  },
+  "mentions": [
+    { "@type": "Thing", "name": "Project Scoping" },
+    { "@type": "Thing", "name": "Dependency Mapping" },
+    { "@type": "Thing", "name": "Risk Register" },
+    { "@type": "Thing", "name": "Stakeholder Communication" },
+    { "@type": "Thing", "name": "Devil's Advocate Prompting" }
+  ],
+  "keywords": "project planning with Claude, project scoping, timeline development, risk management AI, stakeholder communication, project management AI",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neearventures.com/learn-series-claude-mastery-chapter-22.html"
+  }
+}
+</script>
+
+<!-- BREADCRUMBLIST SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://neearventures.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Learn With Us",
+      "item": "https://neearventures.com/learn.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Chapter 22: Project Management & Planning",
+      "item": "https://neearventures.com/learn-series-claude-mastery-chapter-22.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQPAGE SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How can Claude help scope a project before building a timeline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude can force scope clarity by asking the questions a rushed kickoff meeting typically skips: what's genuinely being requested, which interpretations of that request would lead to different projects, and what remains undefined. Giving Claude the one-sentence ask, who's requesting it, and known constraints produces a draft charter that can be confirmed with stakeholders before any timeline work begins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you build a project timeline based on dependencies instead of a deadline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Map the dependency relationships between workstreams first — which tasks block which others, what can run in parallel, and where the critical path likely runs — before adding any dates. Only after that map exists should real constraints like team availability and the hard deadline be layered in, with an explicit instruction to flag anywhere the deadline looks unrealistic rather than quietly compressing the schedule to fit it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Claude help identify project risks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude can generate a project-specific risk list of 8-10 realistic risks, each rated for likelihood and impact, paired with one concrete mitigation and one early warning sign. The early warning sign is what most risk registers skip, and it's what turns a static compliance document into something that can actually be monitored as the project progresses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can Claude help write stakeholder updates for different audiences?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The same weekly status can be turned into three distinct versions from a single set of bullet points: a 3-4 sentence executive summary that flags only decisions leadership needs to make, a detailed action-oriented team update with named owners and blockers, and a cross-functional FYI that explains what changed and why it matters without extra internal detail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the devil's advocate prompting technique for project planning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's a prompting pattern where Claude is deliberately asked to argue against a plan rather than validate it — identifying specific assumptions that, if wrong, would break the timeline or scope. This surfaces risks the planner didn't consider, which is typically more valuable than confirming risks that were already known."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:          #f7f4ef;
+  --bg-alt:      #f0ece4;
+  --surface:     #ffffff;
+  --border:      #e2d9cc;
+  --navy:        #0d1f35;
+  --navy-light:  #162d47;
+  --navy-muted:  #1e3a5a;
+  --gold:        #9a7a2e;
+  --gold-light:  #b8963e;
+  --gold-pale:   rgba(154,122,46,0.1);
+}
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* CHAPTER HERO */
+.chapter-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: clip; text-align: center; }
+.chapter-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.chapter-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; }
+.chapter-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem; }
+.chapter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; color: var(--navy); line-height: 1.15; margin-bottom: 0.8rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.chapter-subtitle { font-size: 1.05rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.chapter-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+/* CONTENT LAYOUT — two-column: article + TOC sidebar */
+.content-layout { display: grid; grid-template-columns: 1fr 260px; grid-template-areas: "article toc"; gap: 0; max-width: 1200px; margin: 0 auto; align-items: start; }
+.article-col { grid-area: article; min-width: 0; order: 1; }
+.article-col .article-wrap { max-width: 760px; margin: 0; padding: 4rem 4vw 6rem; }
+
+.article-lead { font-size: 1.05rem; line-height: 1.9; color: var(--navy); margin-bottom: 2.5rem; padding-left: 1.2rem; border-left: 3px solid var(--gold); font-weight: 400; }
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p strong { color: var(--navy); font-weight: 600; }
+
+/* DIRECT ANSWER BLOCK (AEO) */
+.direct-answer { background: #0d1f35; padding: 1.6rem 1.8rem; margin: 1.8rem 0 2.2rem; border-left: 4px solid #9a7a2e; }
+.direct-answer .da-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: #9a7a2e; font-weight: 600; margin-bottom: 0.7rem; }
+.direct-answer p { font-size: 0.92rem; color: rgba(232,224,208,0.9); line-height: 1.75; margin: 0; }
+.direct-answer p strong { color: #9a7a2e; }
+
+/* HEADINGS */
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--navy); margin: 3.5rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.8rem; scroll-margin-top: 90px; }
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.7rem; scroll-margin-top: 90px; }
+h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin: 1.6rem 0 0.6rem; }
+.num-badge { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: var(--navy); color: #fff; border-radius: 50%; font-size: 0.82rem; font-family: 'Jost', sans-serif; font-weight: 500; flex-shrink: 0; }
+
+ul, ol { margin-left: 1.5rem; margin-bottom: 1.4rem; }
+li { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 0.5rem; }
+
+/* CODE / PROMPT BLOCKS */
+.code-block { background: var(--navy); color: #e8e0d0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.7; overflow-x: auto; border-radius: 2px; white-space: pre-wrap; }
+.code-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 1.6rem 0 0.6rem; }
+
+/* INSIGHT CARD */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.4rem 0 1.8rem; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0; line-height: 1.7; }
+
+/* TIP ROW */
+.tip-row { display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--border); padding: 1.1rem 1.3rem; margin: 1.4rem 0; align-items: flex-start; }
+.tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.tip-row p { font-size: 0.88rem; margin: 0; color: var(--navy-muted); }
+.tip-row strong { color: var(--navy); }
+
+/* CONTENT CARD */
+.content-card { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 1.2rem 0; transition: box-shadow 0.3s; }
+.content-card:hover { box-shadow: 0 2px 16px rgba(154,122,46,0.1); }
+.content-card .cc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--navy); font-weight: 600; margin-bottom: 0.5rem; }
+.content-card .cc-meta { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); padding: 0.15rem 0.6rem; font-weight: 600; display: inline-block; margin-bottom: 0.6rem; }
+.content-card p { font-size: 0.87rem; color: var(--navy-muted); margin: 0; line-height: 1.65; }
+
+/* AUDIENCE GRID — NEW IN CH 22 */
+/* Three-column card grid contrasting how the same update is reshaped per audience */
+.audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.6rem 0 2.2rem; }
+.audience-card { background: var(--surface); border: 1px solid var(--border); padding: 1.3rem 1.3rem; position: relative; }
+.audience-card .ac-icon { font-size: 1.3rem; margin-bottom: 0.6rem; }
+.audience-card .ac-title { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
+.audience-card .ac-desc { font-size: 0.82rem; color: var(--navy-muted); line-height: 1.6; margin-bottom: 0.7rem; }
+.audience-card .ac-tag { font-size: 0.64rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.audience-card:nth-child(1) { border-top: 4px solid var(--navy); }
+.audience-card:nth-child(2) { border-top: 4px solid var(--gold); }
+.audience-card:nth-child(3) { border-top: 4px solid var(--navy-muted); }
+
+/* MISTAKE LIST */
+.mistake-list { margin: 1.6rem 0 2.2rem; }
+.mistake-list-item { display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #c0392b; padding: 1rem 1.3rem; margin-bottom: 0.7rem; align-items: flex-start; }
+.mistake-list-item .mli-icon { font-size: 1rem; color: #c0392b; flex-shrink: 0; margin-top: 2px; }
+.mistake-list-item p { font-size: 0.88rem; margin: 0; color: var(--navy-muted); line-height: 1.65; }
+.mistake-list-item p strong { color: var(--navy); }
+
+/* ASSIGNMENT BOX */
+.assignment-box { background: var(--surface); border: 2px solid var(--gold); padding: 1.8rem 2rem; margin: 2.5rem 0; }
+.assignment-box .box-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--navy); font-weight: 600; margin-bottom: 1rem; }
+.assignment-box h4 { margin-top: 1.2rem; }
+.assignment-box p { font-size: 0.9rem; margin-bottom: 0.8rem; }
+
+/* TAKEAWAYS */
+.takeaways { background: var(--bg-alt); padding: 2rem 2.5rem; margin: 3rem 0; border-top: 3px solid var(--gold); }
+.takeaways-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--navy); font-weight: 600; margin-bottom: 1.2rem; text-align: center; }
+.takeaways ul { list-style: none; padding: 0; margin: 0; margin-left: 0; }
+.takeaways li { padding-left: 2rem; position: relative; margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.7; }
+.takeaways li:before { content: '✅'; position: absolute; left: 0; color: var(--gold); }
+
+/* SECTION ORNAMENT */
+.section-ornament { text-align: center; color: var(--gold); opacity: 0.4; letter-spacing: 12px; font-size: 0.9rem; margin: 3rem 0; }
+
+/* FAQ SECTION */
+.faq-section { margin: 3.5rem 0 2rem; }
+.faq-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 1.4rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--border); }
+.faq-item { border: 1px solid var(--border); margin-bottom: 0.5rem; }
+.faq-question { width: 100%; background: var(--surface); border: none; padding: 1rem 1.4rem; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-family: 'Jost', sans-serif; font-size: 0.92rem; font-weight: 500; color: var(--navy); line-height: 1.5; transition: background 0.2s; }
+.faq-question:hover { background: var(--bg-alt); }
+.faq-icon { font-size: 1.2rem; color: var(--gold); flex-shrink: 0; font-weight: 300; transition: transform 0.3s; }
+.faq-item.open .faq-question { background: var(--bg-alt); }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-item.open .faq-answer { max-height: 400px; }
+.faq-answer p { padding: 0.9rem 1.4rem 1.1rem; font-size: 0.9rem; color: var(--navy-muted); line-height: 1.8; margin: 0; border-top: 1px solid var(--border); }
+
+/* TOC SIDEBAR */
+.toc-sidebar { grid-area: toc; position: sticky; top: 110px; align-self: start; padding: 1.6rem; border: 1px solid var(--border); background: var(--surface); margin: 2.5rem 1.6rem 0 0; order: 2; }
+.toc-box-title { font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border); }
+.toc-box-section { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy-muted); font-weight: 600; margin: 1rem 0 0.4rem; }
+.toc-box-list { list-style: none; padding: 0; margin: 0 0 0.4rem; }
+.toc-box-list li { margin: 0; }
+.toc-box-list a { display: block; font-size: 0.8rem; color: var(--navy-muted); text-decoration: none; padding: 0.32rem 0 0.32rem 0.7rem; border-left: 2px solid transparent; line-height: 1.4; transition: color 0.2s, border-color 0.2s; }
+.toc-box-list a:hover, .toc-box-list a.active { color: var(--gold); border-left-color: var(--gold); }
+.toc-box-divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+
+/* PROGRESS WIDGET (sidebar) */
+.progress-widget { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.progress-widget-label { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy-muted); font-weight: 600; margin-bottom: 0.6rem; }
+.progress-track { width: 100%; height: 6px; background: var(--bg-alt); border: 1px solid var(--border); overflow: hidden; }
+.progress-fill { height: 100%; background: var(--gold); width: 73%; }
+.progress-percent { font-size: 0.72rem; color: var(--gold); font-weight: 600; margin-top: 0.5rem; }
+
+/* SERIES CTA (sidebar) */
+.series-cta-box { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.series-cta-title { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.6rem; line-height: 1.4; }
+.series-cta-btn { display: block; text-align: center; background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.5rem 0.8rem; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; font-weight: 500; }
+.series-cta-btn:hover { background: var(--gold); color: #fff; }
+
+/* MOBILE TOC */
+.toc-mobile { display: none; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--gold); margin: 0; }
+.toc-mobile-toggle { width: 100%; background: none; border: none; padding: 0.9rem 1.2rem; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-family: 'Jost', sans-serif; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+.toc-mobile-toggle-icon { font-size: 1rem; color: var(--gold); transition: transform 0.3s; flex-shrink: 0; }
+.toc-mobile.open .toc-mobile-toggle-icon { transform: rotate(45deg); }
+.toc-mobile-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.toc-mobile.open .toc-mobile-body { max-height: 600px; }
+.toc-mobile-body .toc-list { list-style: none; padding: 0.4rem 1.2rem 1rem; border-top: 1px solid var(--border); }
+.toc-mobile-body .toc-list a { display: block; font-size: 0.85rem; color: var(--navy-muted); text-decoration: none; padding: 0.4rem 0 0.4rem 0.7rem; }
+.toc-mobile-progress { height: 3px; background: var(--bg-alt); }
+.toc-mobile-progress-bar { height: 100%; background: var(--gold); width: 0%; }
+
+/* NAVIGATION FOOTER (chapter nav) */
+.chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 2.5rem 0; border-top: 2px solid var(--border); margin-top: 3rem; flex-wrap: wrap; }
+.nav-btn { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--navy); padding: 1rem 1.5rem; border: 1px solid var(--border); background: var(--surface); transition: all 0.3s; flex: 1; min-width: 200px; }
+.nav-btn:hover { border-color: var(--gold); box-shadow: 0 2px 12px rgba(154,122,46,0.1); }
+.nav-btn.prev { justify-content: flex-start; }
+.nav-btn.next { justify-content: flex-end; }
+.nav-btn .nav-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.nav-btn .nav-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; }
+.nav-center { text-align: center; flex: 0 0 auto; }
+.nav-center a { color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+.nav-center a:hover { color: var(--gold-light); }
+
+/* FOOTER */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+@media (max-width: 900px) {
+  .content-layout { display: block; }
+  .toc-sidebar { display: none; }
+  .toc-mobile { display: block; }
+  .article-col .article-wrap { padding: 2.5rem 4vw 5rem; }
+  .audience-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .chapter-nav { flex-direction: column; }
+  .nav-btn { width: 100%; }
+  footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="learn.html" class="active">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="chapter-hero">
+  <a href="learn.html#claude-mastery" class="back-link">← Back to Claude Mastery</a>
+  <div class="chapter-label">Claude Mastery · Chapter 22 of 30</div>
+  <div class="chapter-number">22</div>
+  <h1 class="chapter-title">Project Management & Planning</h1>
+  <p class="chapter-subtitle">Turn Ambiguity Into a Plan You Can Execute</p>
+  <div class="chapter-meta">
+    <span>⏱️ 13 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>📊 Advanced</span>
+    <span class="meta-dot">◆</span>
+    <span>🎯 Project Management</span>
+  </div>
+  <div class="divider-line"></div>
+</div>
+
+<main>
+<div class="content-layout">
+
+<div class="article-col">
+
+<!-- MOBILE TOC -->
+<div class="toc-mobile" id="toc-mobile">
+  <button class="toc-mobile-toggle" onclick="toggleMobileToc()" aria-expanded="false" aria-controls="toc-mobile-body">
+    <span>In This Chapter</span>
+    <span class="toc-mobile-toggle-icon">+</span>
+  </button>
+  <div class="toc-mobile-progress"><div class="toc-mobile-progress-bar" id="toc-progress-bar"></div></div>
+  <div class="toc-mobile-body" id="toc-mobile-body">
+    <ul class="toc-list">
+      <li><a href="#project-scoping">1. Project Scoping</a></li>
+      <li><a href="#timeline-development">2. Timeline Development</a></li>
+      <li><a href="#risk-management">3. Risk Management</a></li>
+      <li><a href="#stakeholder-communication">4. Stakeholder Communication</a></li>
+      <li><a href="#common-mistakes">5. Common Mistakes to Avoid</a></li>
+      <li><a href="#faq">FAQs</a></li>
+    </ul>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <p class="article-lead">Most projects don't fail because of bad execution. They fail because of bad planning — vague scope, timelines built on hope instead of dependencies, risks nobody named out loud, and stakeholders who find out about a problem the week it becomes a crisis. Project management tools can track a plan once it exists. They can't help build one — and that's exactly where Claude earns its keep.</p>
+
+  <div class="direct-answer" role="note" aria-label="Quick Answer">
+    <div class="da-label">Quick Answer</div>
+    <p>
+      <strong>Using Claude for project planning</strong> means treating it as a thinking partner across the full project lifecycle: forcing scope clarity before a timeline exists, mapping dependencies before adding dates, generating a genuinely useful risk register with early warning signs, and reshaping one status update into audience-specific versions. It doesn't replace project management software — it determines whether that software ends up tracking a good plan or a fragile one.
+    </p>
+  </div>
+
+  <p>This chapter covers how to use Claude as a planning partner across four stages: turning a vague request into a scoped project, building realistic timelines on actual dependencies, surfacing risks before they become fires, and drafting stakeholder communication that informs without burying people in detail.</p>
+
+  <section aria-label="Project scoping">
+  <h2 id="project-scoping"><span class="num-badge">1</span> How Do You Scope a Project Before Building a Timeline?</h2>
+  <p>The single most common cause of project failure is starting before scope is clear. Someone says "we need a new onboarding flow" and three departments build three different mental models of what that means. Claude is exceptionally good at forcing scope clarity, because it will ask the questions a rushed kickoff meeting skips.</p>
+
+  <h3>The Scoping Prompt Pattern</h3>
+  <p>Give Claude the one-sentence version of what's being asked for, who's asking and why, any known constraints, and a request to identify what's not yet defined.</p>
+
+  <div class="code-block">We've been asked to "improve the customer onboarding experience" for
+our SaaS product. Leadership wants it done this quarter. I have a
+team of 3 (1 designer, 2 engineers). Before I build a project plan,
+help me scope this properly:
+
+1. What questions do I need answered before this can be scoped
+   accurately?
+2. What are 3 different interpretations of "improve onboarding" that
+   could lead to very different projects?
+3. Draft a one-paragraph project charter I could bring back to
+   leadership to confirm we're aligned before I plan further.</div>
+
+  <div class="insight-card">
+    <div class="card-label">Key Insight</div>
+    <p>This makes the ambiguity visible before a timeline gets built on top of it. A charter that leadership actually confirms is worth more than a beautiful Gantt chart built on a guess.</p>
+  </div>
+
+  <h3>Breaking Scope Into Workstreams</h3>
+  <p>Once scope is confirmed, Claude can help decompose it into a structural skeleton before a single date gets touched.</p>
+  <div class="code-block">Given this confirmed scope [paste charter], break this project into
+logical workstreams. For each workstream, identify:
+- The core deliverable
+- Rough sequencing (what has to happen before what)
+- Which skill sets are needed
+- A rough T-shirt size (S/M/L) for effort</div>
+  </section>
+
+  <section aria-label="Timeline development">
+  <h2 id="timeline-development"><span class="num-badge">2</span> How Do You Build a Timeline on Dependencies Instead of a Deadline?</h2>
+  <p>Most timelines are built backward from a deadline instead of forward from dependencies. That's how a schedule ends up looking fine in a slide deck and falling apart in week two.</p>
+
+  <h3>Mapping Dependencies First</h3>
+  <p>Before asking Claude for dates, ask it to map relationships between workstreams.</p>
+  <div class="code-block">Here are the workstreams for this project: [list]. Identify the
+dependency relationships between them — which tasks block which
+others, which can run in parallel, and where the critical path
+likely runs. Present this as a simple ordered list, not a chart.</div>
+
+  <p>This step alone catches a huge share of planning mistakes: work that was scheduled in parallel but actually can't start until something else finishes.</p>
+
+  <h3>Building the Actual Schedule</h3>
+  <p>Once dependencies are mapped, add real constraints — and explicitly instruct Claude to flag unrealistic compression rather than quietly fitting the schedule to the date.</p>
+  <div class="code-block">Using this dependency map, build a rough timeline. Assumptions: team
+availability is [X], the hard deadline is [Y], and [engineer name] is
+unavailable for 2 weeks in the middle for another commitment. Flag
+anywhere the deadline looks unrealistic given the dependencies,
+rather than just fitting the schedule to the date.</div>
+
+  <div class="tip-row">
+    <div class="tip-icon">💡</div>
+    <p><strong>Why the explicit instruction matters:</strong> Left unprompted, most planning tools — and most people — will quietly compress a schedule to hit a deadline rather than flag that the deadline doesn't fit the work. Asking directly keeps the plan honest.</p>
+  </div>
+
+  <h3>Building in Buffer Deliberately</h3>
+  <div class="code-block">Review this timeline and suggest where buffer should be added. Don't
+just add buffer evenly — tell me which specific tasks have the
+highest uncertainty and deserve the most padding, and which are
+predictable enough to schedule tightly.</div>
+  </section>
+
+  <section aria-label="Risk management">
+  <h2 id="risk-management"><span class="num-badge">3</span> How Does Claude Help Identify and Track Project Risks?</h2>
+  <p>Risk registers often get built as a compliance exercise — a table nobody looks at again after kickoff. Used well, they're one of the highest-leverage planning tools available, and Claude can generate a genuinely useful first draft in minutes.</p>
+
+  <h3>Generating a Real Risk List</h3>
+  <div class="code-block">For this project [paste scope and timeline], identify 8-10 realistic
+risks. For each one:
+1. Describe the risk specifically (not generic — tied to this project)
+2. Rate likelihood and impact (Low/Medium/High)
+3. Suggest one concrete mitigation
+4. Suggest one early warning sign that would tell us the risk is
+   starting to materialize</div>
+
+  <div class="insight-card">
+    <div class="card-label">Why This Matters</div>
+    <p>The early warning sign is the piece most risk registers skip — and it's the piece that actually makes one useful. It turns a static list into something that can be monitored, not just filed away after kickoff.</p>
+  </div>
+
+  <h3>Pressure-Testing Assumptions</h3>
+  <p>A useful follow-up is asking Claude to argue against the plan rather than validate it.</p>
+  <div class="code-block">Play devil's advocate on this project plan. What assumptions am I
+making that, if wrong, would break the timeline or the scope? Be
+specific, not generic.</div>
+
+  <div class="tip-row">
+    <div class="tip-icon">💡</div>
+    <p><strong>Underused pattern:</strong> Deliberately asking Claude to disagree with a plan, rather than confirm it, is one of the most underused prompting patterns in project work.</p>
+  </div>
+  </section>
+
+  <section aria-label="Stakeholder communication">
+  <h2 id="stakeholder-communication"><span class="num-badge">4</span> How Do You Write Stakeholder Updates for Different Audiences?</h2>
+  <p>The same project update means something different to an executive sponsor, a working team, and an adjacent department. Writing three separate versions by hand is where a lot of project management time disappears — and it's exactly the kind of repetitive, format-shifting task Claude handles well.</p>
+
+  <h3>One Update, Multiple Audiences</h3>
+  <div class="code-block">Here's this week's project status: [bullet points of progress,
+blockers, decisions needed]. Turn this into three versions:
+
+1. Executive summary (3-4 sentences, outcome-focused, no jargon,
+   flags only decisions needed from leadership)
+2. Team update (detailed, includes specific blockers and owners,
+   action-oriented)
+3. Cross-functional FYI (context on what changed and why it matters
+   to them specifically, no internal detail they don't need)</div>
+
+  <div class="audience-grid">
+    <div class="audience-card">
+      <div class="ac-icon">🎯</div>
+      <div class="ac-title">Executive Summary</div>
+      <div class="ac-desc">3-4 sentences. Outcome-focused. No jargon. Surfaces only the decisions leadership actually needs to make.</div>
+      <div class="ac-tag">Brevity First</div>
+    </div>
+    <div class="audience-card">
+      <div class="ac-icon">🛠️</div>
+      <div class="ac-title">Team Update</div>
+      <div class="ac-desc">Detailed and action-oriented. Names specific blockers and the owner responsible for each one.</div>
+      <div class="ac-tag">Detail First</div>
+    </div>
+    <div class="audience-card">
+      <div class="ac-icon">🔗</div>
+      <div class="ac-title">Cross-Functional FYI</div>
+      <div class="ac-desc">Context on what changed and why it matters to that team specifically — no internal detail they don't need.</div>
+      <div class="ac-tag">Relevance First</div>
+    </div>
+  </div>
+
+  <h3>Delivering Bad News Early</h3>
+  <p>The hardest stakeholder communication is the one nobody wants to send: the timeline is slipping. Claude is useful here specifically because it won't soften a message into uselessness or over-dramatize it into panic.</p>
+  <div class="code-block">I need to tell my sponsor the deadline will likely slip by 2 weeks
+due to [specific reason]. Draft this message so it: states the issue
+clearly in the first sentence, explains the cause factually without
+excessive apology, presents the revised timeline, and proposes one
+option to recover time if that matters to them. Keep it under 150
+words.</div>
+  </section>
+
+  <section aria-label="Common mistakes to avoid">
+  <h2 id="common-mistakes"><span class="num-badge">5</span> What Are the Most Common Project Planning Mistakes?</h2>
+  <p>The same five mistakes account for most planning failures, regardless of project type or team size.</p>
+
+  <div class="mistake-list">
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Skipping the scoping conversation.</strong> Jumping straight to a timeline on an unscoped request guarantees rework later.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Building schedules from deadlines instead of dependencies.</strong> A date isn't a plan.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Treating the risk register as a one-time document.</strong> Revisit it at each milestone, not just at kickoff.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Sending the same update to every audience.</strong> What an executive needs to know and what a teammate needs to know are rarely the same thing.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Never asking Claude to disagree with the plan.</strong> The most valuable output is often the risk that wasn't considered, not the one that was already known.</p>
+    </div>
+  </div>
+  </section>
+
+  <div class="section-ornament">◆ ◆ ◆</div>
+
+  <div class="takeaways">
+    <div class="takeaways-title">Key Takeaways</div>
+    <ul>
+      <li>Scope before timeline — ambiguity built into a plan compounds, it doesn't resolve on its own</li>
+      <li>Map dependencies before dates — a schedule built backward from a deadline is a guess wearing a Gantt chart</li>
+      <li>Instruct Claude to flag unrealistic compression — otherwise it will quietly fit the schedule to the date</li>
+      <li>Every risk needs an early warning sign — that's what makes a risk register monitorable, not decorative</li>
+      <li>Ask Claude to argue against the plan — the risk not yet considered is more valuable than the one already known</li>
+      <li>One update, three audiences — executive, team, and cross-functional readers need different things, not different tones of the same thing</li>
+    </ul>
+  </div>
+
+  <div class="assignment-box">
+    <div class="box-title">Practice Exercises</div>
+    <h4>Foundation Option</h4>
+    <p>Take a project currently being planned (or one completed recently) and run it through the scoping prompt pattern. Notice what questions come up that weren't asked at the actual kickoff.</p>
+    <h4>Advanced Option</h4>
+    <p>Build a full dependency-based timeline for a real project using the two-step process — map dependencies first, then apply constraints. Compare it to whatever timeline currently exists for that project.</p>
+    <h4>Reflection Questions</h4>
+    <p>Where did scoping reveal a gap in the original understanding of the ask? Did the dependency-first timeline change the estimate of the deadline's feasibility? Which risk on the generated list genuinely hadn't been considered?</p>
+  </div>
+
+  <!-- VISIBLE FAQ SECTION -->
+  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How can Claude help scope a project before building a timeline?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Claude can force scope clarity by asking the questions a rushed kickoff meeting typically skips: what's genuinely being requested, which interpretations of that request would lead to different projects, and what remains undefined. Giving Claude the one-sentence ask, who's requesting it, and known constraints produces a draft charter that can be confirmed with stakeholders before any timeline work begins.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How do you build a project timeline based on dependencies instead of a deadline?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Map the dependency relationships between workstreams first — which tasks block which others, what can run in parallel, and where the critical path likely runs — before adding any dates. Only after that map exists should real constraints like team availability and the hard deadline be layered in, with an explicit instruction to flag anywhere the deadline looks unrealistic rather than quietly compressing the schedule to fit it.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How does Claude help identify project risks?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Claude can generate a project-specific risk list of 8-10 realistic risks, each rated for likelihood and impact, paired with one concrete mitigation and one early warning sign. The early warning sign is what most risk registers skip, and it's what turns a static compliance document into something that can actually be monitored as the project progresses.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How can Claude help write stakeholder updates for different audiences?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>The same weekly status can be turned into three distinct versions from a single set of bullet points: a 3-4 sentence executive summary that flags only decisions leadership needs to make, a detailed action-oriented team update with named owners and blockers, and a cross-functional FYI that explains what changed and why it matters without extra internal detail.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is the devil's advocate prompting technique for project planning?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>It's a prompting pattern where Claude is deliberately asked to argue against a plan rather than validate it — identifying specific assumptions that, if wrong, would break the timeline or scope. This surfaces risks the planner didn't consider, which is typically more valuable than confirming risks that were already known.</p>
+      </div>
+    </div>
+  </section>
+
+  <p style="margin-top: 2.5rem; font-size: 0.9rem; color: var(--navy-muted);"><strong>Coming Up Next:</strong> In Chapter 23, <em>Process Optimization</em>, learn how to use Claude to map existing workflows, identify bottlenecks, and redesign processes for speed and reliability — without adding unnecessary complexity.</p>
+
+</div>
+</article>
+</div><!-- /.article-col -->
+
+<!-- TOC SIDEBAR -->
+<aside class="toc-sidebar" aria-label="Table of contents">
+  <div class="toc-box-title">In This Chapter</div>
+  <ul class="toc-box-list" id="toc-list-desktop">
+    <li><a href="#project-scoping">1. Project Scoping</a></li>
+    <li><a href="#timeline-development">2. Timeline Development</a></li>
+    <li><a href="#risk-management">3. Risk Management</a></li>
+    <li><a href="#stakeholder-communication">4. Stakeholder Communication</a></li>
+    <li><a href="#common-mistakes">5. Common Mistakes</a></li>
+  </ul>
+  <hr class="toc-box-divider">
+  <div class="toc-box-section">FAQs</div>
+  <ul class="toc-box-list">
+    <li><a href="#faq" onclick="openFaq(0);return false;">Scoping a project?</a></li>
+    <li><a href="#faq" onclick="openFaq(1);return false;">Dependency-based timeline?</a></li>
+    <li><a href="#faq" onclick="openFaq(2);return false;">Identifying risks?</a></li>
+    <li><a href="#faq" onclick="openFaq(3);return false;">Audience-specific updates?</a></li>
+  </ul>
+
+  <div class="progress-widget">
+    <div class="progress-widget-label">Series Progress</div>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+    <div class="progress-percent">Chapter 22 of 30 · 73%</div>
+  </div>
+
+  <div class="series-cta-box">
+    <div class="series-cta-title">Continue the Claude Mastery series</div>
+    <a href="learn.html#claude-mastery" class="series-cta-btn">View All Chapters</a>
+  </div>
+</aside>
+
+</div><!-- /.content-layout -->
+</main>
+
+<div class="chapter-nav" style="max-width: 1200px; margin: 0 auto; padding-left: 4vw; padding-right: 4vw;">
+  <a href="learn-series-claude-mastery-chapter-21.html" class="nav-btn prev">
+    <div>
+      <div class="nav-label">Previous Chapter</div>
+      <div class="nav-title">← Learning & Skill Development</div>
+    </div>
+  </a>
+  <div class="nav-center">
+    <a href="learn.html#claude-mastery">View All Chapters</a>
+  </div>
+  <div class="nav-btn next" style="visibility: hidden;">
+    <div style="text-align: right;">
+      <div class="nav-label">Next Chapter</div>
+      <div class="nav-title">Coming Soon →</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:arjun@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/NeeArVentures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+<script>
+/* FAQ Accordion */
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+/* openFaq(N): open a specific FAQ item by index (sidebar FAQ links) */
+function openFaq(index) {
+  var items = document.querySelectorAll('.faq-item');
+  if (!items[index]) return;
+  items.forEach(function(i) { i.classList.remove('open'); i.querySelector('.faq-question').setAttribute('aria-expanded','false'); });
+  items[index].classList.add('open');
+  items[index].querySelector('.faq-question').setAttribute('aria-expanded','true');
+  setTimeout(function() { items[index].scrollIntoView({ behavior:'smooth', block:'center' }); }, 80);
+}
+
+/* Mobile TOC Toggle */
+function toggleMobileToc() {
+  const toc = document.getElementById('toc-mobile');
+  const btn = toc.querySelector('.toc-mobile-toggle');
+  const isOpen = toc.classList.contains('open');
+  toc.classList.toggle('open');
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+
+/* TOC Smooth Scroll */
+document.querySelectorAll('.toc-box-list a[href^="#"], .toc-mobile-body a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var href = a.getAttribute('href');
+    if (href === '#faq') return;
+    var el = document.getElementById(href.replace('#', ''));
+    if (el) {
+      e.preventDefault();
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+    }
+  });
+});
+
+/* Mobile TOC Progress Bar */
+(function() {
+  var progressBar = document.getElementById('toc-progress-bar');
+  if (!progressBar) return;
+  window.addEventListener('scroll', function() {
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0) + '%';
+  }, { passive: true });
+})();
+
+/* Desktop TOC Scroll-Spy — highlights active section link */
+(function() {
+  var sections = ['project-scoping','timeline-development','risk-management','stakeholder-communication','common-mistakes'];
+  var links = document.querySelectorAll('#toc-list-desktop a');
+  if (!('IntersectionObserver' in window) || !links.length) return;
+  var map = {};
+  links.forEach(function(l) { map[l.getAttribute('href').replace('#','')] = l; });
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      var link = map[entry.target.id];
+      if (!link) return;
+      if (entry.isIntersecting) {
+        links.forEach(function(l) { l.classList.remove('active'); });
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-110px 0px -70% 0px', threshold: 0 });
+  sections.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
