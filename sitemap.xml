@@ -12,7 +12,7 @@
   <!-- Blog Listing -->
   <url>
     <loc>https://neearventures.com/blog.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -166,6 +166,12 @@
 </url>
   
   <!-- Blog Posts (sorted by date, newest first) -->
+  <url>
+  <loc>https://neearventures.com/blog-2026-08-08-this-week-in-ai-ep16.html</loc>
+  <lastmod>2026-08-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
   <url>
   <loc>https://neearventures.com/blog-2026-08-01-this-week-in-ai-ep15.html</loc>
   <lastmod>2026-08-03</lastmod>
