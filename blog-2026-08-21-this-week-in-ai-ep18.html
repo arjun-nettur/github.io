@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- 2. FAVICONS -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- 3. CANONICAL TAG — Replace with actual filename before publishing -->
+<link rel="canonical" href="https://neearventures.com/blog-2026-08-21-this-week-in-ai-ep18.html">
+
+<!--
+===========================================================================
+  NEEAR VENTURES — BLOG POST TEMPLATE
+  Version: 4.2 | Last updated: June 2026 | AEO + SEO + WebP + Static Sticky TOC Box
+===========================================================================
+
+  WHAT'S NEW IN v4.2:
+  ✅ TOC sidebar rebuilt as a STATIC STICKY BOX — no JS injection, no overflow issues
+  ✅ TOC links are hard-coded directly in HTML (reliable, instant render)
+  ✅ FAQ quick-links added inside the TOC box (click to open + scroll to FAQ section)
+  ✅ Hero is full-width ABOVE the grid — sidebar only starts alongside article body
+  ✅ Sidebar: position:sticky + align-self:start — sticks while scrolling, no internal scroll
+  ✅ Mobile TOC: collapsible inline block above article content (unchanged)
+  ✅ Progress bar retained on mobile TOC only
+
+  WHAT'S NEW IN v4.0 (AEO UPDATE):
+  ✅ Full AEO compliance per AEO_HTML_STANDARDS_neearventures.md
+  ✅ HEAD block order follows canonical AEO sequence
+  ✅ Upgraded BlogPosting schema: speakable, about, mentions, mainEntityOfPage
+  ✅ NEW: BreadcrumbList schema (separate JSON-LD block)
+  ✅ NEW: FAQPage schema with 3–5 Q&As (separate JSON-LD block)
+  ✅ NEW: Direct Answer block (.direct-answer) with matching CSS
+  ✅ NEW: Visible FAQ accordion section in article body
+  ✅ NEW: FAQ accordion JavaScript
+  ✅ NEW: H2 ids added + scroll-margin-top: 90px
+  ✅ NEW: keywords field in BlogPosting schema
+  ✅ NEW: article-lead class targets speakable
+  ✅ WebP format for all on-page/hero/diagram images
+  ✅ OG image stays as .jpg (social platforms don't reliably render WebP)
+  ✅ Explicit width/height on all img tags (CLS prevention)
+  ✅ Hero image uses loading="eager"; body images use loading="lazy"
+  ✅ Semantic HTML: <main>, <article>, <section aria-label>
+  ✅ article-figure uses <figure>/<figcaption> pattern
+
+  THEME: WARM OFF-WHITE
+  Background: #f7f4ef | Text: #0d1f35 (navy) | Accent: #9a7a2e (gold)
+  Footer: Dark navy (#0d1f35) — consistent across all pages
+
+  FILE NAMING CONVENTION:
+  blog-2026-08-21-this-week-in-ai-ep18.html
+  Example: blog-2026-05-20-ai-tools-for-writers.html
+
+  IMAGE FILE NAMING:
+  blog-2026-08-21-this-week-in-ai-ep18-og.jpg         (1200×630 px — OG/social sharing — stays JPG)
+  blog-YYYY-MM-DD-topic-name-thumb.jpg      (400×210 px — blog card thumbnail — stays JPG)
+  blog-2026-08-21-this-week-in-ai-ep18-hero.webp      (800×420 px — page hero — WebP via squoosh.app)
+  blog-YYYY-MM-DD-topic-name-diagram-1.webp (760×400 px — optional mid-article — WebP via squoosh.app)
+
+  IMAGE WORKFLOW:
+  1. Generate landscape image in AI tool
+  2. Open in Canva
+  3. Export at 1200×630 JPG 80% → rename -og.jpg → upload /images/
+  4. Export at 400×210 JPG 80% → rename -thumb.jpg → upload /images/
+  5. Export at 800×420 JPG → convert to WebP at squoosh.app (quality 80-85%) → rename -hero.webp → upload /images/
+  6. OPTIONAL: Export diagram at 760×400 JPG → convert to WebP at squoosh.app → rename -diagram-1.webp → upload /images/
+
+  BYLINE: NeeAr Ventures Editorial
+
+  NAV LINKS (DO NOT CHANGE): Blog | Learn With Us | Contact
+  FOOTER LINKS (DO NOT CHANGE): Home | Blog | Learn With Us | Contact | Email Us
+
+===========================================================================
+  SEO + AEO CHECKLIST — COMPLETE BEFORE PUBLISHING
+===========================================================================
+
+  ✅ 1. CANONICAL TAG (Line ~13)
+        Replace: blog-2026-08-21-this-week-in-ai-ep18.html with ACTUAL filename
+
+  ✅ 2. TITLE + META DESCRIPTION (after JSON-LD blocks)
+        Title: under 60 chars, keyword near front
+        Description: under 160 chars, direct answer to what page covers
+
+  ✅ 3. OPEN GRAPH TAGS
+        Replace filename and content placeholders
+
+  ✅ 4. BLOGPOSTING SCHEMA — Replace ALL [PLACEHOLDERS]:
+        - This Week in AI — Episode 18: The Biggest Data Center Ever, a $60B Coding Deal Closes, and ChatGPT Grows Up, OpenAI signs an 8GW Ohio data center lease backed by $105B from Nvidia, SpaceX completes its $60B Cursor acquisition, OpenAI launches ChatGPT for Teens, Google's A2A protocol finds a new home, and Cloudflare builds a browser for AI agents.
+        - blog-2026-08-21-this-week-in-ai-ep18-og.jpg (OG image URL)
+        - 2026-08-21 publication and modified dates
+        - blog-2026-08-21-this-week-in-ai-ep18.html (exact filename)
+        - [MAIN TOPIC], [CONCEPT 1..4] (about + mentions)
+        - [KEYWORD LIST] (keywords field)
+
+  ✅ 5. BREADCRUMB SCHEMA — Replace:
+        - This Week in AI — Episode 18: The Biggest Data Center Ever, a $60B Coding Deal Closes, and ChatGPT Grows Up with exact page title
+        - blog-2026-08-21-this-week-in-ai-ep18.html with actual filename
+
+  ✅ 6. FAQPAGE SCHEMA — Replace:
+        - 3–5 real Q&As matching actual page content
+        - Questions phrased as user would type in search engine
+        - Answers plain text, fully self-contained, no HTML tags
+
+  ✅ 7. HERO IMAGE (in article hero block)
+        Replace: blog-2026-08-21-this-week-in-ai-ep18-hero.webp with ACTUAL WebP filename
+        Replace: alt text with descriptive sentence
+        Set correct width/height attributes (800 × 420)
+
+  ✅ 8. DIRECT ANSWER BLOCK (after .article-lead)
+        Fill in the 3–5 sentence direct answer to the page's core question
+        This is what AI engines will extract as the answer
+
+  ✅ 9. MID-ARTICLE DIAGRAM (OPTIONAL)
+        IF CREATING: Replace filename with -diagram-1.webp, fill alt text, caption
+        IF NOT CREATING: Delete entire block between DELETE markers
+
+  ✅ 10. VISIBLE FAQ SECTION (in article body)
+         Match questions and answers to FAQPage schema exactly
+
+  ✅ 11. H2 IDs — Every H2 must have an id="slug" attribute
+        ✅ 11b. TOC SIDEBAR — Update <li> links in <aside> to match actual H2 ids
+               And update FAQ links in <aside> to match actual FAQ questions
+
+  ✅ 12. SHARE ROW + TAGS ROW — Update URL, fill in 4–8 topic tags
+
+  ✅ 13. VALIDATE AFTER PUBLISHING
+         Google Rich Results Test: https://search.google.com/test/rich-results
+         Canonical: View Source → Ctrl+F canonical
+         OG image: developers.facebook.com/tools/debug
+         LinkedIn: linkedin.com/post-inspector
+
+===========================================================================
+  REPLACE ALL [PLACEHOLDERS] BEFORE PUBLISHING
+===========================================================================
+-->
+
+<!-- 4. TITLE + META DESCRIPTION -->
+<title>This Week in AI — Episode 18: The Biggest Data Center Ever, a $60B Coding Deal Closes, and ChatGPT Grows Up — NeeAr Ventures</title>
+<meta name="description" content="OpenAI signs an 8GW Ohio data center lease backed by $105B from Nvidia, SpaceX completes its $60B Cursor acquisition, OpenAI launches ChatGPT for Teens, Google's A2A protocol finds a new home, and Cloudflare builds a browser for AI agents.">
+
+<!-- 5. OPEN GRAPH + TWITTER TAGS -->
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/blog-2026-08-21-this-week-in-ai-ep18.html" />
+<meta property="og:title"        content="This Week in AI — Episode 18: The Biggest Data Center Ever, a $60B Coding Deal Closes, and ChatGPT Grows Up — NeeAr Ventures" />
+<meta property="og:description"  content="OpenAI signs an 8GW Ohio data center lease backed by $105B from Nvidia, SpaceX completes its $60B Cursor acquisition, OpenAI launches ChatGPT for Teens, Google's A2A protocol finds a new home, and Cloudflare builds a browser for AI agents." />
+<meta property="og:image"        content="https://neearventures.com/images/blog-2026-08-21-this-week-in-ai-ep18-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@NeeArVentures" />
+<meta name="twitter:title"       content="This Week in AI — Episode 18: The Biggest Data Center Ever, a $60B Coding Deal Closes, and ChatGPT Grows Up — NeeAr Ventures" />
+<meta name="twitter:description" content="OpenAI signs an 8GW Ohio data center lease backed by $105B from Nvidia, SpaceX completes its $60B Cursor acquisition, OpenAI launches ChatGPT for Teens, Google's A2A protocol finds a new home, and Cloudflare builds a browser for AI agents." />
+<meta name="twitter:image"       content="https://neearventures.com/images/blog-2026-08-21-this-week-in-ai-ep18-og.jpg" />
+
+<!-- 6a. BLOGPOSTING SCHEMA — AEO v4.0
+     New fields: speakable, about, mentions, mainEntityOfPage, keywords
+     Test at: https://search.google.com/test/rich-results
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "This Week in AI — Episode 18: The Biggest Data Center Ever, a $60B Coding Deal Closes, and ChatGPT Grows Up",
+  "description": "OpenAI signs an 8GW Ohio data center lease backed by $105B from Nvidia, SpaceX completes its $60B Cursor acquisition, OpenAI launches ChatGPT for Teens, Google's A2A protocol finds a new home, and Cloudflare builds a browser for AI agents.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://neearventures.com/images/blog-2026-08-21-this-week-in-ai-ep18-og.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": "2026-08-21",
+  "dateModified": "2026-08-21",
+  "author": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures Editorial",
+    "url": "https://neearventures.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://neearventures.com/logo.png"
+    }
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".direct-answer", ".article-lead", "h2"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Artificial Intelligence Industry News"
+  },
+  "mentions": [
+    { "@type": "Thing", "name": "OpenAI Ohio data center" },
+    { "@type": "Thing", "name": "SpaceX Cursor acquisition" },
+    { "@type": "Thing", "name": "ChatGPT for Teens" },
+    { "@type": "Thing", "name": "Agent2Agent Protocol" }
+  ],
+  "keywords": "OpenAI data center, Nvidia AI infrastructure, SpaceX Cursor acquisition, ChatGPT for Teens, AI agent protocol, Cloudflare Kitesurf",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neearventures.com/blog-2026-08-21-this-week-in-ai-ep18.html"
+  }
+}
+</script>
+
+<!-- 6b. BREADCRUMB SCHEMA — AEO v4.0
+     Path for blog posts: Home → Blog → Post Title
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://neearventures.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://neearventures.com/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "This Week in AI — Episode 18: The Biggest Data Center Ever, a $60B Coding Deal Closes, and ChatGPT Grows Up",
+      "item": "https://neearventures.com/blog-2026-08-21-this-week-in-ai-ep18.html"
+    }
+  ]
+}
+</script>
+
+<!-- 6c. FAQPAGE SCHEMA — AEO v4.0
+     Rules:
+     - 3-5 Q&As minimum — match real sections on this page
+     - Questions: phrased exactly as a user would type into Google/ChatGPT
+     - Answers: plain text only (no HTML), fully self-contained, 2-4 sentences each
+     - Must be mirrored in the visible FAQ section in the article body
+     - Add/delete Q&A blocks as needed (min 3, max 5)
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How large is OpenAI's new Ohio data center?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenAI signed a 20-year lease for a data center in Pike County, Ohio that could eventually reach 8 gigawatts of AI computing capacity, backed by up to $105 billion in financing support from Nvidia — making it the largest single AI data center project announced to date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Has SpaceX's acquisition of Cursor actually closed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. SpaceX's $60 billion all-stock acquisition of AI coding startup Cursor became effective on August 14, 2026, finalizing a deal first agreed in June and widely considered the largest acquisition of a venture-backed company on record."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is ChatGPT for Teens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ChatGPT for Teens is a dedicated experience for users aged 13–17, launched by OpenAI on August 18, 2026. It adds stricter content limits, encourages Study Mode over direct answers for schoolwork, and gives linked parent accounts tools like quiet hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Google's Agent2Agent Protocol (A2A)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A2A is Google's open standard letting AI agents exchange information about their capabilities and coordinate tasks with each other. As of August 18, 2026, it became a hosted project of the Agentic AI Foundation, alongside Model Context Protocol."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Cloudflare's Kitesurf browser do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kitesurf, launched by Cloudflare on August 18, 2026, is a web browser built specifically for AI agents to navigate and interact with websites, rather than for human users — part of a broader push toward agent-native web infrastructure."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 7. FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- 8. STYLES -->
+<style>
+/* =====================================================================
+   NEEAR VENTURES DESIGN SYSTEM — WARM OFF-WHITE THEME v4.0
+   Background #f7f4ef | Text navy #0d1f35 | Gold #9a7a2e
+   Footer: Always dark navy #0d1f35
+====================================================================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:          #f7f4ef;
+  --bg-alt:      #f0ece4;
+  --surface:     #ffffff;
+  --border:      #e2d9cc;
+  --navy:        #0d1f35;
+  --navy-light:  #162d47;
+  --navy-muted:  #1e3a5a;
+  --gold:        #9a7a2e;
+  --gold-light:  #b8963e;
+  --gold-pale:   rgba(154,122,46,0.1);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; }
+.page-wrap { } html { overflow-x: hidden; }
+
+/* ── NAV ── */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* ── ARTICLE HERO ── */
+.article-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: clip; text-align: center; }
+.article-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.article-category { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 600; }
+.article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 600; color: var(--navy); line-height: 1.1; margin-bottom: 1.2rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.article-title em { font-style: italic; color: var(--gold); }
+.article-subtitle { font-size: 1rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.article-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.6rem auto 2rem; }
+
+/* ── HERO IMAGE ── */
+.hero-image {
+  max-width: 820px;
+  width: 100%;
+  height: auto;
+  margin: 2rem auto 0;
+  display: block;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(13,31,53,0.08);
+}
+
+/* ── ARTICLE BODY ── */
+/* article-wrap base — layout handled by .article-col */
+.article-wrap { max-width: 760px; margin: 0; padding: 4rem 4vw 6rem; }
+.article-lead { font-size: 1.05rem; line-height: 1.9; color: var(--navy); margin-bottom: 2.5rem; padding-left: 1.2rem; border-left: 3px solid var(--gold); font-weight: 400; }
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+
+/* ── DIRECT ANSWER BLOCK (AEO) ── */
+/* Primary speakable target for AI engines — do not remove */
+.direct-answer { background: #0d1f35; padding: 1.6rem 1.8rem; margin: 1.8rem 0 2.2rem; border-left: 4px solid #9a7a2e; }
+.direct-answer .da-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: #9a7a2e; font-weight: 600; margin-bottom: 0.7rem; }
+.direct-answer p { font-size: 0.92rem; color: rgba(232,224,208,0.9); line-height: 1.75; margin: 0; }
+.direct-answer p strong { color: #9a7a2e; }
+
+/* ── HEADINGS ── */
+/* scroll-margin-top prevents heading from hiding behind fixed nav when anchor-linked */
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--navy); margin: 3.5rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.8rem; scroll-margin-top: 90px; }
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.7rem; scroll-margin-top: 90px; }
+.num-badge { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: var(--navy); color: #fff; border-radius: 50%; font-size: 0.82rem; font-family: 'Jost', sans-serif; font-weight: 500; flex-shrink: 0; }
+
+/* ── MID-ARTICLE FIGURE ── */
+.article-figure { margin: 2.5rem 0; text-align: center; }
+.article-figure img { max-width: 100%; height: auto; border-radius: 3px; box-shadow: 0 2px 16px rgba(13,31,53,0.08); border: 1px solid var(--border); }
+.article-figure figcaption { font-size: 0.78rem; color: var(--navy-muted); font-style: italic; margin-top: 0.8rem; line-height: 1.6; text-align: center; }
+
+/* ── CONTENT BLOCKS ── */
+
+/* Insight / Key point card */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.4rem 0 1.8rem; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0; line-height: 1.7; }
+
+/* Tip row */
+.tip-row { display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--border); padding: 1.1rem 1.3rem; margin: 1.4rem 0; align-items: flex-start; }
+.tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.tip-row p { font-size: 0.88rem; margin: 0; color: var(--navy-muted); }
+.tip-row strong { color: var(--navy); }
+
+/* Stat callout */
+.stat-callout { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; background: var(--navy); padding: 1.8rem; margin: 2rem 0; }
+.stat-item { text-align: center; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold-light); line-height: 1; }
+.stat-label { font-size: 0.68rem; color: rgba(232,224,208,0.7); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; max-width: 120px; line-height: 1.4; }
+
+/* Content card */
+.content-card { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 1.2rem 0; transition: box-shadow 0.3s; }
+.content-card:hover { box-shadow: 0 2px 16px rgba(154,122,46,0.1); }
+.content-card .cc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--navy); font-weight: 600; margin-bottom: 0.5rem; }
+.content-card .cc-meta { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); padding: 0.15rem 0.6rem; font-weight: 600; display: inline-block; margin-bottom: 0.6rem; }
+.content-card p { font-size: 0.87rem; color: var(--navy-muted); margin: 0; line-height: 1.65; }
+.content-card p strong { color: var(--navy); }
+
+/* Blockquote */
+blockquote { background: var(--bg-alt); border-left: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 2rem 0; }
+blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--navy); margin: 0; line-height: 1.6; font-weight: 400; }
+blockquote cite { display: block; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.8rem; font-style: normal; font-weight: 600; }
+
+/* Section ornament */
+.section-ornament { text-align: center; color: var(--gold); opacity: 0.4; letter-spacing: 12px; font-size: 0.9rem; margin: 3rem 0; }
+
+/* ── FAQ SECTION (AEO) ── */
+/* Must match FAQPage schema Q&As exactly */
+.faq-section { margin: 3.5rem 0 2rem; }
+.faq-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 1.4rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--border); }
+.faq-item { border: 1px solid var(--border); margin-bottom: 0.5rem; }
+.faq-question { width: 100%; background: var(--surface); border: none; padding: 1rem 1.4rem; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-family: 'Jost', sans-serif; font-size: 0.92rem; font-weight: 500; color: var(--navy); line-height: 1.5; transition: background 0.2s; }
+.faq-question:hover { background: var(--bg-alt); }
+.faq-icon { font-size: 1.2rem; color: var(--gold); flex-shrink: 0; font-weight: 300; transition: transform 0.3s; }
+.faq-item.open .faq-question { background: var(--bg-alt); }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-item.open .faq-answer { max-height: 400px; }
+.faq-answer p { padding: 0.9rem 1.4rem 1.1rem; font-size: 0.9rem; color: var(--navy-muted); line-height: 1.8; margin: 0; border-top: 1px solid var(--border); }
+
+/* Tags row */
+.tags-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.tags-label { font-size: 0.7rem; color: var(--navy-muted); letter-spacing: 0.2em; text-transform: uppercase; margin-right: 0.3rem; font-weight: 500; }
+.tag { background: var(--bg-alt); border: 1px solid var(--border); padding: 0.25rem 0.8rem; font-size: 0.73rem; color: var(--navy-muted); transition: all 0.3s; }
+.tag:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Share buttons */
+.share-row { display: flex; gap: 1rem; align-items: center; margin-top: 2rem; flex-wrap: wrap; }
+.share-label { font-size: 0.72rem; color: var(--navy-muted); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+.share-btn { background: transparent; border: 1px solid var(--border); color: var(--navy-muted); padding: 0.38rem 1rem; font-size: 0.75rem; font-family: 'Jost', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; font-weight: 400; }
+.share-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Social icons (footer) */
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+/* ── FOOTER — always dark navy ── */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+
+/* ── CONTENT LAYOUT — two-column: article + TOC sidebar ── */
+/* Hero lives ABOVE <main> at full width. Grid starts at article body only. */
+.content-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  grid-template-areas: "article toc";
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* ── ARTICLE COLUMN ── */
+.article-col { grid-area: article; min-width: 0; order: 1; }
+.article-col .article-wrap { max-width: 760px; margin: 0; padding: 3rem 4vw 6rem; }
+
+/* ── TOC SIDEBAR — static sticky box, no internal scroll ── */
+/* IMPORTANT: Links are hard-coded in HTML. Do NOT rely on JS to populate. */
+.toc-sidebar {
+  grid-area: toc;
+  position: sticky;
+  top: 110px;           /* clears fixed nav (90px) + breathing room */
+  align-self: start;    /* prevents stretching to article height */
+  padding: 1.6rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin: 2.5rem 1.6rem 0 0;
+  order: 2;
+}
+
+/* TOC box title */
+.toc-box-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Section label (used for FAQs sub-heading) */
+.toc-box-section {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--navy-muted);
+  font-weight: 600;
+  margin: 1rem 0 0.4rem;
+}
+
+/* Link list */
+.toc-box-list { list-style: none; padding: 0; margin: 0 0 0.4rem; }
+.toc-box-list li { margin: 0; }
+.toc-box-list a {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--navy-muted);
+  text-decoration: none;
+  padding: 0.32rem 0 0.32rem 0.7rem;
+  border-left: 2px solid transparent;
+  line-height: 1.4;
+  transition: color 0.2s, border-color 0.2s;
+}
+.toc-box-list a:hover { color: var(--gold); border-left-color: var(--gold); }
+
+/* Divider between TOC links and FAQ links */
+.toc-box-divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+
+/* MOBILE TOC — collapsible block above article, full width */
+.toc-mobile {
+  display: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  margin: 0;
+}
+
+.toc-mobile-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.toc-mobile-toggle-icon {
+  font-size: 1rem;
+  color: var(--gold);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.toc-mobile.open .toc-mobile-toggle-icon { transform: rotate(45deg); }
+
+.toc-mobile-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.toc-mobile.open .toc-mobile-body { max-height: 600px; }
+
+.toc-mobile-body .toc-list {
+  padding: 0.4rem 1.2rem 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.toc-mobile-body .toc-list a {
+  font-size: 0.85rem;
+  padding: 0.4rem 0 0.4rem 0.7rem;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  /* Switch to single column, show mobile TOC */
+  .content-layout {
+    display: block;
+  }
+  .toc-sidebar {
+    display: none; /* desktop sidebar hidden on mobile */
+  }
+  .toc-mobile {
+    display: block; /* mobile TOC shown */
+  }
+  .article-col .article-wrap {
+    padding: 2.5rem 4vw 5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .article-title { font-size: 2rem; }
+  .stat-callout { gap: 1rem; }
+  footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 1rem; }
+  .footer-social { gap: 0.6rem; }
+  .social-icon { width: 36px; height: 36px; }
+}
+</style>
+</head>
+<body>
+
+<!-- =====================================================================
+   NAV — DO NOT CHANGE. Consistent across all pages.
+====================================================================== -->
+<div class="page-wrap">
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" width="44" height="44" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="learn.html">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<!-- =====================================================================
+   ARTICLE HERO
+   Replace: [CATEGORY], This Week in AI — Episode 18: The Biggest Data Center Ever, a $60B Coding Deal Closes, and ChatGPT Grows Up, [SUBTITLE], [DATE], [READ TIME]
+   Use <em> tags around words to make them italic gold.
+====================================================================== -->
+<div class="article-hero">
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+  <div class="article-category">AI &amp; Technology · Weekly Roundup</div>
+  <h1 class="article-title">This Week in AI — Episode 18: <em>The Biggest Data Center Ever</em></h1>
+  <p class="article-subtitle">Covering August 15–21, 2026: OpenAI signs an 8GW Ohio data center lease backed by Nvidia, SpaceX closes its $60B Cursor deal, ChatGPT gets a teen experience, and agent infrastructure keeps consolidating.</p>
+  <div class="article-meta">
+    <span>NeeAr Ventures Editorial</span>
+    <span class="meta-dot">◆</span>
+    <span>August 21, 2026</span>
+    <span class="meta-dot">◆</span>
+    <span>8 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>This Week in AI</span>
+  </div>
+  <div class="divider-line"></div>
+
+  <!-- =====================================================================
+       HERO IMAGE — WebP format for on-page display
+       File: blog-2026-08-21-this-week-in-ai-ep18-hero.webp (800×420 px)
+       Convert from JPG to WebP at squoosh.app (quality 80-85%)
+       Note: OG image stays as .jpg — only on-page image uses WebP
+       NEVER DELETE THIS BLOCK
+  ====================================================================== -->
+  <img src="images/blog-2026-08-21-this-week-in-ai-ep18-hero.webp"
+       alt="Editorial illustration representing this week's AI industry developments: massive data center infrastructure, a major coding acquisition, and AI agent standards."
+       class="hero-image"
+       loading="eager"
+       width="800"
+       height="420">
+</div>
+
+<!-- =====================================================================
+   ARTICLE BODY
+   <main> and <article> wrappers required for AEO semantic structure.
+   Two-column layout: article content (left) + TOC sidebar (right).
+   On mobile (≤900px): sidebar hidden, mobile TOC shown above content.
+   TOC is auto-built from H2 elements via JavaScript — no manual editing needed.
+   Use <section aria-label="..."> for distinct content blocks.
+====================================================================== -->
+<main>
+<div class="content-layout">
+
+<div class="article-col">
+
+<!-- =====================================================================
+   TABLE OF CONTENTS — MOBILE (collapsible, above article content)
+   Auto-populated by same JS as desktop sidebar.
+   Collapsed by default, tap header to expand.
+   Only visible on screens ≤ 900px.
+====================================================================== -->
+<div class="toc-mobile" id="toc-mobile">
+  <button class="toc-mobile-toggle" onclick="toggleMobileToc()" aria-expanded="false" aria-controls="toc-mobile-body">
+    <span>In This Article</span>
+    <span class="toc-mobile-toggle-icon">+</span>
+  </button>
+  <div class="toc-mobile-body" id="toc-mobile-body">
+    <ul class="toc-list" id="toc-list-mobile">
+      <!-- Populated by JS from mobile toc-list-mobile ul — retained for mobile only -->
+    </ul>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- LEAD PARAGRAPH — always include. Gold left border. 2-4 sentences.
+       This paragraph is a speakable target (.article-lead) — write it as
+       a clear, direct answer or summary of the page. -->
+  <p class="article-lead">The week of August 15–21, 2026 brought the largest single AI data center project ever announced, the largest venture-backed acquisition on record officially closing, and a major shift in how OpenAI treats its youngest users. Underneath it all, the infrastructure that lets AI agents talk to each other kept consolidating too.</p>
+
+  <div class="direct-answer" role="note" aria-label="Quick Answer">
+    <div class="da-label">Quick Answer</div>
+    <p>
+      <strong>This Week in AI — Episode 18</strong> covers five stories from August 15–21, 2026: OpenAI signed a 20-year lease for an 8-gigawatt Ohio data center backed by up to $105 billion from Nvidia, making it the largest single AI data center planned to date.
+      SpaceX completed its $60 billion all-stock acquisition of AI coding startup Cursor, the largest venture-backed acquisition on record.
+      OpenAI launched ChatGPT for Teens, a dedicated experience with tighter content limits and parental controls for users aged 13–17.
+      Google's Agent2Agent Protocol (A2A) became a hosted project of the Agentic AI Foundation, consolidating agent-interoperability standards alongside Model Context Protocol.
+      And Cloudflare launched Kitesurf, a web browser built specifically for AI agents rather than human users.
+    </p>
+  </div>
+
+  <p>Together, these stories show an industry moving in two directions at once: toward infrastructure and deals of almost unimaginable scale, and toward more careful guardrails for the people — including teenagers — who use these products every day. Here's what happened and why it matters.</p>
+
+  <div class="stat-callout">
+    <div class="stat-item"><div class="stat-num">8GW</div><div class="stat-label">OpenAI's Ohio data center capacity</div></div>
+    <div class="stat-item"><div class="stat-num">$105B</div><div class="stat-label">Nvidia's financing guarantee for the project</div></div>
+    <div class="stat-item"><div class="stat-num">$60B</div><div class="stat-label">SpaceX's completed Cursor acquisition</div></div>
+    <div class="stat-item"><div class="stat-num">13–17</div><div class="stat-label">Age range for the new ChatGPT for Teens</div></div>
+  </div>
+
+  <!-- SECTION — each H2 needs: id attribute + question format where appropriate -->
+  <!-- id format: use a short lowercase-hyphenated slug -->
+  <!-- AEO: Write H2 as a question if the section answers a specific question -->
+  <section aria-label="OpenAI Ohio data center lease">
+  <h2 id="openai-ohio-data-center"><span class="num-badge">1</span> How Big Is OpenAI's New Ohio Data Center?</h2>
+  <p>OpenAI signed a 20-year lease for a data center campus in Pike County, Ohio, that could eventually reach 8 gigawatts of AI computing capacity — making it the largest single AI data center project announced to date, built on the site of a former Cold War-era uranium enrichment plant.</p>
+
+  <p>The facility will be developed and owned by SoftBank's SB Energy subsidiary and will run exclusively on Nvidia chips. Nvidia agreed to guarantee up to $105 billion in conditional lease and power payment obligations, and separately invested $1.5 billion directly into SB Energy. SB Energy and SoftBank plan to build at least 10 gigawatts of new electricity generation to power the site, with the first 800 megawatts of capacity expected online by 2028.</p>
+
+  <p>The deal also includes a substantial local investment package: OpenAI committed an additional $40 million to a community benefits fund, and up to $84 million in coding-tool credits for roughly 844,000 Ohio students. Nvidia CEO Jensen Huang publicly pushed back on suggestions the arrangement amounts to "circular financing" — where AI companies, investors, and suppliers are all invested in each other — saying on social media that OpenAI will pay the lease directly and that Nvidia is simply using its scale to enable the buildout.</p>
+
+  <div class="insight-card">
+    <div class="card-label">Why This Matters</div>
+    <p>At 8 gigawatts, this single site would rival or exceed entire regional power grids — for comparison, the city of San Francisco used just over 5 gigawatts total in 2024. It's a concrete sign of how much physical infrastructure the current pace of AI development now requires.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="cc-meta">Industry Context</div>
+    <div class="cc-title">Part of a Bigger Pattern</div>
+    <p>This Ohio project sits alongside OpenAI's existing Stargate initiative — a $500 billion, multi-site data center effort announced with Nvidia, SoftBank, and Oracle — and joins a broader wave of AI companies locking in massive, multi-year compute commitments.</p>
+  </div>
+  </section>
+
+  <section aria-label="SpaceX Cursor acquisition closes">
+  <h2 id="spacex-cursor-acquisition"><span class="num-badge">2</span> Why Did SpaceX Buy Cursor for $60 Billion?</h2>
+  <p>SpaceX officially completed its $60 billion all-stock acquisition of Cursor, the AI coding startup, on August 14 — finalizing a deal first agreed in June and widely described as the largest acquisition of a venture-backed company on record.</p>
+
+  <p>The acquisition folds Cursor's popular AI-powered code editor into SpaceX's xAI division, giving Elon Musk's combined space-and-AI operation a competitive coding product to go up against Anthropic and OpenAI. Cursor said joining SpaceX gives it access to "the largest fleet of GPUs in the world," pairing its software with the infrastructure it needs to keep scaling. The deal follows SpaceX's own record-breaking IPO earlier this year and its earlier merger with xAI.</p>
+
+  <div class="tip-row">
+    <div class="tip-icon">💡</div>
+    <p><strong>What to watch:</strong> Cursor's market share in AI coding tools had reportedly slipped in the months before this deal closed, even as its revenue grew quickly — worth watching whether SpaceX's infrastructure and distribution can reverse that trend.</p>
+  </div>
+  </section>
+
+  <section aria-label="ChatGPT for Teens launch">
+  <h2 id="chatgpt-for-teens"><span class="num-badge">3</span> What Is ChatGPT for Teens and How Does It Work?</h2>
+  <p>OpenAI launched a dedicated ChatGPT experience for users aged 13 to 17, automatically applied to anyone who identifies as a teenager or whom OpenAI's age-prediction system estimates to be under 18.</p>
+
+  <p>The teen experience adds stricter limits around sexual or romantic roleplay, graphic violence, and self-harm content, along with safeguards intended to discourage emotional dependency on the chatbot. On the education side, OpenAI says the teen product can steer students toward its Study Mode rather than simply completing assignments outright, while parents who link accounts can set quiet hours and access additional oversight tools.</p>
+
+  <div class="insight-card">
+    <div class="card-label">Why This Matters</div>
+    <p>The launch arrives alongside broader industry and regulatory scrutiny of how AI chatbots affect younger users — including ongoing legal cases involving other platforms — making this one of the clearest steps yet by a major AI lab to build age-specific guardrails directly into its product.</p>
+  </div>
+  </section>
+
+  <section aria-label="Google A2A protocol foundation">
+  <h2 id="a2a-agentic-foundation"><span class="num-badge">4</span> What Happened to Google's Agent2Agent Protocol?</h2>
+  <p>Google's Agent2Agent Protocol (A2A) — an open standard that lets AI agents exchange structured information about their capabilities and endpoints — became a hosted project of the Agentic AI Foundation, joining Model Context Protocol and other open agent infrastructure efforts under one dedicated organization.</p>
+
+  <p>The move consolidates cross-agent communication standards that had previously been spread across different hosting arrangements, making it easier for vendors and open-source projects to agree on how AI agents discover each other, delegate tasks, and coordinate work without building brittle, one-off integrations for every new framework.</p>
+
+  <div class="content-card">
+    <div class="cc-meta">Standards Consolidation</div>
+    <div class="cc-title">A Shared Backbone for Multi-Agent Systems</div>
+    <p>With A2A and MCP now under the same foundation, platform teams building multi-agent systems have a clearer shared standard to build on, rather than needing to reconcile competing specifications from different organizations.</p>
+  </div>
+  </section>
+
+  <section aria-label="Cloudflare Kitesurf browser for agents">
+  <h2 id="cloudflare-kitesurf-browser"><span class="num-badge">5</span> What Is Cloudflare's Kitesurf Browser for AI Agents?</h2>
+  <p>Cloudflare introduced Kitesurf, a web browser designed specifically for AI agents to navigate and interact with the web, rather than for human use — signaling a broader shift toward "agent-native" infrastructure.</p>
+
+  <p>The launch follows Cloudflare's earlier release of x402, a system that lets AI agents make autonomous payments online, which has already been adopted by more than 20 companies. Taken together, these releases point to Cloudflare positioning itself as core infrastructure for a web increasingly navigated by AI agents rather than people typing into a browser bar.</p>
+
+  <blockquote>
+    <p>Enterprise AI companies are building governance tools to help organizations scale their use of agents securely and efficiently, as agent-native infrastructure becomes its own category.</p>
+    <cite>— Industry coverage of this week's agent infrastructure announcements</cite>
+  </blockquote>
+  </section>
+
+  <!-- Add more <section> + <h2 id="..."> blocks as needed -->
+
+  <!-- SECTION ORNAMENT — use between major content shifts -->
+  <div class="section-ornament">◆ ◆ ◆</div>
+
+  <!-- CLOSING SECTION — always include -->
+  <section aria-label="Conclusion">
+  <h2 id="what-this-means" style="border:none; margin-top:0; display:block; font-size:1.5rem;">What This Means for You</h2>
+  <p>This week showed two sides of the same industry at once: infrastructure and dealmaking at a scale that's genuinely hard to picture, alongside real steps toward safer, more age-appropriate AI products. OpenAI and Nvidia are betting tens of billions on physical capacity years in advance. SpaceX just made its biggest bet yet on AI coding. And ChatGPT for Teens shows that even as the industry races ahead, it's also being pushed to build guardrails for its most vulnerable users. Staying curious about how these threads connect — scale, safety, and standards — is exactly the kind of exploration we're here for. Stay Curious. Explore What's Next. Grow Together.</p>
+  </section>
+
+  <!-- =====================================================================
+       FAQ SECTION (AEO) — MANDATORY
+       Must match FAQPage schema Q&As exactly.
+       Place before share-row and tags-row.
+       Questions and answers must be identical to what's in the JSON-LD block above.
+  ====================================================================== -->
+  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How large is OpenAI's new Ohio data center?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>OpenAI signed a 20-year lease for a data center in Pike County, Ohio that could eventually reach 8 gigawatts of AI computing capacity, backed by up to $105 billion in financing support from Nvidia — making it the largest single AI data center project announced to date.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Has SpaceX's acquisition of Cursor actually closed?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes. SpaceX's $60 billion all-stock acquisition of AI coding startup Cursor became effective on August 14, 2026, finalizing a deal first agreed in June and widely considered the largest acquisition of a venture-backed company on record.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is ChatGPT for Teens?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>ChatGPT for Teens is a dedicated experience for users aged 13–17, launched by OpenAI on August 18, 2026. It adds stricter content limits, encourages Study Mode over direct answers for schoolwork, and gives linked parent accounts tools like quiet hours.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is Google's Agent2Agent Protocol (A2A)?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>A2A is Google's open standard letting AI agents exchange information about their capabilities and coordinate tasks with each other. As of August 18, 2026, it became a hosted project of the Agentic AI Foundation, alongside Model Context Protocol.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What does Cloudflare's Kitesurf browser do?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Kitesurf, launched by Cloudflare on August 18, 2026, is a web browser built specifically for AI agents to navigate and interact with websites, rather than for human users — part of a broader push toward agent-native web infrastructure.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SHARE ROW — always include, update URL -->
+  <div class="share-row">
+    <span class="share-label">Share:</span>
+    <button class="share-btn" onclick="copyLink()">Copy Link</button>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://neearventures.com/blog-2026-08-21-this-week-in-ai-ep18.html" target="_blank" class="share-btn">Facebook</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://neearventures.com/blog-2026-08-21-this-week-in-ai-ep18.html" target="_blank" class="share-btn">LinkedIn</a>
+    <a href="https://twitter.com/intent/tweet?url=https://neearventures.com/blog-2026-08-21-this-week-in-ai-ep18.html" target="_blank" class="share-btn">Twitter / X</a>
+  </div>
+
+  <!-- TAGS ROW — always include, add 4-8 relevant tags -->
+  <!-- Tags should match the keywords field in BlogPosting schema -->
+  <div class="tags-row">
+    <span class="tags-label">Topics:</span>
+    <span class="tag">OpenAI</span>
+    <span class="tag">Nvidia</span>
+    <span class="tag">SpaceX</span>
+    <span class="tag">ChatGPT for Teens</span>
+    <span class="tag">AI Agents</span>
+  </div>
+
+</div>
+</article>
+</div><!-- /.article-col -->
+
+<!-- =====================================================================
+   TABLE OF CONTENTS — DESKTOP SIDEBAR (right column, static sticky box)
+   v4.2: Links are HARD-CODED in HTML. Update manually when H2s change.
+   Add one <li> per H2 section. href must match the H2's id attribute.
+   FAQ links scroll to #faq and open the accordion item via openFaq(N).
+   Hidden on screens ≤ 900px (mobile uses collapsible TOC above).
+====================================================================== -->
+<aside class="toc-sidebar" aria-label="Table of contents">
+  <div class="toc-box-title">In This Article</div>
+  <ul class="toc-box-list">
+    <!-- REPLACE with one <li> per H2 section in the article -->
+    <!-- href="#section-id" must match id="section-id" on the H2 -->
+    <li><a href="#openai-ohio-data-center">1. OpenAI's 8GW Ohio Data Center</a></li>
+    <li><a href="#spacex-cursor-acquisition">2. SpaceX's $60B Cursor Deal Closes</a></li>
+    <li><a href="#chatgpt-for-teens">3. ChatGPT for Teens</a></li>
+    <li><a href="#a2a-agentic-foundation">4. Google's A2A Protocol Moves</a></li>
+    <li><a href="#cloudflare-kitesurf-browser">5. Cloudflare's Kitesurf Browser</a></li>
+    <!-- Add or remove <li> items as needed -->
+  </ul>
+  <hr class="toc-box-divider">
+  <div class="toc-box-section">FAQs</div>
+  <ul class="toc-box-list">
+    <!-- REPLACE with your FAQ questions. openFaq(N) = 0-indexed FAQ item -->
+    <li><a href="#faq" onclick="openFaq(0);return false;">OpenAI's Ohio data center size</a></li>
+    <li><a href="#faq" onclick="openFaq(1);return false;">SpaceX-Cursor deal status</a></li>
+    <li><a href="#faq" onclick="openFaq(2);return false;">What ChatGPT for Teens is</a></li>
+    <li><a href="#faq" onclick="openFaq(3);return false;">Google's A2A protocol explained</a></li>
+    <li><a href="#faq" onclick="openFaq(4);return false;">Cloudflare's Kitesurf browser</a></li>
+  </ul>
+</aside>
+
+</div><!-- /.content-layout -->
+</main>
+
+<!-- =====================================================================
+   FOOTER — DO NOT CHANGE. Dark navy. Consistent across all pages.
+====================================================================== -->
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:arjun@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/NeeArVentures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+</div><!-- /.page-wrap -->
+
+<script>
+/* ─── Copy Link button ─── */
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => btn.textContent = 'Copy Link', 2000);
+  });
+}
+
+/* ─── openFaq(N): open a specific FAQ item by index (used by sidebar FAQ links) ─── */
+function openFaq(index) {
+  var items = document.querySelectorAll('.faq-item');
+  if (!items[index]) return;
+  items.forEach(function(i) { i.classList.remove('open'); i.querySelector('.faq-question').setAttribute('aria-expanded','false'); });
+  items[index].classList.add('open');
+  items[index].querySelector('.faq-question').setAttribute('aria-expanded','true');
+  setTimeout(function() { items[index].scrollIntoView({ behavior:'smooth', block:'center' }); }, 80);
+}
+
+/* ─── FAQ Accordion (AEO) ─── */
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+/* ─── Mobile TOC Toggle ─── */
+function toggleMobileToc() {
+  const toc = document.getElementById('toc-mobile');
+  const btn = toc.querySelector('.toc-mobile-toggle');
+  const isOpen = toc.classList.contains('open');
+  toc.classList.toggle('open');
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+
+/* ─── TOC Smooth Scroll (v4.2) ───
+   Links are hard-coded in HTML — no auto-builder needed.
+   This block only handles smooth scrolling on click.
+   openFaq(N) is defined above and handles FAQ accordion + scroll.
+─── */
+document.querySelectorAll('.toc-box-list a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var href = a.getAttribute('href');
+    if (href === '#faq') return; /* FAQ links handled by openFaq() */
+    var el = document.getElementById(href.replace('#', ''));
+    if (el) {
+      e.preventDefault();
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+    }
+  });
+});
+
+/* ─── Mobile TOC Progress Bar ─── */
+(function() {
+  var progressBar = document.getElementById('toc-progress-bar');
+  if (!progressBar) return;
+  window.addEventListener('scroll', function() {
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0) + '%';
+  }, { passive: true });
+})();
+</script>
+
+</body>
+</html>
