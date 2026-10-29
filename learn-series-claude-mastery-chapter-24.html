@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- FAVICONS -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- CANONICAL TAG -->
+<link rel="canonical" href="https://neearventures.com/learn-series-claude-mastery-chapter-24.html">
+
+<!-- TITLE + META DESCRIPTION -->
+<title>Chapter 24: Computer Use & File Operations — Claude Mastery — NeeAr Ventures</title>
+<meta name="description" content="Learn how Claude works directly with files, runs code for exact results, generates real deliverables, and how to verify the output before trusting it.">
+
+<!-- OPEN GRAPH + TWITTER TAGS -->
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/learn-series-claude-mastery-chapter-24.html" />
+<meta property="og:title"        content="Chapter 24: Computer Use & File Operations — Claude Mastery — NeeAr Ventures" />
+<meta property="og:description"  content="Learn how Claude works directly with files, runs code for exact results, generates real deliverables, and how to verify the output before trusting it." />
+<meta property="og:image"        content="https://neearventures.com/images/learn-series-claude-mastery-chapter-24-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@NeeArVentures" />
+<meta name="twitter:title"       content="Chapter 24: Computer Use & File Operations — Claude Mastery — NeeAr Ventures" />
+<meta name="twitter:description" content="Learn how Claude works directly with files, runs code for exact results, generates real deliverables, and how to verify the output before trusting it." />
+<meta name="twitter:image"       content="https://neearventures.com/images/learn-series-claude-mastery-chapter-24-og.jpg" />
+
+<!-- LEARNINGRESOURCE SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Chapter 24: Computer Use & File Operations",
+  "headline": "Chapter 24: Computer Use & File Operations",
+  "description": "Learn how Claude works directly with files, runs code for exact results, generates real deliverables, and how to verify the output before trusting it.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://neearventures.com/images/learn-series-claude-mastery-chapter-24-og.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "learningResourceType": "Chapter",
+  "educationalLevel": "Advanced",
+  "teaches": "How to direct Claude to read, edit, and transform uploaded files with precise before/after instructions, use code execution for exact and repeatable results, generate real deliverables in the right format, and verify output before relying on it.",
+  "datePublished": "2026-10-29",
+  "dateModified": "2026-10-29",
+  "author": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures Editorial",
+    "url": "https://neearventures.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://neearventures.com/logo.png"
+    }
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Claude Mastery",
+    "url": "https://neearventures.com/learn.html#claude-mastery"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".direct-answer", ".article-lead", "h2"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Computer Use and File Operations with AI"
+  },
+  "mentions": [
+    { "@type": "Thing", "name": "File Transformation" },
+    { "@type": "Thing", "name": "Code Execution" },
+    { "@type": "Thing", "name": "Deliverable Generation" },
+    { "@type": "Thing", "name": "Output Verification" },
+    { "@type": "Thing", "name": "Iterative Building" }
+  ],
+  "keywords": "Claude computer use, Claude file operations, Claude code execution, AI file editing, generate spreadsheet with AI, verify AI output, Claude deliverables",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neearventures.com/learn-series-claude-mastery-chapter-24.html"
+  }
+}
+</script>
+
+<!-- BREADCRUMBLIST SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://neearventures.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Learn With Us",
+      "item": "https://neearventures.com/learn.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Chapter 24: Computer Use & File Operations",
+      "item": "https://neearventures.com/learn-series-claude-mastery-chapter-24.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQPAGE SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does computer use mean when working with Claude?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Computer use means Claude can act on files rather than only describe what to do with them: opening an uploaded file, editing it, running code against it, and returning a finished result. The shift is from reviewing words to reviewing actions taken on real files, which makes precise instructions and output verification part of using the capability well."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you write a good file transformation request for Claude?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Describe the before and after states precisely instead of stating a general goal. A request like clean this up leaves Claude guessing what clean means, while a numbered list of exactly what the output should contain produces a precise result. It also helps to say upfront whether the original should be edited in place or whether a new version with a different structure should be produced."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should you ask Claude to use code instead of answering directly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Code execution is the better choice for anything involving counting, calculating, cross-referencing, or applying one rule consistently across many items, and whenever close enough is not good enough. Examples include verifying a count against a hard limit, applying the same transformation to every row of a dataset, and cross-referencing two lists for discrepancies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you get Claude to produce a real file instead of a description?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Name the format explicitly, such as an Excel file rather than a table in the chat, matching the format to the task: spreadsheets for tabular data, documents for reports, presentations for slides, and code files for anything meant to run. For longer deliverables, ask for an outline first, confirm it, and then have the full version built out."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you verify a file Claude produced before using it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Combine automated checks with a manual spot-check. Build the checks into the request itself, such as confirming required columns are filled, totals match the line items, and no values violate a rule, and ask for any failing rows to be listed. Then review a sample by hand, since automated checks only catch what they were told to look for and miss problems like awkward tone or formatting that is technically correct but looks wrong."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:          #f7f4ef;
+  --bg-alt:      #f0ece4;
+  --surface:     #ffffff;
+  --border:      #e2d9cc;
+  --navy:        #0d1f35;
+  --navy-light:  #162d47;
+  --navy-muted:  #1e3a5a;
+  --gold:        #9a7a2e;
+  --gold-light:  #b8963e;
+  --gold-pale:   rgba(154,122,46,0.1);
+}
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* CHAPTER HERO */
+.chapter-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: clip; text-align: center; }
+.chapter-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.chapter-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; }
+.chapter-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem; }
+.chapter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; color: var(--navy); line-height: 1.15; margin-bottom: 0.8rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.chapter-subtitle { font-size: 1.05rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.chapter-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+/* CONTENT LAYOUT — two-column: article + TOC sidebar */
+.content-layout { display: grid; grid-template-columns: 1fr 260px; grid-template-areas: "article toc"; gap: 0; max-width: 1200px; margin: 0 auto; align-items: start; }
+.article-col { grid-area: article; min-width: 0; order: 1; }
+.article-col .article-wrap { max-width: 760px; margin: 0; padding: 4rem 4vw 6rem; }
+
+.article-lead { font-size: 1.05rem; line-height: 1.9; color: var(--navy); margin-bottom: 2.5rem; padding-left: 1.2rem; border-left: 3px solid var(--gold); font-weight: 400; }
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p strong { color: var(--navy); font-weight: 600; }
+
+/* DIRECT ANSWER BLOCK (AEO) */
+.direct-answer { background: #0d1f35; padding: 1.6rem 1.8rem; margin: 1.8rem 0 2.2rem; border-left: 4px solid #9a7a2e; }
+.direct-answer .da-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: #9a7a2e; font-weight: 600; margin-bottom: 0.7rem; }
+.direct-answer p { font-size: 0.92rem; color: rgba(232,224,208,0.9); line-height: 1.75; margin: 0; }
+.direct-answer p strong { color: #9a7a2e; }
+
+/* HEADINGS */
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--navy); margin: 3.5rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.8rem; scroll-margin-top: 90px; }
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.7rem; scroll-margin-top: 90px; }
+h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin: 1.6rem 0 0.6rem; }
+.num-badge { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: var(--navy); color: #fff; border-radius: 50%; font-size: 0.82rem; font-family: 'Jost', sans-serif; font-weight: 500; flex-shrink: 0; }
+
+ul, ol { margin-left: 1.5rem; margin-bottom: 1.4rem; }
+li { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 0.5rem; }
+
+/* CODE / PROMPT BLOCKS */
+.code-block { background: var(--navy); color: #e8e0d0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.7; overflow-x: auto; border-radius: 2px; white-space: pre-wrap; }
+.code-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 1.6rem 0 0.6rem; }
+
+/* INSIGHT CARD */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.4rem 0 1.8rem; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0; line-height: 1.7; }
+
+/* TIP ROW */
+.tip-row { display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--border); padding: 1.1rem 1.3rem; margin: 1.4rem 0; align-items: flex-start; }
+.tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.tip-row p { font-size: 0.88rem; margin: 0; color: var(--navy-muted); }
+.tip-row strong { color: var(--navy); }
+
+/* CONTENT CARD */
+.content-card { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 1.2rem 0; transition: box-shadow 0.3s; }
+.content-card:hover { box-shadow: 0 2px 16px rgba(154,122,46,0.1); }
+.content-card .cc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--navy); font-weight: 600; margin-bottom: 0.5rem; }
+.content-card .cc-meta { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); padding: 0.15rem 0.6rem; font-weight: 600; display: inline-block; margin-bottom: 0.6rem; }
+.content-card p { font-size: 0.87rem; color: var(--navy-muted); margin: 0; line-height: 1.65; }
+
+/* BEFORE / AFTER PAIR — NEW IN CH 24 */
+/* Two-column contrast of a vague request versus a precise one */
+.before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.6rem 0 2.2rem; }
+.ba-card { background: var(--surface); border: 1px solid var(--border); padding: 1.2rem 1.4rem; }
+.ba-card.ba-vague { border-top: 4px solid #c0392b; }
+.ba-card.ba-precise { border-top: 4px solid #2d7a4f; }
+.ba-card .ba-label { font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.6rem; }
+.ba-card.ba-vague .ba-label { color: #c0392b; }
+.ba-card.ba-precise .ba-label { color: #2d7a4f; }
+.ba-card .ba-quote { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.4; }
+.ba-card .ba-note { font-size: 0.82rem; color: var(--navy-muted); line-height: 1.6; margin: 0; }
+
+/* FORMAT GRID — NEW IN CH 24 */
+/* Two-by-two grid matching a deliverable format to the task it suits */
+.format-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.6rem 0 2.2rem; }
+.format-card { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 1.3rem 1.4rem; }
+.format-card .fc-icon { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.format-card .fc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+.format-card .fc-desc { font-size: 0.84rem; color: var(--navy-muted); line-height: 1.6; margin-bottom: 0.6rem; }
+.format-card .fc-tag { font-size: 0.64rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+
+/* MISTAKE LIST */
+.mistake-list { margin: 1.6rem 0 2.2rem; }
+.mistake-list-item { display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #c0392b; padding: 1rem 1.3rem; margin-bottom: 0.7rem; align-items: flex-start; }
+.mistake-list-item .mli-icon { font-size: 1rem; color: #c0392b; flex-shrink: 0; margin-top: 2px; }
+.mistake-list-item p { font-size: 0.88rem; margin: 0; color: var(--navy-muted); line-height: 1.65; }
+.mistake-list-item p strong { color: var(--navy); }
+
+/* ASSIGNMENT BOX */
+.assignment-box { background: var(--surface); border: 2px solid var(--gold); padding: 1.8rem 2rem; margin: 2.5rem 0; }
+.assignment-box .box-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--navy); font-weight: 600; margin-bottom: 1rem; }
+.assignment-box h4 { margin-top: 1.2rem; }
+.assignment-box p { font-size: 0.9rem; margin-bottom: 0.8rem; }
+
+/* TAKEAWAYS */
+.takeaways { background: var(--bg-alt); padding: 2rem 2.5rem; margin: 3rem 0; border-top: 3px solid var(--gold); }
+.takeaways-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--navy); font-weight: 600; margin-bottom: 1.2rem; text-align: center; }
+.takeaways ul { list-style: none; padding: 0; margin: 0; margin-left: 0; }
+.takeaways li { padding-left: 2rem; position: relative; margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.7; }
+.takeaways li:before { content: '✅'; position: absolute; left: 0; color: var(--gold); }
+
+/* SECTION ORNAMENT */
+.section-ornament { text-align: center; color: var(--gold); opacity: 0.4; letter-spacing: 12px; font-size: 0.9rem; margin: 3rem 0; }
+
+/* FAQ SECTION */
+.faq-section { margin: 3.5rem 0 2rem; }
+.faq-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 1.4rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--border); }
+.faq-item { border: 1px solid var(--border); margin-bottom: 0.5rem; }
+.faq-question { width: 100%; background: var(--surface); border: none; padding: 1rem 1.4rem; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-family: 'Jost', sans-serif; font-size: 0.92rem; font-weight: 500; color: var(--navy); line-height: 1.5; transition: background 0.2s; }
+.faq-question:hover { background: var(--bg-alt); }
+.faq-icon { font-size: 1.2rem; color: var(--gold); flex-shrink: 0; font-weight: 300; transition: transform 0.3s; }
+.faq-item.open .faq-question { background: var(--bg-alt); }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-item.open .faq-answer { max-height: 400px; }
+.faq-answer p { padding: 0.9rem 1.4rem 1.1rem; font-size: 0.9rem; color: var(--navy-muted); line-height: 1.8; margin: 0; border-top: 1px solid var(--border); }
+
+/* TOC SIDEBAR */
+.toc-sidebar { grid-area: toc; position: sticky; top: 110px; align-self: start; padding: 1.6rem; border: 1px solid var(--border); background: var(--surface); margin: 2.5rem 1.6rem 0 0; order: 2; }
+.toc-box-title { font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border); }
+.toc-box-section { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy-muted); font-weight: 600; margin: 1rem 0 0.4rem; }
+.toc-box-list { list-style: none; padding: 0; margin: 0 0 0.4rem; }
+.toc-box-list li { margin: 0; }
+.toc-box-list a { display: block; font-size: 0.8rem; color: var(--navy-muted); text-decoration: none; padding: 0.32rem 0 0.32rem 0.7rem; border-left: 2px solid transparent; line-height: 1.4; transition: color 0.2s, border-color 0.2s; }
+.toc-box-list a:hover, .toc-box-list a.active { color: var(--gold); border-left-color: var(--gold); }
+.toc-box-divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+
+/* PROGRESS WIDGET (sidebar) */
+.progress-widget { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.progress-widget-label { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy-muted); font-weight: 600; margin-bottom: 0.6rem; }
+.progress-track { width: 100%; height: 6px; background: var(--bg-alt); border: 1px solid var(--border); overflow: hidden; }
+.progress-fill { height: 100%; background: var(--gold); width: 80%; }
+.progress-percent { font-size: 0.72rem; color: var(--gold); font-weight: 600; margin-top: 0.5rem; }
+
+/* SERIES CTA (sidebar) */
+.series-cta-box { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.series-cta-title { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.6rem; line-height: 1.4; }
+.series-cta-btn { display: block; text-align: center; background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.5rem 0.8rem; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; font-weight: 500; }
+.series-cta-btn:hover { background: var(--gold); color: #fff; }
+
+/* MOBILE TOC */
+.toc-mobile { display: none; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--gold); margin: 0; }
+.toc-mobile-toggle { width: 100%; background: none; border: none; padding: 0.9rem 1.2rem; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-family: 'Jost', sans-serif; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+.toc-mobile-toggle-icon { font-size: 1rem; color: var(--gold); transition: transform 0.3s; flex-shrink: 0; }
+.toc-mobile.open .toc-mobile-toggle-icon { transform: rotate(45deg); }
+.toc-mobile-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.toc-mobile.open .toc-mobile-body { max-height: 600px; }
+.toc-mobile-body .toc-list { list-style: none; padding: 0.4rem 1.2rem 1rem; border-top: 1px solid var(--border); }
+.toc-mobile-body .toc-list a { display: block; font-size: 0.85rem; color: var(--navy-muted); text-decoration: none; padding: 0.4rem 0 0.4rem 0.7rem; }
+.toc-mobile-progress { height: 3px; background: var(--bg-alt); }
+.toc-mobile-progress-bar { height: 100%; background: var(--gold); width: 0%; }
+
+/* NAVIGATION FOOTER (chapter nav) */
+.chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 2.5rem 0; border-top: 2px solid var(--border); margin-top: 3rem; flex-wrap: wrap; }
+.nav-btn { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--navy); padding: 1rem 1.5rem; border: 1px solid var(--border); background: var(--surface); transition: all 0.3s; flex: 1; min-width: 200px; }
+.nav-btn:hover { border-color: var(--gold); box-shadow: 0 2px 12px rgba(154,122,46,0.1); }
+.nav-btn.prev { justify-content: flex-start; }
+.nav-btn.next { justify-content: flex-end; }
+.nav-btn .nav-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.nav-btn .nav-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; }
+.nav-center { text-align: center; flex: 0 0 auto; }
+.nav-center a { color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+.nav-center a:hover { color: var(--gold-light); }
+
+/* FOOTER */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+@media (max-width: 900px) {
+  .content-layout { display: block; }
+  .toc-sidebar { display: none; }
+  .toc-mobile { display: block; }
+  .article-col .article-wrap { padding: 2.5rem 4vw 5rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .chapter-nav { flex-direction: column; }
+  .nav-btn { width: 100%; }
+  .before-after { grid-template-columns: 1fr; }
+  .format-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="learn.html" class="active">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="chapter-hero">
+  <a href="learn.html#claude-mastery" class="back-link">← Back to Claude Mastery</a>
+  <div class="chapter-label">Claude Mastery · Chapter 24 of 30</div>
+  <div class="chapter-number">24</div>
+  <h1 class="chapter-title">Computer Use & File Operations</h1>
+  <p class="chapter-subtitle">When Claude Stops Talking About the Task and Starts Doing It</p>
+  <div class="chapter-meta">
+    <span>⏱️ 12 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>📊 Advanced</span>
+    <span class="meta-dot">◆</span>
+    <span>🎯 Files &amp; Automation</span>
+  </div>
+  <div class="divider-line"></div>
+</div>
+
+<main>
+<div class="content-layout">
+
+<div class="article-col">
+
+<!-- MOBILE TOC -->
+<div class="toc-mobile" id="toc-mobile">
+  <button class="toc-mobile-toggle" onclick="toggleMobileToc()" aria-expanded="false" aria-controls="toc-mobile-body">
+    <span>In This Chapter</span>
+    <span class="toc-mobile-toggle-icon">+</span>
+  </button>
+  <div class="toc-mobile-progress"><div class="toc-mobile-progress-bar" id="toc-progress-bar"></div></div>
+  <div class="toc-mobile-body" id="toc-mobile-body">
+    <ul class="toc-list">
+      <li><a href="#working-with-files">1. Working With Files Directly</a></li>
+      <li><a href="#code-execution">2. Code Execution</a></li>
+      <li><a href="#generating-deliverables">3. Generating Real Deliverables</a></li>
+      <li><a href="#verifying-output">4. Verifying Before You Trust It</a></li>
+      <li><a href="#common-mistakes">5. Common Mistakes to Avoid</a></li>
+      <li><a href="#faq">FAQs</a></li>
+    </ul>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <p class="article-lead">Up to this point in the series, most of what has been asked of Claude ended in text — an answer, a draft, an outline that then had to be implemented by hand. Computer use changes that relationship. Instead of describing what to do with a file, Claude can open it, edit it, run code against it, and hand back a finished result. That shift comes with a responsibility: the thing being reviewed is no longer just words, it is actions taken on real files.</p>
+
+  <div class="direct-answer" role="note" aria-label="Quick Answer">
+    <div class="da-label">Quick Answer</div>
+    <p>
+      <strong>Computer use with Claude</strong> means handing over a real file and getting back a finished result: Claude reads and edits the file, runs code for tasks that need exact counts or consistent rules, and generates deliverables such as spreadsheets, documents, and presentations. Results depend on precise before/after instructions, and trust depends on verification — automated checks built into the request, plus a manual spot-check of the output.
+    </p>
+  </div>
+
+  <p>This chapter covers how to work with uploaded files directly, when to use code execution instead of an eyeballed answer, how to get real deliverables in the right format, and how to verify the output before relying on it.</p>
+
+  <section aria-label="Working with files directly">
+  <h2 id="working-with-files"><span class="num-badge">1</span> How Do You Work With Files Directly Using Claude?</h2>
+  <p>The starting point for most computer-use tasks is a file that already exists — a spreadsheet that needs cleaning, a document that needs edits, a folder of images that need renaming. Instead of describing the file's contents, the file itself gets handed over.</p>
+
+  <h3>Being Specific About the Transformation</h3>
+  <p>The quality of file-based work depends heavily on how precisely the <em>before</em> and <em>after</em> are described, not just the general goal.</p>
+
+  <div class="code-block">I've uploaded 'Q3_expenses.xlsx'. It has one sheet with expense
+entries from three regions mixed together in a single column. I need:
+1. A separate sheet for each region
+2. Totals at the bottom of each sheet
+3. A summary sheet comparing region totals side by side
+4. Keep the original formatting for currency columns</div>
+
+  <div class="before-after">
+    <div class="ba-card ba-vague">
+      <div class="ba-label">❌ Vague Request</div>
+      <div class="ba-quote">"Clean this up."</div>
+      <p class="ba-note">Leaves Claude guessing what "clean" means for this specific file — the result is a guess.</p>
+    </div>
+    <div class="ba-card ba-precise">
+      <div class="ba-label">✅ Precise Request</div>
+      <div class="ba-quote">"Split by region, add totals, build a summary sheet, keep currency formatting."</div>
+      <p class="ba-note">A specific before/after produces a specific result on the first pass.</p>
+    </div>
+  </div>
+
+  <h3>Editing in Place vs. Producing a New Version</h3>
+  <p>Decide upfront whether Claude should edit the original structure or produce something new, and say so. Two similar-sounding requests produce very different outputs.</p>
+  <div class="code-block">In place:
+Edit this document in place — keep the existing headings and
+formatting, and only change the sections I've marked with [EDIT] in
+the text.
+
+New version:
+Use this document as a reference, but produce a new version with a
+different structure that covers the same content.</div>
+
+  <div class="tip-row">
+    <div class="tip-icon">💡</div>
+    <p><strong>Name the distinction explicitly:</strong> Stating whether the original should be preserved or replaced avoids a wasted first pass.</p>
+  </div>
+  </section>
+
+  <section aria-label="Code execution for reliable work">
+  <h2 id="code-execution"><span class="num-badge">2</span> When Should You Ask Claude to Use Code Instead of Answering Directly?</h2>
+  <p>Some tasks are technically possible to do "by eye," but far more reliable done with actual code — anything involving counting, calculating, cross-referencing, or applying a rule consistently across many items.</p>
+
+  <h3>Good Candidates for Code Execution</h3>
+  <ul>
+    <li>Verifying a count, total, or calculation against a hard limit, such as a character count</li>
+    <li>Applying the same transformation to every row in a dataset</li>
+    <li>Cross-referencing two lists for matches or discrepancies</li>
+    <li>Anything where "close enough" isn't good enough</li>
+  </ul>
+
+  <div class="code-block">Rather than estimating, write and run a script that counts the exact
+number of words in each section of this document and confirms the
+total matches what I specified.</div>
+
+  <div class="insight-card">
+    <div class="card-label">Key Insight</div>
+    <p>Preferring a verified calculation over an eyeballed one is exactly what prevents the quiet errors that slip through when a task is done "by feel."</p>
+  </div>
+
+  <h3>Iterating on Code Output</h3>
+  <p>Code execution isn't a one-shot process. The first result is a draft, and failing rows can be separated out before the transformation is applied to the full file.</p>
+  <div class="code-block">Run this script and show me the output. If any rows fail the
+validation, list them separately so I can review before we apply the
+transformation to the full file.</div>
+  </section>
+
+  <section aria-label="Generating real deliverables">
+  <h2 id="generating-deliverables"><span class="num-badge">3</span> How Do You Get Claude to Produce Real Deliverables?</h2>
+  <p>Computer use means Claude can produce an actual file that gets downloaded and used — not just a description of what that file should contain. This is where the biggest time savings usually show up.</p>
+
+  <h3>Matching the Right Format to the Right Task</h3>
+  <div class="format-grid">
+    <div class="format-card">
+      <div class="fc-icon">📊</div>
+      <div class="fc-title">Spreadsheets</div>
+      <div class="fc-desc">Anything tabular: data cleaning, calculations, comparisons.</div>
+      <div class="fc-tag">Tabular Work</div>
+    </div>
+    <div class="format-card">
+      <div class="fc-icon">📄</div>
+      <div class="fc-title">Documents</div>
+      <div class="fc-desc">Reports, long-form writing, anything that needs to look professional when printed or shared.</div>
+      <div class="fc-tag">Written Content</div>
+    </div>
+    <div class="format-card">
+      <div class="fc-icon">🖥️</div>
+      <div class="fc-title">Presentations</div>
+      <div class="fc-desc">Slide-based content built to be presented rather than read.</div>
+      <div class="fc-tag">Slide-Based</div>
+    </div>
+    <div class="format-card">
+      <div class="fc-icon">⌨️</div>
+      <div class="fc-title">Code Files</div>
+      <div class="fc-desc">Scripts, components, or anything meant to run rather than be read.</div>
+      <div class="fc-tag">Runnable</div>
+    </div>
+  </div>
+
+  <p>Naming the format explicitly — "I need this as an Excel file, not just a table in the chat" — ensures the result is something usable rather than something that then has to be reformatted by hand.</p>
+
+  <h3>Iterative Building for Longer Deliverables</h3>
+  <p>For anything substantial, ask for a structure first, confirm it, then let Claude build it out section by section rather than generating the whole thing in one pass.</p>
+  <div class="code-block">Before building the full report, give me an outline of the sections
+and roughly how long each will be. Once I confirm, build it out.</div>
+
+  <div class="tip-row">
+    <div class="tip-icon">💡</div>
+    <p><strong>Same principle as Chapter 22:</strong> Confirm scope before committing to the full build — the same discipline that applies to project planning applies to file generation.</p>
+  </div>
+  </section>
+
+  <section aria-label="Verifying output before trusting it">
+  <h2 id="verifying-output"><span class="num-badge">4</span> How Do You Verify Claude's Output Before Trusting It?</h2>
+  <p>The fact that Claude produced a finished file doesn't mean the file is correct. Verification is a habit worth building deliberately, especially for anything with hard constraints such as character limits, specific numbers, or required formatting.</p>
+
+  <h3>Building Verification Into the Request Itself</h3>
+  <div class="code-block">After generating this file, run a check that confirms: every row has
+a value in the required columns, the totals match the sum of the line
+items, and no currency values are negative. Report any rows that fail
+these checks.</div>
+
+  <h3>Spot-Checking Before You Ship</h3>
+  <p>Even with automated verification, a quick manual spot-check on a sample of the output catches things a script wasn't told to look for — a tone that's off, a section that reads awkwardly, formatting that is technically correct but looks wrong.</p>
+
+  <div class="insight-card">
+    <div class="card-label">Why This Matters</div>
+    <p>Automated checks and human judgment aren't substitutes for each other. They catch different kinds of problems — the script catches what it was told to look for, and the human catches what nobody thought to ask about.</p>
+  </div>
+  </section>
+
+  <section aria-label="Common mistakes to avoid">
+  <h2 id="common-mistakes"><span class="num-badge">5</span> What Are the Most Common Computer Use Mistakes?</h2>
+  <p>The same five mistakes account for most disappointing results from file-based work.</p>
+
+  <div class="mistake-list">
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Describing a file's contents instead of uploading it.</strong> Let Claude work with the actual file rather than a secondhand description.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Vague transformation requests.</strong> "Clean this up" produces a guess. A specific before/after produces a result.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Eyeballing something code could verify exactly.</strong> If there's a hard limit or count involved, ask for a script, not an estimate.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Generating a long deliverable in one pass with no outline check.</strong> Confirm structure first, especially for anything substantial.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Trusting a finished file without checking it.</strong> A file that looks complete isn't the same as a file that's correct.</p>
+    </div>
+  </div>
+  </section>
+
+  <div class="section-ornament">◆ ◆ ◆</div>
+
+  <div class="takeaways">
+    <div class="takeaways-title">Key Takeaways</div>
+    <ul>
+      <li>Upload the actual file — a real file beats a secondhand description every time</li>
+      <li>Describe the before and after precisely — "clean this up" is a guess, a specific transformation is a result</li>
+      <li>Say whether to edit in place or produce a new version — the two requests sound alike but produce very different outputs</li>
+      <li>Use code when "close enough" isn't good enough — counts, totals, and consistent rules belong to scripts, not estimates</li>
+      <li>Name the output format explicitly — Excel, document, presentation, or code file, not just a table in the chat</li>
+      <li>Outline first for long deliverables — confirm structure before the full build</li>
+      <li>Verify twice — automated checks inside the request, then a manual spot-check on a sample</li>
+    </ul>
+  </div>
+
+  <div class="assignment-box">
+    <div class="box-title">Practice Exercises</div>
+    <h4>Foundation Option</h4>
+    <p>Upload a file already on hand — a spreadsheet, document, or list — and practice writing a precise before/after transformation request rather than a vague "improve this" prompt.</p>
+    <h4>Advanced Option</h4>
+    <p>Take a task normally done manually that involves some counting, calculating, or cross-referencing, and ask Claude to solve it with code instead. Compare the confidence in the code-verified answer versus a manually eyeballed one.</p>
+    <h4>Reflection Questions</h4>
+    <p>Where did being specific about the "after" state change the result? What is a task currently done manually that a script could verify more reliably? What would a useful verification step look like for the last file Claude was asked to produce?</p>
+  </div>
+
+  <!-- VISIBLE FAQ SECTION -->
+  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What does computer use mean when working with Claude?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Computer use means Claude can act on files rather than only describe what to do with them: opening an uploaded file, editing it, running code against it, and returning a finished result. The shift is from reviewing words to reviewing actions taken on real files, which makes precise instructions and output verification part of using the capability well.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How do you write a good file transformation request for Claude?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Describe the before and after states precisely instead of stating a general goal. A request like "clean this up" leaves Claude guessing what clean means, while a numbered list of exactly what the output should contain produces a precise result. It also helps to say upfront whether the original should be edited in place or whether a new version with a different structure should be produced.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>When should you ask Claude to use code instead of answering directly?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Code execution is the better choice for anything involving counting, calculating, cross-referencing, or applying one rule consistently across many items, and whenever "close enough" is not good enough. Examples include verifying a count against a hard limit, applying the same transformation to every row of a dataset, and cross-referencing two lists for discrepancies.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How do you get Claude to produce a real file instead of a description?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Name the format explicitly, such as an Excel file rather than a table in the chat, matching the format to the task: spreadsheets for tabular data, documents for reports, presentations for slides, and code files for anything meant to run. For longer deliverables, ask for an outline first, confirm it, and then have the full version built out.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How do you verify a file Claude produced before using it?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Combine automated checks with a manual spot-check. Build the checks into the request itself, such as confirming required columns are filled, totals match the line items, and no values violate a rule, and ask for any failing rows to be listed. Then review a sample by hand, since automated checks only catch what they were told to look for and miss problems like awkward tone or formatting that is technically correct but looks wrong.</p>
+      </div>
+    </div>
+  </section>
+
+  <p style="margin-top: 2.5rem; font-size: 0.9rem; color: var(--navy-muted);"><strong>Coming Up Next:</strong> In Chapter 25, <em>Documentation &amp; Knowledge Management</em>, learn how to use Claude to capture, organize, and maintain documentation that actually stays useful over time — instead of going stale the moment it's written.</p>
+
+</div>
+</article>
+</div><!-- /.article-col -->
+
+<!-- TOC SIDEBAR -->
+<aside class="toc-sidebar" aria-label="Table of contents">
+  <div class="toc-box-title">In This Chapter</div>
+  <ul class="toc-box-list" id="toc-list-desktop">
+    <li><a href="#working-with-files">1. Working With Files</a></li>
+    <li><a href="#code-execution">2. Code Execution</a></li>
+    <li><a href="#generating-deliverables">3. Real Deliverables</a></li>
+    <li><a href="#verifying-output">4. Verifying Output</a></li>
+    <li><a href="#common-mistakes">5. Common Mistakes</a></li>
+  </ul>
+  <hr class="toc-box-divider">
+  <div class="toc-box-section">FAQs</div>
+  <ul class="toc-box-list">
+    <li><a href="#faq" onclick="openFaq(0);return false;">What is computer use?</a></li>
+    <li><a href="#faq" onclick="openFaq(1);return false;">Transformation requests?</a></li>
+    <li><a href="#faq" onclick="openFaq(2);return false;">When to use code?</a></li>
+    <li><a href="#faq" onclick="openFaq(4);return false;">Verifying output?</a></li>
+  </ul>
+
+  <div class="progress-widget">
+    <div class="progress-widget-label">Series Progress</div>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+    <div class="progress-percent">Chapter 24 of 30 · 80%</div>
+  </div>
+
+  <div class="series-cta-box">
+    <div class="series-cta-title">Continue the Claude Mastery series</div>
+    <a href="learn.html#claude-mastery" class="series-cta-btn">View All Chapters</a>
+  </div>
+</aside>
+
+</div><!-- /.content-layout -->
+</main>
+
+<div class="chapter-nav" style="max-width: 1200px; margin: 0 auto; padding-left: 4vw; padding-right: 4vw;">
+  <a href="learn-series-claude-mastery-chapter-23.html" class="nav-btn prev">
+    <div>
+      <div class="nav-label">Previous Chapter</div>
+      <div class="nav-title">← Process Optimization</div>
+    </div>
+  </a>
+  <div class="nav-center">
+    <a href="learn.html#claude-mastery">View All Chapters</a>
+  </div>
+  <div class="nav-btn next" style="visibility: hidden;">
+    <div style="text-align: right;">
+      <div class="nav-label">Next Chapter</div>
+      <div class="nav-title">Coming Soon →</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:arjun@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/NeeArVentures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+<script>
+/* FAQ Accordion */
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+/* openFaq(N): open a specific FAQ item by index (sidebar FAQ links) */
+function openFaq(index) {
+  var items = document.querySelectorAll('.faq-item');
+  if (!items[index]) return;
+  items.forEach(function(i) { i.classList.remove('open'); i.querySelector('.faq-question').setAttribute('aria-expanded','false'); });
+  items[index].classList.add('open');
+  items[index].querySelector('.faq-question').setAttribute('aria-expanded','true');
+  setTimeout(function() { items[index].scrollIntoView({ behavior:'smooth', block:'center' }); }, 80);
+}
+
+/* Mobile TOC Toggle */
+function toggleMobileToc() {
+  const toc = document.getElementById('toc-mobile');
+  const btn = toc.querySelector('.toc-mobile-toggle');
+  const isOpen = toc.classList.contains('open');
+  toc.classList.toggle('open');
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+
+/* TOC Smooth Scroll */
+document.querySelectorAll('.toc-box-list a[href^="#"], .toc-mobile-body a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var href = a.getAttribute('href');
+    if (href === '#faq') return;
+    var el = document.getElementById(href.replace('#', ''));
+    if (el) {
+      e.preventDefault();
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+    }
+  });
+});
+
+/* Mobile TOC Progress Bar */
+(function() {
+  var progressBar = document.getElementById('toc-progress-bar');
+  if (!progressBar) return;
+  window.addEventListener('scroll', function() {
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0) + '%';
+  }, { passive: true });
+})();
+
+/* Desktop TOC Scroll-Spy — highlights active section link */
+(function() {
+  var sections = ['working-with-files','code-execution','generating-deliverables','verifying-output','common-mistakes'];
+  var links = document.querySelectorAll('#toc-list-desktop a');
+  if (!('IntersectionObserver' in window) || !links.length) return;
+  var map = {};
+  links.forEach(function(l) { map[l.getAttribute('href').replace('#','')] = l; });
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      var link = map[entry.target.id];
+      if (!link) return;
+      if (entry.isIntersecting) {
+        links.forEach(function(l) { l.classList.remove('active'); });
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-110px 0px -70% 0px', threshold: 0 });
+  sections.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
