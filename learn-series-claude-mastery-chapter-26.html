@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- FAVICONS -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- CANONICAL TAG -->
+<link rel="canonical" href="https://neearventures.com/learn-series-claude-mastery-chapter-26.html">
+
+<!-- TITLE + META DESCRIPTION -->
+<title>Chapter 26: AI-Human Collaboration Patterns — Claude Mastery — NeeAr Ventures</title>
+<meta name="description" content="Learn how to divide work between you and Claude: delegate, collaborate, or retain; run draft-and-refine loops; use Claude as reviewer and challenger.">
+
+<!-- OPEN GRAPH + TWITTER TAGS -->
+<meta property="og:type"         content="article" />
+<meta property="og:site_name"    content="NeeAr Ventures" />
+<meta property="og:url"          content="https://neearventures.com/learn-series-claude-mastery-chapter-26.html" />
+<meta property="og:title"        content="Chapter 26: AI-Human Collaboration Patterns — Claude Mastery — NeeAr Ventures" />
+<meta property="og:description"  content="Learn how to divide work between you and Claude: delegate, collaborate, or retain; run draft-and-refine loops; use Claude as reviewer and challenger." />
+<meta property="og:image"        content="https://neearventures.com/images/learn-series-claude-mastery-chapter-26-og.jpg" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@NeeArVentures" />
+<meta name="twitter:title"       content="Chapter 26: AI-Human Collaboration Patterns — Claude Mastery — NeeAr Ventures" />
+<meta name="twitter:description" content="Learn how to divide work between you and Claude: delegate, collaborate, or retain; run draft-and-refine loops; use Claude as reviewer and challenger." />
+<meta name="twitter:image"       content="https://neearventures.com/images/learn-series-claude-mastery-chapter-26-og.jpg" />
+
+<!-- LEARNINGRESOURCE SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Chapter 26: AI-Human Collaboration Patterns",
+  "headline": "Chapter 26: AI-Human Collaboration Patterns",
+  "description": "Learn how to divide work between you and Claude: delegate, collaborate, or retain; run draft-and-refine loops; use Claude as reviewer and challenger.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://neearventures.com/images/learn-series-claude-mastery-chapter-26-og.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "learningResourceType": "Chapter",
+  "educationalLevel": "Mastery",
+  "teaches": "How to decide which parts of a task to delegate, share, or keep; run draft-and-refine loops with specific feedback; use Claude as a reviewer, challenger, and thinking partner; and build a reusable collaboration rhythm.",
+  "datePublished": "2026-10-31",
+  "dateModified": "2026-10-31",
+  "author": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures Editorial",
+    "url": "https://neearventures.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeeAr Ventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://neearventures.com/logo.png"
+    }
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Claude Mastery",
+    "url": "https://neearventures.com/learn.html#claude-mastery"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".direct-answer", ".article-lead", "h2"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "AI-Human Collaboration"
+  },
+  "mentions": [
+    { "@type": "Thing", "name": "Task Delegation" },
+    { "@type": "Thing", "name": "Draft-and-Refine Loop" },
+    { "@type": "Thing", "name": "Prompt Feedback" },
+    { "@type": "Thing", "name": "AI Reviewer and Challenger Roles" },
+    { "@type": "Thing", "name": "Reusable Context" }
+  ],
+  "keywords": "AI human collaboration, delegate to Claude, draft and refine loop, Claude as reviewer, Claude as challenger, working with AI, human in the loop",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neearventures.com/learn-series-claude-mastery-chapter-26.html"
+  }
+}
+</script>
+
+<!-- BREADCRUMBLIST SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://neearventures.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Learn With Us",
+      "item": "https://neearventures.com/learn.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Chapter 26: AI-Human Collaboration Patterns",
+      "item": "https://neearventures.com/learn-series-claude-mastery-chapter-26.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQPAGE SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you decide what to delegate to Claude and what to keep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask three questions about each task. Does it require context only you have? If so, provide that context or keep the task. Does it carry consequences you are accountable for, such as a decision or a message to a customer? If so, you make the final call. Is it mostly volume, structure, or first-draft effort? If so, delegate it freely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between delegating, collaborating, and retaining a task?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delegating means Claude does the work and you review the result, which suits formatting, summaries, and first drafts. Collaborating means working back and forth, which suits strategy and writing with a point of view. Retaining means you do the task yourself, perhaps with Claude as a sounding board, which suits final decisions and sensitive conversations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a draft-and-refine loop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A draft-and-refine loop is a short cycle of five steps: you brief the goal, audience, and constraints; Claude drafts; you react with specific feedback; Claude revises only what you pointed to; and you decide whether the work is ready. If the third revision is not clearly better than the second, the problem is usually the brief, so rewrite it instead of polishing further."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you give Claude feedback that actually improves the work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Be specific about what to change and what to keep. A comment like make it better produces change without improvement, while naming the exact problem, the parts to leave untouched, and the desired adjustment gives a targeted revision. Naming what to keep matters because a revision can otherwise quietly undo parts you liked."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can Claude act as a reviewer or challenger of your work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Assign a specific viewpoint and ask for disagreement explicitly. For example, ask Claude to review a proposal as a skeptical finance director and list the weakest points and likely questions, or to argue against your plan as strongly as possible and name the most serious objection. The default tone leans cooperative, so the request for challenge has to be stated."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:          #f7f4ef;
+  --bg-alt:      #f0ece4;
+  --surface:     #ffffff;
+  --border:      #e2d9cc;
+  --navy:        #0d1f35;
+  --navy-light:  #162d47;
+  --navy-muted:  #1e3a5a;
+  --gold:        #9a7a2e;
+  --gold-light:  #b8963e;
+  --gold-pale:   rgba(154,122,46,0.1);
+}
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { background: var(--bg); color: var(--navy); font-family: 'Jost', sans-serif; font-weight: 400; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0.75rem 4vw; display: flex; align-items: center; justify-content: space-between; background: rgba(247,244,239,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
+.logo-img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.logo-text-block { display: flex; flex-direction: column; }
+.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.25; white-space: nowrap; }
+.logo-tagline { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; white-space: nowrap; margin-top: 2px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--navy); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; font-weight: 400; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.42rem 1.2rem; font-family: 'Jost', sans-serif; font-size: 0.76rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; font-weight: 500; }
+.nav-cta:hover { background: var(--gold); color: #fff; }
+
+/* CHAPTER HERO */
+.chapter-hero { padding: 9rem 4vw 4.5rem; background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; overflow: clip; text-align: center; }
+.chapter-hero::before { content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 700px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(154,122,46,0.07) 0%, transparent 65%); pointer-events: none; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy-muted); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
+.back-link:hover { color: var(--gold); }
+.chapter-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; }
+.chapter-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem; }
+.chapter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; color: var(--navy); line-height: 1.15; margin-bottom: 0.8rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+.chapter-subtitle { font-size: 1.05rem; color: var(--navy-muted); line-height: 1.75; max-width: 580px; margin: 0 auto 2rem; font-weight: 400; }
+.chapter-meta { display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 0.78rem; color: var(--navy-muted); letter-spacing: 0.1em; flex-wrap: wrap; font-weight: 400; }
+.meta-dot { color: var(--gold); opacity: 0.5; }
+.divider-line { width: 44px; height: 1px; background: var(--gold); margin: 1.8rem auto; }
+
+/* CONTENT LAYOUT — two-column: article + TOC sidebar */
+.content-layout { display: grid; grid-template-columns: 1fr 260px; grid-template-areas: "article toc"; gap: 0; max-width: 1200px; margin: 0 auto; align-items: start; }
+.article-col { grid-area: article; min-width: 0; order: 1; }
+.article-col .article-wrap { max-width: 760px; margin: 0; padding: 4rem 4vw 6rem; }
+
+.article-lead { font-size: 1.05rem; line-height: 1.9; color: var(--navy); margin-bottom: 2.5rem; padding-left: 1.2rem; border-left: 3px solid var(--gold); font-weight: 400; }
+p { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 1.4rem; font-weight: 400; }
+p strong { color: var(--navy); font-weight: 600; }
+
+/* DIRECT ANSWER BLOCK (AEO) */
+.direct-answer { background: #0d1f35; padding: 1.6rem 1.8rem; margin: 1.8rem 0 2.2rem; border-left: 4px solid #9a7a2e; }
+.direct-answer .da-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: #9a7a2e; font-weight: 600; margin-bottom: 0.7rem; }
+.direct-answer p { font-size: 0.92rem; color: rgba(232,224,208,0.9); line-height: 1.75; margin: 0; }
+.direct-answer p strong { color: #9a7a2e; }
+
+/* HEADINGS */
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--navy); margin: 3.5rem 0 1rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.8rem; scroll-margin-top: 90px; }
+h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--navy); margin: 2rem 0 0.7rem; scroll-margin-top: 90px; }
+h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin: 1.6rem 0 0.6rem; }
+.num-badge { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: var(--navy); color: #fff; border-radius: 50%; font-size: 0.82rem; font-family: 'Jost', sans-serif; font-weight: 500; flex-shrink: 0; }
+
+ul, ol { margin-left: 1.5rem; margin-bottom: 1.4rem; }
+li { font-size: 0.96rem; line-height: 1.85; color: var(--navy); margin-bottom: 0.5rem; }
+
+/* CODE / PROMPT BLOCKS */
+.code-block { background: var(--navy); color: #e8e0d0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.7; overflow-x: auto; border-radius: 2px; white-space: pre-wrap; }
+.code-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 1.6rem 0 0.6rem; }
+
+/* INSIGHT CARD */
+.insight-card { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.3rem 1.5rem; margin: 1.4rem 0 1.8rem; }
+.insight-card .card-label { font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+.insight-card p { font-size: 0.88rem; color: var(--navy-muted); margin: 0; line-height: 1.7; }
+
+/* TIP ROW */
+.tip-row { display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--border); padding: 1.1rem 1.3rem; margin: 1.4rem 0; align-items: flex-start; }
+.tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.tip-row p { font-size: 0.88rem; margin: 0; color: var(--navy-muted); }
+.tip-row strong { color: var(--navy); }
+
+/* CONTENT CARD */
+.content-card { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 1.4rem 1.6rem; margin: 1.2rem 0; transition: box-shadow 0.3s; }
+.content-card:hover { box-shadow: 0 2px 16px rgba(154,122,46,0.1); }
+.content-card .cc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--navy); font-weight: 600; margin-bottom: 0.5rem; }
+.content-card .cc-meta { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid rgba(154,122,46,0.25); padding: 0.15rem 0.6rem; font-weight: 600; display: inline-block; margin-bottom: 0.6rem; }
+.content-card p { font-size: 0.87rem; color: var(--navy-muted); margin: 0; line-height: 1.65; }
+
+/* SORT TEST — NEW IN CH 26 */
+/* Three question rows, each pointing to the action it triggers */
+.sort-test { margin: 1.6rem 0 2.2rem; border: 1px solid var(--border); background: var(--surface); }
+.st-row { display: grid; grid-template-columns: 2rem 1fr 1fr; gap: 1rem; align-items: start; padding: 1rem 1.3rem; border-bottom: 1px solid var(--border); }
+.st-row:last-child { border-bottom: none; }
+.st-num { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--gold); opacity: 0.6; line-height: 1.1; }
+.st-q { font-size: 0.9rem; color: var(--navy); line-height: 1.6; font-weight: 500; }
+.st-q small { display: block; font-weight: 400; font-size: 0.78rem; color: var(--navy-muted); margin-top: 0.25rem; }
+.st-a { font-size: 0.84rem; color: var(--navy-muted); line-height: 1.6; padding-left: 1rem; border-left: 2px solid var(--gold); }
+.st-a strong { color: var(--navy); display: block; font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.2rem; }
+
+/* MODE GRID — NEW IN CH 26 */
+/* Three-column Delegate / Collaborate / Retain cards with a "you vs Claude" effort bar */
+.mode-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.6rem 0 2.2rem; }
+.mode-card { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 1.3rem 1.2rem; }
+.mode-card .mc-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--navy); margin-bottom: 0.3rem; }
+.mode-card .mc-flow { font-size: 0.78rem; color: var(--navy-muted); line-height: 1.55; margin-bottom: 0.8rem; }
+.mode-card .mc-bar { display: flex; height: 8px; border: 1px solid var(--border); margin-bottom: 0.4rem; }
+.mode-card .mc-bar span { display: block; height: 100%; }
+.mode-card .mc-bar .mc-claude { background: var(--navy); }
+.mode-card .mc-bar .mc-you { background: var(--gold-light); }
+.mode-card .mc-legend { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy-muted); margin-bottom: 0.9rem; display: flex; justify-content: space-between; }
+.mode-card .mc-good { font-size: 0.82rem; color: var(--navy-muted); line-height: 1.6; margin: 0; }
+.mode-card.mc-delegate .mc-bar .mc-claude { width: 85%; } .mode-card.mc-delegate .mc-bar .mc-you { width: 15%; }
+.mode-card.mc-collab .mc-bar .mc-claude { width: 50%; } .mode-card.mc-collab .mc-bar .mc-you { width: 50%; }
+.mode-card.mc-retain .mc-bar .mc-claude { width: 10%; } .mode-card.mc-retain .mc-bar .mc-you { width: 90%; }
+
+/* LOOP STRIP — NEW IN CH 26 */
+/* Five-step draft-and-refine loop; each step tagged with who acts */
+.loop-strip { display: flex; margin: 1.6rem 0 2.2rem; border: 1px solid var(--border); background: var(--surface); }
+.loop-step { flex: 1; padding: 1.1rem 0.8rem; text-align: center; }
+.loop-step + .loop-step { border-left: 1px dashed var(--border); }
+.loop-step .ls-n { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--gold); opacity: 0.4; line-height: 1; }
+.loop-step .ls-t { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--navy); margin: 0.3rem 0; }
+.loop-step .ls-d { font-size: 0.74rem; color: var(--navy-muted); line-height: 1.5; margin-bottom: 0.6rem; }
+.loop-step .ls-who { display: inline-block; font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; padding: 0.15rem 0.6rem; border: 1px solid var(--gold); color: var(--gold); }
+.loop-step .ls-who.who-claude { background: var(--navy); border-color: var(--navy); color: #e8e0d0; }
+
+/* BEFORE / AFTER PAIR */
+.before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.6rem 0 2.2rem; }
+.ba-card { background: var(--surface); border: 1px solid var(--border); padding: 1.2rem 1.4rem; }
+.ba-card.ba-vague { border-top: 4px solid #c0392b; }
+.ba-card.ba-precise { border-top: 4px solid #2d7a4f; }
+.ba-card .ba-label { font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.6rem; }
+.ba-card.ba-vague .ba-label { color: #c0392b; }
+.ba-card.ba-precise .ba-label { color: #2d7a4f; }
+.ba-card .ba-quote { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.4; }
+.ba-card .ba-note { font-size: 0.82rem; color: var(--navy-muted); line-height: 1.6; margin: 0; }
+
+/* MISTAKE LIST */
+.mistake-list { margin: 1.6rem 0 2.2rem; }
+.mistake-list-item { display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #c0392b; padding: 1rem 1.3rem; margin-bottom: 0.7rem; align-items: flex-start; }
+.mistake-list-item .mli-icon { font-size: 1rem; color: #c0392b; flex-shrink: 0; margin-top: 2px; }
+.mistake-list-item p { font-size: 0.88rem; margin: 0; color: var(--navy-muted); line-height: 1.65; }
+.mistake-list-item p strong { color: var(--navy); }
+
+/* ASSIGNMENT BOX */
+.assignment-box { background: var(--surface); border: 2px solid var(--gold); padding: 1.8rem 2rem; margin: 2.5rem 0; }
+.assignment-box .box-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--navy); font-weight: 600; margin-bottom: 1rem; }
+.assignment-box h4 { margin-top: 1.2rem; }
+.assignment-box p { font-size: 0.9rem; margin-bottom: 0.8rem; }
+
+/* TAKEAWAYS */
+.takeaways { background: var(--bg-alt); padding: 2rem 2.5rem; margin: 3rem 0; border-top: 3px solid var(--gold); }
+.takeaways-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--navy); font-weight: 600; margin-bottom: 1.2rem; text-align: center; }
+.takeaways ul { list-style: none; padding: 0; margin: 0; margin-left: 0; }
+.takeaways li { padding-left: 2rem; position: relative; margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.7; }
+.takeaways li:before { content: '✅'; position: absolute; left: 0; color: var(--gold); }
+
+/* SECTION ORNAMENT */
+.section-ornament { text-align: center; color: var(--gold); opacity: 0.4; letter-spacing: 12px; font-size: 0.9rem; margin: 3rem 0; }
+
+/* FAQ SECTION */
+.faq-section { margin: 3.5rem 0 2rem; }
+.faq-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 1.4rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--border); }
+.faq-item { border: 1px solid var(--border); margin-bottom: 0.5rem; }
+.faq-question { width: 100%; background: var(--surface); border: none; padding: 1rem 1.4rem; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-family: 'Jost', sans-serif; font-size: 0.92rem; font-weight: 500; color: var(--navy); line-height: 1.5; transition: background 0.2s; }
+.faq-question:hover { background: var(--bg-alt); }
+.faq-icon { font-size: 1.2rem; color: var(--gold); flex-shrink: 0; font-weight: 300; transition: transform 0.3s; }
+.faq-item.open .faq-question { background: var(--bg-alt); }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-item.open .faq-answer { max-height: 400px; }
+.faq-answer p { padding: 0.9rem 1.4rem 1.1rem; font-size: 0.9rem; color: var(--navy-muted); line-height: 1.8; margin: 0; border-top: 1px solid var(--border); }
+
+/* TOC SIDEBAR */
+.toc-sidebar { grid-area: toc; position: sticky; top: 110px; align-self: start; padding: 1.6rem; border: 1px solid var(--border); background: var(--surface); margin: 2.5rem 1.6rem 0 0; order: 2; }
+.toc-box-title { font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border); }
+.toc-box-section { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy-muted); font-weight: 600; margin: 1rem 0 0.4rem; }
+.toc-box-list { list-style: none; padding: 0; margin: 0 0 0.4rem; }
+.toc-box-list li { margin: 0; }
+.toc-box-list a { display: block; font-size: 0.8rem; color: var(--navy-muted); text-decoration: none; padding: 0.32rem 0 0.32rem 0.7rem; border-left: 2px solid transparent; line-height: 1.4; transition: color 0.2s, border-color 0.2s; }
+.toc-box-list a:hover, .toc-box-list a.active { color: var(--gold); border-left-color: var(--gold); }
+.toc-box-divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+
+/* PROGRESS WIDGET (sidebar) */
+.progress-widget { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.progress-widget-label { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy-muted); font-weight: 600; margin-bottom: 0.6rem; }
+.progress-track { width: 100%; height: 6px; background: var(--bg-alt); border: 1px solid var(--border); overflow: hidden; }
+.progress-fill { height: 100%; background: var(--gold); width: 87%; }
+.progress-percent { font-size: 0.72rem; color: var(--gold); font-weight: 600; margin-top: 0.5rem; }
+
+/* SERIES CTA (sidebar) */
+.series-cta-box { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.series-cta-title { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.6rem; line-height: 1.4; }
+.series-cta-btn { display: block; text-align: center; background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.5rem 0.8rem; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; font-weight: 500; }
+.series-cta-btn:hover { background: var(--gold); color: #fff; }
+
+/* MOBILE TOC */
+.toc-mobile { display: none; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--gold); margin: 0; }
+.toc-mobile-toggle { width: 100%; background: none; border: none; padding: 0.9rem 1.2rem; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-family: 'Jost', sans-serif; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+.toc-mobile-toggle-icon { font-size: 1rem; color: var(--gold); transition: transform 0.3s; flex-shrink: 0; }
+.toc-mobile.open .toc-mobile-toggle-icon { transform: rotate(45deg); }
+.toc-mobile-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.toc-mobile.open .toc-mobile-body { max-height: 600px; }
+.toc-mobile-body .toc-list { list-style: none; padding: 0.4rem 1.2rem 1rem; border-top: 1px solid var(--border); }
+.toc-mobile-body .toc-list a { display: block; font-size: 0.85rem; color: var(--navy-muted); text-decoration: none; padding: 0.4rem 0 0.4rem 0.7rem; }
+.toc-mobile-progress { height: 3px; background: var(--bg-alt); }
+.toc-mobile-progress-bar { height: 100%; background: var(--gold); width: 0%; }
+
+/* NAVIGATION FOOTER (chapter nav) */
+.chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 2.5rem 0; border-top: 2px solid var(--border); margin-top: 3rem; flex-wrap: wrap; }
+.nav-btn { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--navy); padding: 1rem 1.5rem; border: 1px solid var(--border); background: var(--surface); transition: all 0.3s; flex: 1; min-width: 200px; }
+.nav-btn:hover { border-color: var(--gold); box-shadow: 0 2px 12px rgba(154,122,46,0.1); }
+.nav-btn.prev { justify-content: flex-start; }
+.nav-btn.next { justify-content: flex-end; }
+.nav-btn .nav-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.nav-btn .nav-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; }
+.nav-center { text-align: center; flex: 0 0 auto; }
+.nav-center a { color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+.nav-center a:hover { color: var(--gold-light); }
+
+/* FOOTER */
+footer { padding: 2.2rem 4vw; background: var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.76rem; color: rgba(232,224,208,0.5); }
+.footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.76rem; color: rgba(232,224,208,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+.social-icon { width: 32px; height: 32px; border: 1px solid rgba(184,150,62,0.25); background: transparent; display: flex; align-items: center; justify-content: center; color: rgba(232,224,208,0.45); text-decoration: none; transition: all 0.3s; }
+.social-icon:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+@media (max-width: 900px) {
+  .content-layout { display: block; }
+  .toc-sidebar { display: none; }
+  .toc-mobile { display: block; }
+  .article-col .article-wrap { padding: 2.5rem 4vw 5rem; }
+  .mode-grid { grid-template-columns: 1fr; }
+  .loop-strip { flex-direction: column; }
+  .loop-step + .loop-step { border-left: none; border-top: 1px dashed var(--border); }
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .chapter-nav { flex-direction: column; }
+  .nav-btn { width: 100%; }
+  .before-after { grid-template-columns: 1fr; }
+  .st-row { grid-template-columns: 1.6rem 1fr; }
+  .st-a { grid-column: 2; }
+  footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="NeeAr Ventures" class="logo-img" />
+    <div class="logo-text-block">
+      <div class="logo-name">NeeAr Ventures</div>
+      <div class="logo-tagline">Stay Curious · Explore · Grow</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="learn.html" class="active">Learn With Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<div class="chapter-hero">
+  <a href="learn.html#claude-mastery" class="back-link">← Back to Claude Mastery</a>
+  <div class="chapter-label">Claude Mastery · Chapter 26 of 30</div>
+  <div class="chapter-number">26</div>
+  <h1 class="chapter-title">AI-Human Collaboration Patterns</h1>
+  <p class="chapter-subtitle">Know What to Hand Over and What to Keep</p>
+  <div class="chapter-meta">
+    <span>⏱️ 13 min read</span>
+    <span class="meta-dot">◆</span>
+    <span>📊 Mastery</span>
+    <span class="meta-dot">◆</span>
+    <span>🎯 Working With AI</span>
+  </div>
+  <div class="divider-line"></div>
+</div>
+
+<main>
+<div class="content-layout">
+
+<div class="article-col">
+
+<!-- MOBILE TOC -->
+<div class="toc-mobile" id="toc-mobile">
+  <button class="toc-mobile-toggle" onclick="toggleMobileToc()" aria-expanded="false" aria-controls="toc-mobile-body">
+    <span>In This Chapter</span>
+    <span class="toc-mobile-toggle-icon">+</span>
+  </button>
+  <div class="toc-mobile-progress"><div class="toc-mobile-progress-bar" id="toc-progress-bar"></div></div>
+  <div class="toc-mobile-body" id="toc-mobile-body">
+    <ul class="toc-list">
+      <li><a href="#deciding-who-does-what">1. Deciding Who Does What</a></li>
+      <li><a href="#draft-and-refine">2. Draft-and-Refine Loops</a></li>
+      <li><a href="#reviewer-challenger">3. Reviewer, Challenger, Partner</a></li>
+      <li><a href="#building-rhythm">4. Building a Rhythm</a></li>
+      <li><a href="#common-mistakes">5. Common Mistakes to Avoid</a></li>
+      <li><a href="#faq">FAQs</a></li>
+    </ul>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <p class="article-lead">By this point in the series you know how to prompt well. The next level of mastery is not another technique — it is a working relationship. Two people can use the same tool and get very different results: one treats Claude as a search box and gets generic answers; another hands over everything, including decisions that needed their judgment, and ships work they never really evaluated. Both are using Claude. Neither is collaborating with it.</p>
+
+  <div class="direct-answer" role="note" aria-label="Quick Answer">
+    <div class="da-label">Quick Answer</div>
+    <p>
+      <strong>AI-human collaboration</strong> means deciding, task by task, what to delegate, what to work on together, and what to keep — then moving work back and forth through short draft-and-refine loops with specific feedback. Delegate effort, never accountability: use Claude for volume and first drafts, as a reviewer and challenger of finished work, and as a thinking partner, while the final judgment stays with you.
+    </p>
+  </div>
+
+  <p>Real collaboration is closer to managing a very fast, very well-read colleague than to operating software. That colleague has no memory of yesterday unless context is provided, cannot see priorities unless they are stated, and will produce confident-sounding work whether or not it is right. This chapter covers how to divide the work, run the loop, use Claude to examine work, and build a rhythm that improves over time.</p>
+
+  <section aria-label="Deciding who does what">
+  <h2 id="deciding-who-does-what"><span class="num-badge">1</span> How Do You Decide What to Delegate to Claude and What to Keep?</h2>
+  <p>Before writing a prompt, decide the division of labor. Most poor results trace back to a mismatch at this stage, not a weak prompt.</p>
+
+  <h3>A Simple Sorting Test</h3>
+  <p>For any task, three questions settle who does what.</p>
+
+  <div class="sort-test">
+    <div class="st-row">
+      <div class="st-num">1</div>
+      <div class="st-q">Does it require context only I have?<small>Office politics, a client's unspoken preferences, what happened last quarter.</small></div>
+      <div class="st-a"><strong>If yes</strong>Provide the context, or keep the task.</div>
+    </div>
+    <div class="st-row">
+      <div class="st-num">2</div>
+      <div class="st-q">Does it carry consequences I'm accountable for?<small>A decision, a published claim, a message to a customer.</small></div>
+      <div class="st-a"><strong>If yes</strong>You make the final call.</div>
+    </div>
+    <div class="st-row">
+      <div class="st-num">3</div>
+      <div class="st-q">Is it mostly volume, structure, or first-draft effort?<small>Summarizing, reformatting, drafting options, checking for gaps.</small></div>
+      <div class="st-a"><strong>If yes</strong>Delegate it freely.</div>
+    </div>
+  </div>
+
+  <h3>Three Modes of Working</h3>
+  <p>The answers map onto three modes, each with a different balance of effort between Claude and the person.</p>
+
+  <div class="mode-grid">
+    <div class="mode-card mc-delegate">
+      <div class="mc-name">Delegate</div>
+      <div class="mc-flow">Claude does the work, you review the result.</div>
+      <div class="mc-bar"><span class="mc-claude"></span><span class="mc-you"></span></div>
+      <div class="mc-legend"><span>Claude</span><span>You</span></div>
+      <p class="mc-good">Formatting, summaries, first drafts, data cleanup.</p>
+    </div>
+    <div class="mode-card mc-collab">
+      <div class="mc-name">Collaborate</div>
+      <div class="mc-flow">You and Claude work back and forth.</div>
+      <div class="mc-bar"><span class="mc-claude"></span><span class="mc-you"></span></div>
+      <div class="mc-legend"><span>Claude</span><span>You</span></div>
+      <p class="mc-good">Strategy, writing with a point of view, problem-solving.</p>
+    </div>
+    <div class="mode-card mc-retain">
+      <div class="mc-name">Retain</div>
+      <div class="mc-flow">You do it, with Claude as a sounding board.</div>
+      <div class="mc-bar"><span class="mc-claude"></span><span class="mc-you"></span></div>
+      <div class="mc-legend"><span>Claude</span><span>You</span></div>
+      <p class="mc-good">Final decisions, sensitive conversations, anything where your judgment is the point.</p>
+    </div>
+  </div>
+
+  <div class="code-block">I'm deciding whether to restructure my team's reporting process. I'll
+make the decision myself. Your role is to help me think: list the
+strongest arguments for and against, ask me the questions I should be
+asking, and point out anything I seem to be assuming. Don't recommend
+a decision.</div>
+
+  <div class="insight-card">
+    <div class="card-label">Key Insight</div>
+    <p>Stating the role up front keeps Claude from jumping to a conclusion that wasn't asked for. The same question gets a different, more useful answer when the mode is named.</p>
+  </div>
+  </section>
+
+  <section aria-label="Draft-and-refine loops">
+  <h2 id="draft-and-refine"><span class="num-badge">2</span> How Does a Draft-and-Refine Loop Work?</h2>
+  <p>The best results rarely come from a single prompt. They come from a short loop where each round makes the work more specific to the person doing it.</p>
+
+  <h3>The Basic Loop</h3>
+  <div class="loop-strip">
+    <div class="loop-step">
+      <div class="ls-n">1</div>
+      <div class="ls-t">Brief</div>
+      <div class="ls-d">Goal, audience, constraints, what good looks like</div>
+      <span class="ls-who">You</span>
+    </div>
+    <div class="loop-step">
+      <div class="ls-n">2</div>
+      <div class="ls-t">Draft</div>
+      <div class="ls-d">A first version</div>
+      <span class="ls-who who-claude">Claude</span>
+    </div>
+    <div class="loop-step">
+      <div class="ls-n">3</div>
+      <div class="ls-t">React</div>
+      <div class="ls-d">Specific feedback, not "make it better"</div>
+      <span class="ls-who">You</span>
+    </div>
+    <div class="loop-step">
+      <div class="ls-n">4</div>
+      <div class="ls-t">Refine</div>
+      <div class="ls-d">Revises only what was pointed to</div>
+      <span class="ls-who who-claude">Claude</span>
+    </div>
+    <div class="loop-step">
+      <div class="ls-n">5</div>
+      <div class="ls-t">Decide</div>
+      <div class="ls-d">Judge whether it is ready</div>
+      <span class="ls-who">You</span>
+    </div>
+  </div>
+
+  <h3>Giving Feedback That Moves Work Forward</h3>
+  <p>Vague feedback gets vague changes. Naming what to keep is as important as naming what to change — without it, a revision can quietly undo parts that were working.</p>
+
+  <div class="before-after">
+    <div class="ba-card ba-vague">
+      <div class="ba-label">❌ Weak Feedback</div>
+      <div class="ba-quote">"This doesn't feel right."</div>
+      <p class="ba-note">Produces change without direction — Claude has to guess what "right" means.</p>
+    </div>
+    <div class="ba-card ba-precise">
+      <div class="ba-label">✅ Strong Feedback</div>
+      <div class="ba-quote">"Opening is too formal. Keep paragraph two exactly as is. Cut paragraph three to two sentences and make the call to action more direct."</div>
+      <p class="ba-note">Names the problem, the part to protect, and the change wanted.</p>
+    </div>
+  </div>
+
+  <h3>Knowing When to Stop</h3>
+  <div class="tip-row">
+    <div class="tip-icon">💡</div>
+    <p><strong>The third-revision rule:</strong> If the third revision is not clearly better than the second, the problem is usually the brief, not the draft. Step back and rewrite the brief instead of polishing further.</p>
+  </div>
+  </section>
+
+  <section aria-label="Reviewer, challenger, and thinking partner">
+  <h2 id="reviewer-challenger"><span class="num-badge">3</span> How Can Claude Act as Reviewer, Challenger, and Thinking Partner?</h2>
+  <p>Many people use Claude only to produce. Some of its most valuable uses are to examine work that already exists.</p>
+
+  <div class="content-card">
+    <div class="cc-meta">Reviewer</div>
+    <div class="cc-title">Examine finished work from a named viewpoint</div>
+    <p>Assigning a specific viewpoint makes the review sharper than a general request for feedback.</p>
+  </div>
+  <div class="code-block">Review this proposal as a skeptical finance director. List the three
+weakest points, the questions I'm most likely to be asked, and
+anything that sounds like an unsupported claim.</div>
+
+  <div class="content-card">
+    <div class="cc-meta">Challenger</div>
+    <div class="cc-title">Argue against the plan, on request</div>
+    <p>A challenger is useful precisely because it has no stake in being agreeable. Ask for disagreement explicitly, because the default tone leans cooperative.</p>
+  </div>
+  <div class="code-block">Here is my plan. Argue against it as strongly as you can. Then tell
+me which of your objections you think is most serious and why.</div>
+
+  <div class="content-card">
+    <div class="cc-meta">Thinking Partner</div>
+    <div class="cc-title">Ask better questions than the ones already being asked</div>
+    <p>Sometimes the most useful thing Claude can do is not solve the problem yet.</p>
+  </div>
+  <div class="code-block">I'm stuck on how to approach this. Don't solve it yet. Ask me five
+questions that would help me clarify what I actually want.</div>
+  </section>
+
+  <section aria-label="Building a rhythm">
+  <h2 id="building-rhythm"><span class="num-badge">4</span> How Do You Build a Collaboration Rhythm That Gets Better?</h2>
+  <p>Collaboration becomes powerful when it stops being improvised each time.</p>
+
+  <h3>Keep Your Context Reusable</h3>
+  <p>Write down the background that keeps getting re-explained: role, audience, style, standards. Keep it in a short note to paste at the start of a session, or in a project where it persists. Repeating it costs minutes; not having it costs consistency.</p>
+
+  <h3>Capture What Works</h3>
+  <p>When a prompt gives excellent results, save it with a note on when to use it. Over a few weeks that becomes a personal library more valuable than any generic list.</p>
+
+  <h3>Review Your Own Habits</h3>
+  <p>Once a month, look back at recent work and ask where delegation is off in either direction.</p>
+  <div class="code-block">Based on these examples of how I've used Claude, where am I doing
+work that could be delegated? Where am I delegating something I
+should be reviewing more closely?</div>
+
+  <div class="insight-card">
+    <div class="card-label">Why This Matters</div>
+    <p>Both errors are common, and they point in opposite directions: doing too much by hand, and trusting too much without checking. A monthly look back catches whichever one is drifting.</p>
+  </div>
+  </section>
+
+  <section aria-label="Common mistakes to avoid">
+  <h2 id="common-mistakes"><span class="num-badge">5</span> What Are the Most Common Collaboration Mistakes?</h2>
+  <p>The same five mistakes account for most weak results from working with Claude, whatever the task.</p>
+
+  <div class="mistake-list">
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Handing over judgment along with the work.</strong> Delegate effort, not accountability. You own the result.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Doing everything yourself out of habit.</strong> Volume, formatting, and first drafts rarely need your direct effort.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Vague feedback loops.</strong> "Make it better" produces change without improvement. Be specific about what to keep and what to change.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Never asking Claude to disagree.</strong> If every response feels agreeable, the challenge needed probably isn't arriving.</p>
+    </div>
+    <div class="mistake-list-item">
+      <div class="mli-icon">✕</div>
+      <p><strong>Re-explaining context every time.</strong> Capture it once and reuse it.</p>
+    </div>
+  </div>
+  </section>
+
+  <div class="section-ornament">◆ ◆ ◆</div>
+
+  <div class="takeaways">
+    <div class="takeaways-title">Key Takeaways</div>
+    <ul>
+      <li>Decide the division of labor before writing the prompt — most poor results start with a mismatch there</li>
+      <li>Use the three-question test: private context, accountability, or volume and first-draft effort</li>
+      <li>Name the mode up front — delegate, collaborate, or retain — and state Claude's role</li>
+      <li>Run short loops: brief, draft, react, refine, decide — and rewrite the brief if round three isn't better than round two</li>
+      <li>Give feedback that names what to keep as well as what to change</li>
+      <li>Use Claude to review, challenge, and ask questions — and ask for disagreement explicitly</li>
+      <li>Save reusable context and winning prompts, and audit your own delegation habits monthly</li>
+    </ul>
+  </div>
+
+  <div class="assignment-box">
+    <div class="box-title">Practice Exercises</div>
+    <h4>Foundation Option</h4>
+    <p>Take three tasks from the coming week and sort each into Delegate, Collaborate, or Retain using the three-question test. Run one of them with the role stated up front.</p>
+    <h4>Advanced Option</h4>
+    <p>Take a piece of work already finished and run it through the Reviewer and Challenger prompts. Note which objections had not been considered.</p>
+    <h4>Reflection Questions</h4>
+    <p>Which kind of task tends to be over-delegated, and which over-kept? Where has vague feedback cost extra rounds of revision? What background would be worth saving to stop re-explaining it?</p>
+  </div>
+
+  <!-- VISIBLE FAQ SECTION -->
+  <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How do you decide what to delegate to Claude and what to keep?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Ask three questions about each task. Does it require context only you have? If so, provide that context or keep the task. Does it carry consequences you are accountable for, such as a decision or a message to a customer? If so, you make the final call. Is it mostly volume, structure, or first-draft effort? If so, delegate it freely.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is the difference between delegating, collaborating, and retaining a task?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Delegating means Claude does the work and you review the result, which suits formatting, summaries, and first drafts. Collaborating means working back and forth, which suits strategy and writing with a point of view. Retaining means you do the task yourself, perhaps with Claude as a sounding board, which suits final decisions and sensitive conversations.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>What is a draft-and-refine loop?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>A draft-and-refine loop is a short cycle of five steps: you brief the goal, audience, and constraints; Claude drafts; you react with specific feedback; Claude revises only what you pointed to; and you decide whether the work is ready. If the third revision is not clearly better than the second, the problem is usually the brief, so rewrite it instead of polishing further.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How do you give Claude feedback that actually improves the work?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Be specific about what to change and what to keep. A comment like "make it better" produces change without improvement, while naming the exact problem, the parts to leave untouched, and the desired adjustment gives a targeted revision. Naming what to keep matters because a revision can otherwise quietly undo parts you liked.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How can Claude act as a reviewer or challenger of your work?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Assign a specific viewpoint and ask for disagreement explicitly. For example, ask Claude to review a proposal as a skeptical finance director and list the weakest points and likely questions, or to argue against your plan as strongly as possible and name the most serious objection. The default tone leans cooperative, so the request for challenge has to be stated.</p>
+      </div>
+    </div>
+  </section>
+
+  <p style="margin-top: 2.5rem; font-size: 0.9rem; color: var(--navy-muted);"><strong>Coming Up Next:</strong> In Chapter 27, <em>MCP Connectors &amp; Integrations</em>, learn how to connect Claude to the tools and data already in use, so it can work with real information instead of whatever gets pasted into the chat.</p>
+
+</div>
+</article>
+</div><!-- /.article-col -->
+
+<!-- TOC SIDEBAR -->
+<aside class="toc-sidebar" aria-label="Table of contents">
+  <div class="toc-box-title">In This Chapter</div>
+  <ul class="toc-box-list" id="toc-list-desktop">
+    <li><a href="#deciding-who-does-what">1. Who Does What</a></li>
+    <li><a href="#draft-and-refine">2. Draft-and-Refine Loops</a></li>
+    <li><a href="#reviewer-challenger">3. Reviewer &amp; Challenger</a></li>
+    <li><a href="#building-rhythm">4. Building a Rhythm</a></li>
+    <li><a href="#common-mistakes">5. Common Mistakes</a></li>
+  </ul>
+  <hr class="toc-box-divider">
+  <div class="toc-box-section">FAQs</div>
+  <ul class="toc-box-list">
+    <li><a href="#faq" onclick="openFaq(0);return false;">What to delegate?</a></li>
+    <li><a href="#faq" onclick="openFaq(1);return false;">Delegate vs collaborate?</a></li>
+    <li><a href="#faq" onclick="openFaq(2);return false;">Draft-and-refine loop?</a></li>
+    <li><a href="#faq" onclick="openFaq(3);return false;">Giving good feedback?</a></li>
+  </ul>
+
+  <div class="progress-widget">
+    <div class="progress-widget-label">Series Progress</div>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+    <div class="progress-percent">Chapter 26 of 30 · 87%</div>
+  </div>
+
+  <div class="series-cta-box">
+    <div class="series-cta-title">Continue the Claude Mastery series</div>
+    <a href="learn.html#claude-mastery" class="series-cta-btn">View All Chapters</a>
+  </div>
+</aside>
+
+</div><!-- /.content-layout -->
+</main>
+
+<div class="chapter-nav" style="max-width: 1200px; margin: 0 auto; padding-left: 4vw; padding-right: 4vw;">
+  <a href="learn-series-claude-mastery-chapter-25.html" class="nav-btn prev">
+    <div>
+      <div class="nav-label">Previous Chapter</div>
+      <div class="nav-title">← Documentation & Knowledge Management</div>
+    </div>
+  </a>
+  <div class="nav-center">
+    <a href="learn.html#claude-mastery">View All Chapters</a>
+  </div>
+  <div class="nav-btn next" style="visibility: hidden;">
+    <div style="text-align: right;">
+      <div class="nav-label">Next Chapter</div>
+      <div class="nav-title">Coming Soon →</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 NeeAr Ventures. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="learn.html">Learn With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:arjun@neearventures.com">Email Us</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/neearventures" target="_blank" class="social-icon" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/neearventures" target="_blank" class="social-icon" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/company/neearventures" target="_blank" class="social-icon" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/NeeArVentures" target="_blank" class="social-icon" title="Twitter / X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.youtube.com/@neearventures" target="_blank" class="social-icon" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy)"/></svg></a>
+  </div>
+</footer>
+
+<script>
+/* FAQ Accordion */
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+/* openFaq(N): open a specific FAQ item by index (sidebar FAQ links) */
+function openFaq(index) {
+  var items = document.querySelectorAll('.faq-item');
+  if (!items[index]) return;
+  items.forEach(function(i) { i.classList.remove('open'); i.querySelector('.faq-question').setAttribute('aria-expanded','false'); });
+  items[index].classList.add('open');
+  items[index].querySelector('.faq-question').setAttribute('aria-expanded','true');
+  setTimeout(function() { items[index].scrollIntoView({ behavior:'smooth', block:'center' }); }, 80);
+}
+
+/* Mobile TOC Toggle */
+function toggleMobileToc() {
+  const toc = document.getElementById('toc-mobile');
+  const btn = toc.querySelector('.toc-mobile-toggle');
+  const isOpen = toc.classList.contains('open');
+  toc.classList.toggle('open');
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+
+/* TOC Smooth Scroll */
+document.querySelectorAll('.toc-box-list a[href^="#"], .toc-mobile-body a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var href = a.getAttribute('href');
+    if (href === '#faq') return;
+    var el = document.getElementById(href.replace('#', ''));
+    if (el) {
+      e.preventDefault();
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+    }
+  });
+});
+
+/* Mobile TOC Progress Bar */
+(function() {
+  var progressBar = document.getElementById('toc-progress-bar');
+  if (!progressBar) return;
+  window.addEventListener('scroll', function() {
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0) + '%';
+  }, { passive: true });
+})();
+
+/* Desktop TOC Scroll-Spy — highlights active section link */
+(function() {
+  var sections = ['deciding-who-does-what','draft-and-refine','reviewer-challenger','building-rhythm','common-mistakes'];
+  var links = document.querySelectorAll('#toc-list-desktop a');
+  if (!('IntersectionObserver' in window) || !links.length) return;
+  var map = {};
+  links.forEach(function(l) { map[l.getAttribute('href').replace('#','')] = l; });
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      var link = map[entry.target.id];
+      if (!link) return;
+      if (entry.isIntersecting) {
+        links.forEach(function(l) { l.classList.remove('active'); });
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-110px 0px -70% 0px', threshold: 0 });
+  sections.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
