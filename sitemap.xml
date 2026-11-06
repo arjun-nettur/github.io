@@ -195,7 +195,18 @@
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
-
+<url>
+  <loc>https://neearventures.com/learn-series-claude-mastery-chapter-28.html</loc>
+  <lastmod>2026-11-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+  <url>
+  <loc>https://neearventures.com/learn-series-claude-mastery-chapter-29.html</loc>
+  <lastmod>2026-11-06</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
   <!-- Blog Posts (sorted by date, newest first) -->
   <url>
   <loc>https://neearventures.com/blog-2026-10-31-this-week-in-ai-ep19.html</loc>
